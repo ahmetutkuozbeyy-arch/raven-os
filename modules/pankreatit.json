@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "PANKREATİTLER",
+    "tag": "GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 AKUT PANKREATİT</div><div class='sum-body'>• <b>Tanım:</b> Pankreas enzimlerinin (özellikle Tripsin) organ içinde erken aktifleşmesi sonucu oluşan otodigesyon (kendi kendini sindirme) tablosudur.<br>• <b>Tanı Kriterleri (2/3):</b> 1. Tipik karın ağrısı (Kuşak tarzı), 2. Amilaz/Lipaz >3 kat artışı, 3. Görüntüleme bulgusu.<br>• <b>Etyoloji:</b> En sık nedenler Safra Taşları ve Alkoldür.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 SKORLAMA & İŞARETLER</div><div class='sum-body'>• <b>Cullen Belirtisi:</b> Göbek çevresinde ekimoz (Hemorajik pankreatit).<br>• <b>Grey-Turner Belirtisi:</b> Böğürde (lumbar) ekimoz.<br>• <b>Ranson Kriterleri:</b> Şiddeti belirlemede kullanılır (Geliş ve 48. saat).<br>• <b>ALT > 150:</b> Biliyer (Taş) pankreatiti düşündürür.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 KRONİK PANKREATİT</div><div class='sum-body'>• <b>Klinik Triad:</b> Karın Ağrısı + Steatore (Yağlı dışkı) + Diyabet.<br>• <b>Tanı:</b> BT'de pankreatik kalsifikasyonlar (kireçlenme) görülmesi tipiktir.<br>• <b>Tedavi:</b> Alkolün kesilmesi, Enzim replasmanı (Yemekle birlikte), Analjezi.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KUŞAK TARZI AĞRI",
+        "desc": "Acil Servis - 45 Yaş Erkek - Alkol Sonrası Kriz",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n45 yaşında erkek hasta. Dün gece ağır bir yemek ve alkol alımından sonra başlayan, epigastriumda (mide boşluğu) çok şiddetli, sırta doğru kuşak tarzında yayılan ağrı ile geldi. Bulantı ve kusma eşlik ediyor.\n\nİlk şüphen nedir?",
+            "opts": [
+              { "txt": "Akut Pankreatit", "type": "correct", "go": "s2" },
+              { "txt": "Miyokard İnfarktüsü (MI)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nMI sırta yayılabilir ama genelde sol kola vurur ve eforla ilişkilidir. Yemek ve alkol sonrası başlayan, öne eğilmekle hafifleyen kuşak tarzı ağrı pankreatit için tipiktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANI ]</b>\n\nHastadan Amilaz ve Lipaz istedin. Sonuçlar normalin 5 katı yüksek geldi. USG'de safra kesesi normal (Taş yok). Etyolojide ne düşünürsün?",
+            "opts": [
+              { "txt": "Alkolik Pankreatit", "type": "correct", "go": "s3" },
+              { "txt": "Biliyer Pankreatit", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ETYOLOJİ ]</b>\n\nUSG'de taş yoksa ve hastanın alkol öyküsü varsa (erkek hasta), en olası neden alkoldür. Biliyer pankreatitte ALT düzeyi de >150 U/L olurdu.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nAkut pankreatit tanısı kesinleşti. Acil serviste bu hastaya yapman gereken İLK ve EN ÖNEMLİ tedavi müdahalesi nedir?",
+            "opts": [
+              { "txt": "Agresif İntravenöz Sıvı Resüsitasyonu", "type": "correct", "go": "s4" },
+              { "txt": "Profilaktik Antibiyotik Başlanması", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ TEDAVİ İLKESİ ]</b>\n\nPankreatitte en büyük risk 'hipovolemi' ve organ yetmezliğidir. İlk 24 saatte agresif sıvı verilmesi prognozu iyileştirir. Rutin antibiyotik önerilmez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ BESLENME ]</b>\n\nHastanın ağrısı 48. saatte azaldı. Beslenmeye nasıl geçilmeli?",
+            "opts": [
+              { "txt": "Oral veya Enteral (Nasojejunal) beslenme erkenden başlanmalı.", "type": "correct", "go": "s5" },
+              { "txt": "Pankreas dinlensin diye 1 hafta aç (NPO) bırakılmalı.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ GÜNCEL BİLGİ ]</b>\n\nBarsak bariyerini korumak ve bakteriyel translokasyonu (enfeksiyonu) önlemek için 'Erken Enteral Beslenme' şarttır. Aç bırakmak (Total Parenteral Nutrisyon) komplikasyonları artırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta sıvı tedavisi ve erken beslenme ile komplikasyonsuz iyileşti. Alkolü bırakması tavsiye edildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: SAFRA TAŞI KRİZİ",
+        "desc": "Acil Servis - 60 Yaş Kadın - Sarılık ve Ateş",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ BAŞVURU ]</b>\n\n60 yaşında kadın hasta. Bilinen safra taşı öyküsü var. Dün başlayan karın ağrısı, bulantı ve bugün eklenen sarılık şikayetiyle geldi. Ateşi 38.5°C.\n\nBu tablo neyi düşündürür?",
+            "opts": [
+              { "txt": "Biliyer Pankreatit + Kolanjit Şüphesi", "type": "correct", "go": "s2" },
+              { "txt": "Sadece Akut Kolesistit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK ANALİZ ]</b>\n\nKolesistitte sarılık ve pankreas enzim yüksekliği beklenmez. Sarılık, taşın ana safra kanalına (koledok) düştüğünü gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ LABORATUVAR ]</b>\n\nAmilaz: 2000, ALT: 350, Bilirubin: 4 mg/dL (Yüksek). Biliyer pankreatit tanısı koydun. Ancak hastanın ateşi ve sarılığı artıyor (Kolanjit tablosu).\n\nBu hastada yapılması gereken ACİL işlem nedir?",
+            "opts": [
+              { "txt": "ERCP (Endoskopik Retrograd Kolanjio Pankreatografi)", "type": "correct", "go": "s3" },
+              { "txt": "Acil Kolesistektomi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TEDAVİ SIRASI ]</b>\n\nSafra yolu tıkalı ve enfekte (kolanjit) ise öncelik kanalın açılmasıdır. ERCP ile taş çıkarılmalı ve drenaj sağlanmalıdır. Ameliyat sonraki aşamadır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nERCP yapıldı, taş çıkarıldı. Ancak hasta 3. haftada tekrar geldi. Karında ele gelen bir kitle ve tokluk hissi var. Ateşi yok.\n\nBT'de pankreas kuyruğunda 6 cm çapında, düzgün sınırlı sıvı koleksiyonu görüldü. Tanın?",
+            "opts": [
+              { "txt": "Pankreatik Psödokist", "type": "correct", "go": "s4" },
+              { "txt": "Pankreas Absesi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ TANIM ]</b>\n\nAbsede yüksek ateş ve enfeksiyon bulguları olur. Psödokist ise akut ataktan 4 hafta sonra olgunlaşan, granülasyon dokusu (epitel yok) ile çevrili sıvı birikimidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YAKLAŞIM ]</b>\n\nPsödokist 6 cm boyutunda ve hastada bası semptomları (erken doyma, ağrı) yapıyor. Tedavi planın ne olmalı?",
+            "opts": [
+              { "txt": "Drenaj (Endoskopik veya Perkütan)", "type": "correct", "go": "s5" },
+              { "txt": "Takip (Spontan rezorpsiyon bekle)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ENDİKASYON ]</b>\n\nSemptomatik olan veya 6 cm'den büyük kistler nadiren kendiliğinden geçer. Komplikasyon (rüptür, kanama) riskini önlemek için boşaltılmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nKist endoskopik olarak mideye drene edildi (Kistogastrostomi). Hasta rahatladı. Daha sonra kese ameliyatı (Kolesistektomi) planlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KRONİK YIKIM",
+        "desc": "Poliklinik - 55 Yaş Erkek - İshal ve Kilo Kaybı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n55 yaşında erkek hasta. 10 yıldır günde 1 şişe votka içiyor. Son 1 yıldır tekrarlayan karın ağrıları, kilo kaybı ve 'tuvalete yapışan, kötü kokulu dışkılama' şikayeti var.\n\nBu dışkılama tipi (Steatore) neyi gösterir?",
+            "opts": [
+              { "txt": "Pankreasın Ekzokrin Yetmezliğini (Yağ sindirilemiyor)", "type": "correct", "go": "s2" },
+              { "txt": "Enfeksiyöz İshal", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nKronik pankreatitte enzim üretimi %90'ın altına düşünce yağlar sindirilemez ve dışkı ile atılır (Steatore). Dışkı yağlı, parlak ve kötü kokuludur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANI ]</b>\n\nKronik Pankreatit düşünüyorsun. Tanıyı kesinleştirmek için Batın BT (Tomografi) çektirdin. Ne görmeyi beklersin?",
+            "opts": [
+              { "txt": "Pankreatik kanalda düzensizlik ve parankimde Kalsifikasyonlar", "type": "correct", "go": "s3" },
+              { "txt": "Pankreasta ödem ve sıvı koleksiyonu", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ RADYOLOJİ ]</b>\n\nÖdem akut pankreatit bulgusudur. Kronik pankreatitin en tipik radyolojik bulgusu kalsifikasyonlar (taşlaşma) ve kanal düzensizliğidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KOMORBİDİTE ]</b>\n\nHastanın kan şekerini ölçtün ve 250 mg/dL buldun (Diyabet). Bu durum Kronik Pankreatitin hangi sonucudur?",
+            "opts": [
+              { "txt": "Endokrin Yetmezlik (Adacık hücre kaybı)", "type": "correct", "go": "s4" },
+              { "txt": "Tesadüfi Tip 2 Diyabet", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KLİNİK TRİAD ]</b>\n\nKronik pankreatit triadı: 1. Ağrı, 2. Steatore (Ekzokrin kayıp), 3. Diyabet (Endokrin kayıp). Bu diyabet Tip 3c diyabet olarak adlandırılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nSteatore ve kilo kaybını düzeltmek için hangi ilacı başlamalısın?",
+            "opts": [
+              { "txt": "Pankreas Enzim Replasmanı (Yemeklerle birlikte)", "type": "correct", "go": "s5" },
+              { "txt": "Sadece Vitamin takviyesi", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TEDAVİ YÖNETİMİ ]</b>\n\nSindirimi sağlamak için dışarıdan Lipaz/Amilaz içeren enzim preparatları (Örn: Creon) verilmelidir. İlaç yemek ortasında alınmalıdır ki gıdayla karışsın.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya alkolü bırakması şart koşuldu. Enzim tedavisi ve insülin ile kilo alımı sağlandı. Ağrı yönetimi planlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Akut pankreatit tanısı için aşağıdakilerden hangisi ŞARTTIR (En az 2'si)?", "a": ["Tipik Karın Ağrısı, Amilaz/Lipaz >3x, Görüntüleme Bulgusu", "Sadece Amilaz yüksekliği", "Sadece USG bulgusu", "Ateş ve Lökositoz"], "correct": 0 },
+      { "q": "Biliyer (Taş kaynaklı) pankreatiti en iyi gösteren laboratuvar bulgusu hangisidir?", "a": ["ALT > 150 U/L", "AST > 40 U/L", "GGT Yüksekliği", "LDH Yüksekliği"], "correct": 0 },
+      { "q": "Hemorajik pankreatitte göbek çevresinde görülen ekimozun (morarma) adı nedir?", "a": ["Cullen Belirtisi", "Grey-Turner Belirtisi", "Murphy Belirtisi", "Kehr Belirtisi"], "correct": 0 },
+      { "q": "Akut pankreatitin en sık görülen lokal komplikasyonu nedir?", "a": ["Pankreatik Psödokist", "Abse", "Nekroz", "Fistül"], "correct": 0 },
+      { "q": "Kronik pankreatitin klasik klinik triadında hangisi YOKTUR?", "a": ["Sarılık", "Karın Ağrısı", "Steatore (Yağlı dışkı)", "Diyabet"], "correct": 0 },
+      { "q": "Ranson kriterleri neyi değerlendirmek için kullanılır?", "a": ["Akut pankreatitin şiddetini ve prognozunu", "Etyolojiyi", "Kanseri", "Kronikleşme riskini"], "correct": 0 },
+      { "q": "Pankreatik psödokist ile gerçek kist arasındaki en temel histolojik fark nedir?", "a": ["Psödokistte epitel döşemesi yoktur (Granülasyon dokusu vardır)", "Psödokist daha büyüktür", "Psödokist çok odalıdır", "Fark yoktur"], "correct": 0 },
+      { "q": "Akut pankreatit tedavisinde ilk 24 saatte en önemli basamak nedir?", "a": ["Agresif Sıvı Resüsitasyonu", "Antibiyotik", "Cerrahi", "ERCP"], "correct": 0 },
+      { "q": "Akut biliyer pankreatitte ve eşlik eden kolanjitte (tıkanma sarılığı) yapılması gereken işlem nedir?", "a": ["ERCP (Taşın çıkarılması)", "Acil Cerrahi", "MRCP", "Takip"], "correct": 0 },
+      { "q": "Kronik pankreatitte steatore (yağlı dışkı) ne zaman ortaya çıkar?", "a": ["Pankreasın %90'ı fonksiyonunu yitirdiğinde", "Hemen başlangıçta", "%50 kayıpta", "Sadece atakta"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Cullen Belirtisi", "B": "Göbek çevresi ekimoz (Hemorajik)" },
+      { "A": "Grey-Turner Belirtisi", "B": "Böğürde (Lumbar) ekimoz" },
+      { "A": "Akut Pankreatit", "B": "Otodigesyon (Kendi kendini sindirme)" },
+      { "A": "Kronik Pankreatit", "B": "İrreversibl fibrozis ve kalsifikasyon" },
+      { "A": "Psödokist", "B": "Epiteli olmayan sıvı koleksiyonu" },
+      { "A": "ERCP", "B": "Koledok taşı / Kolanjit tedavisi" },
+      { "A": "Steatore", "B": "Ekzokrin yetmezlik (Yağlı dışkı)" },
+      { "A": "Diyabet (Tip 3c)", "B": "Endokrin yetmezlik" }
+    ],
+    "decypher": [
+      {
+        "text": "Akut pankreatit, pankreas enzimlerinin (özellikle {Tripsin}) organ içinde erken aktifleşmesi sonucu pankreasın kendi kendini sindirmesi ({Otodigesyon}) olayıdır. En sık nedenler safra taşları ve {alkol} kullanımıdır.",
+        "decoys": ["amilaz", "lipaz", "enfeksiyon", "travma"]
+      },
+      {
+        "text": "Kronik pankreatit, pankreasın ilerleyici harabiyeti ve {fibrozis} ile karakterizedir. Klinik olarak karın ağrısı, {steatore} (yağlı dışkı) ve {diyabet} üçlüsü ile seyreder.",
+        "decoys": ["ödem", "kabızlık", "hipertansiyon", "sarılık"]
+      },
+      {
+        "text": "Biliyer pankreatitte, safra taşı ampulla vateriye oturarak hem safra hem de pankreas kanalını tıkar. Bu durumda {ERCP} ile taşın çıkarılması gerekir. Tanıda {ALT} yüksekliği değerlidir.",
+        "decoys": ["MRCP", "AST", "GGT", "cerrahi"]
+      }
+    ]
+  }
+}

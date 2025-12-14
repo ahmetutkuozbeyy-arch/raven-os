@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "GASTROÖZOFAGEAL REFLÜ HASTALIĞI",
+    "tag": "GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 TEMEL KAVRAMLAR</div><div class='sum-body'>• <b>Tanım:</b> Mide içeriğinin özofagusa kaçarak rahatsız edici semptomlar veya komplikasyonlar oluşturmasıdır.<br>• <b>Tipik Semptomlar:</b> Pirozis (Heartburn) ve Regürjitasyon.<br>• <b>Atipik Semptomlar:</b> Öksürük, larenjit, astım, dental erozyon, göğüs ağrısı.<br>• <b>Asit Cebi (Acid Pocket):</b> Yemek sonrası mide fundusunda oluşan, tamponlanmamış asit tabakasıdır. Reflü ataklarının ana kaynağıdır.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KLİNİK İPUÇLARI</div><div class='sum-body'>• <b>Tanı:</b> Tipik semptomlar varsa <b>PPI Testi</b> (2 hafta çift doz) en pratik tanı yöntemidir.<br>• <b>Altın Standart:</b> Reflü tanısında altın standart <b>24 Saatlik pH/Empedans Monitorizasyonu</b>dur.<br>• <b>Alarm Semptomları:</b> Disfaji, odinofaji, kilo kaybı, anemi, kanama -> ENDOSKOPI ŞART!</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ & FENOTİPLER</div><div class='sum-body'>• <b>NERD (Non-Eroziv Reflü):</b> Endoskopi normaldir ama asit maruziyeti artmıştır.<br>• <b>Hipersensitif Özofagus:</b> Asit maruziyeti normaldir ama reflü ile semptom ilişkisi pozitiftir.<br>• <b>Fonksiyonel Pirozis:</b> Ne asit artışı ne de semptom ilişkisi vardır. PPI yanıt vermez.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: YANMA HİSSİ",
+        "desc": "Poliklinik - 35 Yaş Kadın - Göğüs Arkasında Yanma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n35 yaşında kadın hasta. Haftada 3-4 kez yemeklerden sonra göğüs kemiği arkasında yanma (pirozis) ve ağza ekşi su gelmesi (regürjitasyon) şikayetiyle başvurdu. Yutma güçlüğü veya kilo kaybı yok.\n\nİlk yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "PPI (Proton Pompa İnhibitörü) Testi (2 hafta çift doz).", "type": "correct", "go": "s2" },
+              { "txt": "Hemen Üst GİS Endoskopisi.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ GEREKSİZ GİRİŞİM ]</b>\n\nAlarm semptomu (disfaji, anemi, kilo kaybı, >50 yaş) olmayan genç hastalarda, tipik reflü semptomları varsa endoskopi gerekmez. PPI testi hem tanı hem tedavi edicidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TEST SONUCU ]</b>\n\nHasta 2 hafta sonra kontrole geldi. 'Hocam şikayetlerim %80 azaldı, çok rahatladım' diyor. Bu sonuç neyi gösterir?",
+            "opts": [
+              { "txt": "GÖRH tanısı doğrulanmıştır.", "type": "correct", "go": "s3" },
+              { "txt": "Plasebo etkisidir, ileri tetkik gerekir.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TANI KRİTERİ ]</b>\n\nPPI tedavisine yanıt (semptomların >%50 azalması) GÖRH tanısı için pratik ve güvenilir bir kriterdir (Sensitivite %83).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nHastaya hastalığının mekanizmasını anlatıyorsun. Yemek sonrası mide girişinde (fundusta) oluşan ve reflü ataklarının ana kaynağı olan 'tamponlanmamış asit tabakasına' ne ad verilir?",
+            "opts": [
+              { "txt": "Asit Cebi (Acid Pocket)", "type": "correct", "go": "s4" },
+              { "txt": "Helicobacter Pylori", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YANLIŞ KAVRAM ]</b>\n\nH. Pylori bir bakteridir. Asit cebi (Acid Pocket), yemekle nötralize olmamış, mide üst kısmında biriken asit gölüdür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ İDAMESİ ]</b>\n\nHastayı idame tedavisine alacaksın. Hangi strateji en uygundur?",
+            "opts": [
+              { "txt": "En düşük etkili doz ile idame veya 'gereğinde' kullanım.", "type": "correct", "go": "s5" },
+              { "txt": "Ömür boyu yüksek doz PPI.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ YAN ETKİ RİSKİ ]</b>\n\nKomplikasyonsuz GÖRH hastalarında amaç semptom kontrolüdür. Gereksiz yüksek doz kemik erimesi ve enfeksiyon riskini artırabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya yaşam tarzı değişiklikleri (yatak başını yükseltme, gece yememe) önerildi ve düşük doz tedaviyle taburcu edildi. Başarılı yönetim.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: DİRENÇLİ YANMA",
+        "desc": "Gastroenteroloji - 45 Yaş Erkek - İlaçlara Yanıtsızlık",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SEVK ]</b>\n\n45 yaşında erkek hasta. 6 aydır yanma şikayeti var. Aile hekimi PPI vermiş ancak fayda görmemiş. Endoskopi yapılmış ve 'Normal' (Eroziv özofajit yok) bulunmuş.\n\nEndoskopisi normal olan ama reflü semptomları olan bu tabloya ne denir?",
+            "opts": [
+              { "txt": "Non-Eroziv Reflü Hastalığı (NERD)", "type": "correct", "go": "s2" },
+              { "txt": "Barrett Özofagus", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANIM HATASI ]</b>\n\nBarrett endoskopide görülen bir mukozal değişikliktir (Salmon rengi). NERD ise endoskopinin tamamen normal olduğu reflü tipidir (Hastaların %50'sinden fazlası böyledir).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ İLERİ TETKİK ]</b>\n\nHasta ilaca yanıtsız olduğu için 'Fonksiyonel Pirozis' veya 'Hipersensitif Özofagus' ayırıcı tanısı yapılmalı. Hangi tetkiki istersin?",
+            "opts": [
+              { "txt": "24 Saatlik pH-Empedans Monitorizasyonu", "type": "correct", "go": "s3" },
+              { "txt": "Baryumlu Grafi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ALTIN STANDART ]</b>\n\nGrafi reflü miktarını ölçemez. pH-metri asit reflüsünü, Empedans ise asit olmayan (gaz/sıvı) reflüyü gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SONUÇ ANALİZİ ]</b>\n\nTest sonucunda: Özofagusa asit kaçışı (Asit Maruziyet Süresi) NORMAL sınırlarda çıktı. Ancak hasta butona bastığında (semptom anında) reflü olduğu görüldü (Pozitif Semptom İndeksi).\n\nTanın nedir?",
+            "opts": [
+              { "txt": "Reflü Hipersensitivitesi (Aşırı Duyarlı Özofagus)", "type": "correct", "go": "s4" },
+              { "txt": "Fonksiyonel Pirozis", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ İNCE AYRIM ]</b>\n\nFonksiyonel piroziste ne asit artışı vardır ne de semptomla reflü arasında ilişki vardır. Hipersensitivitede ise asit normaldir ama semptomla ilişkilidir (Hasta azıcık asidi bile hisseder).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ MODİFİKASYONU ]</b>\n\nHipersensitif özofagusta sorun asit değil, sinir uçlarının aşırı duyarlılığıdır. Bu nedenle PPI yanına ne eklenmelidir?",
+            "opts": [
+              { "txt": "Ağrı modülatörleri (Düşük doz antidepresanlar vb.)", "type": "correct", "go": "s5" },
+              { "txt": "Cerrahi (Fundoplikasyon)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ YANLIŞ SEÇİM ]</b>\n\nAsit reflüsü patolojik olmayan bir hastaya anti-reflü cerrahisi yapmak semptomları düzeltmez, aksine komplikasyon yaratabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya bunun sinirsel bir hassasiyet olduğu anlatıldı. PPI + Ağrı modülatörü ile semptomlar kontrol altına alındı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: ALARM ZİLLERİ",
+        "desc": "Acil Servis - 65 Yaş Erkek - Yutma Güçlüğü",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n65 yaşında erkek hasta. Uzun yıllardır reflüsü var ama ilaç kullanmıyor. Son 2 aydır katı gıdaları yutarken takılma (Disfaji) ve 10 kg kilo kaybı şikayetiyle geldi.\n\nBu tablo neyi işaret eder?",
+            "opts": [
+              { "txt": "Alarm Semptomları (Malignite Şüphesi)", "type": "correct", "go": "s2" },
+              { "txt": "Basit Reflü Alevlenmesi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KIRMIZI BAYRAK ]</b>\n\nDisfaji (yutma güçlüğü) ve kilo kaybı asla basit reflüye bağlanamaz. Mutlaka altında yatan organik bir neden (kanser, darlık) aranmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANI YÖNTEMİ ]</b>\n\nBu hastada yapılması gereken İLK ve EN ÖNEMLİ tetkik nedir?",
+            "opts": [
+              { "txt": "Üst GİS Endoskopisi", "type": "correct", "go": "s3" },
+              { "txt": "PPI Testi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ZAMAN KAYBI ]</b>\n\nAlarm semptomu olan hastada PPI testi ile vakit kaybedilmez. Doğrudan endoskopi ile içerisi görülmelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ENDOSKOPI BULGUSU ]</b>\n\nEndoskopide distal özofagusta lümeni daraltan ülserovejetan bir kitle görüldü. Biyopside 'Adenokarsinom' saptandı. Bu kanserin en önemli risk faktörü nedir?",
+            "opts": [
+              { "txt": "Barrett Özofagus", "type": "correct", "go": "s4" },
+              { "txt": "H. Pylori Enfeksiyonu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nH. Pylori mide kanseri riskini artırır ama özofagus adenokarsinomu riskini azaltabilir (asidi azalttığı için). Barrett, adenokarsinomun tek ve en güçlü öncüsüdür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SINIFLAMA ]</b>\n\nEndoskopide ayrıca 'Los Angeles Sınıflaması'na göre Grade D özofajit (lümenin %75'inden fazlasını tutan birleşmiş lezyonlar) görüldü.\n\nBu sınıflama ne için kullanılır?",
+            "opts": [
+              { "txt": "Eroziv Özofajitin Şiddetini Belirlemek İçin", "type": "correct", "go": "s5" },
+              { "txt": "Kanserin Evresini Belirlemek İçin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ BİLGİ ]</b>\n\nLos Angeles (LA) sınıflaması (A-B-C-D), reflüye bağlı mukozal hasarın (erozyonun) yaygınlığını tarif eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta Onkoloji ve Cerrahisi konseyine sevk edildi. Uzun süreli tedavi edilmeyen reflünün Barrett ve Kansere yol açabileceği acı bir şekilde doğrulandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "GÖRH'ün en tipik iki semptomu hangisidir?", "a": ["Pirozis ve Regürjitasyon", "Disfaji ve Odinofaji", "Öksürük ve Ses Kısıklığı", "Karın Ağrısı ve İshal"], "correct": 0 },
+      { "q": "Alarm semptomu olmayan genç bir hastada GÖRH tanısı için en pratik yöntem nedir?", "a": ["PPI Testi (2 hafta çift doz)", "24 saatlik pH-metri", "Endoskopi", "Baryumlu Grafi"], "correct": 0 },
+      { "q": "Reflü tanısında 'Altın Standart' yöntem hangisidir?", "a": ["24 Saatlik pH/Empedans Monitorizasyonu", "Endoskopi", "Manometri", "Sintigrafi"], "correct": 0 },
+      { "q": "Yemek sonrası mide fundusunda oluşan ve reflü ataklarının ana kaynağı olan asit tabakasına ne denir?", "a": ["Asit Cebi (Acid Pocket)", "Alkali Gelgit", "Pilorik Siften", "Z-Çizgisi"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi GÖRH için bir 'Alarm Semptomu' DEĞİLDİR?", "a": ["Yemek sonrası şişkinlik", "Disfaji (Yutma güçlüğü)", "Odinofaji (Ağrılı yutma)", "İstemsiz kilo kaybı"], "correct": 0 },
+      { "q": "Endoskopisi normal olan, asit maruziyeti normal olan ancak semptomları reflü ile ilişkili olan tabloya ne denir?", "a": ["Reflü Hipersensitivitesi", "NERD", "Fonksiyonel Pirozis", "Barrett Özofagus"], "correct": 0 },
+      { "q": "Los Angeles (LA) sınıflaması neyi değerlendirmek için kullanılır?", "a": ["Eroziv özofajitin şiddetini", "Kanserin evresini", "AÖS basıncını", "Mide fıtığının boyutunu"], "correct": 0 },
+      { "q": "GÖRH tedavisinde amaç nedir?", "a": ["Semptom kontrolü ve komplikasyonların önlenmesi", "Kür (Hastalığın tamamen yok edilmesi)", "Mide asidinin tamamen sıfırlanması", "H. Pylori eradikasyonu"], "correct": 0 },
+      { "q": "Asit olmayan (Gaz veya zayıf asit) reflüyü saptamak için hangi test kullanılır?", "a": ["Empedans (Impedance)", "pH-metri", "Manometri", "Endoskopi"], "correct": 0 },
+      { "q": "Barrett özofagus gelişimi için en önemli risk faktörü nedir?", "a": ["Uzun süreli ve şiddetli GÖRH", "H. Pylori enfeksiyonu", "Akalazya", "Divertükül"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Pirozis", "B": "Göğüs arkasında yanma (Heartburn)" },
+      { "A": "Regürjitasyon", "B": "Ağıza acı/ekşi su gelmesi" },
+      { "A": "Disfaji", "B": "Yutma güçlüğü (Takılma hissi)" },
+      { "A": "Odinofaji", "B": "Ağrılı yutma" },
+      { "A": "NERD", "B": "Endoskopisi normal reflü hastalığı" },
+      { "A": "Barrett", "B": "İntestinal Metaplazi (Adenokanser riski)" },
+      { "A": "Asit Cebi", "B": "Postprandial asit rezervuarı" },
+      { "A": "Empedans", "B": "Asit olmayan reflüyü ölçer" }
+    ],
+    "decypher": [
+      {
+        "text": "Gastroözofageal reflü hastalığında (GÖRH) en sık görülen semptomlar göğüs kemiği arkasında yanma anlamına gelen {pirozis} ve mide içeriğinin ağza gelmesi olan {regürjitasyon}dur.",
+        "decoys": ["disfaji", "odinofaji", "öksürük", "globus"]
+      },
+      {
+        "text": "Reflü tanısında altın standart yöntem {pH} ve empedans monitorizasyonudur. Bu test, asit olan ve {olmayan} reflü ataklarını ve bunların semptomlarla ilişkisini gösterir.",
+        "decoys": ["endoskopi", "manometri", "radyoloji", "kan"]
+      },
+      {
+        "text": "Yemeklerden sonra midenin proksimalinde (fundus) oluşan ve tamponlanmamış asitten oluşan tabakaya {Asit} Cebi denir. Bu bölge, reflü ataklarının ana {kaynağı}dır.",
+        "decoys": ["safra", "mukus", "hedef", "sonucu"]
+      }
+    ]
+  }
+}

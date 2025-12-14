@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "MALABSORPSİYON TESTLERİ",
+    "tag": "TIBBİ BİYOKİMYA"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧪 SİNDİRİM FAZLARI</div><div class='sum-body'>• <b>Luminal Faz:</b> Enzim ve safra ile parçalanma (Pankreatit, Kolestaz).<br>• <b>Mukozal Faz:</b> Fırçamsı kenardan emilim (Çölyak, Laktoz İntoleransı).<br>• <b>Post-Absorptif Faz:</b> Lenfatik ve vasküler taşınma (Lenfajiektazi).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 AYIRICI TANI TESTLERİ</div><div class='sum-body'>• <b>D-Ksiloz Testi:</b> Pankreatik yetmezlik ile Mukozal hasarı (Çölyak) ayırır. İdrarda D-Ksiloz DÜŞÜKSE sorun Mukozadadır (Emilememiştir). NORMALSE sorun Pankreastadır (Sindirilememiştir).<br>• <b>Schilling Testi:</b> B12 eksikliğinin nedenini (Pernisiyöz anemi vs İleal hastalık) ayırır.<br>• <b>Hidrojen Nefes Testi:</b> Karbonhidrat malabsorpsiyonu ve SIBO tanısında kullanılır.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💩 DIŞKI ANALİZİ</div><div class='sum-body'>• <b>Sudan III Boyası:</b> Steatore (Yağlı dışkı) taraması için kullanılır.<br>• <b>72 Saatlik Dışkıda Yağ:</b> Steatore tanısında ALTIN STANDARTTIR (>7g/gün yağ atılımı).<br>• <b>Fekal Elastaz-1:</b> Pankreas ekzokrin yetmezliğinin en güvenilir tarama testidir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: SUÇLU KİM?",
+        "desc": "Laboratuvar - Kronik İshal - Pankreas mı Bağırsak mı?",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\nKronik ishal ve kilo kaybı olan bir hastada 'Steatore' (Yağlı dışkılama) saptadın. Sorunun Pankreas kaynaklı mı (Maldijesyon) yoksa İnce Bağırsak kaynaklı mı (Malabsorpsiyon) olduğunu anlamak istiyorsun.\n\nHangi test bu ayrımı yapmak için en uygundur?",
+            "opts": [
+              { "txt": "D-Ksiloz Testi", "type": "correct", "go": "s2" },
+              { "txt": "Gaitada Gizli Kan Testi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TEST SEÇİMİ ]</b>\n\nGizli kan testi kanamayı gösterir, emilim bozukluğunun yerini göstermez. D-Ksiloz testi, emilim kapasitesini ölçen fonksiyonel bir testtir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nHastaya D-Ksiloz içirildi. D-Ksiloz, pankreas enzimlerine ihtiyaç duymadan, olduğu gibi emilen bir monosakkarittir.\n\nEğer 5 saatlik idrarda D-Ksiloz miktarı < 4g (DÜŞÜK) çıkarsa sorun nerede demektir?",
+            "opts": [
+              { "txt": "Mukozal Fazda (İnce Bağırsak Hasarı / Çölyak)", "type": "correct", "go": "s3" },
+              { "txt": "Luminal Fazda (Pankreas Yetmezliği)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YORUMLAMA ]</b>\n\nD-Ksiloz sindirim gerektirmez. Eğer idrara geçemiyorsa (kanda düşüksü), bağırsaktan emilememiş demektir. Bu da Mukozal hasarı (Villus atrofisi vb.) gösterir. Pankreas hastalarında D-Ksiloz emilimi NORMALDİR.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ALTERNATİF SENARYO ]</b>\n\nPeki, eğer hastanın D-Ksiloz testi NORMAL çıksaydı (İdrarda yüksek), ama hala yağlı dışkılaması olsaydı, sorunu nerede arardın?",
+            "opts": [
+              { "txt": "Pankreas Enzim Eksikliği veya Safra Tuzu Eksikliği", "type": "correct", "go": "s4" },
+              { "txt": "Çölyak Hastalığı", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MANTIK ]</b>\n\nD-Ksiloz normalse bağırsak mukozası sağlamdır. O zaman sorun, yağları parçalayan enzimlerin (Lipaz) veya safra asitlerinin eksikliğindedir (Luminal Faz).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ DOĞRULAMA ]</b>\n\nD-Ksiloz normal çıktı. Pankreas yetmezliğini doğrulamak için dışkıda hangi enzimin seviyesine bakarsın?",
+            "opts": [
+              { "txt": "Fekal Elastaz-1", "type": "correct", "go": "s5" },
+              { "txt": "Fekal Kalprotektin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ BELİRTEÇ ]</b>\n\nKalprotektin inflamasyon (İBH) belirtecidir. Elastaz-1 ise pankreas tarafından salgılanır, barsaktan geçerken yıkılmaz ve dışkıda ölçülebilir. Düşüklüğü yetmezliği gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastada Fekal Elastaz düşük bulundu. Pankreas Ekzokrin Yetmezliği tanısı kondu. D-Ksiloz testi gereksiz ince barsak biyopsisini önledi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KIRMIZI ETİ SEVMEYEN VİTAMİN",
+        "desc": "Hematoloji - B12 Eksikliği Ayrıcı Tanısı - Schilling Testi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\nHastada Megaloblastik Anemi ve B12 eksikliği var. Sorunun diyet mi, midede İntrinsik Faktör (IF) eksikliği mi, yoksa terminal ileumda emilim bozukluğu mu olduğunu anlamak istiyorsun.\n\nHangi test bu ayrımı yapabilir?",
+            "opts": [
+              { "txt": "Schilling Testi", "type": "correct", "go": "s2" },
+              { "txt": "Coombs Testi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TEST ]</b>\n\nCoombs testi hemolitik anemiler içindir. B12 emilim basamaklarını değerlendiren test Schilling testidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 1 ]</b>\n\nHastaya ağızdan Radyoaktif B12 vitamini ve kalçadan (IM) yüksek doz normal B12 (doyurma dozu) verdin. 24 saatlik idrarda radyoaktif B12 <%5 (DÜŞÜK) çıktı.\n\nBu ne anlama gelir?",
+            "opts": [
+              { "txt": "Hasta B12'yi ağızdan ememiyor (Malabsorpsiyon var).", "type": "correct", "go": "s3" },
+              { "txt": "Hasta B12'yi emiyor, sorun diyette.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YORUM ]</b>\n\nEğer emilim normal olsaydı (sorun sadece diyet olsaydı), verilen radyoaktif B12 emilir ve (dokular IM dozla doyduğu için) idrarla atılırdı. İdrarda yoksa emilmemiştir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 2 ]</b>\n\nŞimdi sorunun midede mi (Pernisiyöz Anemi) olduğunu anlamak istiyorsun. Testi tekrarlıyorsun, ama bu sefer Radyoaktif B12'nin yanına ne ekliyorsun?",
+            "opts": [
+              { "txt": "İntrinsik Faktör (IF)", "type": "correct", "go": "s4" },
+              { "txt": "Pankreas Enzimi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ EKSİK HALKA ]</b>\n\nPernisiyöz anemide mideden IF salgılanmaz. Dışarıdan IF verdiğinde emilim düzelirse, sorunun midede olduğunu kanıtlarsın.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nIF ekleyince idrardaki B12 miktarı NORMALE döndü. Tanın nedir?",
+            "opts": [
+              { "txt": "Pernisiyöz Anemi (IF Eksikliği)", "type": "correct", "go": "s5" },
+              { "txt": "İleal Hastalık (Crohn vb.)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ANALİZ ]</b>\n\nEğer sorun ileumda olsaydı (reseptör bozukluğu), IF versen bile B12 emilemezdi ve test yine düşük çıkardı. IF ile düzelmesi sorunun eksiklik olduğunu gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ FİNAL ]</b>\n\nHastaya Pernisiyöz Anemi tanısı kondu ve ömür boyu parenteral (iğne) B12 tedavisi planlandı. Schilling testinin mantığını çözdün.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: ŞİŞKİN KARIN",
+        "desc": "Gastroenteroloji - Süt İçince Şişkinlik - Nefes Testi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ŞİKAYET ]</b>\n\nGenç hasta süt veya dondurma yediğinde karın ağrısı, gaz ve ishal şikayetiyle geliyor. Karbonhidrat malabsorpsiyonundan (Laktoz İntoleransı) şüpheleniyorsun.\n\nTanı için hangi 'Nefes Testi'ni istersin?",
+            "opts": [
+              { "txt": "Hidrojen (H2) Nefes Testi", "type": "correct", "go": "s2" },
+              { "txt": "Üre Nefes Testi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KARIŞIKLIK ]</b>\n\nÜre nefes testi H. Pylori içindir. Karbonhidrat emilim bozukluğunda bakterilerin ürettiği Hidrojen gazı ölçülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PRENSİP ]</b>\n\nHastaya laktoz içirildikten sonra nefesinde Hidrojen gazı neden artar?",
+            "opts": [
+              { "txt": "Emilmeyen laktoz kolona geçer, bakteriler fermente eder ve H2 gazı açığa çıkar.", "type": "correct", "go": "s3" },
+              { "txt": "Mide asidi laktozu parçalarken H2 gazı oluşturur.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ FERMANTASYON ]</b>\n\nİnsan hücresi H2 gazı üretmez. Bu gaz sadece bakteriyel fermantasyon (mayalanma) sonucu oluşur ve kana karışıp akciğerden atılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ DİĞER KULLANIM ]</b>\n\nHidrojen nefes testi, karbonhidrat malabsorpsiyonu dışında hangi patolojinin tanısında da kullanılır?",
+            "opts": [
+              { "txt": "İnce Bağırsakta Aşırı Bakteri Çoğalması (SIBO)", "type": "correct", "action": "end" },
+              { "txt": "Ülseratif Kolit", "type": "wrong", "go": "s3" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Dışkıda yağ atılımını (Steatore) göstermek için kullanılan 'Altın Standart' test hangisidir?", "a": ["72 Saatlik Dışkıda Yağ Ölçümü", "Sudan III Boyası", "Steatokrit", "D-Ksiloz Testi"], "correct": 0 },
+      { "q": "D-Ksiloz testi hangi iki durumu ayırt etmek için kullanılır?", "a": ["Mukozal Malabsorpsiyon (Çölyak) ile Pankreatik Maldijesyonu", "Mide ile Kolon hastalıklarını", "B12 ile Demir eksikliğini", "Laktoz ile Fruktoz intoleransını"], "correct": 0 },
+      { "q": "Schilling testinin 2. aşamasında (B12 + İntrinsik Faktör) düzelme olması neyi gösterir?", "a": ["Pernisiyöz Anemi (Mide kaynaklı)", "İleal Hastalık", "Bakteriyel Aşırı Çoğalma", "Pankreas Yetmezliği"], "correct": 0 },
+      { "q": "Pankreas ekzokrin yetmezliği taramasında en sık kullanılan dışkı testi hangisidir?", "a": ["Fekal Elastaz-1", "Gaitada Gizli Kan", "Kalprotektin", "Dışkı pH"], "correct": 0 },
+      { "q": "Hidrojen Nefes Testi hangi durumun tanısında kullanılır?", "a": ["Karbonhidrat Malabsorpsiyonu ve SIBO", "H. Pylori Enfeksiyonu", "Safra Taşı", "Gastrit"], "correct": 0 },
+      { "q": "İdrarda D-Ksiloz miktarının DÜŞÜK olması (<4g) neyi işaret eder?", "a": ["İnce bağırsak mukozasında emilim bozukluğunu (Örn: Çölyak)", "Pankreas yetmezliğini", "Safra azlığını", "Böbrek yetmezliğini"], "correct": 0 },
+      { "q": "Dışkıda pH'nın asidik (<5.5) olması ve redüktan madde pozitifliği neyi düşündürür?", "a": ["Karbonhidrat (Şeker) Malabsorpsiyonunu", "Protein kaçağını", "Yağ emilim bozukluğunu", "Kanama"], "correct": 0 },
+      { "q": "Schilling testinde antibiyotik verildikten sonra (3. Aşama) emilimin düzelmesi neyi gösterir?", "a": ["İnce Bağırsakta Aşırı Bakteri Çoğalmasını (SIBO)", "Pankreas yetmezliğini", "İleal rezeksiyonu", "Pernisiyöz anemiyi"], "correct": 0 },
+      { "q": "Steatore tanısında kullanılan basit tarama (boyama) testi hangisidir?", "a": ["Sudan III Boyası", "Gram Boyası", "Giemsa Boyası", "Trikrom Boyası"], "correct": 0 },
+      { "q": "Pankreatik yetmezlikte D-Ksiloz test sonucu nasıl beklenir?", "a": ["Normal (İdrarda >4g)", "Düşük", "Yüksek", "Ölçülemez"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "D-Ksiloz Testi", "B": "Mukozal vs Pankreatik ayrımı" },
+      { "A": "Schilling Testi", "B": "B12 emilim bozukluğu nedeni" },
+      { "A": "Fekal Elastaz-1", "B": "Pankreas yetmezliği taraması" },
+      { "A": "Hidrojen Nefes Testi", "B": "Laktoz intoleransı / SIBO" },
+      { "A": "Sudan III", "B": "Steatore taraması (Boya)" },
+      { "A": "72 Saatlik Yağ", "B": "Steatore altın standardı" },
+      { "A": "Düşük D-Ksiloz", "B": "Mukozal hasar (Çölyak)" },
+      { "A": "Normal D-Ksiloz", "B": "Pankreatik yetmezlik" }
+    ],
+    "decypher": [
+      {
+        "text": "{D-Ksiloz} testi, pankreatik enzimlere ihtiyaç duymadan emilebilen bir monosakkarit kullanılarak yapılır. Test sonucunun idrarda {düşük} çıkması, sorunun pankreasta değil, ince bağırsak {mukozasında} (örneğin Çölyak) olduğunu gösterir.",
+        "decoys": ["Glikoz", "yüksek", "lümeninde", "midede"]
+      },
+      {
+        "text": "{Schilling} testi, B12 vitamini eksikliğinin nedenini bulmak için aşamalı olarak yapılır. İntrinsik faktör eklendiğinde emilim düzeliyorsa tanı {Pernisiyöz} anemidir. Antibiyotikle düzeliyorsa neden bakteriyel {aşırı} çoğalmadır.",
+        "decoys": ["Coombs", "Demir", "Viral", "azalma"]
+      },
+      {
+        "text": "Pankreasın ekzokrin fonksiyonunu değerlendirmek için dışkıda {Elastaz-1} seviyesine bakılır. Bu enzim bağırsaktan geçerken yıkılmaz. Yağ emilimini (steatore) kesinleştirmek için ise {72} saatlik dışkı toplanarak yağ analizi yapılır.",
+        "decoys": ["Amilaz", "24", "Lipaz", "Kan"]
+      }
+    ]
+  }
+}

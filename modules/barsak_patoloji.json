@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "title": "İNCE VE KALIN BARSAĞIN İNFLAMATUVAR HASTALIKLARINDA PATOLOJİ",
+    "tag": "PATOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 KONJENİTAL ANOMALİLER</div><div class='sum-body'>• <b>Hirschsprung Hastalığı:</b> Distal kolonda ganglion hücrelerinin (Auerbach/Meissner) yokluğudur. 'Aganglionozis' görülür. Proksimal segment dilate olur (Megakolon).<br>• <b>Meckel Divertikülü:</b> Gerçek bir divertiküldür (Tüm katları içerir). Ektopik mide veya pankreas dokusu içerebilir.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 İBH PATOLOJİSİ (ÜK vs CROHN)</div><div class='sum-body'>• <b>Crohn:</b> Transmural (Tam kat) inflamasyon, Kaldırım taşı görünümü, Skip (Atlamalı) lezyonlar, <b>Non-kazeifiye Granülomlar</b>.<br>• <b>Ülseratif Kolit:</b> Sadece Mukoza/Submukoza tutulumu, Sürekli yayılım, <b>Kript Apseleri</b>, Psödopolipler.</div></div><div class='sum-card sum-rx'><div class='sum-title'>🦠 DİĞER KOLİTLER</div><div class='sum-body'>• <b>İskemik Kolit:</b> Mukoza soluk/hemorajik, mikroskobide koagülasyon nekrozu.<br>• <b>Psödomembranöz Kolit:</b> C. difficile toksinlerine bağlı, mantar şeklinde (volkanik) fibrinopürülan eksuda.<br>• <b>Amebik Kolit:</b> 'Şişe biçimli' (Flask-shaped) ülserler.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: PATOLOĞUN GÖZÜNDEN İBH",
+        "desc": "Patoloji Laboratuvarı - Kolektomi Materyali İncelemesi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ MAKROSKOPİ ]</b>\n\nLaboratuvara gönderilen total kolektomi materyalini inceliyorsun. Rektumdan başlayıp tüm kolonu tutan, arada sağlam alan bırakmayan (sürekli), diffüz hemorajik ve ülserli bir mukoza görüyorsun.\n\nBu makroskopik görünüm hangi hastalığa daha çok uyar?",
+            "opts": [
+              { "txt": "Ülseratif Kolit", "type": "correct", "go": "s2" },
+              { "txt": "Crohn Hastalığı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MAKROSKOPİK FARKLAR ]</b>\n\nCrohn hastalığında lezyonlar 'Atlamalıdır' (Skip lesions), arada sağlam mukoza bulunur ve duvar kalınlaşmıştır. Sürekli ve sadece mukozal tutulum Ülseratif Kolit bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MİKROSKOPİ ]</b>\n\nÖrneklerden hazırlanan lamı mikroskoba koydun. İnflamasyonun sadece mukoza ve submukozada sınırlı olduğunu gördün. Kriptlerin içinde nötrofil birikimi var.\n\nBu karakteristik bulguya ne ad verilir?",
+            "opts": [
+              { "txt": "Kript Apsesi", "type": "correct", "go": "s3" },
+              { "txt": "Granülom", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ HİSTOLOJİK BULGU ]</b>\n\nGranülomlar (dev hücreler, epiteloid histiyositler) Crohn hastalığının tipik özelliğidir. Kript lümeninde nötrofil birikimi (Kript apsesi) Ülseratif Kolit için karakteristiktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KRONİKLİK ]</b>\n\nMukozada iyileşme ve rejenerasyon çabası sonucu oluşan, tümör olmayan polip benzeri yapılara rastladın. Bunlar nedir?",
+            "opts": [
+              { "txt": "İnflamatuvar Psödopolip", "type": "correct", "go": "s4" },
+              { "txt": "Adenomatöz Polip", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ POLİP TİPİ ]</b>\n\nAdenomatöz polipler neoplastiktir (tümör öncüsü). İBH'de görülenler ise inflamasyon sonrası kalan sağlam mukozanın kabarmasıyla oluşan 'Yalancı' (Psödo) poliplerdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nEğer bu hastada inflamasyon kas tabakasına kadar inip nöromusküler pleksusu hasara uğratsaydı ve kolon aşırı genişleseydi, hangi acil tablo gelişirdi?",
+            "opts": [
+              { "txt": "Toksik Megakolon", "type": "correct", "go": "s5" },
+              { "txt": "İnvajinasyon", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ACİL DURUM ]</b>\n\nÜlseratif kolitin en korkulan akut komplikasyonu, kolonun dilatasyonu ve toksisite ile giden Toksik Megakolondur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nPatolojik tanı: Kronik Aktif Ülseratif Kolit. Displazi veya kanser görülmedi. Rapor onaylandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: DOĞUŞTAN GELEN SORUN",
+        "desc": "Pediatrik Patoloji - Yenidoğan - Mekonyum Çıkaramama",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ KLİNİK BİLGİ ]</b>\n\nYenidoğan bir bebekte karın şişliği ve ilk 48 saatte mekonyum (ilk dışkı) çıkaramama öyküsü var. Rektal biyopsi gönderildi. Ön tanın nedir?",
+            "opts": [
+              { "txt": "Hirschsprung Hastalığı (Aganglionik Megakolon)", "type": "correct", "go": "s2" },
+              { "txt": "Nekrotizan Enterokolit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANI ]</b>\n\nNekrotizan enterokolit genelde prematürelerde ve iskemik/enfeksiyöz bir süreçtir. Mekonyum çıkaramama ve tam kat biyopsi endikasyonu Hirschsprung hastalığını düşündürür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ HİSTOLOJİ ]</b>\n\nBiyopsiyi mikroskopta inceliyorsun. Tanıyı koymak için submukoza ve kas tabakaları arasında neyi ARAMALISIN (ama bulamayacaksın)?",
+            "opts": [
+              { "txt": "Ganglion Hücreleri (Meissner ve Auerbach Pleksusları)", "type": "correct", "go": "s3" },
+              { "txt": "Goblet Hücreleri", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nHirschsprung hastalığının temeli, nöral krest hücrelerinin göç edememesi sonucu distal barsakta sinir hücresi (ganglion) olmamasıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ EK BULGU ]</b>\n\nGanglion hücrelerinin yokluğuna ek olarak, asetilkolinesteraz boyasında ne görülmesi tanıyı destekler?",
+            "opts": [
+              { "txt": "Hipertrofik Sinir Lifleri (Sinirlerin kalınlaşması)", "type": "correct", "go": "s4" },
+              { "txt": "Sinir liflerinin tamamen kaybolması", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ BOYAMA ]</b>\n\nGanglionlar yoktur ama preganglionik kolinerjik sinir lifleri (aksonlar) doku içinde hipertrofik ve düzensiz şekilde artmıştır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ MAKROSKOPİ ]</b>\n\nBu bebekte ameliyatla çıkarılan barsağın hangi kısmı 'Dardır' (Hastalıklı olan kısım)?",
+            "opts": [
+              { "txt": "Distaldeki Aganglionik Segment (Rektum/Sigmoid)", "type": "correct", "go": "s5" },
+              { "txt": "Proksimaldeki Ganglionik Segment", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TUZAK ]</b>\n\nHasta olan (sinirsiz) kısım kasılamadığı için DAR kalır. Onun arkasındaki sağlam kısım dışkıyı itmeye çalıştığı için genişler (MEGAkolon). Yani genişleyen kısım aslında sağlamdır!",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nRektum biyopsisinde aganglionozis doğrulandı. Aganglionik segment cerrahi olarak çıkarıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: İSKEMİ VE NEKROZ",
+        "desc": "Otopsi/Cerrahi - 70 Yaş Erkek - Ani Karın Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ MAKROSKOPİ ]</b>\n\n70 yaşında aterosklerotik kalp hastalığı olan hastada ani karın ağrısı ve kanlı ishal gelişmiş. Rezeke edilen barsak segmenti koyu kırmızı, ödemli ve yer yer siyahlaşmış (Gangrenöz).\n\nBu görüntü neyi ifade eder?",
+            "opts": [
+              { "txt": "İskemik Enterokolit (İnfarktüs)", "type": "correct", "go": "s2" },
+              { "txt": "Divertikülit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ GÖRÜNÜM ]</b>\n\nSiyahlaşma ve yaygın hemoraji doku ölümünü (nekroz/infarkt) gösterir. Divertikülit fokal bir inflamasyondur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MİKROSKOPİ ]</b>\n\nMikroskopta mukozada ne tür bir nekroz görmeyi beklersin?",
+            "opts": [
+              { "txt": "Koagülasyon Nekrozu", "type": "correct", "go": "s3" },
+              { "txt": "Kazeifikasyon Nekrozu", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ NEKROZ TİPİ ]</b>\n\nİskemik hasarlarda (beyin hariç) tipik olarak hücre çatısının korunduğu Koagülasyon Nekrozu görülür. Kazeifikasyon tüberkülozda olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ETKEN ]</b>\n\nİskemik kolit en sık kolonun kanlanmasının en zayıf olduğu 'Watershed' (Su bölümü) alanlarında görülür. Burası neresidir?",
+            "opts": [
+              { "txt": "Splenik Fleksura (Griffith noktası)", "type": "correct", "go": "s4" },
+              { "txt": "Çekum", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ANATOMİ ]</b>\n\nSplenik fleksura, Superior ve İnferior Mezenterik arterlerin beslenme alanlarının birleştiği, kan akımının en hassas olduğu bölgedir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nTanı: Transmural İntestinal İnfarktüs. Etyoloji: Mezenterik Arter Trombozu.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Hirschsprung hastalığında patoloji nedir?", "a": ["Distal kolonda ganglion hücrelerinin yokluğu (Aganglionozis)", "Mukozal atrofi", "Kas hipertrofisi", "Divertikül oluşumu"], "correct": 0 },
+      { "q": "Meckel divertikülünün 'Gerçek Divertikül' olmasının nedeni nedir?", "a": ["Barsak duvarının tüm katlarını (Mukoza, Submukoza, Kas, Seroza) içermesi", "Sadece mukozanın fıtıklaşması", "Çok büyük olması", "Mide dokusu içermesi"], "correct": 0 },
+      { "q": "Crohn hastalığının en karakteristik mikroskobik bulgusu nedir?", "a": ["Kazeifiye olmayan Granülomlar", "Kript apseleri", "Adenokarsinom", "Taşlı yüzük hücreleri"], "correct": 0 },
+      { "q": "Ülseratif Kolit'te inflamasyon barsak duvarının hangi katmanlarında sınırlıdır?", "a": ["Mukoza ve Submukoza", "Tüm katlar (Transmural)", "Sadece Seroza", "Sadece Kas tabakası"], "correct": 0 },
+      { "q": "Hangi hastalıkta 'Kaldırım Taşı' (Cobblestone) görünümü ve 'Atlamalı' (Skip) lezyonlar görülür?", "a": ["Crohn Hastalığı", "Ülseratif Kolit", "İskemik Kolit", "Amebik Kolit"], "correct": 0 },
+      { "q": "Psödomembranöz kolitin en sık nedeni nedir?", "a": ["Antibiyotik kullanımı sonrası C. difficile toksinleri", "İskemi", "Viral enfeksiyon", "Otoimmünite"], "correct": 0 },
+      { "q": "Amebik kolitte (Entamoeba histolytica) görülen tipik ülser şekli nasıldır?", "a": ["Şişe biçimli (Flask-shaped) ülser", "Yüzeyel erozyon", "Zımba deliği ülser", "Lineer ülser"], "correct": 0 },
+      { "q": "Whipple hastalığında lamina propriada biriken, PAS (+) boyanan makrofajların içinde ne vardır?", "a": ["Tropheryma whipplei bakterisi", "Yağ damlacıkları", "Amiloid", "Demir"], "correct": 0 },
+      { "q": "İskemik kolitin en sık görüldüğü 'Watershed' alanı neresidir?", "a": ["Splenik Fleksura", "Rektum", "Çekum", "İleum"], "correct": 0 },
+      { "q": "Çölyak hastalığında ince barsak biyopsisinde görülen temel değişiklik nedir?", "a": ["Villus atrofisi ve kript hiperplazisi", "Granülom oluşumu", "Ganglion kaybı", "Psödomembran"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Hirschsprung", "B": "Aganglionozis (Rektumda sinir yok)" },
+      { "A": "Meckel", "B": "Gerçek divertikül (Vitellin kanal artığı)" },
+      { "A": "Crohn", "B": "Transmural, Granülom, Atlamalı" },
+      { "A": "Ülseratif Kolit", "B": "Mukozal, Sürekli, Kript Apsesi" },
+      { "A": "İskemik Kolit", "B": "Koagülasyon nekrozu, Splenik fleksura" },
+      { "A": "Psödomembranöz", "B": "C. difficile, Volkanik eksuda" },
+      { "A": "Amebik Kolit", "B": "Flask-shaped (Şişe) ülser" },
+      { "A": "Whipple", "B": "PAS (+) Makrofajlar" }
+    ],
+    "decypher": [
+      {
+        "text": "{Hirschsprung} hastalığı, nöral krest hücrelerinin göç edememesi sonucu distal barsakta {ganglion} hücrelerinin bulunmamasıdır. Bu segment kasılamadığı için dardır, proksimalindeki sağlam segment ise genişleyerek {Megakolon} oluşturur.",
+        "decoys": ["Crohn", "epitel", "daralır", "polip"]
+      },
+      {
+        "text": "{Crohn} hastalığında inflamasyon barsak duvarının tüm katlarını ({transmural}) tutar ve granülomlar görülebilir. {Ülseratif} kolitte ise inflamasyon sadece mukoza ve submukozada sınırlıdır ve {kript} apseleri tipiktir.",
+        "decoys": ["İskemik", "yüzeyel", "lenfosit", "damar"]
+      },
+      {
+        "text": "{Meckel} divertikülü, omfalomezenterik kanalın kapanmaması sonucu oluşan {gerçek} bir divertiküldür. Genellikle ileumda bulunur ve ektopik {mide} veya pankreas dokusu içerebilir.",
+        "decoys": ["Zenker", "yalancı", "karaciğer", "kolon"]
+      }
+    ]
+  }
+}

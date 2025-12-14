@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "MİDE HASTALIKLARI PATOLOJİSİ",
+    "tag": "PATOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 GASTRİTLER</div><div class='sum-body'>• <b>H. Pylori Gastriti:</b> En sık kronik gastrit nedenidir. Antrumu tutar. Nötrofil aktivitesi ve lenfoid folikül oluşumu tipiktir.<br>• <b>Otoimmün Gastrit:</b> Korpus/Fundus tutulur. Paryetal hücrelere karşı antikor vardır. <b>Pernisiyöz Anemi</b> (B12 eksikliği) ve Aklorhidri görülür.<br>• <b>Reaktif Gastropati:</b> NSAİİ ve safra reflüsü kaynaklıdır. Foveolar hiperplazi görülür, inflamasyon azdır.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 MİDE TÜMÖRLERİ (TUS)</div><div class='sum-body'>• <b>İntestinal Tip Ca:</b> Bez yapıları oluşturur. Metaplazi zemininde gelişir. İleri yaş, erkek.<br>• <b>Diffüz Tip (Taşlı Yüzük) Ca:</b> E-Cadherin mutasyonu. Mide duvarını kalınlaştırır (Linitis Plastica). Genç, kadın.<br>• <b>GIST:</b> Cajal hücrelerinden köken alır. c-KIT (CD117) pozitiftir.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 ÖZEL TABLOLAR</div><div class='sum-body'>• <b>MALT Lenfoma:</b> H. Pylori ile ilişkili lenfomadır. Erken evrede antibiyotikle geriler.<br>• <b>Zollinger-Ellison:</b> Gastrinoma kaynaklı çoklu ülserler.<br>• <b>Menetrier:</b> TGF-alfa artışı, dev rugalar, protein kaybı.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: BAKTERİYEL İSTİLA",
+        "desc": "Poliklinik - 45 Yaş Erkek - İnatçı Dispepsi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n45 yaşında erkek hasta. 6 aydır yemeklerden sonra şişkinlik, kazınma hissi ve epigastrik ağrı şikayetiyle geldi. Endoskopide antrumda hiperemi (kızarıklık) ve nodülarite görüldü.\n\nBiyopside 'Lamina propriada yoğun plazma hücresi ve nötrofil infiltrasyonu' raporlandı. En olası etken?",
+            "opts": [
+              { "txt": "Helicobacter Pylori", "type": "correct", "go": "s2" },
+              { "txt": "Otoimmün Gastrit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YANLIŞ YERLEŞİM ]</b>\n\nOtoimmün gastrit korpus ve fundusu tutar, antrumu korur. Antral gastrit ve aktif inflamasyon (nötrofil) H. Pylori'nin tipik bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ HİSTOLOJİ ]</b>\n\nBiyopside ayrıca 'Lenfoid Folikül' oluşumları dikkat çekiyor. H. Pylori gastritinde lenfoid folikül varlığı, ileride hangi malignitenin gelişimi için risk oluşturur?",
+            "opts": [
+              { "txt": "MALT Lenfoma", "type": "correct", "go": "s3" },
+              { "txt": "GIST (Gastrointestinal Stromal Tümör)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TÜMÖR KÖKENİ ]</b>\n\nGIST, Cajal hücrelerinden köken alır ve enfeksiyonla ilişkisi yoktur. H. Pylori, lenfoid dokuyu uyararak MALT Lenfoma riskini artırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KARSİNOGENEZ ]</b>\n\nHasta tedavi edilmezse süreç nasıl ilerler? (Correa Kaskadı). Sıralama nasıl olmalıdır?",
+            "opts": [
+              { "txt": "Kronik Gastrit -> Atrofi -> İntestinal Metaplazi -> Displazi -> Kanser", "type": "correct", "go": "s4" },
+              { "txt": "Kronik Gastrit -> Polip -> Kanser", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YANLIŞ YOLAK ]</b>\n\nMide kanserinin (İntestinal tip) gelişiminde 'Atrofi ve Metaplazi' basamakları kritiktir. Polip-Kanser dizisi kolonda daha belirgindir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ VİRÜLANS ]</b>\n\nBu hastadaki bakterinin kanser riskini artıran en önemli virülans faktörü (Onkoprotein) hangisidir?",
+            "opts": [
+              { "txt": "CagA (Sitotoksin ilişkili gen A)", "type": "correct", "go": "s5" },
+              { "txt": "Üreaz", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ETKİ MEKANİZMASI ]</b>\n\nÜreaz bakterinin asitte yaşamasını sağlar. CagA ise hücre içine girip sinyal yolaklarını bozarak karsinogenezi tetikler.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya eradikasyon tedavisi (Antibiyotik + PPI) verildi. Metaplazi takibi için kontrol endoskopisi planlandı. MALToma ve Kanser riski azaltıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: SİNSİ DUVAR",
+        "desc": "Onkoloji - 35 Yaş Kadın - Erken Doyma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n35 yaşında kadın hasta. Son 3 aydır 'erken doyma', kilo kaybı ve karında dolgunluk şikayeti var. Ailede mide kanseri öyküsü yok. Endoskopide midede belirgin bir kitle görülmedi ama mide duvarı sert ve genişlemiyor.\n\nBu görünüme (Matara Mide) ne ad verilir?",
+            "opts": [
+              { "txt": "Linitis Plastica", "type": "correct", "go": "s2" },
+              { "txt": "Menetrier Hastalığı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ GÖRÜNÜM ]</b>\n\nMenetrier'de dev rugalar (kıvrımlar) görülür. Linitis Plastica'da ise duvar diffüz olarak kalınlaşmış, sertleşmiş ve peristaltizmi kaybolmuştur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ HİSTOLOJİ ]</b>\n\nDerin biyopsi alındı. Mikroskopta 'Taşlı Yüzük' (Signet Ring) hücreleri görüldü. Lauren sınıflamasına göre bu hangi tip mide kanseridir?",
+            "opts": [
+              { "txt": "Diffüz Tip Adenokarsinom", "type": "correct", "go": "s3" },
+              { "txt": "İntestinal Tip Adenokarsinom", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ SINIFLAMA ]</b>\n\nİntestinal tip bez yapıları oluşturur ve metaplazi zemininde gelişir. Diffüz tip ise tek tek dağılan taşlı yüzük hücrelerinden oluşur ve daha genç hastalarda görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ GENETİK ]</b>\n\nDiffüz tip mide kanserinde suçlanan temel genetik bozukluk (Hücrelerin birbirine yapışmasını engelleyen) nedir?",
+            "opts": [
+              { "txt": "E-Cadherin (CDH1) Mutasyonu", "type": "correct", "go": "s4" },
+              { "txt": "APC Mutasyonu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MOLEKÜLER ]</b>\n\nAPC ailesel polipoziste görülür. E-Cadherin kaybı, tümör hücrelerinin birbirinden ayrılarak (diffüz) yayılmasını sağlar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ METASTAZ ]</b>\n\nHastanın muayenesinde her iki overde (yumurtalık) kitle saptandı. Mide kanserinin overe metastazına ne ad verilir?",
+            "opts": [
+              { "txt": "Krukenberg Tümörü", "type": "correct", "go": "s5" },
+              { "txt": "Virchow Nodülü", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ İSİMLENDİRME ]</b>\n\nVirchow sol supraklavikuler lenf nodu metastazıdır. Overe metastaz Krukenberg tümörüdür ve genelde taşlı yüzük hücrelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta evre 4 diffüz mide kanseri tanısı aldı. Genç yaşta ve kadınlarda daha sık görülen, prognozu kötü olan bu tipin genetik geçişli olabileceği ailesine bildirildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KANSIZLIK VE UNUTKANLIK",
+        "desc": "Dahiliye - 60 Yaş Kadın - B12 Eksikliği",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n60 yaşında kadın hasta. Halsizlik, çarpıntı ve dilde yanma (Glossit) şikayeti var. Hemogramda Makrositer Anemi (MCV > 100) saptandı. B12 düzeyi çok düşük.\n\nMidedeki hangi patoloji buna neden olabilir?",
+            "opts": [
+              { "txt": "Otoimmün Gastrit", "type": "correct", "go": "s2" },
+              { "txt": "H. Pylori Gastriti", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nH. Pylori demir eksikliği yapabilir ama B12 emilimi için gereken İntrinsik Faktör, Otoimmün Gastritte (paryetal hücre kaybı) azalır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ENDOSKOPI ]</b>\n\nEndoskopide mide gövdesinde (Korpus) mukoza incelmiş, damarlar belirginleşmiş (Atrofi). Antrum ise tamamen normal.\n\nBu tutulum paterni (Korpus baskın) hangi gastriti destekler?",
+            "opts": [
+              { "txt": "Tip A (Otoimmün) Gastrit", "type": "correct", "go": "s3" },
+              { "txt": "Tip B (Bakteriyel) Gastrit", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TUTULUM YERİ ]</b>\n\nTip B (Bakteriyel/H.Pylori) gastriti en sık ANTRUMU tutar. Tip A (Otoimmün) gastrit, paryetal hücrelerin olduğu KORPUSU tutar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ LABORATUVAR ]</b>\n\nTanıyı kesinleştirmek için kanda hangi antikora bakmalısın?",
+            "opts": [
+              { "txt": "Anti-Paryetal Hücre ve Anti-İntrinsik Faktör", "type": "correct", "go": "s4" },
+              { "txt": "Anti-Mitokondriyal Antikor (AMA)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ SEROLOJİ ]</b>\n\nAMA, Primer Biliyer Kolanjit (PBC) belirtecidir. Otoimmün gastritte hedef paryetal hücrelerdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nBu hastada asit salgısı azalmıştır (Aklorhidri). Buna tepki olarak G hücreleri aşırı Gastrin salgılar (Hipergastrinemi). Bu durum hangi tümör riskini artırır?",
+            "opts": [
+              { "txt": "Nöroendokrin Tümör (Karsinoid)", "type": "correct", "go": "s5" },
+              { "txt": "GIST", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ETKİ MEKANİZMASI ]</b>\n\nYüksek Gastrin, ECL hücrelerini (Nöroendokrin) uyarır ve hiperplaziye/tümöre yol açar. GIST ile ilgisi yoktur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya ömür boyu B12 vitamini replasmanı başlandı. Nöroendokrin tümör ve adenokarsinom riski için yıllık endoskopi planlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Kronik gastritin dünya genelinde en sık nedeni nedir?", "a": ["Helicobacter Pylori", "Otoimmünite", "NSAİİ", "Alkol"], "correct": 0 },
+      { "q": "Hangi mide kanseri tipinde E-Cadherin mutasyonu ve 'Taşlı Yüzük' hücreleri görülür?", "a": ["Diffüz Tip Adenokarsinom", "İntestinal Tip Adenokarsinom", "MALT Lenfoma", "GIST"], "correct": 0 },
+      { "q": "Otoimmün gastritte vücudun hangi bölgesindeki hücreler hedef alınır?", "a": ["Korpus ve Fundus (Paryetal Hücreler)", "Antrum (G Hücreleri)", "Kardia", "Pilor"], "correct": 0 },
+      { "q": "Gastrointestinal Stromal Tümörlerin (GIST) köken aldığı hücre hangisidir?", "a": ["Cajal'ın İnterstisyel Hücreleri", "Paryetal Hücreler", "Şef Hücreler", "Endotel Hücreleri"], "correct": 0 },
+      { "q": "H. Pylori enfeksiyonu ile en güçlü ilişkisi olan lenfoma türü hangisidir?", "a": ["MALT Lenfoma", "Hodgkin Lenfoma", "Burkitt Lenfoma", "T Hücreli Lenfoma"], "correct": 0 },
+      { "q": "Zollinger-Ellison sendromunda görülen patoloji nedir?", "a": ["Gastrinoma ve çoklu peptik ülserler", "İnsülinoma", "Pilor stenozu", "Atrofik gastrit"], "correct": 0 },
+      { "q": "Mide kanserinin sol supraklavikuler lenf noduna metastazına ne ad verilir?", "a": ["Virchow Nodülü", "Sister Mary Joseph Nodülü", "Krukenberg Tümörü", "Irish Nodülü"], "correct": 0 },
+      { "q": "NSAİİ (Ağrı kesici) kullanımına bağlı gelişen 'Reaktif Gastropati'de histolojik olarak ne görülür?", "a": ["Foveolar Hiperplazi ve az inflamasyon", "Yoğun nötrofil infiltrasyonu", "Atrofi", "İntestinal metaplazi"], "correct": 0 },
+      { "q": "Pernisiyöz aneminin nedeni nedir?", "a": ["İntrinsik faktör eksikliğine bağlı B12 emilememesi", "Demir eksikliği", "Folat eksikliği", "Kemik iliği yetmezliği"], "correct": 0 },
+      { "q": "Menetrier hastalığının en tipik bulgusu nedir?", "a": ["Dev gastrik rugalar ve protein kaybı", "Çoklu ülserler", "Kitle", "Kanama"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "H. Pylori", "B": "Antral gastrit, Nötrofil aktivitesi" },
+      { "A": "Otoimmün Gastrit", "B": "Korpus atrofisi, B12 eksikliği" },
+      { "A": "İntestinal Tip Ca", "B": "Metaplazi zemininde, bez yapısı" },
+      { "A": "Diffüz Tip Ca", "B": "Taşlı yüzük hücresi, Linitis Plastica" },
+      { "A": "GIST", "B": "Cajal hücresi, CD117 (+)" },
+      { "A": "MALT Lenfoma", "B": "H. Pylori eradikasyonu ile geriler" },
+      { "A": "Zollinger-Ellison", "B": "Gastrinoma, asit hipersekresyonu" },
+      { "A": "Krukenberg", "B": "Midenin overe metastazı" }
+    ],
+    "decypher": [
+      {
+        "text": "Helicobacter Pylori, mide mukozasında {Antrum} bölgesine yerleşir ve kronik aktif gastrite neden olur. Bakterinin {CagA} gibi virülans faktörleri kanser riskini artırır. Histolojide lamina propriada {nötrofil} görülmesi aktiviteyi gösterir.",
+        "decoys": ["Korpus", "VacA", "lenfosit", "özofagus"]
+      },
+      {
+        "text": "Mide kanserinin {Diffüz} tipinde, tümör hücreleri birbirine yapışamaz ve mide duvarı boyunca yayılır. Bu durum mideyi sertleştirerek {Linitis} Plastica (Matara Mide) görünümüne yol açar. Hücreler tipik olarak {taşlı} yüzük görünümündedir.",
+        "decoys": ["İntestinal", "Polipoid", "yassı", "kübik"]
+      },
+      {
+        "text": "Otoimmün gastritte, {paryetal} hücrelere karşı gelişen antikorlar asit ve {intrinsik} faktör üretimini bozar. Bu durum B12 vitamini eksikliğine ve {Pernisiyöz} anemiye neden olur.",
+        "decoys": ["şef", "pepsin", "Hemolitik", "antral"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "PANKREAS VE EKSTRA HEPATİK BİLİYER PATOLOJİ",
+    "tag": "PATOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 PANKREAS HASTALIKLARI</div><div class='sum-body'>• <b>Akut Pankreatit:</b> En sık neden safra taşı ve alkoldür. Enzimlerin (Tripsin) asiner hücre içinde aktifleşmesiyle 'Otodigesyon' (Kendi kendini sindirme) oluşur.<br>• <b>Kronik Pankreatit:</b> En sık neden alkolizmdir. Parankim kaybı ve fibrozis ile gider.<br>• <b>Psödokist:</b> Akut pankreatit sonrası en sık komplikasyondur. Epitel döşemesi YOKTUR.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TÜMÖRLER</div><div class='sum-body'>• <b>Duktal Adenokarsinom:</b> En sık pankreas kanseridir. En sık 'Baş' kısmına yerleşir (Ağrısız Sarılık).<br>• <b>Riskler:</b> Sigara, Kronik Pankreatit, KRAS mutasyonu.<br>• <b>Kistik Tümörler:</b> Seröz (Benign), Müsinöz (Premalign/Kadın), İPMN (Erkek/Baş).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 SAFRA YOLLARI</div><div class='sum-body'>• <b>Kolelithiazis:</b> Kolesterol taşları (Sarı/Radyolusent) ve Pigment taşları (Siyah/Radyopak).<br>• <b>Porselen Kese:</b> Kronik kolesistitte duvarda kalsifikasyon. Kanser riski artmıştır.<br>• <b>Klatskin Tümörü:</b> Hepatik kanal bifurkasyonunda (Hilusta) yerleşen kolanjiokarsinom.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KUŞAK TARZI AĞRI",
+        "desc": "Acil Servis - 45 Yaş Erkek - Alkol Öyküsü",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n45 yaşında erkek hasta, ağır bir yemek ve alkol alımı sonrası başlayan, epigastriumda kuşak tarzında ve sırta vuran çok şiddetli karın ağrısı ile geldi. Öne eğilmekle ağrısı hafifliyor.\n\nİlk şüphen nedir?",
+            "opts": [
+              { "txt": "Akut Pankreatit", "type": "correct", "go": "s2" },
+              { "txt": "Peptik Ülser Perforasyonu", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK TANI ]</b>\n\nKuşak tarzı ve sırta vuran ağrı pankreatit için tipiktir. Perforasyonda 'tahta karın' ve peritoneal irritasyon bulguları ön planda olurdu.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ LABORATUVAR ]</b>\n\nAmilaz ve Lipaz değerleri çok yüksek (>3 kat). Tanı: Akut Pankreatit. Bu hastalığın patofizyolojisindeki temel olay nedir?",
+            "opts": [
+              { "txt": "Pankreas enzimlerinin (Tripsin) organ içinde erken aktifleşmesi (Otodigesyon).", "type": "correct", "go": "s3" },
+              { "txt": "Bakteriyel enfeksiyon.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nAkut pankreatit primer olarak enfeksiyöz değil, kimyasal bir olaydır. Enzimler kendi dokusunu sindirir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ MORFOLOJİ ]</b>\n\nOtodigesyon sonucu pankreas çevresindeki yağ dokusunda ne tür bir nekroz görülmesini beklersin?",
+            "opts": [
+              { "txt": "Yağ Nekrozu (Sabunlaşma)", "type": "correct", "go": "s4" },
+              { "txt": "Koagülasyon Nekrozu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ NEKROZ TİPİ ]</b>\n\nLipaz enziminin yağ dokusunu parçalaması ve kalsiyumla birleşmesi sonucu tebeşir beyazı 'Yağ Nekrozu' odakları oluşur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nHasta iyileşti ancak 3 hafta sonra karında ele gelen bir kitle oluştu. BT'de pankreas komşuluğunda, içi sıvı dolu, epiteli OLMAYAN bir lezyon görüldü. Bu nedir?",
+            "opts": [
+              { "txt": "Pankreatik Psödokist", "type": "correct", "go": "s5" },
+              { "txt": "Müsinöz Kistadenom", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nPsödokistler (Yalancı kist) gerçek bir epitel döşemesine sahip değildir, granülasyon dokusu ile çevrilidir. Neoplazik kistlerde (Kistadenom) epitel vardır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nPsödokist tanısı doğrulandı ve takibe alındı. Akut pankreatitin en sık görülen sekeli olduğu not edildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: SESSİZ SARILIK",
+        "desc": "Onkoloji - 60 Yaş Erkek - Ağrısız Sarılık",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n60 yaşında erkek hasta. Gözlerde sararma, kaşıntı ve belirgin kilo kaybı şikayetiyle geldi. Karın ağrısı tariflemiyor. Sigara öyküsü yoğun.\n\nFizik muayenede sağ üst kadranda 'ağrısız, ele gelen bir kese' (Courvoisier bulgusu) saptadın.\n\nEn olası tanı?",
+            "opts": [
+              { "txt": "Pankreas Başı Kanseri", "type": "correct", "go": "s2" },
+              { "txt": "Safra Kesesi Taşı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK BULGU ]</b>\n\nTaş olsaydı ağrı olurdu ve kese fibrotik olduğu için şişmezdi (Courvoisier Kanunu). Ağrısız sarılık ve şiş kese, pankreas başı tümörünü işaret eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ GENETİK ]</b>\n\nPankreas duktal adenokarsinomunda en sık görülen onkogen mutasyonu hangisidir?",
+            "opts": [
+              { "txt": "KRAS", "type": "correct", "go": "s3" },
+              { "txt": "APC", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MOLEKÜLER PATOLOJİ ]</b>\n\nPankreas kanserlerinin %90'ında KRAS onkogen mutasyonu görülür. p16, p53 ve SMAD4 ise tümör süpresör genlerdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ HİSTOLOJİ ]</b>\n\nBiyopsi alındı. Tümörün mikroskobik incelemesinde bez yapıları (glandlar) ve çevresinde yoğun fibrotik stroma (Desmoplazi) görüldü.\n\nBu stroma özelliği tümöre nasıl bir kıvam verir?",
+            "opts": [
+              { "txt": "Sert (Scirrhous)", "type": "correct", "go": "s4" },
+              { "txt": "Yumuşak ve kanamalı", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MAKROSKOPİ ]</b>\n\nPankreas kanserleri yoğun desmoplastik reaksiyon nedeniyle tipik olarak sert, gri-beyaz kitlelerdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ PARANEOPLASTİK ]</b>\n\nHastanın bacağında gezici tarzda tromboflebit (damar iltihabı) atakları olduğu öğrenildi. Bu bulgunun özel adı nedir?",
+            "opts": [
+              { "txt": "Trousseau Belirtisi", "type": "correct", "go": "s5" },
+              { "txt": "Virchow Nodülü", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ SENDROM ]</b>\n\nVirchow sol supraklavikuler lenf nodudur. Gezici tromboflebit, pankreas ve akciğer kanserlerinde görülen Trousseau sendromudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta ileri evre pankreas adenokarsinomu tanısı aldı. Baş kısmında olduğu için erken sarılık verdi ancak prognoz yine de ciddidir.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: SAFRA KESESİ",
+        "desc": "Poliklinik - 40 Yaş Kadın - Yemek Sonrası Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ RİSK FAKTÖRLERİ ]</b>\n\n40 yaşında, obez, çok doğum yapmış kadın hasta (Fat, Female, Forty, Fertile). Yağlı yemeklerden sonra sağ üst kadranda ağrı şikayeti var.\n\nEn olası tanı nedir?",
+            "opts": [
+              { "txt": "Kolelithiazis (Safra Taşı)", "type": "correct", "go": "s2" },
+              { "txt": "Pankreas Kanseri", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK ]</b>\n\n4F kuralı (Fat, Female, Forty, Fertile) safra taşı (kolesterol taşı) için klasik risk faktörleridir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TAŞ TİPLERİ ]</b>\n\nBatı toplumlarında ve bu hastada en sık görülen, sarı renkli, radyolusent (röntgende görülmeyen) taşların içeriği nedir?",
+            "opts": [
+              { "txt": "Kolesterol Taşları", "type": "correct", "go": "s3" },
+              { "txt": "Pigment Taşları", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TAŞ KİMYASI ]</b>\n\nPigment taşları (siyah/kahverengi) bilirubin içerir ve hemolitik anemilerde görülür. En sık görülen (%80) kolesterol taşlarıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nHastada yıllar içinde 'Kronik Kolesistit' gelişmiş. Radyolojide safra kesesi duvarının kireçlendiği (Kalsifikasyon) görülüyor.\n\nBu görünüme (Porselen Kese) neden dikkat edilmelidir?",
+            "opts": [
+              { "txt": "Safra Kesesi Karsinomu riski yüksektir.", "type": "correct", "go": "s4" },
+              { "txt": "Kese delinebilir.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KANSER RİSKİ ]</b>\n\nPorselen safra kesesi, kronik inflamasyon sonucu oluşur ve kanser gelişme riski belirgin şekilde artmıştır. Profilaktik kolesistektomi gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ HİSTOLOJİ ]</b>\n\nSafra kesesi çıkarıldı. Patolojide kronik kolesistite özgü, mukozanın kas tabakası içine doğru cepleşmesi (sinüs yapması) görüldü. Bu sinüslerin adı nedir?",
+            "opts": [
+              { "txt": "Rokitansky-Aschoff Sinüsleri", "type": "correct", "go": "s5" },
+              { "txt": "Mallory Cisimcikleri", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ MİKROSKOPİ ]</b>\n\nMallory cisimciği karaciğerde (alkolik hepatit) görülür. Rokitansky-Aschoff sinüsleri kronik kolesistitin tipik bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya Laparoskopik Kolesistektomi yapıldı. Porselen kese zemininde gelişebilecek kanser önlendi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Pankreasın en sık görülen konjenital anomalisi nedir?", "a": ["Pankreas Divisum", "Annüler Pankreas", "Ektopik Pankreas", "Agenezi"], "correct": 0 },
+      { "q": "Akut pankreatitin en sık iki nedeni nedir?", "a": ["Safra Taşları ve Alkol", "Travma ve İlaçlar", "Hiperlipidemi ve Hiperkalsemi", "Enfeksiyon ve İskemi"], "correct": 0 },
+      { "q": "Akut pankreatitte yağ nekrozu sonucu kalsiyum birikmesine ne ad verilir?", "a": ["Sabunlaşma (Saponifikasyon)", "Kalsifikasyon", "Ossifikasyon", "Petrifikasyon"], "correct": 0 },
+      { "q": "Pankreas kanserlerinin (Duktal Adenokarsinom) en sık yerleşim yeri neresidir?", "a": ["Pankreas Başı (%60)", "Gövde", "Kuyruk", "Diffüz"], "correct": 0 },
+      { "q": "Pankreas kanserinde görülen 'Gezici Tromboflebit' tablosuna ne ad verilir?", "a": ["Trousseau Sendromu", "Budd-Chiari Sendromu", "Mallory-Weiss Sendromu", "Zollinger-Ellison Sendromu"], "correct": 0 },
+      { "q": "Seröz Kistadenomlar genellikle benign midir, malign mi?", "a": ["Benign (Hemen her zaman)", "Malign", "Premalign", "Değişkendir"], "correct": 0 },
+      { "q": "Müsinöz Kistik Neoplaziler (MCN) en sık hangi hasta grubunda ve nerede görülür?", "a": ["Kadınlarda, Gövde/Kuyrukta", "Erkeklerde, Başta", "Çocuklarda, Başta", "Yaşlılarda, Diffüz"], "correct": 0 },
+      { "q": "Safra kesesi taşlarının (Kolelithiazis) en sık görülen tipi hangisidir?", "a": ["Kolesterol Taşları", "Siyah Pigment Taşları", "Kahverengi Pigment Taşları", "Kalsiyum Taşları"], "correct": 0 },
+      { "q": "Ekstrahepatik safra yollarının (özellikle Hilar bölge) kanserine ne ad verilir?", "a": ["Klatskin Tümörü", "Wilms Tümörü", "Krukenberg Tümörü", "Warthin Tümörü"], "correct": 0 },
+      { "q": "Kronik kolesistitte görülen, mukozanın kas tabakası içine fıtıklaşmasına ne denir?", "a": ["Rokitansky-Aschoff Sinüsleri", "Crypt Apseleri", "Mallory Cisimleri", "Lewy Cisimleri"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Akut Pankreatit", "B": "Yağ Nekrozu / Otodigesyon" },
+      { "A": "Kronik Pankreatit", "B": "Fibrozis / Kalsifikasyon / Alkolizm" },
+      { "A": "Psödokist", "B": "Epitel döşemesi olmayan kist" },
+      { "A": "Pankreas Ca", "B": "KRAS mutasyonu / Desmoplazi" },
+      { "A": "Trousseau", "B": "Gezici Tromboflebit" },
+      { "A": "Courvoisier", "B": "Ağrısız, ele gelen safra kesesi" },
+      { "A": "Klatskin", "B": "Hilar Kolanjiokarsinom" },
+      { "A": "Porselen Kese", "B": "Kalsifiye safra kesesi (Kanser riski)" }
+    ],
+    "decypher": [
+      {
+        "text": "Akut pankreatit, pankreas enzimlerinin organ içinde {erken} aktivasyonu sonucu kendi kendini sindirmesi ({otodigesyon}) olayıdır. En sık nedenler safra taşları ve {alkol} kullanımıdır.",
+        "decoys": ["geç", "bakteriyel", "travma", "sigara"]
+      },
+      {
+        "text": "Pankreas duktal adenokarsinomu en sık pankreasın {baş} kısmına yerleşir ve bu nedenle {sarılık} erken bulgu verir. Gövde ve kuyruk tümörleri ise sinsi seyreder.",
+        "decoys": ["kuyruk", "ağrı", "kanama", "kist"]
+      },
+      {
+        "text": "Safra kesesi taşlarının çoğu {kolesterol} yapısındadır. Pigment taşları ise {bilirubin} tuzlarından oluşur ve genellikle hemolitik anemilerde görülür.",
+        "decoys": ["kalsiyum", "protein", "yağ", "demir"]
+      }
+    ]
+  }
+}

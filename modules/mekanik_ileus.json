@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "title": "MEKANİK BARSAK TIKANIKLIĞI VE İLEUS",
+    "tag": "GENEL CERRAHİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 MEKANİK vs ADİNAMİK</div><div class='sum-body'>• <b>Mekanik İleus:</b> Fiziksel bir engel vardır (Yapışıklık, Tümör, Fıtık). Barsak bu engeli aşmak için çok çalışır (Hiperperistaltizm -> <b>Metalik Ses</b>).<br>• <b>Adinamik (Paralitik) İleus:</b> Engel yoktur, motor aktivite durmuştur (Hipokalemi, Peritonit). Barsak sessizdir (<b>Sessiz Batın</b>).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS İPUÇLARI</div><div class='sum-body'>• <b>En Sık Nedenler:</b> İnce barsakta <b>Brid</b> (Yapışıklık), Kalın barsakta <b>Kanser</b>.<br>• <b>Strangülasyon:</b> Kan akımının bozulmasıdır. Ateş, taşikardi, lökositoz ve sürekli ağrı varsa ACİL CERRAHİ gerekir.<br>• <b>Radyoloji:</b> Ayakta Direkt Batın Grafisinde (ADBG) <b>Hava-Sıvı Seviyeleri</b> tipiktir.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ PRENSİPLERİ</div><div class='sum-body'>• <b>Konservatif:</b> Strangülasyon yoksa -> Nazogastrik (NG) sonda ile dekompresyon + IV Sıvı/Elektrolit.<br>• <b>Cerrahi:</b> Strangülasyon, perforasyon veya konservatif tedaviye yanıtsızlık durumunda.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: ESKİ AMELİYAT İZİ",
+        "desc": "Acil Servis - 45 Yaş Erkek - Kusma ve Şişkinlik",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n45 yaşında erkek hasta. 1 gündür devam eden karın ağrısı, kusma ve gaz-gaita çıkaramama şikayetiyle geldi. Özgeçmişinde 10 yıl önce Apandektomi öyküsü var.\n\nFizik muayenede batın distandü (şiş). Oskültasyonda (Dinleme) ne duymayı beklersin?",
+            "opts": [
+              { "txt": "Artmış, çınlama tarzında 'Metalik' barsak sesleri.", "type": "correct", "go": "s2" },
+              { "txt": "Barsak sesleri tamamen kaybolmuş (Sessiz Batın).", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ FİZYOPATOLOJİ ]</b>\n\nBu hastada mekanik bir engel (muhtemelen yapışıklık) var. Barsak bu engeli aşmak için kasılmalarını artırır (Hiperperistaltizm). Sessiz batın, hareketin durduğu paralitik ileusta görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ RADYOLOJİ ]</b>\n\nMekanik obstrüksiyon düşünüyorsun. Ayakta Direkt Batın Grafisi (ADBG) istedin. Filmde tanıyı destekleyen klasik bulgu nedir?",
+            "opts": [
+              { "txt": "Merdiven basamağı şeklinde Hava-Sıvı Seviyeleri.", "type": "correct", "go": "s3" },
+              { "txt": "Diyafram altı serbest hava.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ BULGU ]</b>\n\nSerbest hava perforasyonu (delinmeyi) gösterir. Tıkanıklıkta gaz ve sıvı ilerleyemediği için hava-sıvı seviyeleri oluşur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ETYOLOJİ ]</b>\n\nİnce barsak tipi hava-sıvı seviyeleri var. Karında eski ameliyat izi olması, ince barsak tıkanıklığının EN SIK nedenini akla getirir. Bu nedir?",
+            "opts": [
+              { "txt": "Brid (Post-op Adhezyon / Yapışıklık)", "type": "correct", "go": "s4" },
+              { "txt": "Tümör", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ İSTATİSTİK ]</b>\n\nİnce barsak tıkanıklıklarının en sık nedeni (%60-70) geçirilmiş ameliyatlara bağlı yapışıklıklardır. Tümör, kalın barsak tıkanıklığının en sık nedenidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nHastanın ateşi yok, lökositozu yok, rebound yok (Strangülasyon bulgusu yok). İlk tedavi yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Nazogastrik Sonda (Dekompresyon) + IV Sıvı + Takip", "type": "correct", "go": "s5" },
+              { "txt": "Hemen Ameliyat", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ACELECİ ]</b>\n\nStrangülasyon (boğulma) bulgusu olmayan yapışıklığa bağlı tıkanıklıkların %60-80'i konservatif tedavi (sonda+sıvı) ile açılır. Cerrahi hemen gerekmez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\n24 saatlik takipte hastanın gaz-gaita çıkışı başladı, distansiyonu geriledi. Sonda çekildi ve oral beslenmeye başlandı. Başarılı konservatif yönetim.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: SESSİZ TEHLİKE",
+        "desc": "Servis - 65 Yaş - Ameliyat Sonrası Şişkinlik",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ]</b>\n\n65 yaşında kadın hasta. Ortopedik kalça ameliyatından 3 gün sonra karında şişkinlik, bulantı ve gaz çıkaramama şikayeti başladı. Ağrı kolik tarzda DEĞİL, daha çok huzursuzluk hissi var.\n\nOskültasyonda barsak sesleri alınamıyor (Sessiz Batın).\n\nTanın nedir?",
+            "opts": [
+              { "txt": "Paralitik (Adinamik) İleus", "type": "correct", "go": "s2" },
+              { "txt": "Mekanik Barsak Tıkanıklığı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ AYRIM ]</b>\n\nMekanik tıkanıklıkta barsak engeli aşmaya çalıştığı için sesler artar (Metalik) ve ağrı kolik (kıvrandırıcı) tarzda olur. Burada ses yok ve ağrı künt.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ETYOLOJİ ]</b>\n\nParalitik ileusun en sık nedenlerinden biri elektrolit bozukluğudur. Hangi elektrolitin DÜŞÜKLÜĞÜ barsak hareketlerini durdurur?",
+            "opts": [
+              { "txt": "Hipokalemi (Potasyum düşüklüğü)", "type": "correct", "go": "s3" },
+              { "txt": "Hiperkalsemi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ELEKTROLİT ]</b>\n\nPotasyum, düz kas kasılması için elzemdir. Hipokalemide kaslar kasılamaz ve ileus gelişir. (Not: Hiperkalsemi de ileus yapabilir ama hipokalemi post-op daha sıktır).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nHastanın potasyumu 2.8 mEq/L bulundu. Ayrıca ağrıları için 'Opioid' (Morfin türevi) kullanıyor.\n\nTedavi planında hangisi YANLIŞTIR?",
+            "opts": [
+              { "txt": "Barsakları hareketlendirmek için hemen yemek yedirmek.", "type": "correct", "go": "s4" },
+              { "txt": "Opioidleri kesmek ve Potasyum replasmanı yapmak.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ DOĞRU OLAN ]</b>\n\nOpioidler barsak hareketini durdurur, kesilmelidir. Potasyum verilmeli, hasta yürütülmeli ve oral alım kesilmelidir (barsak çalışana kadar). Yemek yedirmek kusmayı artırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nElektrolitler düzeltildi, hasta mobilize edildi, narkotik kesildi. 2 gün sonra gaz çıkışı başladı. Ameliyat gerektirmeyen fonksiyonel bir durum olduğu anlaşıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: BOĞULAN BARSAK",
+        "desc": "Acil - Kasık Fıtığı ve Akut Karın",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ BAŞVURU ]</b>\n\n50 yaşında erkek. Kasık fıtığı (İnguinal herni) olduğunu biliyor ama ameliyat olmamış. Bugün fıtık bölgesinde ve tüm karnında ani başlayan çok şiddetli ağrı ile geldi.\n\nFıtık şişliği içeri itilemiyor (İnkarserasyon). Ayrıca fıtık üzerindeki deri kızarık.\n\nBu neyin işaretidir?",
+            "opts": [
+              { "txt": "Strangülasyon (Boğulma - Gangren)", "type": "correct", "go": "s2" },
+              { "txt": "Basit Tıkanıklık", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ CİDDİYET ]</b>\n\nKızarıklık, şiddetli ağrı ve redükte edilememe, barsak kanlanmasının bozulduğunu (iskemi/gangren) gösterir. Bu basit bir tıkanıklık değildir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ SİSTEMİK BULGULAR ]</b>\n\nHastanın ateşi 38.5°C, Nabız 110/dk, Lökosit 18.000. Fizik muayenede yaygın hassasiyet ve rebound var.\n\nBu tablo (Strangülasyon) varlığında tedavi yaklaşımın ne olmalıdır?",
+            "opts": [
+              { "txt": "ACİL CERRAHİ (Laparotomi)", "type": "correct", "go": "s3" },
+              { "txt": "Nazogastrik takıp 24 saat beklemek", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ZAMAN KAYBI ]</b>\n\nStrangülasyon (iskemi) bulguları olan hastada beklemek barsak perforasyonuna ve sepsise yol açar. Konservatif tedavi KONTRENDİKEDİR.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AMELİYAT ]</b>\n\nHasta acilen ameliyata alındı. Fıtık kesesi içinde sıkışmış ince barsak ansı siyahlaşmıştı (Nekroz).\n\nNe yapılmalı?",
+            "opts": [
+              { "txt": "Nekrotik barsak rezeke edilmeli (kesilmeli) ve sağlam uçlar birleştirilmeli.", "type": "correct", "go": "s4" },
+              { "txt": "Sadece fıtık onarılıp barsak içeri itilmeli.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ PRENSİP ]</b>\n\nÖlü (nekrotik) doku vücutta bırakılamaz. Perforasyon ve peritonit yapar. Rezeksiyon (çıkarma) şarttır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nZamanında müdahale ile hasta sepsis gelişmeden kurtarıldı. Fıtık onarıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "İnce barsak tıkanıklıklarının (SBO) en sık nedeni nedir?", "a": ["Brid (Post-op yapışıklık)", "Tümör", "Fıtık", "Volvulus"], "correct": 0 },
+      { "q": "Kalın barsak tıkanıklıklarının (LBO) en sık nedeni nedir?", "a": ["Kanser (Tümör)", "Divertikülit", "Volvulus", "Yapışıklık"], "correct": 0 },
+      { "q": "Mekanik barsak tıkanıklığının erken döneminde oskültasyon bulgusu nedir?", "a": ["Artmış, metalik tınlamalı sesler", "Sessiz batın", "Normal sesler", "Üfürüm"], "correct": 0 },
+      { "q": "Paralitik (Adinamik) ileusun en tipik fizik muayene bulgusu nedir?", "a": ["Sessiz Batın (Barsak sesi yok)", "Rebound", "Tahta karın", "Hiperaktif sesler"], "correct": 0 },
+      { "q": "Ayakta Direkt Batın Grafisinde (ADBG) ileus tanısı için ne aranır?", "a": ["Hava-Sıvı Seviyeleri", "Serbest hava", "Opak taş", "Kalsifikasyon"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi Strangülasyon (Boğulma/İskemi) bulgusu DEĞİLDİR?", "a": ["Gaz-gaita çıkaramama (Sadece tıkanıklık bulgusudur)", "Ateş", "Taşikardi", "Sürekli ve şiddetli ağrı"], "correct": 0 },
+      { "q": "Hangi elektrolit bozukluğu paralitik ileusa neden olur?", "a": ["Hipokalemi", "Hipernatremi", "Hiperkloremi", "Hipokalsemi"], "correct": 0 },
+      { "q": "Strangülasyon şüphesi olmayan bir brid ileusunda ilk tedavi yaklaşımı ne olmalıdır?", "a": ["Konservatif (NG sonda + Sıvı)", "Hemen Cerrahi", "Antibiyotik", "Kolonoskopi"], "correct": 0 },
+      { "q": "Sigmoid volvulusta (Barsağın kendi etrafında dönmesi) direkt grafide görülen tipik bulgu nedir?", "a": ["Kahve Çekirdeği Manzarası", "Çift Kabarcık", "Buzlu Cam", "Tesbih tanesi"], "correct": 0 },
+      { "q": "Mekanik tıkanıklıkta ağrının karakteri nasıldır?", "a": ["Kolik (Kramp tarzında, gelip giden)", "Sürekli ve yanıcı", "Sadece yemekle artan", "Hareketle azalan"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Brid", "B": "İnce barsak tıkanıklığının en sık nedeni" },
+      { "A": "Tümör", "B": "Kalın barsak tıkanıklığının en sık nedeni" },
+      { "A": "Metalik Ses", "B": "Mekanik tıkanıklık (Hiperperistaltizm)" },
+      { "A": "Sessiz Batın", "B": "Paralitik İleus" },
+      { "A": "Hava-Sıvı Seviyesi", "B": "ADBG radyolojik bulgusu" },
+      { "A": "Strangülasyon", "B": "Kan akımının bozulması (Acil Cerrahi)" },
+      { "A": "NG Sonda", "B": "Dekompresyon (Mideyi boşaltma)" },
+      { "A": "Hipokalemi", "B": "Adinamik ileus nedeni" }
+    ],
+    "decypher": [
+      {
+        "text": "Mekanik barsak tıkanıklığında, barsak engeli aşmak için kasılmalarını artırır ve bu durum {kolik} tarzda karın ağrısına ve oskültasyonda {metalik} seslere neden olur. Radyolojide tipik olarak {hava-sıvı} seviyeleri görülür.",
+        "decoys": ["sürekli", "sessiz", "kitle", "opak"]
+      },
+      {
+        "text": "{Adinamik} ileusta mekanik bir engel yoktur ancak barsak hareketleri (peristaltizm) durmuştur. En sık nedenler karın ameliyatları, peritonit ve {hipokalemi} gibi elektrolit bozukluklarıdır. Fizik muayenede batın {sessiz}dir.",
+        "decoys": ["Mekanik", "kanser", "hiperaktif", "sert"]
+      },
+      {
+        "text": "Tıkanıklık sonucu barsak kanlanmasının bozulmasına {strangülasyon} denir. Bu durumda hastada ateş, taşikardi ve sürekli ağrı gelişir. Tedavisi acil {cerrahi}dir.",
+        "decoys": ["perforasyon", "sonda", "antibiyotik", "gözlem"]
+      }
+    ]
+  }
+}

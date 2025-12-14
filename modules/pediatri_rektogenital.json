@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "title": "PEDİATRİK REKTOGENİTAL MUAYENE",
+    "tag": "PEDİATRİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 TEMEL PRENSİPLER</div><div class='sum-body'>• <b>Mahremiyet:</b> Adolesanlarda utangaçlık ve korku ön plandadır. İletişim şarttır.<br>• <b>Pozisyon:</b> Kızlarda 'Kurbağa Bacağı' (sırt üstü, bacaklar fleksiyonda), erkeklerde sırt üstü veya ayakta.<br>• <b>Yenidoğan:</b> Kızlarda maternal hormonlara bağlı vajinal kanama/akıntı ve meme büyümesi fizyolojiktir.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KLİNİK İPUÇLARI</div><div class='sum-body'>• <b>Testis Torsiyonu:</b> Ani ağrı, kızarıklık, kusma. Kremaster refleksi YOKTUR. Acildir!<br>• <b>Hidrosel:</b> Ağrısız, ışık tutunca parlar (Transilluminasyon +).<br>• <b>İnguinal Herni:</b> Ağlayınca artan şişlik. Boğulma riski vardır, cerrahi gerekir.<br>• <b>Rektal Prolapsus:</b> Kistik Fibrozis ekarte edilmelidir!</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TANI & YÖNETİM</div><div class='sum-body'>• <b>Hipospadias:</b> Üretra deliği alttadır. <span class='sum-tag'>SÜNNET YASAK</span> (Deri onarımda kullanılır).<br>• <b>Vulvovajinit:</b> En sık neden kötü hijyen, köpük banyosu ve naylon iç çamaşırıdır.<br>• <b>Labial Yapışıklık:</b> Östrojenli krem veya hafif germe ile açılabilir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: HUZURSUZ BEBEK",
+        "desc": "Acil Servis - 6 Aylık Erkek - Kasık Şişliği",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ TRİAJ ]</b>\n\n6 aylık erkek bebek, sabahtan beri durdurulamayan ağlama ve huzursuzluk şikayetiyle getirildi. Annesi altını değiştirirken sağ kasığında bir şişlik fark etmiş. Kusması yok.\n\nİlk yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Kasık ve skrotumu inspeksiyonla incele.", "type": "correct", "go": "s2" },
+              { "txt": "Gaz sancısıdır, analjezik verip gönder.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ İHMAL ]</b>\n\nHuzursuz bir bebekte kasık şişliği 'Boğulmuş Fıtık' (İnkarserasyon) olabilir. Bakmadan göndermek organ kaybına yol açar!",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MUAYENE ]</b>\n\nSağ inguinal bölgeden skrotuma inen bir şişlik var. Cilt rengi doğal. Palpasyonda kitle yumuşak ve parmakla karın içine itildiğinde 'gurultu' hissiyle kayboluyor (Redüksiyon).\n\nTanın nedir?",
+            "opts": [
+              { "txt": "İnguinal Herni", "type": "correct", "go": "s3" },
+              { "txt": "Hidrosel", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nHidrosel sıvıdır, 'gurultu' sesi vermez ve genellikle hemen redükte edilemez (sıvı yavaş yer değiştirir).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ RİSK YÖNETİMİ ]</b>\n\nTanı: Redükte edilebilir İnguinal Herni. Aileye bunun cerrahi gerektirdiğini anlatmalısın. Eğer kitle sertleşse, kızarsa ve bebek kussa ne düşünürdün?",
+            "opts": [
+              { "txt": "İnkarserasyon (Boğulmuş Fıtık)", "type": "correct", "go": "s4" },
+              { "txt": "Testis Torsiyonu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YANLIŞ ]</b>\n\nTorsiyonda herni gibi bağırsak sesi olmaz, testis yukarı çekilir. Burada herni kesesinin boğulması (inkarserasyon) tarif ediliyor.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nŞu an fıtığı redükte ettin (yerine oturttun). Kesin tedavi planın ne olmalı?",
+            "opts": [
+              { "txt": "Çocuk Cerrahisi konsültasyonu ile elektif cerrahi planlanması.", "type": "correct", "action": "end" },
+              { "txt": "1 yaşına kadar kendiliğinden kapanmasını bekle.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ HATALI BİLGİ ]</b>\n\nİnguinal herni kendiliğinden geçmez (Göbek fıtığı geçebilir). Boğulma riski nedeniyle tanı konduğunda ameliyat planlanmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KAŞINTI KRİZİ",
+        "desc": "Poliklinik - 5 Yaş Kız - Genital Akıntı ve Kaşıntı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n5 yaşında kız çocuğu. Genital bölgede kaşıntı ve iç çamaşırında sarımsı lekelenme şikayetiyle geldi. Ateşi yok.\n\nÖyküde özellikle neyi sormalısın?",
+            "opts": [
+              { "txt": "Tuvalet temizliği, köpük banyosu, giysi türü.", "type": "correct", "go": "s2" },
+              { "txt": "Ailede kanser öyküsü.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ GEREKSİZ ]</b>\n\nBu yaş grubunda en sık neden hijyen hataları ve iritan maddelerdir. Kanser çok nadirdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MUAYENE POZİSYONU ]</b>\n\nÇocuk sık sık köpük banyosu yapıyormuş ve naylonlu süslü külotlar giyiyormuş. Muayene için çocuğu nasıl pozisyonlandırırsın?",
+            "opts": [
+              { "txt": "Sırt üstü, 'Kurbağa Bacağı' pozisyonu.", "type": "correct", "go": "s3" },
+              { "txt": "Diz-Dirsek (Secde) pozisyonu.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ POZİSYON ]</b>\n\nDiz-dirsek pozisyonu daha çok anal muayene veya yabancı cisim aramada kullanılır. Genital inspeksiyon için kurbağa bacağı idealdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TANI VE TEDAVİ ]</b>\n\nVulva ve labiumlarda kızarıklık (eritem) var. Kötü koku yok. Yabancı cisim yok. Tanı: İritatif Vulvovajinit.\n\nTedavi önerin?",
+            "opts": [
+              { "txt": "Pamuklu çamaşır, iritanlardan (köpük/sabun) kaçınma, hijyen eğitimi.", "type": "correct", "action": "end" },
+              { "txt": "Geniş spektrumlu oral antibiyotik.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ HATALI TEDAVİ ]</b>\n\nNon-spesifik vulvovajinitte etkene yönelik değil, hijyene yönelik önlemler esastır. Antibiyotik florayı bozar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: İLK BAKIŞ",
+        "desc": "Yenidoğan Servisi - 1 Saatlik Erkek Bebek - Anomali Kontrolü",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ RUTİN KONTROL ]</b>\n\n1 saatlik erkek bebek. Aile anomali kontrolü istiyor. Penisi inceliyorsun. İdrar deliğinin (meatus) penisin ucunda değil, alt yüzünde (ventral) olduğunu gördün.\n\nBu anomalinin adı nedir?",
+            "opts": [
+              { "txt": "Hipospadias", "type": "correct", "go": "s2" },
+              { "txt": "Epispadias", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KAVRAM KARMAŞASI ]</b>\n\nEpispadias'ta delik penisin ÜST (dorsal) yüzündedir. Altta ise Hipospadias denir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ SÜNNET KARARI ]</b>\n\nTanı Hipospadias. Aile 'Hocam hazır hastanedeyken sünnetini de yapalım' diyor.\n\nCevabın ne olmalı?",
+            "opts": [
+              { "txt": "HAYIR. Sünnet derisi onarımda kullanılacak, sünnet yasak.", "type": "correct", "go": "s3" },
+              { "txt": "Tabii, hemen yapabiliriz.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MALPRAKTİS RİSKİ ]</b>\n\nHipospadiaslı bir çocuğu sünnet etmek, düzeltme cerrahisi (üretra plastiği) için gereken en önemli yama dokusunu yok etmektir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ANAL KONTROL ]</b>\n\nGenital muayene bitti. Anal bölgeye bakıyorsun. Anüsün açık olduğunu teyit etmek için hangi bulguya bakarsın?",
+            "opts": [
+              { "txt": "Mekonyum (ilk dışkı) çıkışı veya bulaşığı.", "type": "correct", "action": "end" },
+              { "txt": "Anal fissür varlığı.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ İLGİSİZ ]</b>\n\nFissür kabızlıkta olur. Yenidoğanda açıklığı teyit etmek için mekonyum çıkışı gözlenir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Tunica vaginaliste ağrısız, ışık geçiren (transilluminasyon +) sıvı birikimine ne ad verilir?", "a": ["Hidrosel", "İnguinal Herni", "Varikosel", "Orşit"], "correct": 0 },
+      { "q": "Erkek çocuk muayenesinde uyluk iç kısmının uyarılmasıyla testisin yukarı çekilmesini sağlayan refleks hangisidir?", "a": ["Kremaster refleksi", "Babinski refleksi", "Moro refleksi", "Patella refleksi"], "correct": 0 },
+      { "q": "Üretra dış deliğinin penisin alt (ventral) yüzünde olması durumuna ne ad verilir?", "a": ["Hipospadias", "Epispadias", "Fimozis", "Parafimozis"], "correct": 0 },
+      { "q": "Çocuklarda rektal kanamanın en sık görülen nedeni (genellikle kabızlığa bağlı) hangisidir?", "a": ["Anal Fissür", "Hemoroid", "Rektal Prolapsus", "Polip"], "correct": 0 },
+      { "q": "Testis torsiyonu için hangisi YANLIŞTIR?", "a": ["Ağrısız ve yavaş gelişen bir şişliktir", "Acil cerrahi müdahale gerektirir", "Skrotum kızarık ve çok duyarlıdır", "Kremaster refleksi genellikle kaybolur"], "correct": 0 },
+      { "q": "Kız çocuklarında labial yapışıklık (sineşi) tedavisi için ne kullanılabilir?", "a": ["Östrojenli kremler", "Antibiyotik", "Steroid", "Antifungal"], "correct": 0 },
+      { "q": "Rektal prolapsus (bağırsağın dışa sarkması) görülen bir çocukta altta yatan hangi hastalık mutlaka araştırılmalıdır?", "a": ["Kistik Fibrozis", "Diyabet", "Astım", "Kalp yetmezliği"], "correct": 0 },
+      { "q": "Yenidoğan kız bebekte vajinal kanlı akıntı görülmesi neyin işaretidir?", "a": ["Maternal hormon çekilmesine bağlı normal durum", "Ciddi enfeksiyon", "Travma", "Tümör"], "correct": 0 },
+      { "q": "İnmemiş testis (Kriptorşidizm) tedavi edilmezse hangi risk artar?", "a": ["Malignite (Tümör)", "Böbrek yetmezliği", "Enfeksiyon", "Darlık"], "correct": 0 },
+      { "q": "Kız çocuklarının genital muayenesi için en uygun pozisyon hangisidir?", "a": ["Kurbağa Bacağı (Sırt üstü, fleksiyonda)", "Diz-Dirsek", "Yüz üstü", "Ayakta"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Hidrosel", "B": "Işık geçiren sıvı birikimi" },
+      { "A": "Kriptorşidizm", "B": "İnmemiş testis" },
+      { "A": "Hipospadias", "B": "İdrar deliği altta" },
+      { "A": "Fimozis", "B": "Sünnet derisi darlığı" },
+      { "A": "Anal Fissür", "B": "Anüste ağrılı çatlak" },
+      { "A": "Varikosel", "B": "Damar genişlemesi (Pampiniformis)" },
+      { "A": "Amasti", "B": "Meme dokusu yokluğu" },
+      { "A": "Testis Torsiyonu", "B": "Acil cerrahi, kan akımı kesilmesi" }
+    ],
+    "decypher": [
+      {
+        "text": "Erkek çocuklarda skrotumda, karın içi basıncın artması (ağlama, öksürme) ile belirginleşen şişliklere {İnguinal Herni} denir. Bu durumdaki barsak segmenti skrotuma iner ve parmakla karın içine itilebilir, yani {redükte} edilebilir. Ancak sıkışırsa {boğulmuş} fıtık olur.",
+        "decoys": ["Hidrosel", "Varikosel", "Torsiyon", "sabit"]
+      },
+      {
+        "text": "Kız çocuklarında görülen vulvovajinitlerin en sık nedeni {Kötü Hijyen} ve iritan maddelerdir (sabun, köpük). Ayrıca {naylon} iç çamaşırı kullanımı ve tuvalet temizliğinin arkadan öne yapılması riski artırır.",
+        "decoys": ["Tümör", "Hormon", "pamuklu", "önden arkaya"]
+      },
+      {
+        "text": "Testis torsiyonu, testisin kendi etrafında dönerek {kan} akımını bozması sonucu oluşan acil bir durumdur. Şiddetli ağrı ve {kızarıklık} ile karakterizedir. {Kremaster} refleksi alınamaz.",
+        "decoys": ["lenf", "kaşıntı", "ödem", "kronik", "Patella"]
+      }
+    ]
+  }
+}

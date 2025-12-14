@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "title": "BAS1 BOOSTER: KLİNİK VE ENTEGRE",
+    "tag": "SINAV HAZIRLIK"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🏥 AKUT KARIN VE CERRAHİ</div><div class='sum-body'>• <b>Akut Karın Ağrı Tipleri:</b> Enflamatuar (Apandisit), Perforan (Ülser delinmesi), Kolik (Taş), Vasküler (İskemi).<br>• <b>Bulgular:</b> <b>Murphy</b> (Kolesistit), <b>McBurney</b> (Apandisit), <b>Kehr</b> (Dalak rüptürü-Omuz ağrısı), <b>Rovsing</b> (Solu bastır sağ ağrısın).<br>• <b>İleus:</b> Mekanik tıkanıklıkta <b>metalik ses</b>, paralitik ileusta <b>sessiz batın</b> olur.</div></div><div class='sum-card sum-tus'><div class='sum-title'>👶 PEDİATRİK ACİLLER</div><div class='sum-body'>• <b>Safralı Kusma (Yenidoğan):</b> Ampulla Vateri altı tıkanıklık (Volvulus/Atrezi) -> ACİL CERRAHİ!<br>• <b>Hirschsprung:</b> Mekonyum gecikmesi, aganglionozis.<br>• <b>Pilor Stenozu:</b> Fışkırır tarzda (Projektil) safrasız kusma, Zeytin kitle.</div></div><div class='sum-card sum-rx'><div class='sum-title'>📸 GÖRÜNTÜLEME VE TANI</div><div class='sum-body'>• <b>MRCP:</b> Pankreas/Safra yolları için Non-invaziv altın standart.<br>• <b>ERCP:</b> Hem tanı hem tedavi (Taş çıkarma) içindir (İnvaziv).<br>• <b>ADBG:</b> Hava-sıvı seviyesi (İleus), Diyafram altı serbest hava (Perforasyon).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "VAKA 1: ACI ÇEKEN HASTA",
+        "desc": "Acil Servis - Akut Karın Muayenesi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\nSağ alt kadranda şiddetli ağrı ile gelen hastada, sol alt kadrana bastırdığında sağ tarafta ağrı hissediliyor. Bu bulgunun adı nedir?",
+            "opts": [
+              { "txt": "Rovsing Belirtisi", "type": "correct", "go": "s2" },
+              { "txt": "Murphy Belirtisi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ BULGU ]</b>\n\nMurphy belirtisi sağ üst kadranda (safra kesesi) inspiryumla ağrıdır. Rovsing ise apandisit için tipiktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANIMLAMA ]</b>\n\nAynı hastada elini karnından aniden çektiğinde ağrının artması (Rebound) neyi gösterir?",
+            "opts": [
+              { "txt": "Pariyetal Periton İrritasyonunu (Peritonit)", "type": "correct", "go": "s3" },
+              { "txt": "Barsak tıkanıklığını", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nRebound, periton yapraklarının birbirine sürtünmesiyle oluşan ağrıdır ve inflamasyonu (Peritonit) gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ BAŞKA BİR VAKA ]</b>\n\nBu sefer sağ üst kadranda ağrısı olan hastaya derin nefes aldırırken elini bastırıyorsun ve hasta ağrıdan nefesini kesiyor. Tanın nedir?",
+            "opts": [
+              { "txt": "Akut Kolesistit (Murphy Pozitif)", "type": "correct", "go": "s4" },
+              { "txt": "Pankreatit", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ AYRIM ]</b>\n\nPankreatit ağrısı kuşak tarzındadır ve sırta vurur. Murphy belirtisi safra kesesi inflamasyonuna özgüdür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ GÖRÜNTÜLEME ]</b>\n\nSafra kesesi taşı veya kolesistit şüphesinde İLK istenecek görüntüleme yöntemi hangisidir?",
+            "opts": [
+              { "txt": "Ultrasonografi (USG)", "type": "correct", "action": "end" },
+              { "txt": "BT", "type": "wrong", "go": "s4" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "VAKA 2: YENİDOĞAN SORUNLARI",
+        "desc": "Pediatri - Kusma Tipleri",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\n3 günlük bebek, safralı (yeşil) kusma ile getirildi. Karın şiş. Bu durum neyi işaret eder?",
+            "opts": [
+              { "txt": "Ampulla Vateri distalinde (altında) tıkanıklık (Volvulus, Atrezi vb.)", "type": "correct", "go": "s2" },
+              { "txt": "Pilor Stenozu", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ LOKALİZASYON ]</b>\n\nPilor mide çıkışındadır, safra dökülen yerin (Ampulla) üzerindedir. Bu yüzden pilor darlığında kusma safrasız olur. Safralı kusma daha aşağı seviyeli tıkanıklığı gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ BAŞKA BİR VAKA ]</b>\n\n1 aylık bebek, her emmeden sonra fışkırır tarzda (projektil) kusuyor. Kusmuk safrasız. Karnında 'Zeytin' büyüklüğünde kitle ele geliyor.\n\nTanın nedir?",
+            "opts": [
+              { "txt": "İnfantil Hipertrofik Pilor Stenozu (İHPS)", "type": "correct", "go": "s3" },
+              { "txt": "Gastroözofageal Reflü", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TİPİK BULGU ]</b>\n\nZeytin kitle (Olive) ve projektil safrasız kusma Pilor Stenozunun klasik bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SONUÇ ]</b>\n\nSafralı kusma = Acil Cerrahi Konsültasyonu.\nProjektil Safrasız Kusma = Pilor Stenozu.\n\nBu ayrımlar hayat kurtarır.",
+            "opts": [
+              { "txt": "TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Safra kesesi inflamasyonunda (Kolesistit) görülen, derin inspiryumda ağrı ile nefesin kesilmesi bulgusu nedir?", "a": ["Murphy Belirtisi", "McBurney Belirtisi", "Kehr Belirtisi", "Cullen Belirtisi"], "correct": 0 },
+      { "q": "Akut apandisit şüphesinde, sol alt kadrana bastırıldığında sağ alt kadranda ağrı hissedilmesine ne denir?", "a": ["Rovsing Belirtisi", "Obturator Belirtisi", "Psoas Belirtisi", "Courvoisier Belirtisi"], "correct": 0 },
+      { "q": "Yenidoğan bir bebekte 'Safralı Kusma' görülmesi neyi düşündürür?", "a": ["Ampulla Vateri distalinde (altında) tıkanıklık (Volvulus vb.)", "Pilor Stenozu", "Gastroözofageal Reflü", "Basit gastrit"], "correct": 0 },
+      { "q": "İnfantil Hipertrofik Pilor Stenozunun (İHPS) en tipik fizik muayene bulgusu nedir?", "a": ["Epigastriumda ele gelen 'Zeytin' (Olive) şeklinde kitle", "Tahta karın", "Rektal prolapsus", "Kasık fıtığı"], "correct": 0 },
+      { "q": "Sol omuzda hissedilen yansıyan ağrı (Kehr belirtisi) hangi organ patolojisini düşündürür?", "a": ["Dalak Rüptürü / Diyafram İrritasyonu", "Safra Kesesi", "Apandisit", "Böbrek Taşı"], "correct": 0 },
+      { "q": "Pankreatik kanalı görüntülemede kullanılan NON-İNVAZİV yöntem hangisidir?", "a": ["MRCP", "ERCP", "PTK", "Anjiyografi"], "correct": 0 },
+      { "q": "Mekanik barsak tıkanıklığında (İleus) oskültasyonda ne duyulur?", "a": ["Artmış, metalik tınlamalı sesler", "Sessiz batın", "Normal sesler", "Üfürüm"], "correct": 0 },
+      { "q": "Ayakta Direkt Batın Grafisinde (ADBG) 'Diyafram altı serbest hava' görülmesi neyin işaretidir?", "a": ["İçi boş organ perforasyonu (Mide/Barsak delinmesi)", "İleus", "Asit", "Kitle"], "correct": 0 },
+      { "q": "Hirschsprung hastalığının patofizyolojisi nedir?", "a": ["Distal barsakta ganglion hücrelerinin yokluğu (Aganglionozis)", "Villus atrofisi", "Enzim eksikliği", "Kas hipertrofisi"], "correct": 0 },
+      { "q": "Akut pankreatitin şiddetini belirlemede kullanılan kriterler hangisidir?", "a": ["Ranson Kriterleri", "Roma Kriterleri", "Child-Pugh", "Glasgow Koma Skalası"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Murphy", "B": "Kolesistit (İnspiratuar arrest)" },
+      { "A": "McBurney", "B": "Apandisit (Sağ alt kadran)" },
+      { "A": "Kehr", "B": "Dalak rüptürü (Sol omuz)" },
+      { "A": "Rovsing", "B": "Soldan bastır sağ ağrısın" },
+      { "A": "Metalik Ses", "B": "Mekanik İleus" },
+      { "A": "Sessiz Batın", "B": "Paralitik İleus" },
+      { "A": "Safralı Kusma", "B": "Distal tıkanıklık (Acil!)" },
+      { "A": "Zeytin Kitle", "B": "Pilor Stenozu" }
+    ],
+    "decypher": [
+      {
+        "text": "Akut karın muayenesinde, hekimin elini karından aniden çekmesiyle oluşan şiddetli ağrıya {Rebound} denir ve peritonit bulgusudur. Derin inspiryumda sağ üst kadranda ağrı ile nefesin kesilmesine {Murphy} belirtisi denir.",
+        "decoys": ["Rovsing", "Psoas", "Obturator", "Cullen"]
+      },
+      {
+        "text": "Yenidoğan bir bebekte {safralı} (yeşil) kusma görülmesi, cerrahi bir acil olan {Volvulus} veya barsak tıkanıklığını düşündürür. Pilor stenozunda ise kusma {safrasız} ve fışkırır tarzdadır.",
+        "decoys": ["kanlı", "mukuslu", "reflü", "enfeksiyon"]
+      },
+      {
+        "text": "Safra ve pankreas kanallarını görüntülemek için kullanılan, radyasyon içermeyen ve girişimsel olmayan yönteme {MRCP} denir. Hem tanı hem tedavi (taş çıkarma) için kullanılan girişimsel yöntem ise {ERCP} dir.",
+        "decoys": ["USG", "BT", "PTK", "Sintigrafi"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "FONKSİYONEL DİSPEPSİ (OLGU)",
+    "tag": "GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 DİSPEPSİ TİPLERİ</div><div class='sum-body'>• <b>Organik Dispepsi:</b> Altta yatan bir hastalık (Ülser, Kanser vb.) saptanabilen durumdur.<br>• <b>Fonksiyonel Dispepsi (FD):</b> Rutin incelemelerde (Endoskopi dahil) yapısal bir neden bulunamayan, son 6 aydır devam eden semptomlardır.<br>• <b>Alt Tipler:</b><br>1. <b>PDS (Postprandial Distres Sendromu):</b> Yemek sonrası dolgunluk ve erken doyma.<br>2. <b>EPS (Epigastrik Ağrı Sendromu):</b> Epigastriumda ağrı ve yanma.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 YÖNETİM ALGORİTMASI</div><div class='sum-body'>• <b>Alarm Bulguları:</b> >55 Yaş, Kilo kaybı, Disfaji, Kanama, Kusma ➞ <b>ENDOSKOPI ŞART!</b><br>• <b>Alarm Yoksa:</b> <b>'Test Et ve Tedavi Et'</b> stratejisi uygulanır. (H. Pylori testi yap, pozitifse eradike et, negatifse PPI dene).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ SEÇENEKLERİ</div><div class='sum-body'>• <b>İlk Basamak:</b> Proton Pompa İnhibitörü (PPI).<br>• <b>İkinci Basamak:</b> PDS için Prokinetikler, EPS için Trisiklik Antidepresanlar (TCA).<br>• <b>Diğer:</b> Psikoterapi ve Diyet düzenlemesi.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "OLGU 1: YEMEK KABUSU",
+        "desc": "Poliklinik - 35 Yaş Kadın - Şişkinlik ve Erken Doyma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n35 yaşında kadın hasta. 1 yıldır haftada en az 4 gün, normal bir porsiyon yemeği bile bitiremediğini (erken doyma) ve yemekten sonra rahatsız edici bir dolgunluk hissettiğini söylüyor. Ağrısı yok. Kilo kaybı yok.\n\nBu semptomlar Fonksiyonel Dispepsinin hangi alt grubuna uyar?",
+            "opts": [
+              { "txt": "Postprandial Distres Sendromu (PDS)", "type": "correct", "go": "s2" },
+              { "txt": "Epigastrik Ağrı Sendromu (EPS)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SEMPTOM ANALİZİ ]</b>\n\nEPS'de ön planda olan 'Ağrı ve Yanma'dır. PDS'de ise 'Dolgunluk ve Erken Doyma' (Yemekle ilişkili rahatsızlık) esastır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANI YAKLAŞIMI ]</b>\n\nHastanın yaşı genç (<55) ve alarm bulgusu (kilo kaybı, kanama vb.) yok. 'Araştırılmamış Dispepsi' olarak kabul ediliyor.\n\nİlk yapılması gereken işlem nedir?",
+            "opts": [
+              { "txt": "H. Pylori için Non-İnvaziv Test (Nefes veya Gaita)", "type": "correct", "go": "s3" },
+              { "txt": "Hemen Üst GİS Endoskopisi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ GEREKSİZ İŞLEM ]</b>\n\nAlarm bulgusu olmayan genç hastalarda endoskopi ilk tercih değildir. Maliyet etkindir yaklaşım 'Test Et ve Tedavi Et' stratejisidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nH. Pylori negatif çıktı. Hastaya PPI (Mide koruyucu) başlandı ancak 8 hafta sonra şikayetleri (Şişkinlik/Erken doyma) devam ediyor.\n\nPDS baskın bu hasta için tedaviye hangi ilaç grubunu eklemek mantıklı olur?",
+            "opts": [
+              { "txt": "Prokinetikler (Mide boşalmasını hızlandıranlar)", "type": "correct", "go": "s4" },
+              { "txt": "Trisiklik Antidepresanlar (TCA)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nTCA'lar (ağrı modülatörleri) daha çok Epigastrik Ağrı Sendromunda (EPS) etkilidir. Mide boşalma sorunu olan PDS'de Prokinetikler tercih edilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya prokinetik eklendi ve az az sık sık yemesi önerildi. Semptomlar geriledi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "OLGU 2: ALARM ZİLLERİ",
+        "desc": "Poliklinik - 60 Yaş Erkek - Kilo Kaybı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n60 yaşında erkek hasta. Son 3 aydır epigastrik bölgede yanma ve ağrı şikayeti var. Ayrıca son 1 ayda istemsiz olarak 5 kg vermiş.\n\nBu hastadaki yönetim planın ne olmalı?",
+            "opts": [
+              { "txt": "Vakit kaybetmeden Üst GİS Endoskopisi yapılmalı.", "type": "correct", "go": "s2" },
+              { "txt": "Önce PPI tedavisi denenmeli, geçmezse endoskopi yapılmalı.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KRİTİK HATA ]</b>\n\n55 yaş üstü başlangıç ve 'Kilo Kaybı' (Alarm bulgusu) varlığında Organik Dispepsi (Mide Kanseri vb.) riski yüksektir. Deneme tedavisi ile zaman kaybedilmemelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ENDOSKOPI ]</b>\n\nEndoskopi yapıldı. Midede 2 cm çapında kenarları düzensiz bir ülser saptandı ve biyopsi alındı. Patoloji 'Adenokarsinom' geldi.\n\nBu durum hangi dispepsi sınıfına girer?",
+            "opts": [
+              { "txt": "Organik Dispepsi", "type": "correct", "go": "s3" },
+              { "txt": "Fonksiyonel Dispepsi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TANIM ]</b>\n\nFonksiyonel dispepsi diyebilmek için altta yatan yapısal/organik bir neden (Kanser, Ülser) OLMAMALIDIR. Burada neden bellidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta Onkoloji ve Cerrahisi bölümüne sevk edildi. Alarm bulgularının erken fark edilmesi hayati önem taşıdı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "OLGU 3: YANAN MİDE",
+        "desc": "Poliklinik - 40 Yaş Erkek - Dirençli Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ŞİKAYET ]</b>\n\n40 yaşında erkek hasta. Midesinde sürekli bir yanma ve kazınma hissi (Epigastrik Ağrı) tarifliyor. Yemekle ilişkisi değişken. Endoskopi yapılmış ve tamamen NORMAL bulunmuş. H. Pylori negatif.\n\nTanın nedir?",
+            "opts": [
+              { "txt": "Fonksiyonel Dispepsi - EPS (Epigastrik Ağrı Sendromu)", "type": "correct", "go": "s2" },
+              { "txt": "Peptik Ülser", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ BULGU YOK ]</b>\n\nEndoskopi normalse ülser yoktur. Semptomlar (ağrı/yanma) EPS kriterlerine uymaktadır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TEDAVİ ADIMLARI ]</b>\n\nHasta PPI kullanmış ama fayda görmemiş. Ağrı baskın olan bu fonksiyonel tabloda, viseral hipersensitiviteyi (ağrı algısını) azaltmak için hangi ilacı eklersin?",
+            "opts": [
+              { "txt": "Trisiklik Antidepresan (Düşük doz Amitriptilin vb.)", "type": "correct", "go": "s3" },
+              { "txt": "Prokinetik", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ HEDEF ]</b>\n\nProkinetikler dolgunluk/erken doyma (PDS) için iyidir. Ağrı (EPS) yönetiminde beyin-bağırsak aksını modüle eden TCA'lar daha etkilidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya düşük doz TCA başlandı ve stres yönetimi önerildi. 1 ay sonra ağrı skorlarında %50 azalma sağlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Fonksiyonel Dispepsi tanısı koymak için semptomlar en az ne kadar süredir var olmalıdır?", "a": ["6 ay önce başlamış, son 3 aydır aktif olmalı", "1 aydır olmalı", "1 haftadır olmalı", "1 yıldır sürekli olmalı"], "correct": 0 },
+      { "q": "Alarm bulgusu olmayan, 40 yaşında bir dispepsi hastasında ilk yaklaşım ne olmalıdır?", "a": ["H. Pylori için 'Test et ve Tedavi et'", "Direkt Endoskopi", "Direkt Batın BT", "Psikiyatri konsültasyonu"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi Dispepsi için bir 'Alarm Bulgusu' DEĞİLDİR?", "a": ["Yemek sonrası şişkinlik", "İstemsiz kilo kaybı", "Disfaji (Yutma güçlüğü)", "GİS Kanaması / Anemi"], "correct": 0 },
+      { "q": "Yemek sonrası dolgunluk ve erken doyma ile karakterize fonksiyonel dispepsi alt tipi hangisidir?", "a": ["Postprandial Distres Sendromu (PDS)", "Epigastrik Ağrı Sendromu (EPS)", "İrritabl Barsak Sendromu (İBS)", "Reflü"], "correct": 0 },
+      { "q": "Epigastrik Ağrı Sendromu (EPS) tedavisinde PPI'a yanıtsız hastalarda hangi ilaç grubu denenebilir?", "a": ["Trisiklik Antidepresanlar (TCA)", "Antibiyotikler", "NSAİİ", "Laksatifler"], "correct": 0 },
+      { "q": "Endoskopide ülser veya tümör saptanan hastadaki dispepsiye ne ad verilir?", "a": ["Organik Dispepsi", "Fonksiyonel Dispepsi", "İdiyopatik Dispepsi", "Psikosomatik Dispepsi"], "correct": 0 },
+      { "q": "H. Pylori enfeksiyonunun dispepsi yönetimindeki yeri nedir?", "a": ["Eradikasyon, bazı hastalarda (%10-15) semptomları kalıcı düzeltebilir", "H. Pylori dispepsi yapmaz", "Sadece kanser hastalarında tedavi edilir", "Herkes endoskopi yapılmadan tedavi edilmelidir"], "correct": 0 },
+      { "q": "55 yaş üstü ve yeni başlayan dispepside yapılması gereken ilk tetkik nedir?", "a": ["Üst GİS Endoskopisi", "Üre Nefes Testi", "Batın USG", "Kan sayımı"], "correct": 0 },
+      { "q": "Postprandial Distres Sendromunda (PDS) mide boşalmasını hızlandırmak için hangi ilaçlar kullanılır?", "a": ["Prokinetikler", "Antispazmodikler", "Opioidler", "Antikolinerjikler"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi dispepsiye neden olabilen bir ilaç grubudur?", "a": ["NSAİİ (Ağrı kesiciler)", "Parasetamol", "Vitamin B12", "Probiyotikler"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Organik Dispepsi", "B": "Ülser, Kanser gibi yapısal nedenler" },
+      { "A": "Fonksiyonel Dispepsi", "B": "Endoskopi normal, neden bulunamayan" },
+      { "A": "PDS", "B": "Erken doyma, Dolgunluk" },
+      { "A": "EPS", "B": "Epigastrik Ağrı, Yanma" },
+      { "A": "Alarm Bulgusu", "B": "Kilo kaybı, Disfaji, >55 yaş" },
+      { "A": "Test et ve Tedavi et", "B": "H. Pylori için non-invaziv strateji" },
+      { "A": "Prokinetik", "B": "Mide boşalmasını hızlandırır (PDS)" },
+      { "A": "TCA", "B": "Viseral ağrı eşiğini yükseltir (EPS)" }
+    ],
+    "decypher": [
+      {
+        "text": "Fonksiyonel dispepsi, yapısal bir neden olmaksızın gelişen mide şikayetleridir. İki ana alt tipi vardır: Yemek sonrası rahatsız edici dolgunluk hissi olan {Postprandial} Distres Sendromu ve mide bölgesinde {yanma} ile giden Epigastrik Ağrı Sendromu.",
+        "decoys": ["İrritabl", "Reflü", "ülser", "bulantı"]
+      },
+      {
+        "text": "Dispepsi hastasında 55 yaş üstü başlangıç, {kilo} kaybı, yutma güçlüğü ({disfaji}) veya anemi gibi {alarm} bulguları varsa, kanser riskini dışlamak için mutlaka {endoskopi} yapılmalıdır.",
+        "decoys": ["kilo alımı", "öksürük", "güven", "USG"]
+      },
+      {
+        "text": "Alarm bulgusu olmayan genç hastalarda, maliyet-etkin yaklaşım olarak {H.Pylori} testi yapılır. Pozitifse tedavi edilir (Test et ve Tedavi et). Negatifse veya dirençliyse {PPI} (asit baskılayıcı) başlanır.",
+        "decoys": ["Salmonella", "Biyopsi", "NSAİİ", "Cerrahi"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "MALABSORPSİYONLU ÇOCUĞA YAKLAŞIM",
+    "tag": "PEDİATRİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 TANIMLAR VE FİZYOLOJİ</div><div class='sum-body'>• <b>Maldijesyon:</b> Besinlerin kimyasal/fiziksel parçalanma bozukluğudur (Örn: Pankreas yetmezliği).<br>• <b>Malabsorpsiyon:</b> Parçalanmış ürünlerin mukozadan kana geçiş bozukluğudur (Örn: Çölyak).<br>• <b>Klinik:</b> En sık bulgu kronik ishaldir. Karakteristik bulgu <b>Steatore</b> (yağlı, pis kokulu, yapışkan dışkı) dir.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 ETYOLOJİK SINIFLAMA</div><div class='sum-body'>• <b>Luminal Faz Bozukluğu:</b> Pankreas enzim eksikliği (Kistik Fibrozis) veya Safra tuzu eksikliği (Kolestaz).<br>• <b>Mukozal Faz Bozukluğu:</b> Çölyak, İnek sütü alerjisi, Giardiasis (Villus atrofisi).<br>• <b>Transport Fazı Bozukluğu:</b> Lenfajiektazi (Lenfatik tıkanıklık), Abetalipoproteinemi.</div></div><div class='sum-card sum-rx'><div class='sum-title'>🧪 TANI YAKLAŞIMI</div><div class='sum-body'>• <b>Tarama:</b> Dışkıda Sudan III boyası (Yağ atılımı), Dışkı pH ve redüktan madde (Karbonhidrat malabsorpsiyonu).<br>• <b>Altın Standart (Yağ için):</b> 72 saatlik dışkıda yağ ölçümü (Van de Kamer).<br>• <b>Spesifik:</b> Ter testi (KF), tTG antikoru ve Biyopsi (Çölyak).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: BÜYÜYEMEYEN BEBEK",
+        "desc": "Poliklinik - 18 Aylık Kız - Karın Şişliği",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n18 aylık kız çocuğu. Büyüme geriliği, karın şişliği, iştahsızlık ve huzursuzluk şikayetiyle getirildi. Annesi dışkısının çok kötü koktuğunu ve bol miktarda olduğunu söylüyor.\n\nÖyküde en kritik soru nedir?",
+            "opts": [
+              { "txt": "Şikayetler ek gıdaya (tahıllara) başladıktan sonra mı arttı?", "type": "correct", "go": "s2" },
+              { "txt": "Aşıları tam mı?", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ETYOLOJİ ]</b>\n\nBu yaş grubunda, karın şişliği ve büyüme geriliği (Malabsorpsiyon bulguları) olan bir çocukta Çölyak hastalığı düşünülmelidir. Bu da gluten (tahıl) alımıyla tetiklenir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nÇocuğun karnı ileri derecede distandü (şiş), ancak ekstremiteleri ve gluteal bölgesi (kalçalar) zayıflamış (kas erimesi). Dışkı analizinde Sudan III pozitif (Yağlı dışkı).\n\nBu tablo hangi fazda bir bozukluktur?",
+            "opts": [
+              { "txt": "Mukozal Faz Bozukluğu", "type": "correct", "go": "s3" },
+              { "txt": "Luminal Faz Bozukluğu", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nLuminal faz pankreas ve safra ile ilgilidir. Gluten enteropatisi (Çölyak) ise ince barsak mukozasında villus atrofisi yaparak emilimi bozar, yani Mukozal Faz bozukluğudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TANI ]</b>\n\nÇölyak hastalığından şüpheleniyorsun. Tarama için hangi serolojik testi istersin?",
+            "opts": [
+              { "txt": "Doku Transglutaminaz Antikoru (tTG IgA)", "type": "correct", "go": "s4" },
+              { "txt": "Ter Testi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YANLIŞ TEST ]</b>\n\nTer testi Kistik Fibrozis tanısı içindir. Çölyak için en duyarlı ve özgül tarama testi tTG IgA'dır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KESİN TANI ]</b>\n\nAntikor pozitif geldi. Kesin tanı (Altın Standart) için ne yapmalısın?",
+            "opts": [
+              { "txt": "Endoskopi ve İnce Barsak Biyopsisi", "type": "correct", "go": "s5" },
+              { "txt": "Glutensiz diyet başlayıp sonucu görmek", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TANI KURALI ]</b>\n\nBiyopsi ile villus atrofisi gösterilmeden ömür boyu sürecek bir diyet başlanmaz. Tanı histopatolojik olarak kanıtlanmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nBiyopside 'Total Villöz Atrofi' saptandı. Çölyak tanısı kondu. Ömür boyu glutensiz diyet eğitimi verildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: YAĞLI DIŞKI",
+        "desc": "Pediatri - 4 Yaş - Tekrarlayan Akciğer Enfeksiyonu",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ KLİNİK TABLO ]</b>\n\n4 yaşında erkek hasta. Sık tekrarlayan akciğer enfeksiyonları ve büyüme geriliği öyküsü var. Dışkısının çok yağlı olduğu, tuvalete yapıştığı ve zor temizlendiği belirtiliyor.\n\nBu hastada malabsorpsiyonun en olası nedeni nedir?",
+            "opts": [
+              { "txt": "Kistik Fibrozis (Pankreatik Yetmezlik)", "type": "correct", "go": "s2" },
+              { "txt": "Laktoz İntoleransı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SENDROMİK BAKIŞ ]</b>\n\nAkciğer enfeksiyonları + Malabsorpsiyon (Steatore) birlikteliği Kistik Fibrozis'in en tipik tablosudur. Laktoz intoleransı sulu-asidik ishal yapar, yağlı değil.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nKistik fibroziste sorun sindirimin hangi aşamasındadır?",
+            "opts": [
+              { "txt": "Luminal Faz (Maldijesyon)", "type": "correct", "go": "s3" },
+              { "txt": "Transport Fazı", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nPankreas kanalları tıkalı olduğu için enzimler (Lipaz, Amilaz, Tripsin) barsak lümenine akamaz. Besinler parçalanamaz (Maldijesyon) ve emilemez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ EKSİKLİKLER ]</b>\n\nYağ emilimi bozulduğu için bu hastada hangi vitaminlerin eksikliği beklenir?",
+            "opts": [
+              { "txt": "Yağda Eriyen Vitaminler (A, D, E, K)", "type": "correct", "go": "s4" },
+              { "txt": "Suda Eriyen Vitaminler (B, C)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ VİTAMİN BİLGİSİ ]</b>\n\nSteatore (yağ kaybı) ile birlikte yağda eriyen vitaminler de kaybedilir. Pıhtılaşma bozukluğu (Vit K), kemik zayıflığı (Vit D) görülebilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ PANKREAS FONKSİYONU ]</b>\n\nPankreasın dış salgı (ekzokrin) yetmezliğini göstermek için dışkıda hangi enzimin düzeyi ölçülür?",
+            "opts": [
+              { "txt": "Fekal Elastaz-1", "type": "correct", "go": "s5" },
+              { "txt": "Fekal Kalprotektin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TEST ]</b>\n\nKalprotektin inflamasyonu (İBH) gösterir. Fekal Elastaz-1, pankreas yetmezliğinin en güvenilir tarama testidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nTer testi pozitif, Fekal elastaz düşük. Kistik Fibrozis tanısı kondu. Pankreas enzim replasmanı (Creon) ve vitamin desteği başlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KAŞINTILI CİLT",
+        "desc": "Dermatoloji/Gastro - Çinko Eksikliği",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ GÖRÜNÜM ]</b>\n\nSüt çocuğu, ağız çevresinde, bez bölgesinde ve parmak uçlarında kırmızı, kabuklu deri döküntüleri (Dermatit) ile getirildi. Saçları dökülmüş (Alopesi) ve ishal var.\n\nBu 'Dermatit + İshal + Alopesi' triadı hangi mineralin emilim bozukluğunu işaret eder?",
+            "opts": [
+              { "txt": "Çinko (Akrodermatitis Enteropatika)", "type": "correct", "go": "s2" },
+              { "txt": "Demir", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK TABLO ]</b>\n\nDemir eksikliği anemi yapar. Akral (uç) bölgelerde dermatit ve ishal, Çinko eksikliğinin (Akrodermatitis Enteropatika) klasik bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ BAŞKA BİR VAKA ]</b>\n\nBir başka bebekte ise sürekli sulu, asidik ve popoyu pişiren (pişik yapan) ishal var. Dışkıda redüktan madde pozitif, pH < 5.5.\n\nTanı nedir?",
+            "opts": [
+              { "txt": "Karbonhidrat Malabsorpsiyonu (Örn: Laktoz İntoleransı)", "type": "correct", "go": "s3" },
+              { "txt": "Protein Kaybettiren Enteropati", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ DIŞKI ÖZELLİĞİ ]</b>\n\nEmilmeyen şekerler (laktoz vb.) kolonda bakterilerce fermente edilerek asit ve gaz oluşturur. Bu da asidik, patlayıcı ve pişik yapan ishale neden olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TRANSPORT FAZI ]</b>\n\nSon olarak, ödem ve ishal ile gelen bir çocukta kanda albümin çok düşük ve lenfosit sayısı az (Lenfopeni). Dışkıda alfa-1 antitripsin yüksek.\n\nSorun nerede olabilir?",
+            "opts": [
+              { "txt": "Lenfatik Sistem (İntestinal Lenfajiektazi)", "type": "correct", "action": "end" },
+              { "txt": "Mide", "type": "wrong", "go": "s3" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Malabsorpsiyonun en sık görülen klinik bulgusu nedir?", "a": ["Kronik İshal", "Kabızlık", "Kusma", "Sarılık"], "correct": 0 },
+      { "q": "Yağların sindirim veya emilim bozukluğu sonucu ortaya çıkan, yağlı, pis kokulu ve yapışkan dışkılamaya ne ad verilir?", "a": ["Steatore", "Melena", "Dizanteri", "Hematoşezi"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi 'Luminal Faz' (Sindirimin bozulması) bozukluğuna örnektir?", "a": ["Kistik Fibrozis (Pankreas Yetmezliği)", "Çölyak Hastalığı", "İnek Sütü Alerjisi", "Lenfajiektazi"], "correct": 0 },
+      { "q": "Çölyak hastalığında sorun sindirimin hangi aşamasındadır?", "a": ["Mukozal Faz (Villus Atrofisi)", "Luminal Faz", "Transport Fazı", "Mide Fazı"], "correct": 0 },
+      { "q": "Dışkıda yağ varlığını (Steatore) göstermek için kullanılan en pratik tarama testi hangisidir?", "a": ["Sudan III Boyası", "Gaita Kültürü", "Gaitada Gizli Kan", "Redüktan Madde"], "correct": 0 },
+      { "q": "Yağ malabsorpsiyonu tanısında 'Altın Standart' yöntem nedir?", "a": ["72 Saatlik Dışkıda Yağ Ölçümü (Van de Kamer)", "Ter Testi", "Endoskopi", "Kan Yağları"], "correct": 0 },
+      { "q": "Akrodermatitis Enteropatika hangi mineralin emilim bozukluğudur?", "a": ["Çinko", "Demir", "Bakır", "Kalsiyum"], "correct": 0 },
+      { "q": "Dışkıda pH düşüklüğü (<5.5) ve redüktan madde pozitifliği neyi gösterir?", "a": ["Karbonhidrat Malabsorpsiyonu", "Yağ Malabsorpsiyonu", "Protein Kaçağı", "Kanama"], "correct": 0 },
+      { "q": "Protein kaybettiren enteropatilerde (örn: Lenfajiektazi) kanda hangi bulgu görülür?", "a": ["Hipoalbüminemi ve Lenfopeni", "Hiperlipidemi", "Trombositoz", "Yüksek sedimentasyon"], "correct": 0 },
+      { "q": "Kistik fibrozis tanısında kullanılan temel test hangisidir?", "a": ["Ter Testi (Klor yüksekliği)", "Dışkı Kültürü", "Kan Şekeri", "Üre Nefes Testi"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Maldijesyon", "B": "Sindirimin (parçalanmanın) bozulması" },
+      { "A": "Malabsorpsiyon", "B": "Emilimin (mukozadan geçişin) bozulması" },
+      { "A": "Steatore", "B": "Yağlı dışkılama" },
+      { "A": "Kistik Fibrozis", "B": "Luminal faz bozukluğu (Pankreas yetmezliği)" },
+      { "A": "Çölyak", "B": "Mukozal faz bozukluğu (Villus atrofisi)" },
+      { "A": "Lenfajiektazi", "B": "Transport fazı bozukluğu (Protein kaybı)" },
+      { "A": "Sudan III", "B": "Yağ tarama testi" },
+      { "A": "Fekal Elastaz", "B": "Pankreas fonksiyon testi" }
+    ],
+    "decypher": [
+      {
+        "text": "Sindirim sistemi, besinlerin {enzimler} aracılığıyla parçalanması (dijesyon) ve mukozadan kana geçmesi ({absorpsiyon}) süreçlerini içerir. Pankreas yetmezliğinde dijesyon, {Çölyak} hastalığında ise absorpsiyon bozulur.",
+        "decoys": ["hormonlar", "sekresyon", "Reflü", "Kolit"]
+      },
+      {
+        "text": "{Steatore}, dışkı ile aşırı miktarda yağ atılmasıdır. Dışkı bol, {yağlı}, pis kokulu ve tuvalete yapışkan niteliktedir. Tanıda basit bir yöntem olarak {Sudan} III boyası kullanılır.",
+        "decoys": ["Diyare", "kanlı", "Gram", "Giemsa"]
+      },
+      {
+        "text": "Karbonhidrat malabsorpsiyonunda (örneğin laktoz), emilmeyen şekerler kolonda fermente olur. Bu durum dışkı pH'sını {asidik} yapar ve dışkıda {redüktan} madde pozitifleşir. Klinik olarak gaz ve {pişik} görülür.",
+        "decoys": ["bazik", "protein", "kabızlık", "kanama"]
+      }
+    ]
+  }
+}

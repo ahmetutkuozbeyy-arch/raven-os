@@ -1,0 +1,222 @@
+{
+  "meta": {
+    "title": "AĞIZ VE FARİNKS HASTALIKLARI",
+    "tag": "KBB & PATOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 ANATOMİ & HİSTOLOJİ</div><div class='sum-body'>• <b>Histoloji:</b> Özofagus mukozası keratinize olmayan çok katlı yassı epiteldir. Seroza KATMANI YOKTUR (Adventisya vardır), bu nedenle tümörler hızlı yayılır.<br>• <b>Darlıklar:</b> Krikoid kıkırdak, Aort/Bronş çaprazı, Diyafragmatik hiatus.<br>• <b>Akalazya:</b> AÖS gevşeme kusuru ve peristaltizm kaybı. Radyolojide 'Kuş Gagası' görünümü.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS İPUÇLARI</div><div class='sum-body'>• <b>Barrett Özofagus:</b> Distal özofagusta <b>Goblet hücresi</b> içeren kolumnar metaplazi. Adenokarsinom riskidir.<br>• <b>Enfeksiyöz Özofajitler:</b><br>- <b>Candida:</b> Beyaz plaklar, psödohif.<br>- <b>Herpes (HSV):</b> Multinükleer dev hücre, Cowdry-A.<br>- <b>CMV:</b> Endotel tutulumu, Baykuş Gözü.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💀 ORAL PATOLOJİ</div><div class='sum-body'>• <b>Lökoplaki:</b> Kazınamayan beyaz plak (Premalign).<br>• <b>Eritroplaki:</b> Kırmızı plak (Malignite riski Lökoplakiden daha yüksektir).<br>• <b>Pemfigus Vulgaris:</b> İntraepitelyal bül, akantoliz, Nikolsky (+).<br>• <b>SCC:</b> En sık görülen oral malignite. Keratin incileri tipiktir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: YANAN GÖĞÜS",
+        "desc": "Poliklinik - 50 Yaş Erkek - Kronik Reflü Takibi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n50 yaşında erkek hasta. 10 yıldır 'göğüs arkasında yanma' (pyrosis) şikayeti var. Son zamanlarda katı gıdaları yutarken hafif takılma hissi başlamış.\n\nİlk olarak hangi tetkiki istersin?",
+            "opts": [
+              { "txt": "Üst GİS Endoskopisi", "type": "correct", "go": "s2" },
+              { "txt": "Baryumlu Özofagus Grafisi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ EKSİK YÖNTEM ]</b>\n\nGrafi anatomiyi gösterir ama mukozal değişikliği (metaplazi/displazi) göstermez. Uzun süreli reflüde endoskopi ve biyopsi şarttır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ENDOSKOPI ]</b>\n\nEndoskopide gastroözofageal bileşkenin (Z-çizgisi) yukarısına doğru uzanan, 'somon renkli' ve kadifemsi mukoza adacıkları görüldü.\n\nBu görünümün en olası tanısı nedir?",
+            "opts": [
+              { "txt": "Barrett Özofagus", "type": "correct", "go": "s3" },
+              { "txt": "Candida Özofajiti", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ GÖRSEL AYRIM ]</b>\n\nCandida beyaz ve koparılabilen plaklar yapar. Somon renkli mukoza, mide mukozasına benzerliği (metaplazi) işaret eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ BİYOPSİ ]</b>\n\nKesin tanı için biyopsi aldın. Patolog, 'Barrett' diyebilmek için mikroskopta MUTLAKA hangi hücreyi görmelidir?",
+            "opts": [
+              { "txt": "Goblet Hücresi (İntestinal Metaplazi)", "type": "correct", "go": "s4" },
+              { "txt": "Parietal Hücre", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KRİTİK KRİTER ]</b>\n\nKardia mukozasında da kolumnar epitel vardır. Barrett tanısı için epitelin 'İntestinal' tipe dönüşmesi, yani Goblet hücresi içermesi gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ RİSK ANALİZİ ]</b>\n\nTanı: Barrett Özofagus. Displazi henüz yok. Bu hasta ileride hangi kanser türü açısından yüksek risk altındadır?",
+            "opts": [
+              { "txt": "Adenokarsinom", "type": "correct", "go": "s5" },
+              { "txt": "Skuamöz Hücreli Karsinom (SCC)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ YANLIŞ TİP ]</b>\n\nSCC; sigara ve alkol ile ilişkilidir ve orta özofagusta sıktır. Barrett zemininde gelişen kanser Adenokarsinomdur ve distalde olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nHastayı nasıl takip etmelisin?",
+            "opts": [
+              { "txt": "Düzenli endoskopik biyopsi ile displazi taraması.", "type": "correct", "action": "end" },
+              { "txt": "Şikayeti olursa gelmesini söylemek.", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: BEYAZ LEKE",
+        "desc": "KBB Polikliniği - 45 Yaş Erkek - Ağızda Beyaz Plak",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ MUAYENE ]</b>\n\n45 yaşında, günde 2 paket sigara içen erkek hasta. Ağız tabanında, dili kaldırdığında görülen 'beyaz renkli, hafif kabarık bir plak' fark etmiş. Ağrısı yok.\n\nİlk olarak ne yaparsın?",
+            "opts": [
+              { "txt": "Plağı spatul ile kazımayı denersin.", "type": "correct", "go": "s2" },
+              { "txt": "Direkt eksizyon yaparsın.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ACELECİ ]</b>\n\nÖnce lezyonun niteliğini anlamak gerekir. Kazınabiliyorsa mantar (candida) veya gıda artığı olabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nKazımayı denedin ama lezyon çıkmıyor, mukozaya yapışık. Candida ekarte edildi. Bu klinik görünümün adı nedir?",
+            "opts": [
+              { "txt": "Lökoplaki", "type": "correct", "go": "s3" },
+              { "txt": "Liken Planus", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KARIŞIKLIK ]</b>\n\nLiken planus genellikle yanak mukozasında, bilateral ve ağsı (Wickham çizgileri) beyazlıklar yapar. Tek taraflı, kazınamayan plak Lökoplakidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ RİSK ]</b>\n\nLökoplaki 'Premalign' (kanser öncüsü) bir lezyondur. Peki, eğer bu lezyon beyaz değil de 'KIRMIZI' (Eritroplaki) olsaydı, kanserleşme riski nasıl değişirdi?",
+            "opts": [
+              { "txt": "Risk çok daha yüksek olurdu (%50+).", "type": "correct", "go": "s4" },
+              { "txt": "Risk azalırdı, kırmızı lezyonlar inflamasyondur.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KIRMIZI ALARM ]</b>\n\nEritroplaki (kırmızı plak), Lökoplakiye (beyaz plak) göre çok daha yüksek oranda displazi ve karsinom içerir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ HİSTOLOJİ ]</b>\n\nBiyopsi aldın. Patolog 'Keratin incileri içeren invaziv adalar' rapor etti. Tanın nedir?",
+            "opts": [
+              { "txt": "Skuamöz Hücreli Karsinom (SCC)", "type": "correct", "go": "s5" },
+              { "txt": "Adenokarsinom", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ DOKU TİPİ ]</b>\n\nAğız içi döşemesi çok katlı yassı (skuamöz) epiteldir. Buranın en sık kanseri SCC'dir. Keratin incisi SCC'nin imzasıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nErken evre SCC. Tedavide cerrahi eksizyon ve gerekirse boyun diseksiyonu planladın. Hastaya en önemli tavsiyen ne olmalı?",
+            "opts": [
+              { "txt": "Sigara ve alkolü kesinlikle bırakması.", "type": "correct", "action": "end" },
+              { "txt": "Sıcak içeceklerden kaçınması.", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: İMMÜNSÜPRESİF",
+        "desc": "Enfeksiyon - KT Alan Hasta - Yutma Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ KONSÜLTASYON ]</b>\n\nLösemi nedeniyle kemoterapi gören bir hasta, şiddetli yutma ağrısı (odinofaji) şikayetiyle KBB'ye danışıldı. Endoskopide özofagusta 'derin, zımba deliği gibi ülserler' görüldü.\n\nŞüphelendiğin viral etkenler?",
+            "opts": [
+              { "txt": "Herpes (HSV) veya Sitomegalovirüs (CMV)", "type": "correct", "go": "s2" },
+              { "txt": "HPV veya EBV", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YANLIŞ VİRÜS ]</b>\n\nİmmünsüpresiflerde derin özofagus ülseri en sık HSV ve CMV kaynaklıdır. HPV siğil yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MİKROSKOPİ - 1 ]</b>\n\nBiyopsi alındı. Patolog, ülser kenarındaki skuamöz epitel hücrelerinde 'Multinükleer dev hücreler' ve 'Cowdry-A inklüzyonları' gördü.\n\nTanın?",
+            "opts": [
+              { "txt": "Herpes Simplex Özofajiti (HSV)", "type": "correct", "go": "s3" },
+              { "txt": "CMV Özofajiti", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AYRIM ]</b>\n\nHSV epiteli tutar ve çok çekirdekli dev hücre yapar. CMV stromayı tutar ve tek büyük inklüzyon yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ MİKROSKOPİ - 2 ]</b>\n\nEğer patolog epitelde değil de, ülser tabanındaki damar endotelinde 'Büyük hücreler' ve 'Baykuş Gözü'ne benzeyen inklüzyonlar görseydi tanı ne olurdu?",
+            "opts": [
+              { "txt": "Sitomegalovirüs (CMV)", "type": "correct", "go": "s4" },
+              { "txt": "Candida", "type": "wrong", "go": "s3" }
+            ]
+          },
+          "s4": {
+            "text": "<b>[ KLİNİK BİLGİ ]</b>\n\nCMV tanısı için biyopsi nereden alınmalıdır?",
+            "opts": [
+              { "txt": "Ülserin tabanından (Stromadan)", "type": "correct", "go": "s5" },
+              { "txt": "Ülserin kenarından (Epitelden)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ LOKALİZASYON ]</b>\n\nCMV endotel ve fibroblastları tutar, bu yüzden ülserin dibinden (derinden) alınmalıdır. HSV epiteli tuttuğu için kenardan alınır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nCMV tanısı kondu. İmmünsüpresif hastada tedavi yaklaşımın?",
+            "opts": [
+              { "txt": "Gansiklovir tedavisi başlanması.", "type": "correct", "action": "end" },
+              { "txt": "Sadece takip.", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Özofagus duvarında hangi histolojik katman BULUNMAZ, bu nedenle tümörler hızlı yayılır?", "a": ["Seroza", "Mukoza", "Submukoza", "Muskularis Propria"], "correct": 0 },
+      { "q": "Barrett özofagus tanısı için hangi histolojik bulgu şarttır?", "a": ["Goblet hücresi içeren kolumnar metaplazi", "Skuamöz hiperplazi", "Eozinofilik infiltrasyon", "Keratin incileri"], "correct": 0 },
+      { "q": "Herpes (HSV) özofajitinin tipik histolojik bulgusu nedir?", "a": ["Multinükleer dev hücreler ve Cowdry A inklüzyonu", "Baykuş gözü inklüzyonu", "Psödohifler", "Keratin incileri"], "correct": 0 },
+      { "q": "Akalazya'nın temel patofizyolojisi nedir?", "a": ["Myenterik pleksusta ganglion hücresi kaybı", "Mide asidinin aşırı artışı", "Özofagusun aşırı kasılması", "Ektopik gastrik mukoza"], "correct": 0 },
+      { "q": "Reflü özofajitinde (GÖRH) görülen histolojik bulgulardan hangisi yanlıştır?", "a": ["Mukoza kalınlığında incelme", "Bazal zon hiperplazisi", "Papiller elongasyon (uzama)", "İntraepitelial eozinofiller"], "correct": 0 },
+      { "q": "Özofagusun en sık görülen BENİGN tümörü hangisidir?", "a": ["Leiomyom", "Skuamöz Papillom", "Adenoma", "Lipom"], "correct": 0 },
+      { "q": "CMV özofajiti biyopsisinde 'Baykuş Gözü' inklüzyonları nerede aranmalıdır?", "a": ["Ülser tabanındaki endotel ve fibroblastlarda", "Yüzeyel skuamöz epitelde", "Sadece kas tabakasında", "Goblet hücrelerinde"], "correct": 0 },
+      { "q": "Özofagus adenokarsinomu en sık hangi bölgede görülür?", "a": ["Distal 1/3 (Alt)", "Orta 1/3", "Proksimal 1/3 (Üst)", "Servikal özofagus"], "correct": 0 },
+      { "q": "Skuamöz hücreli karsinomun (SCC) en önemli risk faktörleri nelerdir?", "a": ["Alkol ve Sigara", "Barrett özofagus", "Obezite", "H. Pylori"], "correct": 0 },
+      { "q": "Hangi oral lezyonun malignite (kanserleşme) riski en yüksektir?", "a": ["Eritroplaki (Kırmızı)", "Lökoplaki (Beyaz)", "Liken Planus", "Aft"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Barrett Özofagus", "B": "Goblet hücreli metaplazi" },
+      { "A": "Candida", "B": "Psödohif ve Maya" },
+      { "A": "HSV (Herpes)", "B": "Cowdry-A / 3M (Multinükleasyon)" },
+      { "A": "CMV", "B": "Baykuş Gözü İnklüzyonu" },
+      { "A": "SCC", "B": "Keratin İncileri" },
+      { "A": "GÖRH", "B": "Bazal Zon Hiperplazisi" },
+      { "A": "Akalazya", "B": "Ganglion hücre kaybı" },
+      { "A": "Pemfigus", "B": "Akantoliz / İntraepitelyal bül" }
+    ],
+    "decypher": [
+      {
+        "text": "Gastroözofageal Reflü Hastalığında (GÖRH) histolojik olarak skuamöz epitelde {bazal} zon hiperplazisi, papilla boylarında {uzama} ve epitel içinde {eozinofil} ve nötrofil infiltrasyonu görülür. Kronikleşirse metaplazi gelişebilir.",
+        "decoys": ["atrofi", "kısalma", "makrofaj", "lenfosit"]
+      },
+      {
+        "text": "Barrett özofagusu, distal özofagus mukozasının {skuamöz} epitelden, {Goblet} hücresi içeren kolumnar epitele dönüşmesidir. Bu durum {Adenokarsinom} gelişimi için en önemli risk faktörüdür.",
+        "decoys": ["kübik", "transizyonel", "Paneth", "SCC"]
+      },
+      {
+        "text": "Enfeksiyöz özofajitlerde; {Candida} beyaz plaklar ve psödohiflerle karakterizedir. {Herpes} (HSV) ise çok çekirdekli dev hücreler ve {Cowdry} A inklüzyonları oluşturur. CMV ise endotel hücrelerinde görülür.",
+        "decoys": ["HPV", "Aspergillus", "Negri", "Mallory"]
+      }
+    ]
+  }
+}

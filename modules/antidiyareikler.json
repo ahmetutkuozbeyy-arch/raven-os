@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "title": "ANTİDİYAREİK İLAÇLAR",
+    "tag": "TIBBİ FARMAKOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>💧 ORAL REHİDRATASYON (ORT)</div><div class='sum-body'>• <b>Prensip:</b> Bağırsakta glikoz emilirken beraberinde sodyum ve suyu da çeker (SGLT-1 taşıyıcısı). Bu nedenle ORS içinde tuz, şeker ve su bulunur.<br>• <b>Amaç:</b> İshali durdurmak değil, kaybedilen sıvıyı yerine koymak ve ölümü (dehidratasyonu) engellemektir.</div></div><div class='sum-card sum-tus'><div class='sum-title'>💊 İLAÇ GRUPLARI</div><div class='sum-body'>• <b>Opioidler (Loperamid, Difenoksilat):</b> Barsak motilitesini (peristaltizmi) azaltır, geçiş zamanını uzatır. En etkili gruptur.<br>• <b>Adsorbanlar (Kaolin, Pektin):</b> Toksinleri ve suyu tutar. Etkinlikleri düşüktür.<br>• <b>Oktreotid:</b> Somatostatin analoğudur. Karsinoid tümör ve VIPoma'ya bağlı sekretuar ishallerde kullanılır.</div></div><div class='sum-card sum-rx'><div class='sum-title'>⚠️ KONTRENDİKASYONLAR</div><div class='sum-body'>• <b>Kanlı İshal (Dizanteri) ve Yüksek Ateş:</b> Bu durumlarda motilite azaltıcı ilaçlar (Loperamid) VERİLMEZ! Toksinin atılmasını engeller ve Toksik Megakolon riskini artırır.<br>• <b>Difenoksilat:</b> Yüksek dozda SSS etkisi yapabilir, suiistimali önlemek için içine <b>Atropin</b> eklenmiştir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: HAYAT KURTARAN SIVI",
+        "desc": "Acil Servis - Kolera Şüphesi - ORS Mantığı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nAcil servise bol sulu ishal (koleriform) ile gelen ve orta derece dehidratasyonu olan bir hastaya ilk müdahalen ne olmalı?",
+            "opts": [
+              { "txt": "Oral Rehidratasyon Sıvısı (ORS) vermek.", "type": "correct", "go": "s2" },
+              { "txt": "Hemen İshali kesici (Antidiyareik) ilaç vermek.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ÖNCELİK HATASI ]</b>\n\nİshalde ölüm nedeni sıvı-elektrolit kaybıdır. İlk hedef ishali durdurmak değil, kaybedilen sıvıyı yerine koymaktır (Rehidratasyon). Ayrıca toksin kaynaklı ishallerde motiliteyi durdurmak toksini içeride hapseder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nHastaya tuzlu ve şekerli bir su (ORS) içiriyorsun. Neden sadece tuzlu su değil de içine 'Şeker' (Glikoz) de koyuyoruz?",
+            "opts": [
+              { "txt": "Glikoz, Sodyumun emilimi için gereklidir (Co-transport).", "type": "correct", "go": "s3" },
+              { "txt": "Hastanın enerjisi düşmesin diye.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ FİZYOLOJİ ]</b>\n\nİnce bağırsakta Sodyum (Na+) emilimi, Glikoz ile eşleşerek (SGLT-1 taşıyıcısı üzerinden) gerçekleşir. Glikoz olmadan sodyum ve su yeterince emilemez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ BİLEŞİM ]</b>\n\nORS paketinin içinde sodyum ve glikoz dışında, asidozu önlemek ve potasyum kaybını karşılamak için neler bulunur?",
+            "opts": [
+              { "txt": "Potasyum Klorür ve Bikarbonat (veya Sitrat)", "type": "correct", "go": "s4" },
+              { "txt": "Kalsiyum ve Magnezyum", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ İÇERİK ]</b>\n\nİshalde potasyum kaybı (hipopotasemi) ve bikarbonat kaybı (metabolik asidoz) gelişir. ORS bunları yerine koymayı hedefler.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta ORS ile hidrate edildi ve genel durumu düzeldi. İshalin kendini sınırlaması beklendi. Başarılı yönetim.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: HAREKETİ DURDURMAK",
+        "desc": "Poliklinik - Turist İshali - Loperamid",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\nBir iş adamı seyahat sırasında başlayan sulu, ateşsiz ve kansız ishalden şikayetçi. Toplantısı olduğu için ishalin hemen kesilmesini istiyor.\n\nMotiliteyi azaltarak etki gösteren en güçlü ilaç grubu hangisidir?",
+            "opts": [
+              { "txt": "Opioidler (Loperamid, Difenoksilat)", "type": "correct", "go": "s2" },
+              { "txt": "Adsorbanlar (Kaolin-Pektin)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ETKİ GÜCÜ ]</b>\n\nAdsorbanlar toksinleri bağlar ama ishali durdurma etkileri zayıftır. Opioidler barsak kaslarındaki reseptörlere bağlanarak peristaltizmi durdurur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nBu gruptan, Kan-Beyin Bariyerini geçmeyen ve bağımlılık yapma riski çok düşük olan, reçetesiz de satılabilen ilaç hangisidir?",
+            "opts": [
+              { "txt": "Loperamid", "type": "correct", "go": "s3" },
+              { "txt": "Difenoksilat", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ FARMAKOLOJİ ]</b>\n\nDifenoksilat santral sinir sistemine geçer ve yüksek dozda morfin benzeri etki yapabilir. Loperamid ise sadece periferik etkilidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KOMBİNASYON ]</b>\n\nDifenoksilat kullansaydık, ilacın kötüye kullanımını (suiistimalini) engellemek için içine düşük dozda hangi madde eklenmiştir?",
+            "opts": [
+              { "txt": "Atropin", "type": "correct", "go": "s4" },
+              { "txt": "Kafein", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ CAYDIRICI ]</b>\n\nAtropin, yüksek doz alındığında ağız kuruluğu, taşikardi gibi rahatsız edici etkiler yaparak hastanın ilacı keyif için kullanmasını engeller.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya Loperamid verildi ve ishali kesildi. Ancak ateş veya kanama olursa ilacı kesmesi tembihlendi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KIRMIZI ÇİZGİ",
+        "desc": "Acil Servis - Kanlı İshal - İlaç Hatası",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ]</b>\n\n30 yaşında hasta yüksek ateş, şiddetli karın ağrısı ve kanlı-mukuslu ishal (Dizanteri) ile geldi. Evde bulduğu Loperamid'den 2 tane içmiş.\n\nBu hasta için Loperamid kullanımı doğru mu?",
+            "opts": [
+              { "txt": "HAYIR! Kesinlikle Kontrendikedir.", "type": "correct", "go": "s2" },
+              { "txt": "Evet, ishali azaltır.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ CİDDİ RİSK ]</b>\n\nİnvaziv (kanlı/ateşli) ishallerde barsak hareketini durdurmak, etkenin (bakteri/toksin) atılmasını engeller ve doku hasarını artırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nBu hastada motilite önleyici ilaç kullanımı hangi ciddi komplikasyona yol açabilir?",
+            "opts": [
+              { "txt": "Toksik Megakolon", "type": "correct", "go": "s3" },
+              { "txt": "Hipokalemi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ PATOLOJİ ]</b>\n\nToksik megakolon, kalın bağırsağın aşırı genişleyip delinme riski taşıdığı, hayatı tehdit eden bir tablodur. İnflamatuvar ishallerde antispazmodikler bunu tetikler.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ALTERNATİF ]</b>\n\nBu tip sekretuar veya tümöre bağlı (VIPoma, Karsinoid) dirençli ishallerde kullanılan Somatostatin analoğu ilaç hangisidir?",
+            "opts": [
+              { "txt": "Oktreotid", "type": "correct", "go": "s4" },
+              { "txt": "Bizmut Subsalisilat", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ SEKRESYON KONTROLÜ ]</b>\n\nOktreotid, birçok hormonu ve salgıyı baskılayan somatostatinin uzun etkili analoğudur. Özellikle nöroendokrin tümör ishallerinde kullanılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastanın Loperamid alması durduruldu. Antibiyotik ve sıvı tedavisi başlandı. Toksik megakolon gelişimi önlendi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Oral Rehidratasyon Sıvısının (ORS) içinde sodyum emilimini artırmak için hangi molekül bulunur?", "a": ["Glikoz", "Protein", "Yağ", "Aminoasit"], "correct": 0 },
+      { "q": "Kan-beyin bariyerini geçmeyen ve bağımlılık riski düşük olan opioid türevi antidiyareik hangisidir?", "a": ["Loperamid", "Difenoksilat", "Kodein", "Morfin"], "correct": 0 },
+      { "q": "Difenoksilat preparatlarına, kötüye kullanımı (suiistimali) engellemek için hangi madde eklenir?", "a": ["Atropin", "Kafein", "Aspirin", "Parasetamol"], "correct": 0 },
+      { "q": "Antidiyareik ilaçların (özellikle motilite azaltıcıların) KESİNLİKLE kullanılmaması gereken durum hangisidir?", "a": ["Kanlı ve ateşli ishal (Dizanteri)", "Turist ishali", "Kronik ishal", "Stres ishali"], "correct": 0 },
+      { "q": "Sekretuar ishallerde (Karsinoid sendrom, VIPoma) kullanılan somatostatin analoğu ilaç hangisidir?", "a": ["Oktreotid", "Loperamid", "Bizmut", "Kaolin"], "correct": 0 },
+      { "q": "Barsak lümenindeki toksinleri ve bakterileri yüzeyine bağlayarak etki gösteren ilaç grubu hangisidir?", "a": ["Adsorbanlar (Kaolin, Pektin)", "Opioidler", "Antikolinerjikler", "Probiyotikler"], "correct": 0 },
+      { "q": "Bizmut subsalisilatın hem antisekretuar hem de hangi ek özelliği vardır?", "a": ["Antimikrobiyal (Bakteri ve toksinlere karşı)", "Prokinetik", "Antiemetik", "Sedatif"], "correct": 0 },
+      { "q": "Opioid antidiyareiklerin (Loperamid vb.) etki mekanizması nedir?", "a": ["Barsak düz kaslarındaki opiyat reseptörlerini uyararak motiliteyi azaltmak", "Su emilimini artırmak", "Bakterileri öldürmek", "Toksinleri bağlamak"], "correct": 0 },
+      { "q": "İshal tedavisinde en önemli ve öncelikli basamak nedir?", "a": ["Sıvı ve elektrolit kaybının yerine konması (Rehidratasyon)", "İshali hemen kesmek", "Antibiyotik vermek", "Aç bırakmak"], "correct": 0 },
+      { "q": "Psödomembranöz enterokolit (C. difficile) tedavisinde motilite azaltıcı ilaç verilirse ne riski oluşur?", "a": ["Toksik Megakolon", "Kanama", "Kusma", "Böbrek yetmezliği"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Loperamid", "B": "Periferik opioid (Motilite azaltıcı)" },
+      { "A": "Difenoksilat", "B": "Santral etkili olabilir (+Atropin)" },
+      { "A": "ORS", "B": "Glikoz + Na + K + Bikarbonat" },
+      { "A": "Oktreotid", "B": "Sekretuar ishal (VIPoma)" },
+      { "A": "Kaolin-Pektin", "B": "Adsorban (Toksin bağlayıcı)" },
+      { "A": "Bizmut", "B": "Turist ishali, antimikrobiyal" },
+      { "A": "Dizanteri", "B": "Antidiyareik KONTRENDİKE" },
+      { "A": "Glikoz", "B": "Sodyum emilimini artırır" }
+    ],
+    "decypher": [
+      {
+        "text": "{Loperamid}, barsak duvarındaki opioid reseptörlerine bağlanarak peristaltizmi yavaşlatır. Kan-beyin bariyerini {geçmediği} için merkezi sinir sistemi yan etkileri ve bağımlılık riski düşüktür.",
+        "decoys": ["Difenoksilat", "geçtiği", "artırır", "böbrek"]
+      },
+      {
+        "text": "Oral rehidratasyon sıvısı ({ORS}), ishal tedavisinin temelidir. İçindeki {glikoz}, sodyumun bağırsaktan emilimini artırarak suyun da geri emilmesini sağlar.",
+        "decoys": ["protein", "atılımını", "yağ", "potasyum"]
+      },
+      {
+        "text": "Kanlı ishal, yüksek {ateş} veya psödomembranöz kolit varlığında motiliteyi azaltan ilaçlar {kontrendikedir}. Bu ilaçlar toksinlerin atılmasını engelleyerek {toksik} megakolona yol açabilir.",
+        "decoys": ["uygundur", "sulu", "basit", "tedavi"]
+      }
+    ]
+  }
+}

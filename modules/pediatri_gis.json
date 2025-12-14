@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "title": "GİS: ÜST KARIN MUAYENESİ",
+    "tag": "PEDİATRİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 MUAYENE PRENSİPLERİ</div><div class='sum-body'>• <b>Sıralama:</b> Karın muayenesi İnspeksiyon ➝ <span class='sum-tag'>OSKÜLTASYON</span> ➝ Palpasyon ➝ Perküsyon sırasıyla yapılır. (Palpasyon barsak seslerini değiştirebileceği için oskültasyon önce yapılır).<br>• <b>Pozisyon:</b> Çocuk supin (sırt üstü) pozisyonda, hekim hastanın SAĞINDA olmalıdır.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 KLİNİK İPUÇLARI</div><div class='sum-body'>• <b>Zeytin (Olive) Kitle:</b> Hipertrofik Pilor Stenozu (Epigastriumda).<br>• <b>En Sık Kitle:</b> Çocuklarda karında ele gelen en sık kitle FEKALOM'dur (Sertleşmiş dışkı).<br>• <b>Sessiz Batın:</b> Paralitik İleus veya Peritonit.<br>• <b>Metalik Ses:</b> Mekanik Obstrüksiyonun erken dönemi.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💀 PATOLOJİK BULGULAR</div><div class='sum-body'>• <b>Kaput Meduza:</b> Göbek çevresinde venöz genişleme (Siroz/Portal Hipertansiyon).<br>• <b>Skafoid Karın:</b> Çökük karın (Diyafragma hernisi?).<br>• <b>Rebound:</b> Elin aniden çekilmesiyle artan ağrı (Peritonit bulgusu).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: SAFRA KUSAN ÇOCUK",
+        "desc": "Acil Servis - 7 Yaş - Karın Şişliği",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ GÖZLEM ]</b>\n\n7 yaşında erkek çocuk. 2 gündür karın ağrısı, safralı kusma ve gaz çıkaramama şikayetiyle geldi. Karnı bombe duruyor (Distansiyon). İnspeksiyonu tamamladın.\n\nSırada hangi muayene basamağı var?",
+            "opts": [
+              { "txt": "Oskültasyon (Dinleme)", "type": "correct", "go": "s2" },
+              { "txt": "Palpasyon (Elle muayene)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ USUL HATASI ]</b>\n\nKarın muayenesinde palpasyon, barsak seslerini uyararak yanıltıcı olabilir. Bu yüzden İnspeksiyondan hemen sonra Oskültasyon yapılmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ SESLERİN DİLİ ]</b>\n\nStetoskopla karnı dinliyorsun. Normalde 10-30 saniyede bir duyulması gereken sesler çok artmış ve 'Çınlama/Metalik' bir tonda geliyor.\n\nBu ses neyi işaret eder?",
+            "opts": [
+              { "txt": "Mekanik Barsak Tıkanıklığı (Başlangıç)", "type": "correct", "go": "s3" },
+              { "txt": "Paralitik İleus", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ TANI ]</b>\n\nParalitik ileusta barsak çalışmadığı için sesler azalır veya kaybolur (Sessiz Batın). Metalik ses, barsağın tıkanıklığı aşmaya çalışmasıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ GÖRÜNTÜLEME ]</b>\n\nMekanik obstrüksiyondan şüphelendin. Tanıyı desteklemek için Ayakta Direkt Batın Grafisi (ADBG) istedin. Ne görmeyi beklersin?",
+            "opts": [
+              { "txt": "Hava-Sıvı Seviyeleri", "type": "correct", "go": "s4" },
+              { "txt": "Serbest hava (Pnömoperitoneum)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ BULGU ]</b>\n\nSerbest hava perforasyonu (delinmeyi) gösterir. Tıkanıklıkta tipik bulgu hava-sıvı seviyeleridir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ PERKÜSYON ]</b>\n\nSon olarak perküsyon yapıyorsun. Karaciğer üst sınırını belirlemeye çalışıyorsun. Normalde akciğer-karaciğer sınırında ses nasıl değişmeli?",
+            "opts": [
+              { "txt": "Sonor sesten Submatiteye geçiş.", "type": "correct", "go": "s5" },
+              { "txt": "Timpan sesten Sonor sese geçiş.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nAkciğer (hava dolu) sonordur. Karaciğer (katı) matite verir. Geçiş bölgesi submatitedir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastada mekanik ileus tablosu mevcut. Dekompresyon (Nasogastrik sonda) ve cerrahi konsültasyon gerekiyor. Başarılı yönetim.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: ZEYTİN ÇEKİRDEĞİ",
+        "desc": "Poliklinik - 1 Aylık Bebek - Fışkırır Tarzda Kusma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n1 aylık erkek bebek. Her beslenmeden sonra 'fışkırır tarzda' (projektil) kusma şikayetiyle getirildi. Kilo alımı durmuş. İnspeksiyonda mide bölgesinde peristaltik dalgalanmalar görülüyor.\n\nŞüphen nedir?",
+            "opts": [
+              { "txt": "Hipertrofik Pilor Stenozu", "type": "correct", "go": "s2" },
+              { "txt": "Gastroenterit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK ]</b>\n\nFışkırır tarzda kusma ve peristaltik dalgalar, mide çıkışındaki darlığın (stenoz) tipik bulgusudur. Gastroenteritte ishal ve ateş eşlik eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PALPASYON ]</b>\n\nEpigastrik bölgeyi (mide çıkışını) dikkatlice palpe ediyorsun. Eline sert bir kitle geliyor. Bu kitlenin klasik tanımı nedir?",
+            "opts": [
+              { "txt": "Zeytin (Olive) Kitle", "type": "correct", "go": "s3" },
+              { "txt": "Sosis Kitle", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KİTLE TİPİ ]</b>\n\nSosis kitle İnvajinasyon'da (barsak düğümlenmesi) görülür. Pilor stenozunda 'Zeytin' büyüklüğünde kitle palpe edilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ LABORATUVAR ]</b>\n\nHastada sürekli kusmaya bağlı bir metabolik bozukluk gelişmiş olabilir. Kan gazında ne beklersin?",
+            "opts": [
+              { "txt": "Hipokloremik Metabolik Alkaloz", "type": "correct", "go": "s4" },
+              { "txt": "Metabolik Asidoz", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nMide asidi (HCL) kusulduğu için asit ve klor kaybı olur. Bu da alkaloz ve hipokloremiye yol açar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TANI DOĞRULAMA ]</b>\n\nTanıyı kesinleştirmek için hangi görüntüleme yöntemini seçersin?",
+            "opts": [
+              { "txt": "Batın Ultrasonografisi (USG)", "type": "correct", "go": "s5" },
+              { "txt": "Bilgisayarlı Tomografi (BT)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ RADYASYON ]</b>\n\nBebeklerde radyasyonsuz olduğu için ilk tercih USG'dir. Pilor kas kalınlığı ve kanal uzunluğu ölçülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nTanı: Pilor Stenozu. Bu hastanın kesin tedavisi ne olmalıdır?",
+            "opts": [
+              { "txt": "Cerrahi (Piloromiyotomi)", "type": "correct", "action": "end" },
+              { "txt": "Antibiyotik tedavisi", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ YANLIŞ ]</b>\n\nBu anatomik bir darlıktır (hipertrofi). İlaçla düzelmez, kasın kesilmesi (miyotomi) gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KARINDA KİTLE",
+        "desc": "Servis - 5 Yaş Kız - Karın Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ MUAYENE ]</b>\n\n5 yaşında kız çocuğu karın ağrısı ile geldi. Palpasyonda sol alt kadranda sert, hareketli bir kitle eline geldi. Çocuğun uzun süredir kabızlık çektiği öğrenildi.\n\nÇocuklarda karında ele gelen EN SIK kitle nedir?",
+            "opts": [
+              { "txt": "Fekalom (Sertleşmiş Dışkı)", "type": "correct", "go": "s2" },
+              { "txt": "Wilms Tümörü", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ İSTATİSTİK ]</b>\n\nTümörler (Wilms, Nöroblastom) daha nadirdir. Kabızlık öyküsü olan bir çocukta ele gelen kitle büyük ihtimalle birikmiş dışkıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nEğer bu kitle karnın yan tarafında (böğürde) olsaydı ve çocukta kanlı idrar (hematüri) olsaydı, hangi maligniteyi düşünürdün?",
+            "opts": [
+              { "txt": "Wilms Tümörü (Nefroblastom)", "type": "correct", "go": "s3" },
+              { "txt": "Nöroblastom", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TÜMÖR TİPİ ]</b>\n\nWilms tümörü böbrek kökenlidir ve hematüri yapabilir. Nöroblastom sürrenal (böbrek üstü) kökenlidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SIVI ARANMASI ]</b>\n\nKitleleri ekarte ettin. Şimdi karında serbest sıvı (Asit) var mı diye bakacaksın. Perküsyonla bunu nasıl anlarsın?",
+            "opts": [
+              { "txt": "Yer değiştiren matite (Shifting Dullness) ve Sıvı Dalgası", "type": "correct", "go": "s4" },
+              { "txt": "Rebound bakarım.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YANLIŞ YÖNTEM ]</b>\n\nRebound peritonit bulgusudur. Sıvı varlığında matite (tok ses) alınır ve hasta yan dönünce bu ses yer değiştirir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KLİNİK BULGU ]</b>\n\nKaraciğer sirozuna bağlı asit gelişen bir çocukta, göbek çevresindeki venlerin genişleyerek 'Medusa Başı' gibi görünmesine ne ad verilir?",
+            "opts": [
+              { "txt": "Kaput Meduza", "type": "correct", "go": "s5" },
+              { "txt": "Diastazis Rekti", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ YANLIŞ ]</b>\n\nDiastazis rekti karın kaslarının ayrılmasıdır. Venöz genişleme Kaput Meduza'dır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastada fekalom saptandı, lavman yapıldı ve kitle kayboldu. Tümör ve asit ekarte edildi. Başarılı yönetim.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Karın muayenesinin doğru sıralaması nasıldır?", "a": ["İnspeksiyon -> Oskültasyon -> Palpasyon -> Perküsyon", "İnspeksiyon -> Palpasyon -> Perküsyon -> Oskültasyon", "Palpasyon -> İnspeksiyon -> Oskültasyon -> Perküsyon", "Oskültasyon -> İnspeksiyon -> Palpasyon -> Perküsyon"], "correct": 0 },
+      { "q": "Çocuklarda karında ele gelen EN SIK kitle nedeni nedir?", "a": ["Fekalom (Dışkı)", "Wilms Tümörü", "Nöroblastom", "Over Kisti"], "correct": 0 },
+      { "q": "Oskültasyonda barsak seslerinin alınamamasına (Sessiz Batın) ne denir?", "a": ["Paralitik İleus", "Mekanik Obstrüksiyon", "Gastroenterit", "Pilor Stenozu"], "correct": 0 },
+      { "q": "Sirozlu bir hastada göbek çevresindeki venlerin belirginleşmesine ne ad verilir?", "a": ["Kaput Meduza", "Skafoid Karın", "Diastazis Rekti", "Omfalosel"], "correct": 0 },
+      { "q": "Hipertrofik Pilor Stenozunda ele gelen kitlenin klasik tanımı nedir?", "a": ["Zeytin (Olive)", "Sosis", "Portakal", "Üzüm"], "correct": 0 },
+      { "q": "Mekanik barsak tıkanıklığının erken döneminde oskültasyonda ne duyulur?", "a": ["Metalik Ses", "Sessiz Batın", "Üfürüm", "Fürtman"], "correct": 0 },
+      { "q": "Peritonit varlığında palpasyonda saptanan en tipik bulgu nedir?", "a": ["Rebound (Geri Tepme Ağrısı)", "Ballotman", "Hepatomegali", "Kitle"], "correct": 0 },
+      { "q": "Karın solunumunun kaybolması neyi düşündürür?", "a": ["Peritonit / Akut Karın", "Normal durum", "Pnömoni", "Kabızlık"], "correct": 0 },
+      { "q": "Karında serbest sıvı (asit) varlığını anlamak için hangi muayene yapılır?", "a": ["Yer değiştiren matite (Shifting dullness) ve Sıvı dalgası", "Derin palpasyon", "Oskültasyon", "Rektal tuşe"], "correct": 0 },
+      { "q": "Normalde karın muayenesinde Traube alanında (mide havası) hangi ses alınır?", "a": ["Timpan ses", "Matite", "Submatite", "Sonor ses"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Sessiz Batın", "B": "Paralitik İleus" },
+      { "A": "Metalik Ses", "B": "Mekanik Tıkanıklık" },
+      { "A": "Zeytin Kitle", "B": "Pilor Stenozu" },
+      { "A": "Kaput Meduza", "B": "Siroz / Portal HT" },
+      { "A": "Skafoid Karın", "B": "Çökük Karın (Diyafragma hernisi)" },
+      { "A": "Fekalom", "B": "En sık karın kitlesi" },
+      { "A": "Rebound", "B": "Periton İrritasyonu" },
+      { "A": "Matite", "B": "Sıvı veya Kitle varlığı" }
+    ],
+    "decypher": [
+      {
+        "text": "Karın muayenesi yapılırken hasta {supin} (sırt üstü) pozisyonda olmalı ve hekim hastanın {sağ} tarafında yer almalıdır. Muayene sırası İnspeksiyon, {Oskültasyon}, Palpasyon ve Perküsyon şeklinde olmalıdır.",
+        "decoys": ["sol", "yüz üstü", "Palpasyon", "Perküsyon"]
+      },
+      {
+        "text": "Karında serbest sıvı (asit) varlığında perküsyon ile {matite} alınır. Hastanın pozisyonu değiştirildiğinde matitenin yer değiştirmesine {shifting} dullness denir.",
+        "decoys": ["timpanizm", "sonorite", "rebound", "defans"]
+      },
+      {
+        "text": "Hipertrofik Pilor Stenozunda epigastrik bölgede {zeytin} şeklinde kitle ele gelir. İnvajinasyonda (barsak düğümlenmesi) ise {sosis} şeklinde kitle palpe edilebilir.",
+        "decoys": ["portakal", "üzüm", "fekalom", "kist"]
+      }
+    ]
+  }
+}

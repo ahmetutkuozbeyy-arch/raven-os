@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "title": "İNFLAMATUAR BAĞIRSAK HASTALIKLARI",
+    "tag": "GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 ÜLSERATİF KOLİT (ÜK)</div><div class='sum-body'>• <b>Tutulum:</b> Rektumdan başlar, proksimale doğru SÜREKLİ yayılır. Sadece Kolonu tutar.<br>• <b>Derinlik:</b> Sadece Mukoza ve Submukoza (Yüzeyel).<br>• <b>Klinik:</b> Kanlı ishal, tenezm (dışkılama hissi), urgency (aciliyet).<br>• <b>Sigara:</b> Koruyucudur! (Bırakanlarda hastalık alevlenir).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 CROHN HASTALIĞI (CH)</div><div class='sum-body'>• <b>Tutulum:</b> Ağızdan anüse kadar her yeri tutabilir (En sık Terminal İleum). ATLAMALI (Skip) lezyonlar yapar.<br>• <b>Derinlik:</b> Transmural (Tüm katlar). Bu yüzden Fistül, Darlık ve Abse sık görülür.<br>• <b>Görünüm:</b> Kaldırım taşı (Cobblestone) manzarası.<br>• <b>Sigara:</b> Risk faktörüdür ve seyri kötüleştirir.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ VE KOMPLİKASYON</div><div class='sum-body'>• <b>Tedavi:</b> 5-ASA (Hafif), Steroid (İndüksiyon), Azatioprin/Biyolojikler (İdame).<br>• <b>Toksik Megakolon:</b> ÜK'nin acil komplikasyonudur (Kolon çapı >6cm + Toksisite).<br>• <b>Kanser Riski:</b> ÜK'de pankolit ve uzun süreli hastalıkta risk yüksektir (8. yıldan sonra tarama başlar).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KANLI İSHAL",
+        "desc": "Poliklinik - 25 Yaş Erkek - Sigarayı Bırakma Öyküsü",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n25 yaşında erkek hasta. 3 haftadır günde 8-10 kez olan kanlı, mukuslu ishal şikayetiyle geldi. Ayrıca karın ağrısı ve sürekli tuvalete gitme isteği (tenezm) var. Öyküsünde 1 ay önce sigarayı bıraktığı öğrenildi.\n\nBu tablo ve sigara ilişkisi hangi hastalığı işaret eder?",
+            "opts": [
+              { "txt": "Ülseratif Kolit", "type": "correct", "go": "s2" },
+              { "txt": "Crohn Hastalığı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SİGARA PARADOKSU ]</b>\n\nCrohn hastalığında sigara riski artırır ve hastalığı kötüleştirir. Ülseratif Kolitte ise sigara koruyucudur; hastalık genellikle sigarayı bıraktıktan sonra ortaya çıkar veya alevlenir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ENDOSKOPI ]</b>\n\nKolonoskopi yapıldı. Rektumdan başlayıp splenik fleksuraya kadar devam eden (sol kolon), arada sağlam alan bırakmayan, frajil ve ülserli mukoza görüldü.\n\nBu tutulum paterni (Sürekli ve Rektumdan başlayan) tanıyı destekliyor mu?",
+            "opts": [
+              { "txt": "Evet, Ülseratif Kolit tipik tutulumudur.", "type": "correct", "go": "s3" },
+              { "txt": "Hayır, Crohn hastalığıdır.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nCrohn hastalığında 'Atlamalı' (Skip lesions) tutulum olur ve rektum %50 korunur. Ülseratif kolit ise daima rektumdan başlar ve sürekli ilerler.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ PATOLOJİ ]</b>\n\nBiyopsi sonucunda mukozal inflamasyon görüldü. Patolog raporda Ülseratif Kolit için karakteristik olan hangi mikroskobik bulguyu belirtmiş olabilir?",
+            "opts": [
+              { "txt": "Kript Abseleri ve Kriptit", "type": "correct", "go": "s4" },
+              { "txt": "Kazeifiye Olmayan Granülomlar", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ HİSTOLOJİ ]</b>\n\nGranülom (Kazeifiye olmayan) Crohn hastalığının ayırt edici bulgusudur (Her zaman olmasa da). ÜK'de kript abseleri, kript distorsiyonu ve sadece mukozal tutulum görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ŞİDDET BELİRLEME ]</b>\n\nHastanın günde 10 kez kanlı dışkılaması var, ateşi 38°C ve nabzı 100/dk. Truelove-Witts kriterlerine göre hastalığın şiddeti nedir?",
+            "opts": [
+              { "txt": "Şiddetli (Ağır) Aktivite", "type": "correct", "go": "s5" },
+              { "txt": "Hafif Aktivite", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TRUELOVE-WITTS ]</b>\n\n>6 kanlı dışkı + Sistemik bulgu (Ateş >37.8, Taşikardi >90, Hb <10.5, ESR >30) varsa Şiddetli (Ağır) kabul edilir. Hastaneye yatış gerektirir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nAğır atakta (Hastaneye yatırılan hasta) ilk tercih edilecek indüksiyon (alevlendirmeyi bastırma) tedavisi nedir?",
+            "opts": [
+              { "txt": "İntravenöz Steroid (Metilprednizolon)", "type": "correct", "action": "end" },
+              { "txt": "Oral 5-ASA (Mesalazin)", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ YANLIŞ SEÇİM ]</b>\n\n5-ASA türevleri hafif-orta vakalarda kullanılır. Ağır atakta hayat kurtarıcı olan sistemik steroidlerdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: SAĞ ALT KADRAN",
+        "desc": "Acil Servis - 20 Yaş Kadın - Apandisit Şüphesi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ BAŞVURU ]</b>\n\n20 yaşında kadın hasta. Sağ alt kadranda ağrı, ishal (kansız) ve kilo kaybı şikayetiyle geldi. Muayenede sağ alt kadranda dolgunluk ve hassasiyet var. Apandisit ön tanısıyla yatırıldı ama BT'de apandiks normal.\n\nTerminal ileumda duvar kalınlaşması görülüyor. En olası tanı?",
+            "opts": [
+              { "txt": "Crohn Hastalığı", "type": "correct", "go": "s2" },
+              { "txt": "Ülseratif Kolit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TUTULUM YERİ ]</b>\n\nÜlseratif kolit kolonu tutar, terminal ileum tutulumu (backwash ileitis hariç) beklenmez. Crohn hastalığının en sık tuttuğu yer İleokolik bölgedir ve apandisiti taklit edebilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ENDOSKOPI ]</b>\n\nKolonoskopide sağlam mukoza adaları arasında derin, uzunlamasına ülserler ve 'Kaldırım Taşı' (Cobblestone) görünümü saptandı.\n\nBu görünüm hastalığın hangi özelliğinden kaynaklanır?",
+            "opts": [
+              { "txt": "Transmural (Tam kat) tutulum ve submukozal ödem.", "type": "correct", "go": "s3" },
+              { "txt": "Sadece mukozal tutulum.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ DERİNLİK ]</b>\n\nSadece mukozal tutulum ÜK'de olur. Crohn hastalığı transmuraldir (duvarın tamamını tutar), bu da derin fissürlere ve kaldırım taşı manzarasına yol açar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nHastanın perianal bölgesinde akıntılı delikler (Fistül) saptandı. Fistül gelişimi bu iki hastalıktan hangisine özgüdür?",
+            "opts": [
+              { "txt": "Crohn Hastalığı", "type": "correct", "go": "s4" },
+              { "txt": "Ülseratif Kolit", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ FİSTÜL MEKANİZMASI ]</b>\n\nFistül (tünel) oluşması için iltihabın barsak duvarını tamamen delip geçmesi (transmural) gerekir. Bu özellik Crohn hastalığında vardır. ÜK yüzeyel olduğu için fistül yapmaz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ PLANLAMASI ]</b>\n\nFistülizan Crohn hastalığında ve steroid dirençli vakalarda kullanılan, TNF-alfa'yı hedef alan biyolojik ajan hangisidir?",
+            "opts": [
+              { "txt": "Infliximab / Adalimumab (Anti-TNF)", "type": "correct", "go": "s5" },
+              { "txt": "Mesalazin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ BASAMAK TEDAVİSİ ]</b>\n\nMesalazin Crohn'da etkinliği sınırlı olan bir ilaçtır. Fistül varlığında veya ağır hastalıkta Biyolojik ajanlar (Anti-TNF) 'Top-Down' stratejisiyle erken başlanabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ TARAMA ]</b>\n\nAnti-TNF tedavisine başlamadan önce hastada hangi gizli enfeksiyonu mutlaka araştırmalısın? (Reaktivasyon riski!)",
+            "opts": [
+              { "txt": "Tüberküloz (PPD/Quantiferon ve Akciğer Grafisi ile)", "type": "correct", "action": "end" },
+              { "txt": "İdrar Yolu Enfeksiyonu", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Ülseratif Kolit barsakta hangi bölümden başlar ve nasıl yayılır?", "a": ["Rektumdan başlar, proksimale doğru sürekli yayılır", "Çekumdan başlar, atlamalı yayılır", "İnce barsaktan başlar", "Sadece sağ kolonu tutar"], "correct": 0 },
+      { "q": "Crohn hastalığının en sık tutulum yeri neresidir?", "a": ["Terminal İleum ve Çekum (İleokolik)", "Sadece Rektum", "Mide", "Özofagus"], "correct": 0 },
+      { "q": "Hangi hastalıkta 'Kaldırım Taşı' (Cobblestone) manzarası ve 'Atlamalı' (Skip) lezyonlar görülür?", "a": ["Crohn Hastalığı", "Ülseratif Kolit", "İskemik Kolit", "İBS"], "correct": 0 },
+      { "q": "Sigara kullanımı hangi hastalıkta KORUYUCU bir faktördür?", "a": ["Ülseratif Kolit", "Crohn Hastalığı", "Gastrit", "Pankreatit"], "correct": 0 },
+      { "q": "İnflamatuar Bağırsak Hastalıklarında (İBH) kesin tanı nasıl konur?", "a": ["Klinik, Endoskopik, Radyolojik ve Patolojik bulguların kombinasyonu ile", "Sadece kan testi ile", "Sadece dışkı kültürü ile", "Sadece muayene ile"], "correct": 0 },
+      { "q": "Kazeifiye olmayan (peynirleşmeyen) granülomlar hangi hastalığın patolojik bulgusudur?", "a": ["Crohn Hastalığı", "Ülseratif Kolit", "Çölyak", "Divertikülit"], "correct": 0 },
+      { "q": "Ülseratif kolitin en ciddi akut komplikasyonu nedir?", "a": ["Toksik Megakolon", "Fistül", "Darlık (Striktür)", "Safra taşı"], "correct": 0 },
+      { "q": "Perianal fistül ve apseler hangi hastalığın tipik özelliğidir?", "a": ["Crohn Hastalığı", "Ülseratif Kolit", "İBS", "Gastrit"], "correct": 0 },
+      { "q": "Anti-TNF (Biyolojik) tedavi öncesi hangi hastalık mutlaka taranmalıdır?", "a": ["Tüberküloz (Verem)", "Grip", "Diyabet", "Hipertansiyon"], "correct": 0 },
+      { "q": "Ülseratif kolitte görülen 'Kurşun Boru' (Lead pipe) görünümü neyin sonucudur?", "a": ["Kronik inflamasyon sonucu haustraların kaybı", "Akut ödem", "Polipler", "Kanser"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Ülseratif Kolit", "B": "Sürekli tutulum, Rektumdan başlar" },
+      { "A": "Crohn Hastalığı", "B": "Atlamalı tutulum, Transmural" },
+      { "A": "Sigara", "B": "Crohn'da zararlı, ÜK'de koruyucu" },
+      { "A": "Kaldırım Taşı", "B": "Crohn endoskopik bulgusu" },
+      { "A": "Kript Absesi", "B": "Ülseratif Kolit patolojik bulgusu" },
+      { "A": "Granülom", "B": "Crohn patolojik bulgusu" },
+      { "A": "Fistül", "B": "Crohn komplikasyonu" },
+      { "A": "Toksik Megakolon", "B": "Ülseratif Kolit komplikasyonu" }
+    ],
+    "decypher": [
+      {
+        "text": "{Ülseratif} kolit, rektumdan başlayıp proksimale doğru {sürekli} yayılım gösteren ve sadece kolon mukozasını tutan bir hastalıktır. En önemli semptomu {kanlı} ishaldir.",
+        "decoys": ["Crohn", "atlamalı", "sulu", "mide"]
+      },
+      {
+        "text": "{Crohn} hastalığı, ağızdan anüse kadar tüm GİS'i tutabilir ancak en sık {ileokolik} bölgeyi tutar. İnflamasyon {transmural} (tüm katları tutan) olduğu için darlık ve fistül gelişimi sıktır.",
+        "decoys": ["ÜK", "rektal", "mukozal", "yüzeyel"]
+      },
+      {
+        "text": "İBH tedavisinde hafif vakalarda {5-ASA} preparatları kullanılırken, akut alevlenmelerde {kortikosteroidler} (steroid) devreye girer. Dirençli veya fistülizan vakalarda Anti-{TNF} ajanlar kullanılır.",
+        "decoys": ["antibiyotik", "vitamin", "DNA", "cerrahi"]
+      }
+    ]
+  }
+}

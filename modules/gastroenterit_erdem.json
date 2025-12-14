@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "GASTROENTERİTLER (BAKTERİYEL & VİRAL)",
+    "tag": "ENFEKSİYON"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>💧 İSHAL TİPLERİ VE PATOGENEZ</div><div class='sum-body'>• <b>Sekretuar (Sulu) İshal:</b> İnce barsağı tutar. Toksin aracılıdır (V. Cholerae, ETEC). Lökosit görülmez, dışkı hacmi fazladır.<br>• <b>İnflamatuvar (Kanlı) İshal:</b> Kolonu tutar. İnvazyon yapar (Shigella, Salmonella, C. jejuni). Ateş, tenezm ve dışkıda lökosit/eritrosit vardır.<br>• <b>Akut İshal:</b> <14 gün süren, günde 3 veya daha fazla sulu dışkılama.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🦠 ETKENLER</div><div class='sum-body'>• <b>Rotavirüs:</b> <2 yaş çocuklarda kış ishali.<br>• <b>Norovirüs:</b> Erişkinlerde ve salgınlarda en sık viral etken.<br>• <b>S. Aureus / B. Cereus:</b> Besin zehirlenmesi. Toksinleri önceden oluştuğu için kuluçka süresi çok kısadır (1-6 saat), kusma ön plandadır.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ PRENSİPLERİ</div><div class='sum-body'>• <b>Temel Taş:</b> Sıvı ve elektrolit replasmanı (Oral Rehidratasyon Sıvısı - ORS).<br>• <b>Antibiyotik:</b> Sadece invaziv (kanlı) ishallerde, ağır vakalarda veya riskli gruplarda verilir. Rutin önerilmez.<br>• <b>Motilite Önleyiciler:</b> Kanlı/ateşli ishalde KONTRENDİKEDİR (Toksik megakolon riski).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: PİKNİK SONRASI",
+        "desc": "Acil Servis - 5 Kişilik Aile - Ani Kusma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\nAcil servise bir aile (5 kişi) başvurdu. Yaklaşık 4 saat önce piknikte tavuklu sandviç ve patates salatası yemişler. Şu an hepsinde şiddetli bulantı ve kusma var. Ateş yok, ishal henüz başlamamış.\n\nBu tabloyu en iyi açıklayan mekanizma nedir?",
+            "opts": [
+              { "txt": "Preform (Önceden oluşmuş) Toksin Alımı", "type": "correct", "go": "s2" },
+              { "txt": "Bakteriyel İnvazyon", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KULUÇKA SÜRESİ ]</b>\n\nBakteriyel invazyon (Salmonella vb.) için kuluçka süresi genellikle 12-72 saattir ve ateş eşlik eder. 1-6 saat içinde başlayan, kusmanın ön planda olduğu tablolar 'Besin Zehirlenmesi'dir (Toksin).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ETKEN ]</b>\n\nKısa kuluçka süresi ve kusma hakimiyeti düşünüldüğünde en olası etken hangisidir?",
+            "opts": [
+              { "txt": "Staphylococcus aureus", "type": "correct", "go": "s3" },
+              { "txt": "Salmonella Enteritidis", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ETKEN AYRIMI ]</b>\n\nSalmonella invazivdir, ateş ve ishal yapar, kuluçkası uzundur. S. aureus toksini ısıya dayanıklıdır ve hızla kusma yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nBu hastalara antibiyotik verilmeli mi?",
+            "opts": [
+              { "txt": "Hayır, tedavi destekleyicidir (Sıvı/Antiemetik).", "type": "correct", "action": "end" },
+              { "txt": "Evet, hemen siprofloksasin başlanmalı.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ GEREKSİZ İLAÇ ]</b>\n\nBesin zehirlenmeleri (S. aureus, B. cereus) toksin kaynaklıdır ve kendini sınırlar (12-24 saatte geçer). Antibiyotiğin yeri yoktur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KANLI DIŞKILAMA",
+        "desc": "Poliklinik - 30 Yaş Erkek - Ateş ve Tenezm",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ŞİKAYET ]</b>\n\n30 yaşında erkek hasta. 3 gündür süren karın ağrısı, yüksek ateş (38.5°C) ve günde 10 kez az miktarda kanlı-mukuslu dışkılama şikayetiyle geldi. Tuvalete gidiyor ama yapamıyor (Tenezm).\n\nBu tablo hangi tip ishaldir?",
+            "opts": [
+              { "txt": "İnflamatuvar (İnvaziv) İshal", "type": "correct", "go": "s2" },
+              { "txt": "Sekretuar (Sulu) İshal", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nSekretuar ishal (Kolera vb.) sulu ve bol hacimlidir, kan ve lökosit içermez. Kan, mukus, ateş ve tenezm 'Kolon' tutulumunu ve invazyonu gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ETKEN TAHMİNİ ]</b>\n\nKanlı ishal (Dizanteri) sendromunun bakteriyel etkenlerinden en olası olanı hangisidir?",
+            "opts": [
+              { "txt": "Shigella spp.", "type": "correct", "go": "s3" },
+              { "txt": "Vibrio cholerae", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ETKENLER ]</b>\n\nVibrio cholerae pirinç suyu gibi ishal yapar. Shigella, Salmonella, Campylobacter ve EIEC kanlı ishal yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ KARARI ]</b>\n\nHastanın genel durumu orta-kötü, ateşi yüksek ve kanlı dışkılıyor. Antibiyotik verilmeli mi?",
+            "opts": [
+              { "txt": "Evet, invaziv gastroenteritte (Dizanteri) antibiyotik endikedir.", "type": "correct", "go": "s4" },
+              { "txt": "Hayır, tüm ishaller sıvı ile geçer.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ENDİKASYON ]</b>\n\nGenel kural 'ishale antibiyotik verilmez' olsa da; Shigella, ateşli Salmonella, ağır Campylobacter ve Amip gibi invaziv durumlarda antibiyotik verilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nHangi antibiyotik grubu bu etkenler için (ampirik olarak) uygundur?",
+            "opts": [
+              { "txt": "Florokinolonlar (Siprofloksasin) veya Azitromisin", "type": "correct", "go": "s5" },
+              { "txt": "Penisilin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ETKİNLİK ]</b>\n\nBarsak patojenlerine karşı kinolonlar veya makrolidler tercih edilir. Penisilin etkisizdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ UYARI ]</b>\n\nHasta 'İshalim hemen dursun' diye Lopermid (Motilite azaltıcı) istiyor. Verir misin?",
+            "opts": [
+              { "txt": "HAYIR. İnflamatuvar ishalde motilite azaltıcılar KONTRENDİKEDİR.", "type": "correct", "action": "end" },
+              { "txt": "Evet, konfor sağlar.", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: PİRİNÇ SUYU",
+        "desc": "Seyahat Dönüşü - 40 Yaş - Dehidratasyon",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ÖYKÜ ]</b>\n\n40 yaşında hasta, Güneydoğu Asya seyahatinden döndükten sonra aniden başlayan, ağrısız, 'Pirinç Suyu' görünümünde çok bol sulu ishal ile geldi. Ciddi dehidrate.\n\nTanın nedir?",
+            "opts": [
+              { "txt": "Kolera (Vibrio cholerae)", "type": "correct", "go": "s2" },
+              { "txt": "Amebiasis", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK ]</b>\n\nAmebiasis kanlı ishal yapar. Pirinç suyu (bulanık, beyazımsı) görünümü Kolera için patognomoniktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nKolera toksini barsak hücresinde neyi aktive ederek masif sıvı kaybına yol açar?",
+            "opts": [
+              { "txt": "Adenilat Siklaz (cAMP artışı)", "type": "correct", "go": "s3" },
+              { "txt": "Hücre yıkımı (Sitotoksisite)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TOKSİN ETKİSİ ]</b>\n\nKolera toksini hücreyi öldürmez, cAMP'yi artırarak Klor ve Su sekresyonunu (boşaltımını) sürekli açık tutar. Bu bir 'Sekretuar İshal'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nHastayı kurtaracak en önemli müdahale nedir?",
+            "opts": [
+              { "txt": "Hızla Sıvı ve Elektrolit Replasmanı (IV veya ORS)", "type": "correct", "go": "s4" },
+              { "txt": "Güçlü Antibiyotikler", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ÖNCELİK ]</b>\n\nKolera hastası enfeksiyondan değil, susuzluktan (hipovolemik şok) ölür. Antibiyotik süreyi kısaltır ama asıl tedavi SIVIDIR.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ORS ]</b>\n\nOral Rehidratasyon Sıvısı (ORS) içinde su, sodyum, potasyum ve bikarbonat dışında emilimi artırmak için ne bulunur?",
+            "opts": [
+              { "txt": "Glikoz (Şeker)", "type": "correct", "action": "end" },
+              { "txt": "Protein", "type": "wrong", "go": "s4" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Kanlı, mukuslu ishal, ateş ve tenezm ile karakterize tabloya ne ad verilir?", "a": ["Dizanteri (İnvaziv İshal)", "Sekretuar İshal", "Osmotik İshal", "Besin Zehirlenmesi"], "correct": 0 },
+      { "q": "Besin zehirlenmelerinde (S. aureus, B. cereus) kuluçka süresi neden çok kısadır (1-6 saat)?", "a": ["Toksin önceden besinde oluşmuştur (Preform toksin)", "Bakteri çok hızlı bölünür", "Mide asidi bakteriyi öldüremez", "Bağışıklık sistemi tanıyamaz"], "correct": 0 },
+      { "q": "Hangi viral etken özellikle 2 yaş altı çocuklarda kış aylarında görülen ishalin en sık nedenidir?", "a": ["Rotavirüs", "Norovirüs", "Adenovirüs", "Astrovirüs"], "correct": 0 },
+      { "q": "Erişkinlerde ve toplu yaşam alanlarında (gemi, okul) salgın yapan en sık viral etken hangisidir?", "a": ["Norovirüs", "Rotavirüs", "CMV", "HIV"], "correct": 0 },
+      { "q": "Tavuk ve kümes hayvanlarından bulaşan, Guillain-Barre sendromunu tetikleyebilen bakteri hangisidir?", "a": ["Campylobacter jejuni", "Salmonella", "Shigella", "E. Coli"], "correct": 0 },
+      { "q": "İshal tedavisinde 'Motilite Önleyici' (Loperamid vb.) ilaçlar hangi durumda KESİNLİKLE verilmemelidir?", "a": ["Kanlı ve ateşli ishalde", "Sulu ishalde", "Turist ishalinde", "Kronik ishalde"], "correct": 0 },
+      { "q": "'Pirinç Suyu' görünümünde dışkılama hangi hastalığın tipik bulgusudur?", "a": ["Kolera", "Tifo", "Amebiasis", "Giardiasis"], "correct": 0 },
+      { "q": "Yersinia enterocolitica enfeksiyonu klinik olarak hangi hastalığı taklit edebilir?", "a": ["Akut Apandisit (Sağ alt kadran ağrısı)", "Kolesistit", "Pankreatit", "Ülser"], "correct": 0 },
+      { "q": "Oral Rehidratasyon Sıvısında (ORS) sodyum emilimini artırmak için ne bulunur?", "a": ["Glikoz", "Protein", "Yağ", "Vitamin"], "correct": 0 },
+      { "q": "Tifo (Enterik ateş) etkeni hangisidir?", "a": ["Salmonella Typhi", "Shigella dysenteriae", "E. Coli O157:H7", "Vibrio cholerae"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "S. Aureus", "B": "Besin zehirlenmesi, kusma, kısa kuluçka" },
+      { "A": "Rotavirüs", "B": "Çocuklarda kış ishali" },
+      { "A": "Norovirüs", "B": "Erişkin salgınları (Kruvaziyer)" },
+      { "A": "Vibrio Cholerae", "B": "Pirinç suyu ishal, Sekretuar" },
+      { "A": "Shigella", "B": "Kanlı ishal, çok az bakteri yeterli" },
+      { "A": "Campylobacter", "B": "Tavuk eti, Guillain-Barre" },
+      { "A": "Yersinia", "B": "Psödoapandisit (Sağ alt kadran ağrısı)" },
+      { "A": "E. Coli O157:H7", "B": "Hemolitik Üremik Sendrom (HÜS)" },
+      { "A": "ORS", "B": "Sıvı tedavisi (Hayat kurtarıcı)" }
+    ],
+    "decypher": [
+      {
+        "text": "Akut gastroenteritlerin tedavisinde temel amaç dehidratasyonu önlemektir. Bunun için içinde tuz, {Glikoz} ve elektrolitler bulunan {ORS} (Oral Rehidratasyon Sıvısı) kullanılır.",
+        "decoys": ["Protein", "Serum", "Antibiyotik", "Kan"]
+      },
+      {
+        "text": "{Sekretuar} ishaller (Örn: Kolera), toksinlerin barsak hücresinde cAMP'yi artırması sonucu oluşur. Dışkı çok suludur, lökosit {içermez}. {İnvaziv} ishallerde (Örn: Shigella) ise mukozal hasar, ateş ve kanlı dışkı görülür.",
+        "decoys": ["Osmotik", "içerir", "Viral", "Yağlı"]
+      },
+      {
+        "text": "Besin zehirlenmelerinde (S. aureus), bakteri besin içinde çoğalarak {toksin} üretir. Bu besin yendiğinde {kuluçka} süresi çok kısa olur (1-6 saat) ve tabloya {kusma} hakimdir.",
+        "decoys": ["spor", "uzun", "ishal", "ateş"]
+      }
+    ]
+  }
+}

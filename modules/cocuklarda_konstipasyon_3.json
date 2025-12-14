@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "title": "ÇOCUKLARDA KONSTİPASYON",
+    "tag": "PEDİATRİ & GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🩺 KLİNİK & PATOFİZYOLOJİ</div><div class='sum-body'>• <b>Tanım:</b> Haftada 3'ten az, sert/hacimli dışkılama veya 'keçi pisliği' görünümü.<br>• <b>Yanılgı:</b> Anne sütü alan bebekte 7-15 günde bir krema kıvamında dışkı normaldir, konstipasyon değildir.<br>• <b>Döngü:</b> Konstipasyon → Pasaj yavaşlar → Gaz/Distansiyon → Ağrı → Retansiyon (Tutma) → Daha sert dışkı.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KRİTİK BİLGİ</div><div class='sum-body'>• <b>En Sık Neden:</b> %95-98 Fonksiyonel Konstipasyon.<br>• <b>Alarm (Red Flags):</b> Enkoprezis (soiling) %30-35 eşlik eder, anal fissür (kanama) sıktır.<br>• <b>Organik Nedenler:</b> Hirschsprung, Hipotiroidi, Anal Stenoz.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TANI & YÖNETİM</div><div class='sum-body'>• <b>Yaklaşım:</b> Öykü (hurda gıda, süt fazlalığı) ve FM (büyüme normal) ise tetkik gereksiz.<br>• <b>Tedavi:</b> 1. Diyet (Lif artır, sütü azalt) 2. Tuvalet Eğitimi 3. Laksatif.<br>• <b>İleri Tetkik:</b> 1 ayda düzelmezse kolon grafisi, biyopsi.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KRONİK DÖNGÜ",
+        "desc": "Poliklinik - 9 Yaş Erkek - 1 Yıllık Kabızlık",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ANALİZİ ]</b>\n\nSübje 9 yaşında. 1 yıldır haftada 1-2 kez sert, hacimli dışkılıyor. İlaç kullanırken rahatlıyor, bırakınca tekrarlıyor. Annesinde de konstipasyon öyküsü var.\n\nBeslenme sorgusunda 'junk food' (cips, kola) tüketimi yüksek, kahvaltı yapmıyor. FM'de sol inguinalde fekaloid kitle ve rektumda dışkı retansiyonu saptandı.\n\nTanısal kararın nedir?",
+            "opts": [
+              {
+                "txt": "Fonksiyonel Konstipasyon (Kriterleri karşılıyor)",
+                "type": "correct",
+                "go": "s2"
+              },
+              {
+                "txt": "Akut Batın (Acil cerrahi konsültasyonu)",
+                "type": "wrong",
+                "go": "s1_hata"
+              }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ HATALI TRİAJ ]</b>\n\nKronik bir süreç (1 yıl), normal büyüme verileri ve tipik öykü (kötü beslenme, aile öyküsü) akut batını ekarte eder. Bu klasik bir fonksiyonel konstipasyon tablosudur.",
+            "opts": [
+              { "txt": "GERİ DÖN", "go": "s1" }
+            ]
+          },
+          "s2": {
+            "text": "<b>[ TEDAVİ PLANLAMASI ]</b>\n\nAilesi 'Yine mi ilaç vereceksiniz? İlaç bitince hastalığı geri geliyor' diyor. Tedavi başarısızlığının ana nedenini kırmak için protokole ne eklersin?",
+            "opts": [
+              {
+                "txt": "Sadece ilaç yetmez; Diyet (Hurda gıda stop) + Tuvalet eğitimi şarttır",
+                "type": "correct",
+                "action": "end"
+              },
+              {
+                "txt": "İlacı tamamen kesip sadece bol su içmesini öneririm",
+                "type": "wrong",
+                "go": "s2_hata"
+              }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ EKSİK PROTOKOL ]</b>\n\nRektum dolu (retansiyon) ve fissürü olan çocukta, sadece su içmek 'korkulu dışkılamayı' çözmez. Laksatif ile yumuşak çıkış sağlanmalı, eş zamanlı olarak yaşam tarzı (diyet+eğitim) değiştirilmelidir.",
+            "opts": [
+              { "txt": "GERİ DÖN", "go": "s2" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: YANILGI",
+        "desc": "Poliklinik - 4 Aylık Bebek - 10 Gündür Dışkılamıyor",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ANALİZİ ]</b>\n\n4 aylık, sadece anne sütü ile beslenen bir bebek getirildi. Aile panik halinde: 'Bebek 10 gündür kaka yapmıyor'. Ancak bebek huzurlu, emmesi iyi, kusma yok. Yapınca 'krema kıvamında' yapıyor.\n\nYaklaşımın ne olmalı?",
+            "opts": [
+              {
+                "txt": "Aileye bunun normal olduğunu anlatıp güvence veririm",
+                "type": "correct",
+                "go": "s2"
+              },
+              {
+                "txt": "Derhal lavman veya fitil uygularım",
+                "type": "wrong",
+                "go": "s1_hata"
+              }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ GEREKSİZ GİRİŞİM ]</b>\n\nAnne sütü alan bebeklerde 7-15 günde bir dışkılama, dışkı kıvamı yumuşak/krema gibiyse KONSTİPASYON DEĞİLDİR. Müdahale gerektirmez.",
+            "opts": [
+              { "txt": "GERİ DÖN", "go": "s1" }
+            ]
+          },
+          "s2": {
+            "text": "<b>[ EĞİTİM ]</b>\n\nAile ikna oldu ancak 'Ne zaman endişelenmeliyiz?' diye soruyor. Hangi durumda tekrar gelmelerini söylersin?",
+            "opts": [
+              {
+                "txt": "Kaka sert, top top olursa veya bebekte fışkırır tarzda kusma başlarsa",
+                "type": "correct",
+                "action": "end"
+              },
+              {
+                "txt": "Günde 3 kez yapmaya başlarsa",
+                "type": "wrong",
+                "go": "s2_hata"
+              }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ BİLGİ ]</b>\n\nAnne sütü alan bebek günde 7 kez de yapabilir, 7 günde 1 kez de. Önemli olan kıvamın sertleşmemesi (keçi pisliği) ve distansiyon/kusma gibi organik bulguların olmamasıdır.",
+            "opts": [
+              { "txt": "GERİ DÖN", "go": "s2" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: DİRENÇLİ VAKA",
+        "desc": "Kontrol Muayenesi - Tedaviye Yanıtsızlık",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ANALİZİ ]</b>\n\nDaha önce fonksiyonel konstipasyon tanısı koyduğun hasta 1. ay kontrolüne geldi. Diyete ve laksatiflere tam uyum sağlamalarına rağmen şikayetler düzelmemiş, karın şişliği artmış.\n\nProtokol gereği bir sonraki adımın ne olmalı?",
+            "opts": [
+              {
+                "txt": "İleri tetkik aşamasına geç (Organik nedenleri araştır)",
+                "type": "correct",
+                "go": "s2"
+              },
+              {
+                "txt": "İlaç dozunu 2 katına çıkarıp 6 ay daha bekle",
+                "type": "wrong",
+                "go": "s1_hata"
+              }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ZAMAN KAYBI ]</b>\n\n1 aylık uygun tedaviye (diyet+ilaç+eğitim) yanıt yoksa, tanı yeniden sorgulanmalıdır. Organik nedenler (Hirschsprung vb.) ekarte edilmelidir.",
+            "opts": [
+              { "txt": "GERİ DÖN", "go": "s1" }
+            ]
+          },
+          "s2": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nBu aşamada dışlaman gereken en önemli anatomik/nörolojik patoloji ve buna yönelik istenecek tetkik nedir?",
+            "opts": [
+              {
+                "txt": "Hirschsprung Hastalığı - Rektal Biyopsi / Kolon Grafisi",
+                "type": "correct",
+                "action": "end"
+              },
+              {
+                "txt": "İdrar Yolu Enfeksiyonu - İdrar Kültürü",
+                "type": "wrong",
+                "go": "s2_hata"
+              }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ HEDEF ]</b>\n\nİYE konstipasyonun bir *sonucudur*, tedaviye direnç nedeni değildir. Dirençli vakada 'Konjenital Megakolon' (Hirschsprung) ekarte edilmelidir.",
+            "opts": [
+              { "txt": "GERİ DÖN", "go": "s2" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Konstipasyon tanımı için aşağıdakilerden hangisi KRİTERLERDEN BİRİ DEĞİLDİR?",
+        "a": [
+          "Dışkılama sıklığının haftada 3 kezden az olması",
+          "Dışkı kıvamının sert ve hacimli olması",
+          "Dışkının keçi pisliği şeklinde olması",
+          "Anne sütü alan bebeğin 5 günde bir yumuşak dışkılaması"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Pediatri pratiğinde konstipasyon vakalarının %95-98'inin etyolojisi nedir?",
+        "a": [
+          "Hirschsprung Hastalığı",
+          "Fonksiyonel Konstipasyon",
+          "Hipotiroidi",
+          "Anal Stenoz"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Konstipasyon patogenezinde aşağıdakilerden hangisi 'kısır döngüyü' başlatan ana faktörlerden biri olarak kabul edilir?",
+        "a": [
+          "Dışkılamanın ağrılı olması nedeniyle çocuğun dışkısını tutması",
+          "Aşırı lifli gıda tüketimi",
+          "Sıvı alımının artırılması",
+          "Erken tuvalet eğitimi"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "1 yaşından büyük çocuklarda konstipasyon riskini artıran beslenme hatası hangisidir?",
+        "a": [
+          "Günde 500 cc'den fazla inek sütü tüketimi",
+          "Zeytinyağı tüketimi",
+          "Günde 2 porsiyon meyve tüketimi",
+          "Tam tahıllı ekmek tüketimi"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Konstipasyonlu bir çocukta 'alarm semptomu' (organik patoloji şüphesi veya komplikasyon) sayılan bulgu hangisidir?",
+        "a": [
+          "Encopresis (İç çamaşıra dışkı kaçırma)",
+          "Haftada 2 kez dışkılama",
+          "Karın şişliği",
+          "İştahsızlık"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Fonksiyonel konstipasyon tedavisinde önerilen yaklaşım hangisidir?",
+        "a": [
+          "Sadece diyet değişikliği yeterlidir",
+          "Laksatif tedavi, diyet düzenlemesi ve tuvalet eğitimi bir arada uygulanmalıdır",
+          "Hemen cerrahi konsültasyon istenmelidir",
+          "Antibiyotik tedavisi başlanmalıdır"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Tedaviye dirençli konstipasyon vakalarında, Türkiye gibi endemik bölgelerde mutlaka araştırılması gereken endokrinolojik neden hangisidir?",
+        "a": [
+          "Diyabet",
+          "Konjenital Hipotiroidi",
+          "Büyüme Hormonu Eksikliği",
+          "Cushing Sendromu"
+        ],
+        "correct": 1
+      }
+    ],
+    "match": [
+      {
+        "A": "Hirschsprung Hastalığı",
+        "B": "Konjenital Megakolon (Organik Neden)"
+      },
+      {
+        "A": "Fonksiyonel Konstipasyon",
+        "B": "Vakaların %95-98'i"
+      },
+      {
+        "A": "Encopresis",
+        "B": "Soiling (İç çamaşıra kaçırma)"
+      },
+      {
+        "A": "Anal Fissür",
+        "B": "Dışkıda çizgisel kan"
+      },
+      {
+        "A": "Laksatif",
+        "B": "Ozmotik yumuşatıcı ilaç"
+      }
+    ],
+    "decypher": [
+      {
+        "text": "Rektumda dışkı retansiyonu sonucu mesaneye bası olması {İYE} (İdrar Yolu Enfeksiyonu) riskini artırır.",
+        "decoys": [
+          "ishal",
+          "kusma"
+        ]
+      },
+      {
+        "text": "Bir yaşından sonra günde {500} cc üzeri süt tüketimi kabızlık riskidir.",
+        "decoys": [
+          "1000",
+          "200"
+        ]
+      },
+      {
+        "text": "Haftada 3 kezden az, sert veya {keçi} pisliği şeklinde dışkılama konstipasyondur.",
+        "decoys": [
+          "koyun",
+          "kuş"
+        ]
+      }
+    ]
+  }
+}

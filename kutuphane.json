@@ -1,0 +1,491 @@
+[
+  {
+    "id": "pediatri_gis",
+    "code": "42CSH12",
+    "title": "GİS: ÜST KARIN DEĞERLENDİRMESİ",
+    "author": "Mxdikal Lab",
+    "tag": "PEDİATRİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/pediatri_gis.json"
+  },
+  {
+    "id": "akut_karin",
+    "code": "42ICH27",
+    "title": "KARIN AĞRISI",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/akut_karin_klinik.json"
+  },
+  {
+    "id": "kbb_agiz_farinks",
+    "code": "42KBB01",
+    "title": "AĞIZ VE FARİNKS HASTALIKLARI",
+    "author": "Mxdikal Lab",
+    "tag": "KBB",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/agiz_farinks.json"
+  },
+  {
+    "id": "pediatri_rektogenital",
+    "code": "42KLU03",
+    "title": "PEDİATRİK ÜROGENİTAL MUAYENE",
+    "author": "Mxdikal Lab",
+    "tag": "UYGULAMA",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/pediatri_rektogenital.json"
+  },
+  {
+    "id": "oral_patoloji",
+    "code": "42PAT01",
+    "title": "AĞIZ PATOLOJİSİ",
+    "author": "Mxdikal Lab",
+    "tag": "PATOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/oral_patoloji_v2.json"
+  },
+  {
+    "id": "pat_ozefagus",
+    "code": "42PAT02",
+    "title": "ÖZOFAGUS PATOLOJİSİ",
+    "author": "Mxdikal Lab",
+    "tag": "PATOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/ozefagus_v3.json"
+  },
+  {
+    "id": "tip_tarihi_yunan",
+    "code": "42TTE01",
+    "title": "ANTİK YUNAN DÖNEMİ TIBBI",
+    "author": "Mxdikal Lab",
+    "tag": "TIP TARİHİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/tip_tarihi_yunan.json"
+  },
+  {
+    "id": "gorh_ders",
+    "code": "42ICH28",
+    "title": "GASTROÖZOFAGEAL REFLÜ HASTALIĞI",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/gorh_v3.json"
+  },
+  {
+    "id": "akut_karin",
+    "code": "42GEC01",
+    "title": "AKUT KARIN VE AĞRI FİZYOPATOLOJİSİ",
+    "author": "Mxdikal Lab",
+    "tag": "GENEL CERRAHİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/akut_karin_v4.json"
+  },
+  {
+    "id": "pankreas_biliyer",
+    "code": "42PAT03",
+    "title": "PANKREAS VE EKSTRA HEPATİK BİLİYER PATOLOJİ",
+    "author": "Mxdikal Lab",
+    "tag": "PATOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/pankreas_biliyer.json"
+  },
+  {
+    "id": "safra_hastaliklari",
+    "code": "42ICH02",
+    "title": "SAFRA TAŞLARI, KOLESİSTİT VE KOLANJİT",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/safra_hastaliklari.json"
+  },
+  {
+    "id": "pankreatit_ders",
+    "code": "42ICH03",
+    "title": "PANKREATİTLER",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/pankreatit.json"
+  },
+  {
+    "id": "kronik_pankreatit",
+    "code": "42OLG03",
+    "title": "KRONİK PANKREATİT",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/kronik_pankreatit.json"
+  },
+  {
+    "id": "mide_patoloji",
+    "code": "42PAT04",
+    "title": "MİDE HASTALIKLARI PATOLOJİSİ",
+    "author": "Mxdikal Lab",
+    "tag": "PATOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/mide_patolojisi.json"
+  },
+  {
+    "id": "peptik_ulkus",
+    "code": "42ICH05",
+    "title": "PEPTİK ÜLSER VE GASTRİTLER",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/peptik_ulkus.json"
+  },
+  {
+    "id": "peptik_olgu",
+    "code": "42OLG01",
+    "title": "PEPTİK ÜLSER VE GASTRİTLER (OLGU)",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/peptik_olgu.json"
+  },
+  {
+    "id": "ust_gis_kanama",
+    "code": "42ICH06",
+    "title": "ÜST GİS KANAMALARI",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/ust_gis_kanama.json"
+  },
+  {
+    "id": "bulanti_kusma",
+    "code": "42ENT02",
+    "title": "BULANTI, KUSMA VE AYIRICI TANI",
+    "author": "Mxdikal Lab",
+    "tag": "ENTEGRE (PEDİATRİ & DAHİLİYE)",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/bulanti_kusma.json"
+  },
+  {
+    "id": "biyoistatistik_giris",
+    "code": "42BLD01",
+    "title": "İSTATİSTİKSEL TAHMİNLEME VE HİPOTEZ TESTLERİ",
+    "author": "Mxdikal Lab",
+    "tag": "BİYOİSTATİSTİK",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/biyoistatistik_giris.json"
+  },
+  {
+    "id": "peptik_ilaclar",
+    "code": "42FAR01",
+    "title": "PEPTİK ÜLSER TEDAVİSİNDE İLAÇLAR",
+    "author": "Mxdikal Lab",
+    "tag": "TIBBİ FARMAKOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/peptik_ilaclar.json"
+  },
+  {
+    "id": "mekanik_ileus",
+    "code": "42GEC02",
+    "title": "MEKANİK BARSAK TIKANIKLIĞI VE İLEUS",
+    "author": "Mxdikal Lab",
+    "tag": "GENEL CERRAHİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/mekanik_ileus.json"
+  },
+  {
+    "id": "gastroenteritler",
+    "code": "42PAN01",
+    "title": "GASTROENTERİTLER",
+    "author": "Mxdikal Lab",
+    "tag": "ENFEKSİYON",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/gastroenteritler.json"
+  },
+  {
+    "id": "saglik_sistemleri",
+    "code": "42HSU01",
+    "title": "SAĞLIK SİSTEMLERİ",
+    "author": "Mxdikal Lab",
+    "tag": "HALK SAĞLIĞI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/saglik_sistemleri.json"
+  },
+  {
+    "id": "gastroenterit_erdem",
+    "code": "42PAN01",
+    "title": "GASTROENTERİTLER (BAKTERİYEL & VİRAL)",
+    "author": "Mxdikal Lab",
+    "tag": "ENFEKSİYON",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/gastroenterit_erdem.json"
+  },
+  {
+    "id": "gastroenterit_mikrobiyoloji",
+    "code": "42PAN01",
+    "title": "GASTROENTERİTLER (MİKROBİYOLOJİ)",
+    "author": "Mxdikal Lab",
+    "tag": "TIBBİ MİKROBİYOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/gastroenterit_mikrobiyoloji.json"
+  },
+  {
+    "id": "emetikler_antiemetikler",
+    "code": "42FAR02",
+    "title": "EMETİKLER VE ANTİEMETİKLER",
+    "author": "Mxdikal Lab",
+    "tag": "TIBBİ FARMAKOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/emetikler_antiemetikler.json"
+  },
+  {
+    "id": "beyin_barsak",
+    "code": "42ICH08",
+    "title": "BEYİN-BAĞIRSAK AKSI VE İBS",
+    "author": "Mxdikal Lab",
+    "tag": "İÇ HASTALIKLARI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/beyin_barsak.json"
+  },
+  {
+    "id": "fonksiyonel_dispepsi",
+    "code": "42OLG02",
+    "title": "FONKSİYONEL DİSPEPSİ VE OLGU YÖNETİMİ",
+    "author": "Mxdikal Lab",
+    "tag": "GASTROENTEROLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/fonksiyonel_dispepsi.json"
+  },
+  {
+    "id": "malabsorpsiyon",
+    "code": "42CSH02",
+    "title": "MALABSORPSİYONLU ÇOCUĞA YAKLAŞIM",
+    "author": "Mxdikal Lab",
+    "tag": "PEDİATRİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/malabsorpsiyon.json"
+  },
+  {
+    "id": "saglik_ekonomisi",
+    "code": "42HST04",
+    "title": "SAĞLIK EKONOMİSİ",
+    "author": "Mxdikal Lab",
+    "tag": "HALK SAĞLIĞI",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/saglik_ekonomisi.json"
+  },
+  {
+    "id": "antihelmintik_antiamibik",
+    "code": "42FAR03",
+    "title": "ANTİHELMİNTİKLER VE ANTİAMİBİKLER",
+    "author": "Mxdikal Lab",
+    "tag": "TIBBİ FARMAKOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/antihelmintik_antiamibik.json"
+  },
+  {
+    "id": "geohelmentler",
+    "code": "42PAR02",
+    "title": "GEOHELMENT ENFEKSİYONLARI",
+    "author": "Mxdikal Lab",
+    "tag": "TIBBİ PARAZİTOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/geohelmentler.json"
+  },
+  {
+    "id": "malabsorpsiyon_biyokimya",
+    "code": "42BKY02",
+    "title": "MALABSORPSİYON TESTLERİ",
+    "author": "Mxdikal Lab",
+    "tag": "TIBBİ BİYOKİMYA",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/malabsorpsiyon_biyokimya.json"
+  },
+  {
+    "id": "gastroenterit_pediatri",
+    "code": "42CSH01",
+    "title": "GASTROENTERİTLER VE ÇOCUK SAĞLIĞI",
+    "author": "Mxdikal Lab",
+    "tag": "PEDİATRİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/gastroenterit_pediatri.json"
+  },
+  {
+    "id": "akut_ishal_viral",
+    "code": "42OLG08",
+    "title": "AKUT İSHAL (VİRAL)",
+    "author": "Mxdikal Lab",
+    "tag": "HALK SAĞLIĞI & PEDİATRİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/akut_ishal_viral.json"
+  },
+  {
+    "id": "ibh_ders",
+    "code": "42ICH10",
+    "title": "İNFLAMATUAR BAĞIRSAK HASTALIKLARI",
+    "author": "Mxdikal Lab",
+    "tag": "GASTROENTEROLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/ibh_ders.json"
+  },
+  {
+    "id": "barsak_patoloji",
+    "code": "42PAT05",
+    "title": "İNCE VE KALIN BARSAĞIN İNFLAMATUVAR HASTALIKLARINDA PATOLOJİ",
+    "author": "Mxdikal Lab",
+    "tag": "PATOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/barsak_patoloji.json"
+  },
+  {
+    "id": "antidiyareikler",
+    "code": "42FAR04",
+    "title": "ANTİDİYAREİK İLAÇLAR",
+    "author": "Mxdikal Lab",
+    "tag": "TIBBİ FARMAKOLOJİ",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/antidiyareikler.json"
+  },
+  {
+    "id": "bas1_booster_1",
+    "code": "BAS1",
+    "title": "BAS1 BOOSTER: PATOLOJİ & TEMEL BİLİMLER",
+    "author": "Mxdikal Lab",
+    "tag": "SINAV HAZIRLIK",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/bas1_booster_1.json"
+  },
+  {
+    "id": "bas1_booster_2",
+    "code": "BAS1",
+    "title": "BAS1 BOOSTER: FARMAKOLOJİ VE TEDAVİ",
+    "author": "Mxdikal Lab",
+    "tag": "SINAV HAZIRLIK",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/bas1_booster_2.json"
+  },
+  {
+    "id": "bas1_booster_3",
+    "code": "BAS1",
+    "title": "BAS1 BOOSTER: KLİNİK VE ENTEGRE",
+    "author": "Mxdikal Lab",
+    "tag": "SINAV HAZIRLIK",
+    "class": "3",
+    "block": "E4B2",
+    "url": "modules/bas1_booster_3.json"
+  },
+  {
+  "id": "kronik_diyare_malabsorbsiyon",
+  "code": "42ICH07",
+  "title": "KRONİK DİYARE VE MALABSORBSİYON",
+  "author": "Mxdikal Lab",
+  "tag": "İÇ HASTALIKLARI",
+  "class": "4",
+  "block": "E4B2",
+  "url": "modules/kronik_diyare_malabsorbsiyon.json"
+},{
+  "id": "cocuklarda_konstipasyon_3",
+  "code": "42OLG07",
+  "title": "KONSTİPASYON",
+  "author": "Mxdikal Lab",
+  "tag": "PEDİATRİ & GASTROENTEROLOJİ",
+  "class": "3",
+  "block": "E4B2",
+  "url": "modules/cocuklarda_konstipasyon_3.json"
+},
+{
+  "id": "anal_bolge_patolojisi_3",
+  "code": "42PAT07",
+  "title": "ANAL BÖLGE, MEZENTER VE PERİTON PATOLOJİSİ",
+  "author": "Mxdikal Lab",
+  "tag": "PATOLOJİ & GENEL CERRAHİ",
+  "class": "3",
+  "block": "GİS",
+  "url": "modules/anal_bolge_patolojisi_3.json"
+},
+{
+  "id": "kolon_tumorleri_3",
+  "code": "42PAT06",
+  "title": "İNCE VE KALIN BARSAK TÜMÖRLERİ",
+  "author": "Mxdikal Lab",
+  "tag": "PATOLOJİ & GASTROENTEROLOJİ",
+  "class": "3",
+  "block": "E4B2",
+  "url": "modules/kolon_tumorleri_3.json"
+},
+{
+  "id": "cocukluk_cagi_parazitleri_3",
+  "code": "42ENT04",
+  "title": "ÇOCUKLUK ÇAĞI İNTESTİNAL PARAZİTLERİ",
+  "author": "Mxdikal Lab",
+  "tag": "PEDİATRİ & ENFEKSİYON",
+  "class": "3",
+  "block": "E4B2",
+  "url": "modules/cocukluk_cagi_parazitleri_3.json"
+},
+{
+  "id": "laksatif_purgatif_3",
+  "code": "42FAR05",
+  "title": "LAKSATİF, PURGATİF VE PROKİNETİKLER",
+  "author": "Mxdikal Lab",
+  "tag": "FARMAKOLOJİ & GASTROENTEROLOJİ",
+  "class": "3",
+  "block": "E4B2",
+  "url": "modules/laksatif_purgatif_3.json"
+},
+{
+  "id": "akut_hepatitler_3",
+  "code": "42ENF02",
+  "title": "AKUT HEPATİTLER",
+  "author": "Mxdikal Lab",
+  "tag": "ENFEKSİYON & GASTROENTEROLOJİ",
+  "class": "3",
+  "block": "E4B2",
+  "url": "modules/akut_hepatitler_3.json"
+},
+{
+  "id": "kc_lab_3",
+  "code": "42BKY03",
+  "title": "KARACİĞER HASTALIKLARINDA LABORATUVAR",
+  "author": "Mxdikal Lab",
+  "tag": "BİYOKİMYA & DAHİLİYE",
+  "class": "3",
+  "block": "GİS",
+  "url": "modules/kc_lab_3.json"
+}
+]

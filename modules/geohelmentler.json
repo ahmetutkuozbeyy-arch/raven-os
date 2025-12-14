@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "title": "GEOHELMENT ENFEKSİYONLARI",
+    "tag": "TIBBİ PARAZİTOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🪱 GENEL ÖZELLİKLER</div><div class='sum-body'>• <b>Geohelmentler:</b> Topraktan bulaşan nematodlardır (Yuvarlak solucanlar).<br>• <b>Bulaş Yolları:</b><br>- <b>Ağızdan (Yumurta):</b> Ascaris lumbricoides, Trichuris trichiura.<br>- <b>Deriden (Larva):</b> Kancalı Kurtlar (Ancylostoma/Necator), Strongyloides stercoralis.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 KLİNİK SENDROMLAR</div><div class='sum-body'>• <b>Löffler Sendromu:</b> Larvaların akciğer göçü sırasında oluşturduğu eozinofilik pnömoni (Öksürük, ateş, eozinofili). (Ascaris, Kancalı Kurt, Strongyloides).<br>• <b>Demir Eksikliği Anemisi:</b> Kancalı kurtların kan emmesi sonucu.<br>• <b>Rektal Prolapsus:</b> Trichuris (Kamçılı solucan) enfeksiyonunda ıkınmaya bağlı.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TANI VE TEDAVİ</div><div class='sum-body'>• <b>Strongyloides Farkı:</b> Tanıda dışkıda YUMURTA DEĞİL, LARVA (Rhabditiform) aranır. Otoenfeksiyon ve Hiperenfeksiyon riski vardır.<br>• <b>Tedavi:</b> Genelde Benzimidazoller (Albendazol/Mebendazol). Strongyloides için <b>İvermektin</b> ilk tercihtir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: AKCİĞERDEN BAĞIRSAĞA",
+        "desc": "Pediatri - 8 Yaş - Öksürük ve Karın Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n8 yaşında çocuk hasta. 2 hafta önce kuru öksürük, ateş ve hırıltılı solunum (wheezing) şikayeti varmış. Şimdi ise karın ağrısı ve şişkinlik ile geldi. Hemogramda Eozinofili (%15) mevcut.\n\nBu tablo (Önce akciğer, sonra bağırsak) hangi parazitlerin yaşam döngüsüne uyar?",
+            "opts": [
+              { "txt": "Ascaris, Kancalı Kurt veya Strongyloides", "type": "correct", "go": "s2" },
+              { "txt": "Trichuris trichiura (Kamçılı Solucan)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YAŞAM DÖNGÜSÜ ]</b>\n\nTrichuris trichiura (ve Enterobius) akciğer göçü YAPMAZ. Doğrudan bağırsakta olgunlaşır. Löffler sendromu (Eozinofilik pnömoni) yapanlar Ascaris, Kancalı Kurt ve Strongyloides'tir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ GÖRÜNTÜLEME ]</b>\n\nÇocuğun karnı çok şiş. Ayakta Direkt Batın Grafisinde (ADBG) hava-sıvı seviyeleri (İleus) görüldü. Ailesi çocuğun geçen gün ağzından 'solucan' çıkardığını söylüyor.\n\nEn olası etken ve komplikasyon?",
+            "opts": [
+              { "txt": "Ascaris lumbricoides - Mekanik Barsak Tıkanıklığı", "type": "correct", "go": "s3" },
+              { "txt": "Strongyloides - Hiperenfeksiyon", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nStrongyloides genelde milimetrik boyutlardadır, tıkanıklık yapmaz. Ascaris ise 20-30 cm boyundadır ve 'Yumak' oluşturarak barsak tıkanıklığına (İleus) neden olabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nAscaris'in erişkin formları ince bağırsakta yaşar. Ancak bazen 'Erratic Migration' (Hatalı göç) yaparak tehlikeli bölgelere girebilirler. Bu bölgeler nerelerdir?",
+            "opts": [
+              { "txt": "Safra yolları (Koledok), Pankreas kanalı, Apendiks", "type": "correct", "go": "s4" },
+              { "txt": "Beyin ve Omurilik", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ GÖÇ YOLLARI ]</b>\n\nAscaris lümenli organlara (Koledok, Wirsung) girerek tıkanma sarılığı, pankreatit veya apandisite yol açabilir. Nörolojik tutulum tipik değildir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TANI ]</b>\n\nKesin tanı için dışkı mikroskobisinde ne görmeyi beklersin?",
+            "opts": [
+              { "txt": "Mamillli (Pürtüklü) dış kabuğu olan yumurtalar", "type": "correct", "go": "s5" },
+              { "txt": "Rhabditiform larvalar", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TANI KRİTERİ ]</b>\n\nLarva görmek Strongyloides için tipiktir. Ascaris tanısı dışkıda karakteristik yumurtaların görülmesiyle konur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nİleus tablosu geriledikten sonra medikal tedavi planlıyorsun. Hangi ilacı verirsin?",
+            "opts": [
+              { "txt": "Albendazol veya Mebendazol", "type": "correct", "action": "end" },
+              { "txt": "Prazikuantel", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KAN EMİCİLER",
+        "desc": "Dahiliye - Çiftçi Hasta - Derin Anemi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n40 yaşında çiftçi. Halsizlik, çabuk yorulma ve toprak yeme (Pica) şikayetiyle geldi. Ayaklarında sık sık kaşıntılı kızarıklıklar olduğunu söylüyor. Hemoglobin: 8 g/dL (Mikrositer Anemi).\n\nBu tabloyu en iyi açıklayan parazit grubu hangisidir?",
+            "opts": [
+              { "txt": "Kancalı Kurtlar (Ancylostoma / Necator)", "type": "correct", "go": "s2" },
+              { "txt": "Ascaris lumbricoides", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK İPUCU ]</b>\n\nAscaris besinlere ortak olur ama kan emmez. Kancalı kurtlar barsak mukozasına dişleri/plakları ile tutunup kan emerler ve ciddi Demir Eksikliği Anemisi yaparlar. Ayaktaki kaşıntı giriş yerini gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ BULAŞ YOLU ]</b>\n\nKancalı kurtlar (ve Strongyloides) insana nasıl bulaşır?",
+            "opts": [
+              { "txt": "Enfektif (Filariform) larvaların deriden penetrasyonu ile.", "type": "correct", "go": "s3" },
+              { "txt": "Yumurtaların ağız yoluyla alınmasıyla.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ BULAŞ MEKANİZMASI ]</b>\n\nAscaris ve Trichuris yumurta yutularak bulaşır. Kancalı kurtlar ve Strongyloides, toprakta gelişen larvaların deriden (genelde çıplak ayakla) girmesiyle bulaşır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nBenzer şekilde deriden bulaşan, ancak 'Otoenfeksiyon' yaparak yıllarca vücutta kalabilen ve immünsüpresiflerde ölümcül 'Hiperenfeksiyon' yapan parazit hangisidir?",
+            "opts": [
+              { "txt": "Strongyloides stercoralis", "type": "correct", "go": "s4" },
+              { "txt": "Necator americanus", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KRİTİK FARK ]</b>\n\nKancalı kurtlarda otoenfeksiyon (kendini tekrar enfekte etme) yoktur. Strongyloides'te larvalar barsak içinde enfektif hale gelip tekrar kana karışabilir (Otoenfeksiyon).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ DERİ BULGUSU ]</b>\n\nStrongyloides'in deri altında hızla ilerleyen larvalarının oluşturduğu, 'Larva Currens' (Koşan Larva) denilen döküntü nerede görülür?",
+            "opts": [
+              { "txt": "Perianal bölge, kalça ve gövdede.", "type": "correct", "go": "s5" },
+              { "txt": "Sadece ayak tabanında.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ KLİNİK ]</b>\n\nAyakta görülen 'Kutanöz Larva Migrans'tır (Kedi/Köpek kancalı kurdu). Strongyloides'te larva currens hızlı hareket eder ve gövdede ürtikeryal çizgiler yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ TANI FARKI ]</b>\n\nKancalı kurt ve Strongyloides ayrımında dışkı mikroskopisi nasıldır?",
+            "opts": [
+              { "txt": "Kancalı Kurtta YUMURTA, Strongyloides'te LARVA görülür.", "type": "correct", "action": "end" },
+              { "txt": "İkisinde de yumurta görülür.", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KRONİK İSHAL",
+        "desc": "Çocuk - Rektal Prolapsus - Kanlı İshal",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\n5 yaşında çocuk. Kronik kanlı-mukuslu ishal, karın ağrısı ve gelişme geriliği var. Muayenede 'Rektal Prolapsus' (Barsağın makattan sarkması) saptandı.\n\nHangi geohelment bu tabloya neden olur?",
+            "opts": [
+              { "txt": "Trichuris trichiura (Kamçılı Solucan)", "type": "correct", "go": "s2" },
+              { "txt": "Ascaris lumbricoides", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nAscaris ince barsaktadır. Trichuris kalın barsağa (çekum) yerleşir, mukozaya gömülür, tenezm ve kanlı ishal yapar. Rektal prolapsus Trichuris'in tipik komplikasyonudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANI ]</b>\n\nDışkı incelemesinde Trichuris yumurtaları görüldü. Bu yumurtaların karakteristik şekli nasıldır?",
+            "opts": [
+              { "txt": "Limon (veya Fıçı) şeklinde, iki ucunda tıkaç (bipolar tıkaç) olan yumurtalar.", "type": "correct", "go": "s3" },
+              { "txt": "Yuvarlak, pürtüklü yumurtalar.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MORFOLOJİ ]</b>\n\nPürtüklü yumurta Ascaris'tir. Trichuris yumurtası tipik olarak limon/fıçı/tepsi şeklindedir ve iki ucunda şeffaf tıkaçlar vardır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ YAŞAM DÖNGÜSÜ ]</b>\n\nTrichuris enfeksiyonunda Löffler sendromu (Akciğer belirtileri) görülür mü?",
+            "opts": [
+              { "txt": "Hayır, larvalar akciğer göçü yapmaz.", "type": "correct", "go": "s4" },
+              { "txt": "Evet, tüm geohelmentlerde görülür.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ İSTİSNA ]</b>\n\nGeohelmentler içinde Ascaris, Kancalı Kurt ve Strongyloides akciğer göçü yapar. Trichuris (ve kıl kurdu Enterobius) akciğere uğramadan doğrudan barsakta gelişir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nTrichuris tedavisinde hangi ilaç tercih edilir?",
+            "opts": [
+              { "txt": "Mebendazol veya Albendazol", "type": "correct", "action": "end" },
+              { "txt": "Metronidazol", "type": "wrong", "go": "s4" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Löffler Sendromu (Eozinofilik pnömoni) yapan parazitler hangileridir?", "a": ["Ascaris, Kancalı Kurt, Strongyloides", "Trichuris, Enterobius", "Giardia, Amip", "Taenia, Ekinokok"], "correct": 0 },
+      { "q": "Kan emerek ciddi Demir Eksikliği Anemisine yol açan geohelmentler hangileridir?", "a": ["Kancalı Kurtlar (Necator/Ancylostoma)", "Ascaris", "Trichuris", "Strongyloides"], "correct": 0 },
+      { "q": "Otoenfeksiyon yaparak immünsüpresif hastalarda ölümcül 'Hiperenfeksiyon' tablosuna neden olan parazit hangisidir?", "a": ["Strongyloides stercoralis", "Ascaris lumbricoides", "Necator americanus", "Trichuris trichiura"], "correct": 0 },
+      { "q": "Rektal Prolapsus ve kanlı ishal (Dizanteri benzeri) yapan geohelment hangisidir?", "a": ["Trichuris trichiura", "Ascaris", "Kancalı Kurt", "Strongyloides"], "correct": 0 },
+      { "q": "Dışkıda yumurtası DEĞİL, rhabditiform larvaları görülerek tanısı konan parazit hangisidir?", "a": ["Strongyloides stercoralis", "Ascaris", "Trichuris", "Necator"], "correct": 0 },
+      { "q": "Ascaris lumbricoides erişkinlerinin 'Hatalı Göçü' (Erratic migration) sonucu hangi komplikasyonlar görülebilir?", "a": ["Biliyer tıkanıklık, Pankreatit, Apandisit", "Menenjit", "Anemi", "Rektal Prolapsus"], "correct": 0 },
+      { "q": "Hangi parazitin yumurtası 'Limon/Fıçı' şeklinde ve iki ucunda tıkaçlıdır?", "a": ["Trichuris trichiura", "Ascaris", "Kancalı Kurt", "Enterobius"], "correct": 0 },
+      { "q": "Strongyloides tedavisinde ilk tercih edilen ilaç hangisidir?", "a": ["İvermektin", "Metronidazol", "Prazikuantel", "Pirantel"], "correct": 0 },
+      { "q": "Deriden girerek bulaşan geohelmentler hangileridir?", "a": ["Kancalı Kurtlar ve Strongyloides", "Ascaris ve Trichuris", "Sadece Ascaris", "Sadece Trichuris"], "correct": 0 },
+      { "q": "Mekanik barsak tıkanıklığına (İleus) en sık neden olan, 'yumak' oluşturan büyük solucan hangisidir?", "a": ["Ascaris lumbricoides", "Trichuris", "Strongyloides", "Necator"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Ascaris", "B": "İleus / Biliyer migrasyon" },
+      { "A": "Kancalı Kurt", "B": "Demir eksikliği anemisi" },
+      { "A": "Strongyloides", "B": "Otoenfeksiyon / Larva Currens" },
+      { "A": "Trichuris", "B": "Rektal Prolapsus / Limon yumurta" },
+      { "A": "Löffler Sendromu", "B": "Larvaların akciğer göçü" },
+      { "A": "Albendazol", "B": "Genel antihelmintik" },
+      { "A": "İvermektin", "B": "Strongyloides ilacı" },
+      { "A": "Larva Currens", "B": "Hızlı ilerleyen deri lezyonu" }
+    ],
+    "decypher": [
+      {
+        "text": "{Ascaris} lumbricoides, ince bağırsakta yaşayan en büyük nematoddur. Yumurtaların yutulmasıyla bulaşır, larvaları {akciğer} göçü yapar (Löffler sendromu). Erişkinler yumak oluşturarak mekanik {tıkanıklığa} (ileus) neden olabilir.",
+        "decoys": ["Trichuris", "karaciğer", "anemi", "Strongyloides"]
+      },
+      {
+        "text": "{Kancalı} kurtlar (Ancylostoma ve Necator), larvaların {deriden} girmesiyle bulaşır. Bağırsak mukozasına tutunup kan emerek ciddi demir eksikliği {anemisine} neden olurlar.",
+        "decoys": ["Kamçılı", "ağızdan", "ishal", "Ascaris"]
+      },
+      {
+        "text": "{Strongyloides} stercoralis, {otoenfeksiyon} yapabilme yeteneğiyle vücutta yıllarca kalabilir. Bağışıklığı baskılanmış hastalarda (AIDS, Steroid) yaygın {hiperenfeksiyon} sendromuna ve ölüme yol açabilir.",
+        "decoys": ["Trichuris", "anemi", "iyileşme", "Kancalı"]
+      }
+    ]
+  }
+}

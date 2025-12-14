@@ -1,0 +1,169 @@
+{
+  "meta": {
+    "title": "PEPTİK ÜLSER VE GASTRİTLER (OLGU)",
+    "tag": "İÇ HASTALIKLARI"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 KLİNİK İNCİLER</div><div class='sum-body'>• <b>Gastrik Ülser:</b> Malignite riski taşır. Tanıda çoklu biyopsi ve tedaviden sonra iyileşmenin görülmesi için <b>Kontrol Endoskopisi</b> ŞARTTIR.<br>• <b>H. Pylori Testleri:</b> PPI kullanımı, kanama veya intestinal metaplazi durumlarında invaziv testler (Hızlı Üreaz, Histoloji) <b>Yanlış Negatif</b> çıkabilir. Doğrulama için Üre Nefes Testi (UBT) kullanılır.<br>• <b>Perforasyon:</b> Ani, bıçak saplanır tarzda ağrı ve 'Tahta Karın'. Tanı: ADBG'de diyafram altı serbest hava.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 NSAİİ PROFİLAKSİSİ</div><div class='sum-body'>• <b>Yüksek Risk:</b> Komplike ülser öyküsü veya >2 risk faktörü. (COX-2 İnhibitörü + PPI önerilir).<br>• <b>Orta Risk:</b> >65 yaş, Yüksek doz NSAİİ, Komplike olmayan ülser öyküsü, Aspirin/Steroid kullanımı. (PPI veya Misoprostol eklenir).<br>• <b>Düşük Risk:</b> Risk faktörü yok. (Standart NSAİİ verilebilir).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "OLGU 1: GİZLENEN BAKTERİ",
+        "desc": "Poliklinik - 55 Yaş Kadın - Gastrik Ülser Yönetimi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ BAŞVURU ]</b>\n\n55 yaşında kadın hasta. 3 aydır süren epigastrik ağrı ve yemek sonrası doygunluk hissi var. Aile hekimi PPI başlamış ama şikayetler tam geçmemiş.\n\nEndoskopide: Mide küçük kurvatürde 1 cm çaplı, üzeri beyaz eksudalı ülser saptandı. Hızlı Üreaz Testi (RUT) ve Histolojide H. Pylori NEGATİF geldi.\n\nGerçekten negatif mi?",
+            "opts": [
+              { "txt": "Olabilir, ama PPI kullanımı testleri bozmuş olabilir. Doğrulama gerekir.", "type": "correct", "go": "s2" },
+              { "txt": "Evet, invaziv testler kesindir. Hasta H. Pylori negatiftir.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YANLIŞ NEGATİFLİK ]</b>\n\nPPI kullanımı, mide içindeki bakteri yoğunluğunu azaltarak ve dağılımını değiştirerek Hızlı Üreaz ve Histoloji testlerinde YANLIŞ NEGATİFLİĞE neden olabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ DOĞRULAMA ]</b>\n\nEnfeksiyonu doğrulamak için hangi NON-İNVAZİV testi istersin?",
+            "opts": [
+              { "txt": "Üre Nefes Testi (UBT)", "type": "correct", "go": "s3" },
+              { "txt": "Serumda H. Pylori IgG", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ SEROLOJİ ]</b>\n\nKandaki antikor (IgG), geçirilmiş enfeksiyonu da gösterebilir. Aktif enfeksiyonu doğrulamak için Üre Nefes Testi veya Gaita Antijeni daha güvenilirdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ VE TAKİP ]</b>\n\nÜre nefes testi POZİTİF geldi (Gizli enfeksiyon doğrulandı). Eradikasyon tedavisi verdin.\n\nBu hasta için en kritik takip basamağı nedir?",
+            "opts": [
+              { "txt": "Tedavi bitiminden sonra KONTROL ENDOSKOPİSİ yapmak.", "type": "correct", "go": "s4" },
+              { "txt": "Sadece nefes testi ile eradikasyonu kontrol etmek.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KANSER RİSKİ ]</b>\n\nGastrik ülserlerin %5'i malignite (kanser) barındırır. Ülserin tamamen iyileştiğini gözle görmek ve gerekirse tekrar biyopsi almak için endoskopi ŞARTTIR.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nKontrol endoskopisinde ülserin tamamen kapandığı (skar) görüldü. H. Pylori negatif. Hasta şifayla taburcu edildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "OLGU 2: TAHTA KARIN",
+        "desc": "Acil Servis - 45 Yaş Erkek - Akut Batın",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ACİL TABLO ]</b>\n\n45 yaşında erkek hasta. Ani başlayan, bıçak saplanır tarzda çok şiddetli karın ağrısı ile geldi. Hareket etmekten kaçınıyor.\n\nFizik muayenede karın duvarı sert (Tahta Karın / Defans) ve barsak sesleri yok. Ön tanın nedir?",
+            "opts": [
+              { "txt": "Peptik Ülser Perforasyonu (Delinme)", "type": "correct", "go": "s2" },
+              { "txt": "Akut Gastrit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK CİDDİYET ]</b>\n\nGastrit künt ve rahatsız edici bir ağrı yapar. Tahta karın (yaygın peritonit) perforasyonun en tipik bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANI YÖNTEMİ ]</b>\n\nTanıyı en hızlı ve pratik şekilde doğrulamak için hangi görüntülemeyi istersin?",
+            "opts": [
+              { "txt": "Ayakta Direkt Batın Grafisi (ADBG)", "type": "correct", "go": "s3" },
+              { "txt": "Batın Ultrasonografisi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ HAVA ARAMAK ]</b>\n\nPerforasyonda karın içine serbest hava çıkar. Bu hava en iyi ayakta çekilen grafide, diyafram altında hilal şeklinde görülür. USG havayı göstermekte yetersizdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SONUÇ ]</b>\n\nGrafide sağ diyafram altında serbest hava görüldü. Hasta acil cerrahiye (Laparotomi) alındı ve perforasyon onarıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "OLGU 3: RİSK YÖNETİMİ",
+        "desc": "Poliklinik - 50 Yaş Erkek - NSAİİ Başlanacak",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ KONSÜLTASYON ]</b>\n\n50 yaşında erkek hasta. Romatoid Artrit tanısı aldı ve uzun süreli NSAİİ (Ağrı kesici) tedavisi başlanacak.\n\nHastanın özgeçmişinde ülser yok. Aspirin veya kortizon kullanmıyor. 65 yaş altında.\n\nBu hasta GİS riski açısından hangi gruptadır?",
+            "opts": [
+              { "txt": "Düşük Risk", "type": "correct", "go": "s2" },
+              { "txt": "Orta Risk", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ RİSK KRİTERLERİ ]</b>\n\nOrta risk için: >65 yaş, yüksek doz NSAİİ, komplike olmayan ülser öyküsü veya aspirin/steroid kullanımı gerekir. Bu hastada hiçbiri yok.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ STRATEJİ ]</b>\n\nDüşük riskli bu hasta için mide koruma stratejin ne olmalı?",
+            "opts": [
+              { "txt": "Standart NSAİİ verilebilir. Uzun süreli olacaksa H. Pylori bakılabilir.", "type": "correct", "go": "s3" },
+              { "txt": "Mutlaka PPI ve COX-2 İnhibitörü kombine edilmeli.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AŞIRI TEDAVİ ]</b>\n\nKombine koruma (COX-2 + PPI) sadece Yüksek Riskli hastalarda önerilir. Düşük riskte standart tedavi yeterlidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SENARYO DEĞİŞİMİ ]</b>\n\nPeki, bu hasta 70 yaşında olsaydı ve düşük doz aspirin kullanıyor olsaydı, risk grubu ve yaklaşım ne olurdu?",
+            "opts": [
+              { "txt": "Orta/Yüksek Risk -> PPI eklenmeli veya COX-2 tercih edilmeli.", "type": "correct", "action": "end" },
+              { "txt": "Hala Düşük Risk.", "type": "wrong", "go": "s3" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Gastrik ülser tedavisinde Duodenal ülserden farklı olarak MUTLAKA yapılması gereken nedir?", "a": ["Kontrol Endoskopisi (İyileşmenin teyidi)", "Üre Nefes Testi", "Diyet", "Cerrahi"], "correct": 0 },
+      { "q": "PPI kullanımı H. Pylori testlerini (Hızlı Üreaz, Histoloji) nasıl etkiler?", "a": ["Yanlış Negatif sonuçlara neden olur", "Yanlış Pozitif yapar", "Etkilemez", "Duyarlılığı artırır"], "correct": 0 },
+      { "q": "Peptik ülser perforasyonunun en tipik fizik muayene bulgusu nedir?", "a": ["Tahta Karın (Yaygın Defans)", "Rebound", "Kitle", "Barsak seslerinde artış"], "correct": 0 },
+      { "q": "Perforasyon şüphesinde İLK istenmesi gereken görüntüleme yöntemi hangisidir?", "a": ["Ayakta Direkt Batın Grafisi (ADBG)", "Endoskopi", "USG", "MR"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi NSAİİ kullanımında GİS kanama riskini artıran faktörlerden biri DEĞİLDİR?", "a": ["Erkek cinsiyet", "Yaş > 65", "Birlikte Aspirin kullanımı", "Yüksek doz NSAİİ"], "correct": 0 },
+      { "q": "Aktif H. Pylori enfeksiyonunu doğrulamak için en güvenilir NON-İNVAZİV test hangisidir?", "a": ["Üre Nefes Testi (UBT)", "Serum IgG", "Hızlı Üreaz Testi", "Kültür"], "correct": 0 },
+      { "q": "Yüksek GİS riski olan (örn: Ülser öyküsü) bir hastada NSAİİ gerekirse en güvenli yaklaşım nedir?", "a": ["COX-2 İnhibitörü + PPI", "Sadece COX-2 İnhibitörü", "Standart NSAİİ + H2 Bloker", "Sadece PPI"], "correct": 0 },
+      { "q": "Hızlı Üreaz Testi (RUT) endoskopide alınan biyopside neyi arar?", "a": ["Bakterinin üreaz enzim aktivitesini", "Bakterinin DNA'sını", "İnflamasyonu", "Kanseri"], "correct": 0 },
+      { "q": "ADBG'de 'Diyafram altı serbest hava' görülmesi neyi işaret eder?", "a": ["İçi boş organ perforasyonu (Mide/Barsak delinmesi)", "İleus", "Asit", "Kitle"], "correct": 0 },
+      { "q": "Gastrik ülserlerin malignite (kanser) riski taşıması nedeniyle başlangıçta ne yapılmalıdır?", "a": ["Ülser kenarından çoklu biyopsi alınmalıdır", "Sadece asit baskılanmalıdır", "Hemen ameliyat edilmelidir", "BT çekilmelidir"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Gastrik Ülser", "B": "Malignite riski, kontrol endoskopisi şart" },
+      { "A": "Duodenal Ülser", "B": "Malignite riski yok, gece ağrısı tipik" },
+      { "A": "Tahta Karın", "B": "Perforasyon / Peritonit" },
+      { "A": "Serbest Hava", "B": "ADBG'de perforasyon bulgusu" },
+      { "A": "Üre Nefes Testi", "B": "H. Pylori doğrulaması (Non-invaziv)" },
+      { "A": "Yanlış Negatiflik", "B": "PPI kullanımı altında H. Pylori testleri" },
+      { "A": "Yüksek Risk", "B": "Komplike ülser öyküsü + NSAİİ" },
+      { "A": "COX-2 İnhibitörü", "B": "Mideye daha az zarar veren ağrı kesici" }
+    ],
+    "decypher": [
+      {
+        "text": "Gastrik ülserlerin %5'i malign (kanser) olabileceği için tanıda mutlaka {biyopsi} alınmalı ve tedavi bitiminde ülserin iyileştiğini görmek için kontrol {endoskopisi} yapılmalıdır.",
+        "decoys": ["cerrahi", "grafi", "ultrason", "BT"]
+      },
+      {
+        "text": "Peptik ülser perforasyonunda mide içeriği karın boşluğuna dökülür ve ani, şiddetli bir ağrı ile {tahta} karın (defans) tablosu oluşur. Tanıda ayakta direkt grafide diyafram altında {serbest} hava aranır.",
+        "decoys": ["yumuşak", "gaz", "sıvı", "kitle"]
+      },
+      {
+        "text": "NSAİİ kullanan hastalarda mideyi korumak için risk değerlendirmesi yapılmalıdır. Yüksek riskli hastalarda (ülser öyküsü vb.) {COX-2} inhibitörü tercih edilmeli ve yanına mide koruyucu olarak {PPI} eklenmelidir.",
+        "decoys": ["Aspirin", "Antibiyotik", "H2 Bloker", "Antiasit"]
+      }
+    ]
+  }
+}

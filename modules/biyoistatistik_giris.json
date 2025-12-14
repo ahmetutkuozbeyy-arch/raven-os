@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "İSTATİSTİKSEL TAHMİNLEME VE HİPOTEZ TESTLERİ",
+    "tag": "BİYOİSTATİSTİK"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>📊 TEMEL KAVRAMLAR</div><div class='sum-body'>• <b>H0 (Yokluk Hipotezi):</b> Fark yoktur, ilişki yoktur diyen hipotezdir. Test edilen budur.<br>• <b>H1 (Alternatif Hipotez):</b> Fark vardır diyen, araştırmacının iddia ettiği hipotezdir.<br>• <b>p Değeri (Olasılık):</b> H0 doğru iken, elde edilen sonucun şans eseri çıkma olasılığıdır. p<0.05 ise H0 reddedilir (Sonuç anlamlıdır).</div></div><div class='sum-card sum-tus'><div class='sum-title'>⚠️ HATALAR VE GÜÇ</div><div class='sum-body'>• <b>Tip 1 Hata (α):</b> Gerçekte doğru olan H0'ı reddetmek. (Yani fark yokken var demek - Yalancı Pozitif).<br>• <b>Tip 2 Hata (β):</b> Gerçekte yanlış olan H0'ı kabul etmek. (Yani fark varken bulamamak - Yalancı Negatif).<br>• <b>Testin Gücü (1-β):</b> Gerçek bir farkı tespit edebilme yeteneğidir.</div></div><div class='sum-card sum-rx'><div class='sum-title'>🧮 TEST SEÇİMİ</div><div class='sum-body'>• <b>Tek Örneklem t-testi:</b> Bir grubun ortalamasını, bilinen bir toplum ortalamasıyla kıyaslar.<br>• <b>Bağımsız İki Örneklem t-testi:</b> İki farklı grubun (Örn: İlaç vs Plasebo) ortalamalarını kıyaslar.<br>• <b>Bağımlı (Eş) İki Örneklem t-testi:</b> Aynı grubun Önce-Sonra ölçümlerini kıyaslar.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: ARAŞTIRMACININ İKİLEMİ",
+        "desc": "Klinik Araştırma - Yeni İlaç Denemesi - Hipotez Kurma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nYeni geliştirilen 'X İlacının' kan basıncını düşürüp düşürmediğini test etmek istiyorsun. İlacın etkili olduğunu iddia ediyorsun.\n\nTest edeceğin 'Yokluk Hipotezi' (H0) nasıl olmalıdır?",
+            "opts": [
+              { "txt": "H0: İlaç ile Plasebo arasında fark yoktur. (μ1 = μ2)", "type": "correct", "go": "s2" },
+              { "txt": "H0: İlaç, Plasebodan daha etkilidir. (μ1 < μ2)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TEMEL KURAL ]</b>\n\nİstatistiksel testlerde her zaman 'Fark Yoktur' diyen H0 hipotezi test edilir. Fark olduğunu iddia eden H1 (Alternatif) hipotezidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ KARAR ANI ]</b>\n\nÇalışma sonucunda p değeri 0.03 bulundu. Kabul edilen anlamlılık düzeyi (α) 0.05 ise kararını nasıl verirsin?",
+            "opts": [
+              { "txt": "p < 0.05 olduğu için H0 REDDEDİLİR. Fark anlamlıdır.", "type": "correct", "go": "s3" },
+              { "txt": "p < 0.05 olduğu için H0 KABUL EDİLİR. Fark yoktur.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YORUM HATASI ]</b>\n\np değeri 'hata yapma olasılığıdır'. Bu olasılık sınırımızdan (0.05) küçükse, risk alırız ve H0'ı reddederiz. Yani 'Fark vardır' deriz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ HATA TİPİ ]</b>\n\nDiyelim ki H0'ı reddettin ve 'İlaç etkilidir' dedin. Ama gerçekte ilaç etkisizmiş (Şans eseri öyle çıkmış). Bu durumda ne tür bir hata yapmış olursun?",
+            "opts": [
+              { "txt": "Tip 1 Hata (α)", "type": "correct", "go": "s4" },
+              { "txt": "Tip 2 Hata (β)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ HATA AYRIMI ]</b>\n\nOlmayan bir farkı 'varmış gibi' bulmak Tip 1 Hatadır (Yalancı Pozitif). Var olan bir farkı 'bulamamak' Tip 2 Hatadır (Yalancı Negatif).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ GÜÇ ANALİZİ ]</b>\n\nÇalışmanın 'Gerçekte var olan bir farkı, istatistiksel olarak da bulabilme yeteneğine' ne ad verilir?",
+            "opts": [
+              { "txt": "Testin Gücü (1 - β)", "type": "correct", "go": "s5" },
+              { "txt": "Güven Aralığı", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TANIM ]</b>\n\nTip 2 hata yapmama olasılığına (1 - beta) testin gücü denir. Güçlü bir test, ilacın etkisini kaçırmaz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nAraştırma başarıyla tamamlandı. İlacın etkili olduğu, %95 güven düzeyinde ve %5 hata payı ile kanıtlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: HANGİ TEST?",
+        "desc": "Veri Analizi - Doğru İstatistiksel Testi Seçme",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO 1 ]</b>\n\nBir sınıftaki 30 öğrencinin not ortalamasının, Türkiye genelindeki 50 öğrencinin not ortalamasından farklı olup olmadığını test etmek istiyorsun. (Veriler normal dağılıyor).\n\nHangi testi kullanırsın?",
+            "opts": [
+              { "txt": "Tek Örneklem t-testi (One Sample t-test)", "type": "correct", "go": "s2" },
+              { "txt": "Bağımsız İki Örneklem t-testi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TEST SEÇİMİ ]</b>\n\nBurada tek bir grup (sınıf) var ve bu grubun ortalamasını bilinen bir sabit değerle (Türkiye ortalaması) kıyaslıyorsun. Bu yüzden Tek Örneklem t-testi kullanılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ SENARYO 2 ]</b>\n\nYeni bir diyet programı deniyorsun. 20 kişiye 'Diyet A', başka 20 kişiye 'Diyet B' uyguladın. İki grubun kilo verme miktarlarını karşılaştıracaksın.\n\nHangi test uygundur?",
+            "opts": [
+              { "txt": "Bağımsız İki Örneklem t-testi (Independent Samples)", "type": "correct", "go": "s3" },
+              { "txt": "Eş (Bağımlı) Örneklem t-testi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ GRUP YAPISI ]</b>\n\nİki grup birbirinden tamamen farklı insanlardan oluşuyor (Bağımsız). Eğer aynı kişiler olsaydı bağımlı olurdu.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SENARYO 3 ]</b>\n\nBir grup hastanın 'Tedavi Öncesi' kan şekeri ile 'Tedavi Sonrası' kan şekerini ölçtün. İlacın etkili olup olmadığını anlamak istiyorsun.\n\nHangi test?",
+            "opts": [
+              { "txt": "Bağımlı (Eş) İki Örneklem t-testi (Paired Samples)", "type": "correct", "go": "s4" },
+              { "txt": "Bağımsız t-testi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ÖNCE-SONRA ]</b>\n\nÖlçümler aynı kişilerden alındığı için veriler birbirine bağımlıdır. 'Önce-Sonra' analizlerinde Paired t-test kullanılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YORUMLAMA ]</b>\n\nEşleştirilmiş t-testi sonucunda p=0.001 bulundu. Bu ne anlama gelir?",
+            "opts": [
+              { "txt": "Tedavi öncesi ve sonrası arasında İSTATİSTİKSEL OLARAK ANLAMLI fark vardır.", "type": "correct", "go": "s5" },
+              { "txt": "Fark şans eseridir, tedavi etkisizdir.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ p DEĞERİ ]</b>\n\np < 0.05 olduğu için H0 (Fark yoktur) reddedilir. Yani değişim anlamlıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nDoğru testleri seçerek analizleri tamamladın. Veri analitiği yeteneğin gelişti.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: GÜVEN ARALIĞI",
+        "desc": "Makale Okuma - %95 Güven Aralığını Anlamak",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANALİZ ]</b>\n\nBir makalede şöyle yazıyor: 'İlaç grubunda ortalama düşüş 10 birim, %95 Güven Aralığı (8 - 12)'.\n\nBu 'Güven Aralığı' neyi ifade eder?",
+            "opts": [
+              { "txt": "Deney 100 kez tekrarlansa, 95'inde gerçek ortalamanın bu aralıkta (8-12) olacağını.", "type": "correct", "go": "s2" },
+              { "txt": "Hastaların %95'inin değerinin 8 ile 12 arasında olduğunu.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KAVRAM YANILGISI ]</b>\n\nGüven aralığı bireylerin dağılımını değil, popülasyon ortalamasının (parametrenin) nerede olabileceğini tahmin eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ YORUMLAMA ]</b>\n\nBaşka bir çalışmada iki grup arasındaki farkın %95 Güven Aralığı (-2 ile +5) olarak verilmiş.\n\nBu aralık '0' (Sıfır) değerini kapsadığı için sonuç hakkında ne dersin?",
+            "opts": [
+              { "txt": "İstatistiksel olarak anlamlı fark YOKTUR (p > 0.05).", "type": "correct", "go": "s3" },
+              { "txt": "Fark anlamlıdır.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ SIFIR KURALI ]</b>\n\nEğer güven aralığı '0' noktasını içeriyorsa (biri negatif biri pozitifse), gruplar arasında fark olmama ihtimali vardır. Yani H0 reddedilemez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEK YÖNLÜ TEST ]</b>\n\nAraştırmacı hipotezini 'X ilacı, Y ilacından DAHA İYİDİR' diye kurdu (Büyüktür işareti kullandı).\n\nBu ne tür bir hipotez testidir?",
+            "opts": [
+              { "txt": "Tek Yönlü (One-Tailed) Test", "type": "correct", "go": "s4" },
+              { "txt": "Çift Yönlü (Two-Tailed) Test", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YÖN ]</b>\n\n'Farklıdır' (Eşit değildir) dersen çift yönlüdür. 'Büyüktür' veya 'Küçüktür' diye yön belirtirsen Tek Yönlü test olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SERBESTLİK DERECESİ ]</b>\n\nt-testinde tablo değerine bakmak için 'Serbestlik Derecesi' (sd) kullanılır. Tek örneklem t-testinde sd nasıl hesaplanır (n=örneklem)?",
+            "opts": [
+              { "txt": "n - 1", "type": "correct", "go": "s5" },
+              { "txt": "n", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ FORMÜL ]</b>\n\nTek örneklemde serbestlik derecesi n-1'dir. Bağımsız iki örneklemde (n1+n2)-2'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nGüven aralıklarını ve hipotez yönlerini doğru yorumladın. İstatistiksel okuryazarlığın tam puan aldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "İstatistiksel analizde, gruplar arasında fark olmadığını savunan hipoteze ne ad verilir?", "a": ["Yokluk Hipotezi (H0)", "Alternatif Hipotez (H1)", "Araştırma Hipotezi", "Değişken Hipotezi"], "correct": 0 },
+      { "q": "Gerçekte doğru olan H0 hipotezinin yanlışlıkla reddedilmesine ne denir?", "a": ["Tip 1 Hata (Alfa)", "Tip 2 Hata (Beta)", "Standart Hata", "Sistematik Hata"], "correct": 0 },
+      { "q": "Aynı hasta grubunun tedavi öncesi ve sonrası değerlerini karşılaştırmak için hangi test kullanılır?", "a": ["Bağımlı (Eş) Örneklem t-testi", "Bağımsız Örneklem t-testi", "Ki-Kare Testi", "ANOVA"], "correct": 0 },
+      { "q": "p değerinin 0.05'ten küçük olması ne anlama gelir?", "a": ["Sonuç istatistiksel olarak anlamlıdır (H0 reddedilir)", "Sonuç anlamsızdır", "Hata payı %95'tir", "Gruplar eşittir"], "correct": 0 },
+      { "q": "Testin gücü (Power) nasıl ifade edilir?", "a": ["1 - Beta", "1 - Alfa", "Alfa + Beta", "Beta"], "correct": 0 },
+      { "q": "İki farklı ve bağımsız grubun ortalamalarını karşılaştırmak için kullanılan test hangisidir?", "a": ["Bağımsız İki Örneklem t-testi", "Paired t-test", "Z testi", "Korelasyon"], "correct": 0 },
+      { "q": "Tip 2 hata (Beta) neyi ifade eder?", "a": ["Gerçekte fark varken farkı bulamamak (H0 yanlışken kabul etmek)", "Olmayan farkı varmış gibi görmek", "Örneklem hatası", "Veri giriş hatası"], "correct": 0 },
+      { "q": "Güven aralığı (CI) '0' değerini içeriyorsa (%95 CI: -2 ile +4 gibi), yorum nedir?", "a": ["İstatistiksel olarak anlamlı fark yoktur", "Fark anlamlıdır", "Hata yapılmıştır", "Test geçersizdir"], "correct": 0 },
+      { "q": "H1 hipotezi 'μ1 > μ2' şeklinde kurulmuşsa, bu ne tür bir testtir?", "a": ["Tek Yönlü (One-Tailed)", "Çift Yönlü (Two-Tailed)", "Yönsüz", "Parametrik olmayan"], "correct": 0 },
+      { "q": "Tek örneklem t-testinde serbestlik derecesi (df) kaçtır?", "a": ["n - 1", "n", "n - 2", "n + 1"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "H0", "B": "Yokluk Hipotezi (Fark yoktur)" },
+      { "A": "H1", "B": "Alternatif Hipotez (Fark vardır)" },
+      { "A": "Tip 1 Hata", "B": "Doğru H0'ı reddetmek (Yalancı Pozitif)" },
+      { "A": "Tip 2 Hata", "B": "Yanlış H0'ı kabul etmek (Yalancı Negatif)" },
+      { "A": "Güç (Power)", "B": "1 - Beta (Farkı yakalama gücü)" },
+      { "A": "Bağımsız t-testi", "B": "İki farklı grubun karşılaştırılması" },
+      { "A": "Bağımlı t-testi", "B": "Önce-Sonra ölçümleri" },
+      { "A": "p < 0.05", "B": "İstatistiksel olarak anlamlı" }
+    ],
+    "decypher": [
+      {
+        "text": "Hipotez testlerinde, araştırmacı öncelikle fark olmadığını savunan {Yokluk} hipotezini (H0) ve fark olduğunu savunan {Alternatif} hipotezi (H1) kurar. Analiz sonucunda {p} değeri 0.05'ten küçükse H0 reddedilir.",
+        "decoys": ["İstatistik", "Güven", "alfa", "beta"]
+      },
+      {
+        "text": "Gerçekte doğru olan bir H0 hipotezini reddetme hatasına {Tip 1} hata denir ve alfa ile gösterilir. Gerçekte yanlış olan bir H0'ı kabul etme hatasına ise {Tip 2} hata denir ve {beta} ile gösterilir.",
+        "decoys": ["Tip 3", "Gama", "Delta", "Güç"]
+      },
+      {
+        "text": "İki grubun ortalamalarını karşılaştırırken, eğer gruplar birbirinden farklı bireylerden oluşuyorsa {Bağımsız} t-testi kullanılır. Eğer aynı bireylerin önce ve sonra ölçümleri karşılaştırılıyorsa {Eşleştirilmiş} t-testi kullanılır.",
+        "decoys": ["ANOVA", "Korelasyon", "Ki-kare", "Z-testi"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "meta": {
+    "title": "GASTROENTERİTLER (MİKROBİYOLOJİ)",
+    "tag": "TIBBİ MİKROBİYOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🦠 BAKTERİYEL ETKENLER</div><div class='sum-body'>• <b>İnvaziv (Kanlı):</b> Shigella, Salmonella, Campylobacter, EIEC, Yersinia, EHEC.<br>• <b>Sekretuar (Sulu):</b> V. Cholerae, ETEC (Turist ishali), S. Aureus.<br>• <b>Psikrofilik (+4°C'de Üreyen):</b> Yersinia enterocolitica ve Listeria monocytogenes (Buzdolabı bakterileri).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 KRİTİK AYRIMLAR</div><div class='sum-body'>• <b>Enfektif Doz:</b> Shigella için çok düşüktür (10-200 bakteri yeterli). Salmonella için yüksektir ($10^5$).<br>• <b>EHEC (O157:H7):</b> Az pişmiş hamburgerle bulaşır. HÜS (Hemolitik Üremik Sendrom) yapar.<br>• <b>Vibrio Parahaemolyticus:</b> Halofildir (Tuzu sever), deniz ürünleriyle bulaşır.</div></div><div class='sum-card sum-rx'><div class='sum-title'>🧬 VİRAL ETKENLER</div><div class='sum-body'>• <b>Rotavirüs:</b> Çift iplikli RNA (dsRNA). 2 yaş altı kış ishali. AŞISI VARDIR.<br>• <b>Norovirüs:</b> Klora dirençli, çok düşük enfektif doz. Toplu yaşam alanlarında (Gemi, okul) salgın yapar.<br>• <b>Adenovirüs:</b> Serotip 40 ve 41 gastroenterit yapar.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: AZ PİŞMİŞ TEHLİKE",
+        "desc": "Acil Servis - 6 Yaş Çocuk - Kanlı İshal ve Böbrek Sorunu",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ÖYKÜ ]</b>\n\n6 yaşında kız çocuğu, kanlı ishal şikayetiyle getirildi. Öyküsünde 3 gün önce bir fast-food restoranında hamburger yediği öğrenildi. Dışkı incelemesinde lökosit yok ama bol eritrosit var.\n\nEn olası etken nedir?",
+            "opts": [
+              { "txt": "Enterohemorajik E. Coli (EHEC - O157:H7)", "type": "correct", "go": "s2" },
+              { "txt": "Enterotoksinojenik E. Coli (ETEC)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TİP AYRIMI ]</b>\n\nETEC 'Turist İshali' etkenidir ve sulu ishal yapar. Az pişmiş kıyma/hamburger ile bulaşan ve kanlı ishal (Hemorajik Kolit) yapan etken EHEC'tir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nBu bakteri (EHEC), Shigella dysenteriae tip 1'in ürettiği toksine çok benzeyen bir toksin üretir. Bu toksinin adı nedir?",
+            "opts": [
+              { "txt": "Verotoksin (Shiga-like Toksin)", "type": "correct", "go": "s3" },
+              { "txt": "Labil Toksin (LT)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TOKSİN ]</b>\n\nLabil Toksin (LT) ve Stabil Toksin (ST), ETEC'in sulu ishal yapan toksinleridir. EHEC ise Verotoksin ile damar endoteline hasar verir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nÇocuğun idrar çıkışı azaldı ve trombositleri düştü. EHEC enfeksiyonunun en korkulan komplikasyonu olan bu tablonun adı nedir?",
+            "opts": [
+              { "txt": "Hemolitik Üremik Sendrom (HÜS)", "type": "correct", "go": "s4" },
+              { "txt": "Guillain-Barre Sendromu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ SENDROM ]</b>\n\nGuillain-Barre genellikle Campylobacter jejuni sonrası görülür. EHEC, toksinleriyle böbrek endotelini bozarak HÜS'e (Böbrek yetmezliği + Trombositopeni + Anemi) yol açar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KÜLTÜR ]</b>\n\nE. Coli O157:H7 suşunu diğer E. Coli'lerden ayırmak için özel bir besiyeri kullanılır (Sorbitol MacConkey). Bu bakteri sorbitolü fermente eder mi?",
+            "opts": [
+              { "txt": "Hayır, Sorbitol Negatiftir (Renksiz koloni).", "type": "correct", "go": "s5" },
+              { "txt": "Evet, Sorbitol Pozitiftir (Pembe koloni).", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ AYIRT EDİCİ ÖZELLİK ]</b>\n\nFlora üyesi E. coli'ler sorbitolü fermente eder. Ancak patojen O157:H7 suşu sorbitolü fermente EDEMEZ.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nTanı doğrulandı. Antibiyotik verilmedi (Toksin salınımını artırıp HÜS riskini yükseltebileceği için). Destek tedavisi ile hasta düzeldi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: BUZDOLABI BAKTERİSİ",
+        "desc": "Dahiliye - Soğukta Üreyen Bakteriler",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\nKış ayında karın ağrısı ve ishal ile gelen hastada 'Akut Apandisit' şüphesi oluştu. Ancak apandektomi sırasında apendiks normal bulundu, mezenterik lenfadenit saptandı.\n\nBuzdolabında (+4°C) saklanan süt ve et ürünlerinde çoğalabilen bu etken nedir?",
+            "opts": [
+              { "txt": "Yersinia enterocolitica", "type": "correct", "go": "s2" },
+              { "txt": "Salmonella Typhi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SOĞUK SEVEN ]</b>\n\nSalmonella oda ısısını sever. Soğukta (buzdolabında) üreyebilen (Psikrofilik) ve yalancı apandisit (Psödoapandisit) tablosu yapan bakteri Yersinia'dır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ BAŞKA BİR ETKEN ]</b>\n\nSoğukta üreyebilen bir diğer bakteri ise hamilelerde düşük, yenidoğanlarda menenjit yapabilir. Taze peynir ve sütle bulaşır. Bu hangisidir?",
+            "opts": [
+              { "txt": "Listeria monocytogenes", "type": "correct", "go": "s3" },
+              { "txt": "Bacillus cereus", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ GRAM POZİTİF ]</b>\n\nB. cereus pirinç pilavı ile bulaşır. Soğukta üreyen, süt ürünleriyle bulaşan ve gebeler için riskli olan Gram (+) basil Listeria'dır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ HAREKET ]</b>\n\nListeria monocytogenes'in mikroskop altındaki karakteristik hareketi nedir?",
+            "opts": [
+              { "txt": "Takla atma (Tumbling) hareketi", "type": "correct", "action": "end" },
+              { "txt": "Hareketsizdir", "type": "wrong", "go": "s3" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: ENFEKTİF DOZ",
+        "desc": "Laboratuvar - Bulaş Riski Analizi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nBir kreşte kanlı ishal salgını başladı. Çok az miktarda bakteri alınmasına rağmen çocukların hızla hastalandığı görüldü. Enfektif dozu EN DÜŞÜK (10-100 bakteri) olan etken hangisidir?",
+            "opts": [
+              { "txt": "Shigella spp.", "type": "correct", "go": "s2" },
+              { "txt": "Salmonella spp.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MİDE ASİDİ ]</b>\n\nSalmonella mide asidine duyarlıdır, hastalık yapması için milyonlarca ($10^5$) bakteri gerekir. Shigella ise aside dirençlidir, çok az bakteri bile enfeksiyon yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ SHIGELLA PATOGENEZİ ]</b>\n\nShigella barsak mukozasına nasıl girer ve yayılır?",
+            "opts": [
+              { "txt": "M hücrelerinden girer, Aktin kuyrukları ile hücreden hücreye yayılır.", "type": "correct", "go": "s3" },
+              { "txt": "Kana karışıp hematojen yayılır.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ LOKALİZASYON ]</b>\n\nShigella (ve EIEC) nadiren kana geçer. Genelde epitel içinde yanal (lateral) olarak yayılır ve 'Dizanteri' (ülserasyon) tablosunu oluşturur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ VİRAL SALGIN ]</b>\n\nBaşka bir okulda ise 'kusma' ile karakterize, çok hızlı yayılan bir salgın var. Etken klora dirençli ve enfektif dozu çok düşük. Nedir?",
+            "opts": [
+              { "txt": "Norovirüs", "type": "correct", "go": "s4" },
+              { "txt": "Rotavirüs", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YAŞ GRUBU ]</b>\n\nRotavirüs genelde <2 yaş (süt çocuğu) grubunda kış ishali yapar. Okul çağı ve erişkinlerdeki toplu salgınların (gemi, kamp) en sık nedeni Norovirüstür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nShigella ve Norovirüs gibi düşük enfektif dozlu etkenlerde el hijyeni ve izolasyonun hayati önemi vurgulandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Aşağıdaki bakterilerden hangisinin enfektif dozu en düşüktür (10-200 bakteri yeterlidir)?", "a": ["Shigella", "Salmonella", "Vibrio cholerae", "E. Coli (ETEC)"], "correct": 0 },
+      { "q": "Buzdolabı sıcaklığında (+4°C) üreyebilen ve 'Psödoapandisit' tablosu yapan bakteri hangisidir?", "a": ["Yersinia enterocolitica", "Salmonella Typhi", "Shigella flexneri", "Campylobacter jejuni"], "correct": 0 },
+      { "q": "Az pişmiş hamburger ile bulaşan ve Hemolitik Üremik Sendrom (HÜS) yapabilen E. coli serotipi hangisidir?", "a": ["O157:H7 (EHEC)", "O1 (Vibrio)", "O139 (Vibrio)", "K1 (E. coli)"], "correct": 0 },
+      { "q": "Antibiyotik kullanımı (özellikle Klindamisin, Sefalosporin) sonrası gelişen 'Psödomembranöz Enterokolit' etkeni nedir?", "a": ["Clostridium difficile", "Clostridium perfringens", "Staphylococcus aureus", "Bacillus cereus"], "correct": 0 },
+      { "q": "Deniz suyunda yaşayan, tuzu seven (Halofilik) ve deniz ürünleriyle bulaşan bakteri hangisidir?", "a": ["Vibrio parahaemolyticus", "Salmonella", "Shigella", "Yersinia"], "correct": 0 },
+      { "q": "Rotavirüs en sık hangi yaş grubunda ve hangi mevsimde enfeksiyon yapar?", "a": ["6-24 ay (Kış)", "Okul çağı (Yaz)", "Erişkin (Sonbahar)", "Yenidoğan (İlkbahar)"], "correct": 0 },
+      { "q": "Turist ishalinin en sık etkeni olan ve LT/ST toksinleri ile sulu ishal yapan bakteri hangisidir?", "a": ["ETEC (Enterotoksinojenik E. coli)", "EHEC", "EIEC", "EPEC"], "correct": 0 },
+      { "q": "Vibrio cholerae'nin patogenezinde rol oynayan toksin hücre içinde neyi artırır?", "a": ["cAMP", "cGMP", "Kalsiyum", "Demir"], "correct": 0 },
+      { "q": "Tifo etkeni olan Salmonella Typhi, insan vücudunda kronik olarak nerede saklanır (Taşıyıcılık)?", "a": ["Safra Kesesi", "Böbrek", "Akciğer", "Dalak"], "correct": 0 },
+      { "q": "Gemi, okul, otel gibi toplu yaşam alanlarında salgın yapan, klora dirençli viral etken nedir?", "a": ["Norovirüs", "Rotavirüs", "Adenovirüs", "Astrovirüs"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Shigella", "B": "Düşük enfektif doz, basilli dizanteri" },
+      { "A": "Salmonella", "B": "Yüksek enfektif doz, kümes hayvanları" },
+      { "A": "Yersinia", "B": "Soğukta ürer (+4°C), psödoapandisit" },
+      { "A": "EHEC (O157:H7)", "B": "Hamburger, HÜS, Verotoksin" },
+      { "A": "ETEC", "B": "Turist ishali, LT/ST toksinleri" },
+      { "A": "Vibrio Cholerae", "B": "Pirinç suyu ishal, cAMP artışı" },
+      { "A": "C. Difficile", "B": "Antibiyotik sonrası ishal" },
+      { "A": "Norovirüs", "B": "Toplu salgın, kusma ön planda" },
+      { "A": "Rotavirüs", "B": "Süt çocuğu kış ishali, dsRNA" }
+    ],
+    "decypher": [
+      {
+        "text": "{Shigella} türleri aside dirençlidir ve çok düşük dozda (10-200 bakteri) enfeksiyon yapabilirler. Barsak M hücrelerinden girerek hücreden hücreye {aktin} kuyrukları ile yayılırlar ve {kanlı} mukuslu ishale (dizanteri) neden olurlar.",
+        "decoys": ["Salmonella", "flagella", "sulu", "kolera"]
+      },
+      {
+        "text": "{Enterohemorajik} E. coli (EHEC), özellikle az pişmiş kıyma ve hamburgerle bulaşır. Ürettiği {Verotoksin} (Shiga-benzeri toksin) ile kanlı ishal ve {HÜS} (Hemolitik Üremik Sendrom) tablosuna yol açabilir.",
+        "decoys": ["Enterotoksinojenik", "Labil", "Tifo", "Reiter"]
+      },
+      {
+        "text": "{Yersinia} enterocolitica ve {Listeria} monocytogenes buzdolabı sıcaklığında (+4°C) üreyebilen bakterilerdir. Yersinia klinik olarak {apandisit} ile karışan sağ alt kadran ağrısı yapabilir.",
+        "decoys": ["Vibrio", "E.coli", "gastrit", "ülser"]
+      }
+    ]
+  }
+}

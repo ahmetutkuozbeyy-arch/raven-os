@@ -1,0 +1,190 @@
+{
+  "meta": {
+    "title": "SAĞLIK SİSTEMLERİ",
+    "tag": "HALK SAĞLIĞI"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🏛️ TEMEL MODELLER</div><div class='sum-body'>• <b>Bismarck Modeli (Sosyal Sigorta):</b> Finansman çalışan ve işverenden kesilen <b>primlerle</b> sağlanır. Hizmet sunumu karma (kamu/özel) olabilir. Örn: Almanya.<br>• <b>Beveridge Modeli (Ulusal Sağlık):</b> Finansman <b>genel vergilerle</b> sağlanır. Kapsam evrenseldir. Hizmet sunumu kamunundur. Örn: İngiltere (NHS).<br>• <b>Semashko Modeli:</b> Merkezi planlama, %100 kamu finansmanı ve sunumu. Örn: Eski SSCB, Küba.<br>• <b>Piyasa Modeli (Özel Sigorta):</b> Finansman özel sigortalar ve cepten ödemelerle olur. Örn: ABD.</div></div><div class='sum-card sum-tus'><div class='sum-title'>📜 TARİHÇE VE KAVRAMLAR</div><div class='sum-body'>• <b>Edwin Chadwick (1842):</b> İngiltere'de 'Sanitasyon Raporu'nu hazırlayarak çevre sağlığı ve hijyen reformlarını başlatan isimdir.<br>• <b>Bismarck (1883):</b> İlk Sosyal Sigorta yasasını çıkaran Alman şansölyesidir.<br>• <b>Beveridge (1948):</b> İngiliz Ulusal Sağlık Sistemi'nin (NHS) kurucusudur.</div></div><div class='sum-card sum-rx'><div class='sum-title'>📊 KARŞILAŞTIRMA</div><div class='sum-body'>• <b>ABD:</b> Kişi başı sağlık harcaması en yüksek ülkedir ancak sağlık göstergeleri (bebek ölümü, yaşam beklentisi) harcamaya oranla kötüdür.<br>• <b>Küba:</b> Düşük harcama ile yüksek sağlık göstergelerine (iyi birinci basamak) sahiptir.<br>• <b>Cepten Ödeme:</b> En adaletsiz finansman yöntemidir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: ALMAN DİSİPLİNİ",
+        "desc": "Sistem Analizi - Almanya'da Bir İşçi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nAlmanya'da bir otomobil fabrikasında işçi olarak çalışıyorsun. Hastalandın ve doktora gittin. Sağlık giderlerin nasıl karşılanıyor?",
+            "opts": [
+              { "txt": "Maaşımdan ve işverenimden kesilen 'Primler' ile oluşturulan hastalık kasalarından.", "type": "correct", "go": "s2" },
+              { "txt": "Devletin topladığı genel vergilerden.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MODEL KARIŞIKLIĞI ]</b>\n\nGenel vergilerle finansman Beveridge (İngiltere) modelidir. Almanya'da uygulanan Bismarck modelinin temeli 'Zorunlu Sosyal Sigorta Primleri'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TARİHÇE ]</b>\n\nBu sistemin (Sosyal Sigorta Modeli) dünyadaki ilk kurucusu kimdir?",
+            "opts": [
+              { "txt": "Otto von Bismarck (1883)", "type": "correct", "go": "s3" },
+              { "txt": "Lord Beveridge (1948)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KURUCU ]</b>\n\nBeveridge, İngiliz Ulusal Sağlık Sistemi'ni (NHS) kurmuştur. İlk sosyal sigorta yasası 1883'te Bismarck tarafından Almanya'da çıkarılmıştır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ÖZELLİK ]</b>\n\nBismarck modelinde sigorta fonları (Hastalık Kasaları) kim tarafından yönetilir?",
+            "opts": [
+              { "txt": "Yarı özerk, kar amacı gütmeyen kuruluşlar (Kamu dışı yönetim).", "type": "correct", "go": "s4" },
+              { "txt": "Doğrudan Sağlık Bakanlığı.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nSemashko ve Beveridge modellerinde yönetim doğrudan devlettedir. Bismarck modelinde fonlar özerk yapılar tarafından yönetilir, devlet düzenleyicidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nAlmanya'da yaşıyorsun ve prim ödüyorsun. Bu sistemin adı 'Bismarck Modeli'. Tebrikler.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: İNGİLİZ HASTA",
+        "desc": "Sistem Analizi - İngiltere (NHS) ve Beveridge",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nLondra'da yaşayan bir vatandaşsın. Mahalle doktoruna (GP) gittin. Muayene oldun ve ilaç yazıldı. Vezneye uğrayıp ödeme yapıyor musun?",
+            "opts": [
+              { "txt": "Hayır, hizmet noktasında ücretsizdir (veya çok düşük katkı payı).", "type": "correct", "go": "s2" },
+              { "txt": "Evet, faturayı ben öderim sonra sigortadan alırım.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ NHS PRENSİBİ ]</b>\n\nİngiltere'deki Beveridge modelinde (NHS), hizmet 'kullanım anında ücretsizdir'. Finansman vergilerle önceden sağlanmıştır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ FİNANSMAN ]</b>\n\nDoktorunun maaşı ve hastanenin elektriği nereden ödeniyor?",
+            "opts": [
+              { "txt": "Genel Vergiler (Bütçe)", "type": "correct", "go": "s3" },
+              { "txt": "Özel Sigorta Primleri", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KAYNAK ]</b>\n\nBeveridge modelinin temeli 'Vergi' ile finansmandır. Özel sigorta değil, devlet bütçesi (kamu) esastır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ HİZMET SUNUMU ]</b>\n\nBu modelde hastaneler ve doktorlar (çoğunlukla) kime bağlıdır?",
+            "opts": [
+              { "txt": "Kamuya (Devlet memuru veya sözleşmeli kamu çalışanı).", "type": "correct", "go": "s4" },
+              { "txt": "Özel sektöre.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ SUNUM ]</b>\n\nBismarck modelinde sunum özel veya kamu olabilir ama Beveridge modelinde sunum ağırlıklı olarak kamunundur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nVergilerle finanse edilen, devletin sunduğu ve herkesi kapsayan bu sistem 'Beveridge Modeli'dir. Başarılı analiz.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: AMERİKAN RÜYASI (?)",
+        "desc": "Sistem Analizi - ABD ve Piyasa Modeli",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nABD'de yaşayan birisin. İşsiz kaldın ve özel sigortanı ödeyemedin. Hastaneye gittiğinde karşına çıkan en büyük sorun nedir?",
+            "opts": [
+              { "txt": "Hizmete erişim sorunu ve yüksek faturalar.", "type": "correct", "go": "s2" },
+              { "txt": "Sıra bekleme sorunu.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TEMEL SORUN ]</b>\n\nABD sisteminin (Piyasa Modeli) en büyük eleştirisi 'kapsayıcılık' sorunudur. Parası veya sigortası olmayanın hizmete erişimi çok zordur veya iflasa sürüklenir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ İSTATİSTİK ]</b>\n\nABD dünyada kişi başına en çok sağlık harcaması yapan ülkedir. Peki, sağlık göstergeleri (Bebek ölümü, Yaşam süresi) buna paralel olarak en iyi midir?",
+            "opts": [
+              { "txt": "Hayır, harcamaya oranla göstergeleri gelişmiş ülkeler arasında kötüdür.", "type": "correct", "go": "s3" },
+              { "txt": "Evet, parayı veren düdüğü çalar, en sağlıklısı onlardır.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ VERİMLİLİK ]</b>\n\nABD sistemi 'Verimsizdir'. Çok harcar ama Küba veya Avrupa ülkeleri kadar iyi halk sağlığı sonuçları (örneğin bebek ölüm hızı) elde edemez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TARİHÇE ]</b>\n\n19. yüzyılda İngiltere'de sanayi devrimiyle artan sağlık sorunlarına (kolera vb.) çözüm arayan ve 'Sanitasyon Raporu'nu hazırlayan öncü kimdir?",
+            "opts": [
+              { "txt": "Edwin Chadwick", "type": "correct", "go": "s4" },
+              { "txt": "Robert Koch", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ HALK SAĞLIĞI ]</b>\n\nKoch mikrobiyologdur. Halk sağlığı ve çevre sağlığı reformlarının (kanalizasyon, temiz su) öncüsü Edwin Chadwick'tir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nPiyasa modelinin risklerini ve halk sağlığı tarihini kavradın. Tebrikler.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Sağlık hizmetlerinin finansmanının 'Genel Vergilerle' sağlandığı model hangisidir?", "a": ["Beveridge Modeli", "Bismarck Modeli", "Piyasa Modeli", "Cepten Ödeme"], "correct": 0 },
+      { "q": "Bismarck Modeli (Sosyal Sigorta) ilk olarak hangi ülkede ve kim tarafından kurulmuştur?", "a": ["Almanya - Otto von Bismarck", "İngiltere - Lord Beveridge", "ABD - Truman", "Rusya - Semashko"], "correct": 0 },
+      { "q": "ABD sağlık sisteminin en belirgin özelliği nedir?", "a": ["Yüksek maliyet, düşük kapsayıcılık (Eşitsizlik)", "Düşük maliyet, yüksek kapsayıcılık", "Tamamen kamu finansmanı", "Merkezi planlama"], "correct": 0 },
+      { "q": "Semashko modelinin (Sovyet/Küba) temel özelliği nedir?", "a": ["Merkezi planlama ve %100 kamu finansmanı", "Özel sigortalar", "Prim sistemi", "Hizmet başı ödeme"], "correct": 0 },
+      { "q": "İngiltere'de 'Sanitasyon Raporu'nu hazırlayarak çevre sağlığı reformlarını başlatan kişi kimdir?", "a": ["Edwin Chadwick", "John Snow", "Louis Pasteur", "Robert Koch"], "correct": 0 },
+      { "q": "Hizmet noktasında kişilerden alınan paraya (en adaletsiz yöntem) ne denir?", "a": ["Cepten Ödeme (Out-of-pocket)", "Prim", "Vergi", "Kapitasyon"], "correct": 0 },
+      { "q": "Aşağıdaki ülkelerden hangisi 'Beveridge Modeli'ni (Ulusal Sağlık Sistemi) uygular?", "a": ["İngiltere (Birleşik Krallık)", "Almanya", "ABD", "Fransa"], "correct": 0 },
+      { "q": "Bismarck modelinde finansman temel olarak neye dayanır?", "a": ["Çalışan ve işverenden kesilen Primlere", "Genel vergilere", "Bağışlara", "Cepten ödemelere"], "correct": 0 },
+      { "q": "Küba sağlık sisteminin başarısı (düşük maliyetle iyi göstergeler) neye dayandırılır?", "a": ["Güçlü Birinci Basamak ve Koruyucu Hekimlik", "Yüksek teknoloji", "Özel hastaneler", "İlaç ithalatı"], "correct": 0 },
+      { "q": "Türkiye'deki 'Genel Sağlık Sigortası' (GSS) hangi modelin özelliklerini taşır?", "a": ["Bismarck (Prim esaslı)", "Beveridge (Vergi esaslı)", "Piyasa", "Semashko"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Bismarck Modeli", "B": "Almanya / Prim esaslı" },
+      { "A": "Beveridge Modeli", "B": "İngiltere / Vergi esaslı" },
+      { "A": "Semashko Modeli", "B": "SSCB-Küba / Merkezi planlama" },
+      { "A": "Piyasa Modeli", "B": "ABD / Özel Sigorta" },
+      { "A": "Edwin Chadwick", "B": "Sanitasyon Raporu (1842)" },
+      { "A": "Cepten Ödeme", "B": "En adaletsiz finansman" },
+      { "A": "NHS", "B": "Ulusal Sağlık Sistemi (UK)" },
+      { "A": "Prim", "B": "Sosyal Sigorta geliri" }
+    ],
+    "decypher": [
+      {
+        "text": "Almanya'da uygulanan {Bismarck} modeli, finansmanını çalışan ve işverenden kesilen zorunlu {primler} ile sağlar. Bu modelde fonlar, devletten bağımsız {hastalık} kasaları tarafından yönetilir.",
+        "decoys": ["Beveridge", "vergiler", "emeklilik", "özel"]
+      },
+      {
+        "text": "İngiltere'deki {Beveridge} modeli, finansmanını genel {vergiler}den sağlar ve hizmet sunumu kamusaldır. Bu sistemde sağlık hizmeti kullanım anında {ücretsiz}dir.",
+        "decoys": ["Semashko", "primler", "paralı", "özel"]
+      },
+      {
+        "text": "ABD sağlık sistemi {piyasa} modeline dayanır. Kişi başı sağlık harcaması çok {yüksek} olmasına rağmen, sağlık göstergeleri (bebek ölümü vb.) diğer gelişmiş ülkelere göre daha {kötü}dür.",
+        "decoys": ["kamu", "düşük", "iyi", "sosyal"]
+      }
+    ]
+  }
+}

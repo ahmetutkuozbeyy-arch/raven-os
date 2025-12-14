@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "PEPTİK ÜLSER TEDAVİSİNDE İLAÇLAR",
+    "tag": "TIBBİ FARMAKOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 ASİT SALGI FİZYOLOJİSİ</div><div class='sum-body'>• <b>Paryetal Hücre:</b> Asit salgılayan ana hücredir. Üzerinde Histamin (H2), Asetilkolin (M3) ve Gastrin (CCK-B) reseptörleri bulunur.<br>• <b>Proton Pompası:</b> H+/K+ ATP-az enzimi, asit salgısının son aşamasıdır.<br>• <b>Koruyucu Faktörler:</b> Mukus, Bikarbonat, Prostaglandinler (PGE2, PGI2) ve mukozal kan akımı.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 İLAÇ GRUPLARI & TUS</div><div class='sum-body'>• <b>PPI (Omeprazol vb.):</b> En güçlü asit baskılayıcılardır. Ön ilaçtırlar, asidik ortamda aktifleşip pompayı <b>İrreversibl</b> inhibe ederler.<br>• <b>H2 Blokerleri:</b> Simetidin (CYP inhibisyonu ve Antiandrojenik yan etki yapar!), Famotidin, Ranitidin.<br>• <b>Misoprostol:</b> PGE1 analoğudur. NSAİİ ülserlerinde etkilidir ama <b>Gebelikte Kontrendikedir</b> (Abortif).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ PROTOKOLLERİ</div><div class='sum-body'>• <b>H. Pylori Eradikasyonu (Üçlü Tedavi):</b> PPI + Klaritromisin + Amoksisilin (veya Metronidazol).<br>• <b>Sükralfat:</b> Ülser tabanına yapışarak bariyer oluşturur. Etki edebilmesi için asidik ortam gerekir (Antasitlerle verilmez!).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: MİDENİN KİLİDİ",
+        "desc": "Poliklinik - 45 Yaş - Kronik Reflü Tedavisi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\n45 yaşında erkek hasta kronik GÖRH tanısı ile geldi. Mide asit salgısını 'en güçlü' şekilde baskılamak istiyorsun. Hedefin paryetal hücredeki hangi mekanizma olmalı?",
+            "opts": [
+              { "txt": "H+/K+ ATP-az (Proton Pompası) İnhibisyonu", "type": "correct", "go": "s2" },
+              { "txt": "H2 Reseptör Blokajı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ETKİ GÜCÜ ]</b>\n\nH2 blokerleri sadece histamin yolunu kapatır. Ancak Asetilkolin ve Gastrin hala asit salgılatabilir. Proton pompası ise 'son ortak yol'dur, bloke edilirse asit salgısı %95-98 durur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nHastaya Omeprazol (PPI) reçete edeceksin. Bu ilacın farmakokinetik özelliği gereği hastaya ilacı ne zaman almasını söylemelisin?",
+            "opts": [
+              { "txt": "Sabah kahvaltısından 30-60 dakika önce (Aç karnına).", "type": "correct", "go": "s3" },
+              { "txt": "Yemeklerden hemen sonra tok karnına.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nPPI'lar ön ilaçtır (Prodrug). Kana karışıp paryetal hücreye gitmeleri ve orada asitle karşılaşıp aktifleşmeleri gerekir. Ayrıca sadece 'aktif pompaları' bloke ederler, bu yüzden yemekle uyarılacak pompalara pusu kurmak için yemekten önce alınmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ MOLEKÜLER DÜZEY ]</b>\n\nİlaç paryetal hücre kanalikülüne ulaştı ve sülfenamid türevine dönüştü. Pompaya (H+/K+ ATP-az) nasıl bağlanır?",
+            "opts": [
+              { "txt": "Kovalent (Disülfid) bağ ile İrreversibl olarak.", "type": "correct", "go": "s4" },
+              { "txt": "Yarışmalı (Kompetitif) olarak Reversibl.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ BAĞLANMA TİPİ ]</b>\n\nPPI'ların etkisi kalıcıdır çünkü enzime kovalent bağla yapışırlar. Etkinin geçmesi için vücudun yeni pompa sentezlemesi gerekir (yaklaşık 18-24 saat).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YAN ETKİ ]</b>\n\nHasta ilacı yıllardır kullanıyormuş. Uzun süreli PPI kullanımında midede asit azalmasına (Achlorhydria) bağlı hangi vitaminin emilimi bozulabilir?",
+            "opts": [
+              { "txt": "Vitamin B12", "type": "correct", "go": "s5" },
+              { "txt": "Vitamin C", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ EMİLİM ]</b>\n\nB12 vitamininin gıdalardan ayrışması için mide asidi gereklidir. Uzun süreli asit baskılamada B12 eksikliği gelişebilir. (Demir ve Kalsiyum emilimi de azalabilir).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya uygun kullanım anlatıldı. Uzun dönem yan etkiler (B12, Kemik erimesi, Enfeksiyon riski) açısından bilgilendirildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: İLAÇ ETKİLEŞİMİ",
+        "desc": "Dahiliye - 65 Yaş - Warfarin Kullanan Hasta",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\n65 yaşında, kalp kapak replasmanı nedeniyle Warfarin (Kan sulandırıcı) kullanan bir hastada dispepsi gelişiyor. H2 Reseptör Blokeri başlamak istiyorsun.\n\nHangi ilacı KESİNLİKLE TERCİH ETMEMELİSİN?",
+            "opts": [
+              { "txt": "Simetidin", "type": "correct", "go": "s2" },
+              { "txt": "Famotidin", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ETKİLEŞİM ]</b>\n\nFamotidin'in ilaç etkileşimi çok azdır. Simetidin ise karaciğer mikrozomal enzimlerini (CYP450) güçlü şekilde inhibe eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ NEDEN? ]</b>\n\nSimetidin verirsen Warfarin metabolizması nasıl etkilenir ve sonuç ne olur?",
+            "opts": [
+              { "txt": "Warfarin yıkılamaz, kan düzeyi artar -> KANAMA RİSKİ", "type": "correct", "go": "s3" },
+              { "txt": "Warfarin etkisi azalır -> PIHTI RİSKİ", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ENZİM İNHİBİSYONU ]</b>\n\nSimetidin enzimi susturur (inhibe eder). Enzim çalışmazsa diğer ilaç (Warfarin) vücuttan atılamaz, birikir ve toksisite (kanama) yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ALTERNATİF ]</b>\n\nBu hasta için en güvenli H2 blokeri hangisidir?",
+            "opts": [
+              { "txt": "Famotidin", "type": "correct", "go": "s4" },
+              { "txt": "Nizatidin", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ SEÇENEK ]</b>\n\nNizatidin de güvenlidir ama Famotidin en potent ve en az yan etkili olandır. (Not: Ranitidin piyasadan çekilmiştir).",
+            "opts": [{ "txt": "DEVAM ET", "go": "s4" }]
+          },
+          "s4": {
+            "text": "<b>[ YAN ETKİ ]</b>\n\nSimetidin'in sadece enzim inhibisyonu değil, endokrin yan etkileri de vardır. Uzun süre kullanan erkek hastalarda neye yol açabilir?",
+            "opts": [
+              { "txt": "Jinekomasti ve İmpotans (Antiandrojenik etki)", "type": "correct", "go": "s5" },
+              { "txt": "Hipertansiyon", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ HORMONAL ETKİ ]</b>\n\nSimetidin, androjen reseptörlerini bloke eder ve prolaktini artırır. Bu da erkeklerde meme büyümesi (jinekomasti) ve cinsel isteksizlik yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya Famotidin reçete edildi. İlaç etkileşimi riski ve endokrin yan etkiler önlendi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KORUMA KALKANI",
+        "desc": "Romatoloji - 30 Yaş Kadın - NSAİİ Kullanımı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\n30 yaşında kadın hasta, Ankilozan Spondilit nedeniyle sürekli NSAİİ (Ağrı kesici) kullanmak zorunda. Mide ağrıları başladı. NSAİİ'ler mideye nasıl zarar verir?",
+            "opts": [
+              { "txt": "Prostaglandin sentezini engelleyerek (Mukozal savunmayı bozar).", "type": "correct", "go": "s2" },
+              { "txt": "Direkt asit salgılatarak.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nNSAİİ'ler COX enzimini inhibe eder, bu da koruyucu prostaglandinlerin (PGE2) azalmasına neden olur. Mukus ve bikarbonat salgısı düşer.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ÖZEL İLAÇ ]</b>\n\nEksik olan bu maddeyi yerine koymak için 'Prostaglandin E1 Analoğu' olan hangi ilacı verebilirsin?",
+            "opts": [
+              { "txt": "Misoprostol", "type": "correct", "go": "s3" },
+              { "txt": "Sükralfat", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AYRIM ]</b>\n\nSükralfat fiziksel bariyer oluşturur. Misoprostol ise sentetik prostaglandindir, fizyolojik korumayı taklit eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ KONTRENDİKASYON ]</b>\n\nMisoprostol reçete etmeden önce bu kadın hastada mutlaka neyi sorgulamalısın?",
+            "opts": [
+              { "txt": "Gebelik Durumu", "type": "correct", "go": "s4" },
+              { "txt": "Tansiyon", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ CİDDİ UYARI ]</b>\n\nMisoprostol uterus kontraksiyonlarını (kasılmalarını) artırır. GEBELERDE KESİNLİKLE YASAKTIR (Abortif/Düşük yaptırıcı etki).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ALTERNATİF ]</b>\n\nHasta gebe değil ama Misoprostol'ün en sık görülen yan etkisi olan 'İshal'den (Diyare) şikayetçi oldu. İlacı değiştireceksin. Mide mukozasına yapışarak 'fiziksel bariyer' oluşturan ilaç hangisidir?",
+            "opts": [
+              { "txt": "Sükralfat", "type": "correct", "go": "s5" },
+              { "txt": "Antasitler", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ BARİYER ]</b>\n\nAntasitler asidi nötralize eder. Sükralfat ise asidik ortamda polimerize olup ülser tabanına yapışan koruyucu bir tabaka oluşturur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ UYGULAMA ]</b>\n\nSükralfat vereceksin. Bu ilacın çalışması için ortamın asidik olması gerekir. Bu yüzden hastaya ne söylemelisin?",
+            "opts": [
+              { "txt": "Antasit veya PPI ile aynı anda almayın.", "type": "correct", "action": "end" },
+              { "txt": "Bol su ile tok karnına alın.", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Proton pompası (H+/K+ ATP-az) inhibitörleri (PPI) pompaya nasıl bağlanır?", "a": ["Kovalent (İrreversibl)", "İyonik", "Yarışmalı (Kompetitif)", "Geçici"], "correct": 0 },
+      { "q": "Aşağıdaki H2 reseptör blokerlerinden hangisi CYP enzimlerini inhibe eder ve antiandrojenik yan etki (Jinekomasti) yapar?", "a": ["Simetidin", "Famotidin", "Ranitidin", "Nizatidin"], "correct": 0 },
+      { "q": "Gebelikte kullanılması KONTRENDİKE olan (Düşük yaptıran) peptik ülser ilacı hangisidir?", "a": ["Misoprostol", "Omeprazol", "Sükralfat", "Magnezyum Hidroksit"], "correct": 0 },
+      { "q": "PPI ilaçları (Örn: Omeprazol) en etkili sonuç için ne zaman alınmalıdır?", "a": ["Sabah kahvaltısından 30-60 dk önce", "Yemekten hemen sonra", "Gece yatarken", "Ağrı olunca"], "correct": 0 },
+      { "q": "Sükralfatın etki gösterebilmesi (polimerize olması) için midede nasıl bir ortam gereklidir?", "a": ["Asidik ortam (pH < 4)", "Alkali ortam", "Nötr ortam", "Safra varlığı"], "correct": 0 },
+      { "q": "Zollinger-Ellison sendromunda (Gastrinoma) tercih edilmesi gereken en etkili ilaç grubu hangisidir?", "a": ["PPI (Yüksek doz)", "H2 Bloker", "Antasit", "Bizmut"], "correct": 0 },
+      { "q": "H. Pylori eradikasyonunda kullanılan standart 'Üçlü Tedavi' paketinde hangisi YOKTUR?", "a": ["Sükralfat", "PPI", "Klaritromisin", "Amoksisilin"], "correct": 0 },
+      { "q": "Misoprostol hangi molekülün sentetik analoğudur?", "a": ["Prostaglandin E1", "Histamin", "Gastrin", "Somatostatin"], "correct": 0 },
+      { "q": "Antasitlerden hangisi en sık 'Diyare' (İshal) yan etkisi yapar?", "a": ["Magnezyum tuzları", "Alüminyum tuzları", "Kalsiyum karbonat", "Sukralfat"], "correct": 0 },
+      { "q": "Pirenzepin hangi reseptörü bloke ederek asit salgısını azaltır?", "a": ["M1 Muskarinik", "H2 Histamin", "Gastrin", "Dopamin"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Omeprazol", "B": "H+/K+ ATP-az İnhibitörü (PPI)" },
+      { "A": "Simetidin", "B": "H2 Blokeri (Antiandrojenik)" },
+      { "A": "Misoprostol", "B": "PGE1 Analoğu (Abortif)" },
+      { "A": "Sükralfat", "B": "Koruyucu Bariyer (Asit sever)" },
+      { "A": "Pirenzepin", "B": "M1 Antagonisti" },
+      { "A": "Bizmut", "B": "H. Pylori'ye direkt toksik" },
+      { "A": "Alüminyum Hidroksit", "B": "Antasit (Kabızlık yapar)" },
+      { "A": "Magnezyum Hidroksit", "B": "Antasit (İshal yapar)" }
+    ],
+    "decypher": [
+      {
+        "text": "{Proton} pompası inhibitörleri (PPI), asit salgılanmasının son aşaması olan H+/K+ ATP-az enzimini {irreversibl} olarak bloke ederler. Ön ilaç oldukları için asidik ortamda aktifleşirler ve {yemekten} önce alınmaları gerekir.",
+        "decoys": ["Histamin", "reversibl", "uykudan", "bazik"]
+      },
+      {
+        "text": "{Simetidin}, H2 reseptörlerini bloke ederek etki gösterir ancak karaciğerdeki {CYP450} enzimlerini inhibe ettiği için ilaç etkileşimlerine yol açar. Ayrıca {antiandrojenik} etkisi nedeniyle erkeklerde jinekomasti yapabilir.",
+        "decoys": ["Famotidin", "COX", "östrojenik", "böbrek"]
+      },
+      {
+        "text": "{Misoprostol}, sentetik bir prostaglandin analoğudur ve mukozal kan akımını artırarak koruma sağlar. Ancak uterus kasılmalarını uyardığı için {gebelikte} kullanımı kontrendikedir. En sık yan etkisi {diyare}dir.",
+        "decoys": ["Sükralfat", "yaşlılarda", "kabızlık", "baş ağrısı"]
+      }
+    ]
+  }
+}

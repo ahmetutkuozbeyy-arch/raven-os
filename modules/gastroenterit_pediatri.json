@@ -1,0 +1,191 @@
+{
+  "meta": {
+    "title": "GASTROENTERİTLER VE ÇOCUK SAĞLIĞI",
+    "tag": "PEDİATRİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>👶 DİYARE TANIMI VE TİPLERİ</div><div class='sum-body'>• <b>Tanım:</b> Günde 3 veya daha fazla sayıda, kıvamı azalmış (sulu) dışkılama.<br>• <b>Süreye Göre:</b> Akut (<14 gün), Persistan (14-30 gün), Kronik (>30 gün).<br>• <b>Mekanizmaya Göre:</b> Osmotik (Redüktan madde +), Sekretuar (Koleriform), İnvaziv (Kanlı/Mukuslu).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 ETKENLER (TUS)</div><div class='sum-body'>• <b>Rotavirüs:</b> <2 yaş çocuklarda en sık akut gastroenterit (AGE) etkenidir. Kış aylarında sık görülür. Kusma ile başlar.<br>• <b>E. Coli:</b> ETEC (Turist ishali), EPEC (Süt çocuğu), EHEC (HÜS riski!).<br>• <b>Shigella/Salmonella:</b> Kanlı, mukuslu, ateşli ishal (Dizanteri).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ YAKLAŞIMI</div><div class='sum-body'>• <b>Temel Tedavi:</b> Dehidratasyonun önlenmesi (ORS - Oral Rehidratasyon Sıvısı).<br>• <b>Destek:</b> Çinko takviyesi (Dünya Sağlık Örgütü önerisi) ve Probiyotikler.<br>• <b>Antibiyotik:</b> Sadece invaziv bakteriyel ishallerde (Kanlı/Ateşli) veya paraziter (Giardia/Amip) durumlarda verilir. Viral ishalde YERİ YOKTUR.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KIŞ İSHALİ",
+        "desc": "Pediatri Acil - 18 Aylık Bebek - Kusma ve İshal",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n18 aylık erkek bebek. Ocak ayında (Kış) acile getirildi. 2 gün önce kusma ile başlamış, şimdi günde 8-10 kez bol sulu, kokusuz, kansız ishal yapıyor. Ateş hafif (37.5°C).\n\nBu yaş grubu ve mevsim için en olası etken nedir?",
+            "opts": [
+              { "txt": "Rotavirüs", "type": "correct", "go": "s2" },
+              { "txt": "Salmonella", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ETKEN AYRIMI ]</b>\n\nSalmonella bakteriyeldir, genelde yaz/sonbahar aylarında görülür, ateş daha yüksektir ve dışkı kanlı/mukuslu olabilir. 2 yaş altı kış ishallerinin %70'i Rotavirüstür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nÇocuğun göz küreleri hafif çökük, ağız mukozası kuru, deri turgoru hafif azalmış. Ancak bilinci açık ve su verildiğinde iştahla içiyor.\n\nDehidratasyon derecesi nedir?",
+            "opts": [
+              { "txt": "Orta Derece Dehidratasyon", "type": "correct", "go": "s3" },
+              { "txt": "Ağır Dehidratasyon (Şok)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ DEHİDRATASYON ]</b>\n\nAğır dehidratasyonda bilinç bulanıklaşır (letarji), içemez hale gelir ve kapiller dolum uzar. İştahla su içebilmesi orta dereceyi gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ DIŞKI ANALİZİ ]</b>\n\nDışkı tetkikinde lökosit ve eritrosit görülmedi. Ancak pH 5.0 (asidik) ve Redüktan Madde (++) pozitif saptandı.\n\nBu bulgular neyi işaret eder?",
+            "opts": [
+              { "txt": "Sekonder Laktoz İntoleransı (Osmotik İshal)", "type": "correct", "go": "s4" },
+              { "txt": "İnvaziv Bakteriyel Enfeksiyon", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ LABORATUVAR ]</b>\n\nİnvaziv enfeksiyonda (Dizanteri) lökosit ve eritrosit görülür. Viral ishallerde villus hasarına bağlı geçici laktaz eksikliği gelişir; sindirilmeyen şekerler (laktoz) dışkıyı asitleştirir ve redüktan madde pozitifleşir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nViral gastroenterit tanısı koydun. Tedavi planında ANTİBİYOTİK var mı?",
+            "opts": [
+              { "txt": "Hayır. Tedavi destekleyicidir (ORS + Çinko + Probiyotik).", "type": "correct", "go": "s5" },
+              { "txt": "Evet, süperenfeksiyonu önlemek için verilir.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ YANLIŞ UYGULAMA ]</b>\n\nViral ishallerde antibiyotik etkisizdir, hatta florayı bozarak ishali uzatabilir. Tedavinin temeli sıvı kaybını yerine koymaktır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya ORS başlandı, laktozsuz diyet önerildi. 3 gün içinde düzeldi. Gereksiz antibiyotik kullanımından kaçınıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KANLI DIŞKI",
+        "desc": "Poliklinik - 5 Yaş Çocuk - Ateş ve Karın Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\n5 yaşında kız çocuğu. Yüksek ateş (39°C), karın ağrısı ve tenezm (sürekli ıkınma hissi) ile başvurdu. Dışkısı az miktarda, sümüksü (mukuslu) ve kanlı.\n\nBu tabloya ne ad verilir?",
+            "opts": [
+              { "txt": "Dizanterik (İnvaziv) İshal", "type": "correct", "go": "s2" },
+              { "txt": "Sekretuar İshal", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TİP ]</b>\n\nSekretuar ishal (Kolera vb.) sulu ve bol hacimlidir. Kanlı, mukuslu, ağrılı dışkılama 'Dizanteri' sendromudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ETKENLER ]</b>\n\nÜlkemizde bu tablonun (Basilli Dizanteri) en sık etkeni hangisidir?",
+            "opts": [
+              { "txt": "Shigella spp.", "type": "correct", "go": "s3" },
+              { "txt": "Vibrio cholerae", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ETKEN ]</b>\n\nVibrio sulu ishal yapar. Kanlı ishalin en sık bakteriyel nedenleri Shigella, Salmonella ve Campylobacter'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TETKİK ]</b>\n\nDışkı mikroskopisinde ne görmeyi beklersin?",
+            "opts": [
+              { "txt": "Bol Lökosit (Püy) ve Eritrosit", "type": "correct", "go": "s4" },
+              { "txt": "Sadece yağ damlacıkları", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MİKROSKOPİ ]</b>\n\nİnvaziv bakteriler barsak duvarında inflamasyon yaptığı için dışkıda bol lökosit (iltihap hücresi) ve eritrosit (kanama) görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ KARARI ]</b>\n\nBu hastada (Ateşli, kanlı ishal, genel durumu orta-kötü) antibiyotik verilmeli mi?",
+            "opts": [
+              { "txt": "Evet, Shigella şüphesinde antibiyotik endikedir.", "type": "correct", "go": "s5" },
+              { "txt": "Hayır, ishalde antibiyotik verilmez.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ İSTİSNA ]</b>\n\nGenel kural ishalde antibiyotik vermemektir AMA kanlı ishal (Dizanteri), kolera, parazitler ve immünsüpresif hastalar istisnadır. Shigella tedavisiz düzelmez veya bulaştırıcılığı devam eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nUygun antibiyotik (Örn: Azitromisin veya Seftriakson) ve sıvı desteği ile hasta düzeldi. El hijyeninin önemi anlatıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KUSAN ÇOCUĞA YAKLAŞIM",
+        "desc": "Poliklinik - 4 Yaş - Lomber Hassasiyet",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\n4 yaşında çocuk. 2 gündür kusma ve ateş şikayetiyle geldi. İshal yok. Fizik muayenede kostovertebral açı (Lomber) hassasiyeti pozitif.\n\nKusmanın nedeni ne olabilir?",
+            "opts": [
+              { "txt": "İdrar Yolu Enfeksiyonu (Pyelonefrit)", "type": "correct", "go": "s2" },
+              { "txt": "Gastroenterit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SİSTEMİK BAKI ]</b>\n\nGastroenteritte ishal beklenir. Sadece kusma ve ateşle gelen çocukta GİS dışı nedenler (İYE, Menenjit, Pnömoni) mutlaka ekarte edilmelidir. Lomber hassasiyet böbreği işaret eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TETKİK ]</b>\n\nTanıyı kesinleştirmek için ilk olarak hangi basit tetkiki istersin?",
+            "opts": [
+              { "txt": "Tam İdrar Tetkiki (TİT) ve İdrar Kültürü", "type": "correct", "action": "end" },
+              { "txt": "Batın BT", "type": "wrong", "go": "s2" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Çocuklarda ishalin en sık görülen VİRAL nedeni hangisidir?", "a": ["Rotavirüs", "Adenovirüs", "Norovirüs", "Astrovirüs"], "correct": 0 },
+      { "q": "Kanlı ve mukuslu ishal, ateş ve karın ağrısı ile karakterize tabloya ne denir?", "a": ["Dizanteri", "Sekretuar İshal", "Osmotik İshal", "Fonksiyonel İshal"], "correct": 0 },
+      { "q": "Akut gastroenterit tedavisinde dehidratasyonu önlemek için kullanılan en önemli sıvı hangisidir?", "a": ["Oral Rehidratasyon Sıvısı (ORS)", "Meyve Suyu", "Kola", "Çay"], "correct": 0 },
+      { "q": "Sekonder laktaz eksikliğine bağlı gelişen ishalde dışkıda hangi madde pozitif bulunur?", "a": ["Redüktan Madde", "Gizli Kan", "Lökosit", "Parazit"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi viral gastroenteritte antibiyotik kullanımının bir sonucudur?", "a": ["Gereksizdir ve ishali uzatabilir", "İyileşmeyi hızlandırır", "Ateşi düşürür", "Kusmayı keser"], "correct": 0 },
+      { "q": "Hangi E. Coli tipi 'Turist İshali'ne neden olur?", "a": ["ETEC (Enterotoksinojenik)", "EHEC", "EPEC", "EIEC"], "correct": 0 },
+      { "q": "Hemolitik Üremik Sendrom (HÜS) riskini artıran bakteri hangisidir?", "a": ["EHEC (Enterohemorajik E. Coli)", "Salmonella", "Shigella", "Vibrio"], "correct": 0 },
+      { "q": "İshal tedavisinde DSÖ'nün (WHO) önerdiği mineral desteği hangisidir?", "a": ["Çinko", "Demir", "Magnezyum", "Kalsiyum"], "correct": 0 },
+      { "q": "Günde 3'ten fazla sulu dışkılamanın 14 günden uzun sürmesine ne denir?", "a": ["Persistan / Kronik İshal", "Akut İshal", "Dizanteri", "Kolera"], "correct": 0 },
+      { "q": "Kusma ve ateşle gelen ancak ishal olmayan bir çocukta öncelikle ne ekarte edilmelidir?", "a": ["GİS dışı enfeksiyonlar (İYE, Menenjit vb.)", "Gıda zehirlenmesi", "Parazit", "Çölyak"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Rotavirüs", "B": "Kış ishali, <2 yaş, kusma ile başlar" },
+      { "A": "Shigella", "B": "Kanlı ishal (Dizanteri), Lökosit (+)" },
+      { "A": "ETEC", "B": "Turist ishali, sulu" },
+      { "A": "EHEC", "B": "Kanlı ishal, HÜS riski" },
+      { "A": "ORS", "B": "Dehidratasyon tedavisi" },
+      { "A": "Çinko", "B": "Barsak epitel yenilenmesi" },
+      { "A": "Redüktan Madde", "B": "Laktoz intoleransı (Osmotik)" },
+      { "A": "Lökosit (+)", "B": "İnvaziv (Bakteriyel) enfeksiyon" }
+    ],
+    "decypher": [
+      {
+        "text": "Akut gastroenteritlerin tedavisinde temel amaç dehidratasyonu önlemektir. Hafif ve orta derece dehidratasyonda {oral} rehidratasyon sıvısı (ORS) kullanılırken, ağır dehidratasyon ve şok tablosunda {damar} yoluyla (IV) sıvı verilmelidir.",
+        "decoys": ["antibiyotik", "rektal", "cerrahi", "mama"]
+      },
+      {
+        "text": "{Rotavirüs}, özellikle 2 yaş altı çocuklarda kış aylarında görülen akut ishalin en sık nedenidir. Genellikle {kusma} ile başlar, ardından ateş ve sulu ishal gelişir. Dışkıda kan ve lökosit {görülmez}.",
+        "decoys": ["Norovirüs", "kabızlık", "görülür", "bakteri"]
+      },
+      {
+        "text": "Kanlı ve mukuslu ishale {Dizanteri} denir. En sık etkenler Shigella, Salmonella ve Amip'tir. Bu durumda dışkı mikroskopisinde {lökosit} ve eritrosit görülür. Tedavide {antibiyotik} kullanımı gerekebilir.",
+        "decoys": ["Kolera", "yağ", "probiyotik", "vitamin"]
+      }
+    ]
+  }
+}

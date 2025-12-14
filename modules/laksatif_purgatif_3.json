@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "title": "LAKSATİF, PURGATİF VE PROKİNETİKLER",
+    "tag": "FARMAKOLOJİ & GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧪 MEKANİZMA & SINIFLAMA</div><div class='sum-body'>• <b>Tanımlar:</b> Laksatif (yumuşatıp kolaylaştırma), Purgatif/Katartik (sulu ve hızlı boşaltım).<br>• <b>Yumuşatıcılar:</b> Sıvı vazelin (Lubrikan), Dokuzat (Nemlendirici).<br>• <b>Kitle Oluşturanlar:</b> Psyllium, Metilselüloz (Su tutup şişer, en fizyolojik).<br>• <b>Ozmotik:</b> Mg/Na tuzları, Laktuloz, PEG (Su tutar, bağırsak gerilir).<br>• <b>Stimülanlar:</b> Bisakodil, Senna, Hint yağı (Mukoza irritasyonu, sekresyon artışı).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KRİTİK BİLGİ</div><div class='sum-body'>• <b>Kontrendikasyon:</b> Tanısı konmamış akut karın ağrısı (Apandisit şüphesi) durumunda purgatif ASLA verilmez (Perforasyon riski!).<br>• <b>Laktuloz:</b> Amonyak emilimini azalttığı için Hepatik Ensefalopati tedavisinde kullanılır.<br>• <b>Yan Etki:</b> Sıvı vazelin → Lipid pnömonisi, ADEK vitamin eksikliği.<br>• <b>Hint Yağı:</b> İnce barsakta etkilidir, çok güçlüdür (Risinoleik asit).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 KLİNİK KULLANIM</div><div class='sum-body'>• <b>Kronik Konstipasyon:</b> Önce diyet/egzersiz, sonra kitle oluşturanlar.<br>• <b>Kolonoskopi Hazırlığı:</b> PEG (Polietilen Glikol) veya Na-Fosfat tuzları.<br>• <b>Yeni Ajanlar:</b> Prukaloprid (5HT4 agonisti), Lubiproston (Klor kanal aktivatörü).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: TEHLİKELİ KARIN",
+        "desc": "Acil Servis - 25 Yaş Erkek - Şiddetli Karın Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: TRİAJ ]</b>\n\nSübje 25 yaşında, erkek. 6 saattir devam eden, göbek çevresinde başlayıp sağ alt kadrana yerleşen şiddetli karın ağrısı, bulantı ve iştahsızlık şikayetiyle geldi. '2 gündür tuvalete çıkamadım, karnım şiş, bana güçlü bir müshil (purgatif) verin rahatlayayım' diyor.\n\nİlk hamlen ne olmalı?",
+            "opts": [
+              { "txt": "Detaylı fizik muayene yap ve akut batını ekarte et", "type": "correct", "go": "s2" },
+              { "txt": "İsteğini yerine getir, Oral Hint Yağı (Risinoleik asit) ver", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KRİTİK HATA: PERFORASYON RİSKİ ]</b>\n\nTanısı konmamış karın ağrısında, özellikle apandisit şüphesi (sağ alt kadran ağrısı) varken purgatif verilmesi bağırsak hareketlerini şiddetlendirerek perforasyona (patlamaya) neden olabilir. Asla verilmemelidir.",
+            "opts": [{ "txt": "GERİ DÖN VE ANALİZ ET", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: MUAYENE BULGULARI ]</b>\n\nMuayenede McBurney noktasında hassasiyet ve rebound (tepki) pozitif. Lökositoz var. Tablo Akut Apandisit ile uyumlu. Hasta hala 'Kabızım, ondan ağrıyor' diye ısrar ediyor.\n\nBu durumda laksatif/purgatif kullanımıyla ilgili kararın nedir?",
+            "opts": [
+              { "txt": "Kesinlikle Kontrendikedir", "type": "correct", "go": "s3" },
+              { "txt": "Sadece yumuşatıcı (Laktuloz) verilebilir", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ PROTOKOL İHLALİ ]</b>\n\nAkut batın düşünülen, cerrahi gerektirebilecek, tıkanıklık veya perforasyon riski olan hiçbir durumda oral laksatif/purgatif verilmez. Bağırsak motilitesini artırmak durumu felakete sürükleyebilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: ALTERNATİF SENARYO ]</b>\n\nVarsayalım ki hastanın apandisiti yoktu, sadece opiyat (ağrı kesici) kullanımına bağlı şiddetli konstipasyonu vardı. Bu durumda stimülan (uyarıcı) bir laksatif seçmen gerekseydi, etki mekanizması 'myenterik pleksusu uyararak' çalışan hangisini seçerdin?",
+            "opts": [
+              { "txt": "Bisakodil veya Sennozid", "type": "correct", "go": "s4" },
+              { "txt": "Psyllium (Karnıyarık otu)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MEKANİZMA HATASI ]</b>\n\nPsyllium kitle oluşturan laksatiftir, sinirleri uyarmaz. Bisakodil ve Antrakinonlar (Senna) stimülan laksatiflerdir ve mukozal sinir uçlarını/pleksusları uyararak çalışırlar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: UZUN DÖNEM ]</b>\n\nBu hasta (opiyat kullanıcısı değilse) kronik konstipasyon için sürekli stimülan laksatif (Sinameki/Senna) kullanırsa kolonunda ne gibi bir patolojik değişiklik beklersin?",
+            "opts": [
+              { "txt": "Katartik Kolon / Enteropati (Myenterik pleksus hasarı)", "type": "correct", "go": "s5" },
+              { "txt": "Hipertrofik Pilor Stenozu", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ YAN ETKİ BİLGİSİ ]</b>\n\nUzun süreli stimülan kullanımı 'Katartik Kolon' sendromuna yol açar. Kolon atonikleşir, haustralar kaybolur, myenterik pleksusta kalıcı hasar ve melanozis koli (pigmentasyon) gelişebilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: YENİ NESİL ]</b>\n\nKlasik tedavilere dirençli, özellikle kadınlarda görülen kronik konstipasyonda kullanılan, '5-HT4 reseptör agonisti' olan yeni nesil prokinetik ilaç hangisidir?",
+            "opts": [
+              { "txt": "Prukaloprid", "type": "correct", "action": "end" },
+              { "txt": "Loperamid", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ İLAÇ KARIŞIKLIĞI ]</b>\n\nLoperamid bir opioid türevidir ve ishal tedavisinde (konstipasyon yaparak) kullanılır. Konstipasyonda kullanılan 5-HT4 agonisti Prukaloprid'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: METABOLİK DENGE",
+        "desc": "Dahiliye - 70 Yaş Kadın - Böbrek Yetmezliği ve Kabızlık",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: HASTA PROFİLİ ]</b>\n\nSübje 70 yaşında, kadın. Kronik Böbrek Yetmezliği (KBY) tanısı var (GFR: 20 ml/dk). 4 gündür süren konstipasyon şikayetiyle başvurdu. Evde bulunan 'Magnezyum Sülfat' tozunu içmek istemiş ama kızı izin vermemiş.\n\nKızının kararı doğru mu?",
+            "opts": [
+              { "txt": "Evet, doğru. KBY hastalarında magnezyum tuzları kontrendikedir.", "type": "correct", "go": "s2" },
+              { "txt": "Hayır, Magnezyum sülfat en güvenli ozmotik laksatiftir.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TOKSİSİTE RİSKİ ]</b>\n\nMagnezyum tuzlarının %20'si emilebilir. Böbrek yetmezliğinde atılamaz ve 'Hipermagnezemi'ye yol açar. Bu da SSS depresyonu, kas gevşemesi ve komaya neden olabilir.",
+            "opts": [{ "txt": "DÜZELT VE İLERLE", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: ALTERNATİF SEÇİMİ ]</b>\n\nBu hasta için daha güvenli, sistemik yan etkisi az, gaitayı su tutarak yumuşatan ve kitle oluşturan bir ajan seçmelisin. Hangi grup en uygundur?",
+            "opts": [
+              { "txt": "Kitle Oluşturanlar (Psyllium / Metilselüloz)", "type": "correct", "go": "s3" },
+              { "txt": "Stimülanlar (Hint Yağı)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ GÜVENLİK HATASI ]</b>\n\nHint yağı çok güçlü bir iritandır, yaşlı hastalarda ciddi sıvı-elektrolit kaybına neden olur. KBY hastasında hidrasyon dengesi bozulmamalıdır. En fizyolojik seçenek kitle oluşturanlardır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: KULLANIM TALİMATI ]</b>\n\nPsyllium (Karnıyarık otu tohumu) reçete ettin. İlacın etki mekanizması gereği hastaya vermen gereken en önemli kullanım talimatı nedir?",
+            "opts": [
+              { "txt": "Mutlaka bol su (en az 1-2 bardak) ile içilmelidir.", "type": "correct", "go": "s4" },
+              { "txt": "Sadece gece yatarken susuz yutulmalıdır.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MEKANİK RİSK ]</b>\n\nKitle oluşturan laksatifler suyla şişerek etki eder. Az suyla alınırsa özofagus veya bağırsakta tıkanıklığa (obstrüksiyon) yol açabilirler.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: BAŞKA BİR SENARYO ]</b>\n\nAynı hasta 1 yıl sonra karaciğer yetmezliği ve 'Hepatik Ensefalopati' (kanda amonyak yüksekliği) ile geldi. Hem laksatif etkisi olan hem de amonyağı düşüren spesifik ilaç hangisidir?",
+            "opts": [
+              { "txt": "Laktuloz", "type": "correct", "go": "s5" },
+              { "txt": "Sorbitol", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ENDİKASYON HATASI ]</b>\n\nSorbitol de ozmotiktir ama Laktuloz spesifiktir. Laktuloz kolonda bakterilerce asitlere (Laktik, asetik) parçalanır. Asidik ortam NH3'ü (emilebilir), NH4+'e (emilemez) çevirerek (ion trapping) atılmasını sağlar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: YAN ETKİ ]</b>\n\nLaktuloz tedavisi başlanan hastada, ilacın bakteriyel fermentasyonu sonucu ortaya çıkan en sık yan etki ne olabilir?",
+            "opts": [
+              { "txt": "Abdominal distansiyon ve gaz (Flatulans)", "type": "correct", "action": "end" },
+              { "txt": "Hiperkalsemi", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ YAN ETKİ BİLGİSİ ]</b>\n\nLaktulozun parçalanması sonucu CO2 ve H2 gazları açığa çıkar. Bu da hastada ciddi gaz şikayeti ve karın şişkinliği yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: GİZLİ TEHLİKE",
+        "desc": "Geriatri - 80 Yaş - Aspirasyon Pnömonisi Riski",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: İLAÇ GEÇMİŞİ ]</b>\n\n80 yaşında, yutma güçlüğü (disfaji) olan ve yatalak bir hastanın bakım vereni, hastanın kabızlığı için uzun süredir 'Sıvı Vazelin' (Likit Parafin) içirdiğini söylüyor. Hasta son zamanlarda öksürüyor ve nefes darlığı çekiyor.\n\nŞüphelendiğin durum nedir?",
+            "opts": [
+              { "txt": "Lipid Pnömonisi", "type": "correct", "go": "s2" },
+              { "txt": "Bakteriyel Pnömoni", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SPESİFİK YAN ETKİ ]</b>\n\nSıvı vazelin bir lubrikandır. Yutma güçlüğü olanlarda aspire edilebilir. Akciğere kaçarsa parçalanamaz ve 'Lipid Pnömonisi'ne yol açar. Bu klasik bir yan etkidir.",
+            "opts": [{ "txt": "DÜZELT VE İLERLE", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: VİTAMİN EKSİKLİĞİ ]</b>\n\nSıvı vazelinin uzun süre kullanımı, besin emilimini etkiler. Bu hastada hangi vitaminlerin eksikliği beklenebilir?",
+            "opts": [
+              { "txt": "Yağda eriyen vitaminler (A, D, E, K)", "type": "correct", "go": "s3" },
+              { "txt": "Suda eriyen vitaminler (B, C)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ETKİLEŞİM BİLGİSİ ]</b>\n\nSıvı vazelin (mineral yağ) bağırsakta emilmez ancak yağda eriyen vitaminleri (ADEK) kendi bünyesine hapsederek dışkıyla atılmalarına neden olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: ANAL KOMPLİKASYON ]</b>\n\nHasta yakınları ayrıca hastanın iç çamaşırlarında sürekli yağlı lekelenmeler ve anal bölgede kaşıntı olduğunu belirtiyor. Bunun nedeni ne olabilir?",
+            "opts": [
+              { "txt": "İlacın anal sfinkterden sızması ve anal pruritus yapması", "type": "correct", "go": "s4" },
+              { "txt": "Enterobius (Kıl kurdu) enfeksiyonu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YAN ETKİ ]</b>\n\nSıvı vazelin emilmediği ve kayganlaştırıcı olduğu için anal sfinkterden sızma yapabilir. Bu da perianal bölgeyi tahriş ederek kaşıntı (pruritus) yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: CERRAHİ HAZIRLIK ]</b>\n\nHastaya kolonoskopi planlandı. Kolon temizliği (lavaj) için en uygun, elektrolit dengesini bozmayan 'izotonik' özellikli ajan hangisidir?",
+            "opts": [
+              { "txt": "Polietilen Glikol (PEG) - Elektrolit Solüsyonu", "type": "correct", "go": "s5" },
+              { "txt": "Mannitol", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ PREPARAT SEÇİMİ ]</b>\n\nMannitol kolonda bakterilerce fermente edilir ve patlayıcı gaz (H2, Metan) oluşturabilir; bu da koter kullanılan işlemlerde tehlikelidir. PEG (Makrogol) dengeli elektrolit içerir, gaz yapmaz ve sıvı-elektrolit dengesini bozmaz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: İLAÇ ZAMANLAMASI ]</b>\n\nHastaya aynı zamanda mide koruyucu (Antasit) ve Bisakodil tablet veriliyor. Hemşire ilaçları aynı anda veriyor. Bu doğru mu?",
+            "opts": [
+              { "txt": "Yanlış. Antasitler mide pH'ını artırır, Bisakodil'in enterik kaplaması midede açılır ve irritasyon yapar.", "type": "correct", "action": "end" },
+              { "txt": "Doğru. Birlikte verilmesi etkiyi artırır.", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ İLAÇ ETKİLEŞİMİ ]</b>\n\nBisakodil enterik kaplıdır (bağırsakta açılması için). Antasitler mide asidini nötralize ederse kaplama midede erir, şiddetli mide kramplarına neden olur. En az 2 saat ara olmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Kronik böbrek yetmezliği olan bir hastada aşağıdaki laksatiflerden hangisinin kullanımı 'Hipermagnezemi' riski nedeniyle sakıncalıdır?",
+        "a": ["Laktuloz", "Magnezyum Sülfat", "Psyllium", "Bisakodil"],
+        "correct": 1
+      },
+      {
+        "q": "Aşağıdaki durumlardan hangisi, purgatif ilaç kullanımı için KESİN kontrendikasyon (yapılmaması gereken durum) oluşturur?",
+        "a": ["Kronik konstipasyon", "Teşhis konmamış akut karın ağrısı / Apandisit şüphesi", "İlaç zehirlenmesi", "Radyolojik inceleme öncesi"],
+        "correct": 1
+      },
+      {
+        "q": "Hepatik ensefalopati tedavisinde, bağırsakta asidik ortam oluşturarak amonyak emilimini azaltan (ion trapping) ilaç hangisidir?",
+        "a": ["Laktuloz", "Sıvı Vazelin", "Hint Yağı", "Sennozid"],
+        "correct": 0
+      },
+      {
+        "q": "Oral yolla alındığında ince bağırsakta lipaz ile parçalanarak 'Risinoleik Asit' açığa çıkaran ve çok güçlü purgatif etki gösteren ajan hangisidir?",
+        "a": ["Sorbitol", "Hint Yağı", "Gliserin", "Dokuzat"],
+        "correct": 1
+      },
+      {
+        "q": "Uzun süre sıvı vazelin (Likid Parafin) kullanan bir hastada aşağıdaki yan etkilerden hangisinin görülmesi BEKLENMEZ?",
+        "a": ["Lipid pnömonisi (aspirasyon durumunda)", "A, D, E, K vitamin eksikliği", "Anal sızıntı ve kaşıntı", "Hiperkalemi"],
+        "correct": 3
+      },
+      {
+        "q": "Kitle oluşturan laksatiflerin (Örn: Psyllium) etki mekanizması nedir?",
+        "a": ["Bağırsak sinirlerini irrite ederek motiliteyi artırır", "Su tutarak şişer, feçes hacmini artırır ve bağırsağı gerer", "Yüzey gerilimini azaltarak suyun feçese girmesini sağlar", "Na-K-ATPaz pompasını inhibe eder"],
+        "correct": 1
+      },
+      {
+        "q": "Kronik konstipasyon tedavisinde kullanılan 'Prukaloprid'in etki mekanizması nedir?",
+        "a": ["Selektif 5-HT4 reseptör agonistidir (Prokinetik)", "Dopamin antagonistidir", "Klor kanalı aktivatörüdür", "Ozmotik etkili ajandır"],
+        "correct": 0
+      },
+      {
+        "q": "Kolonoskopi öncesi barsak temizliğinde kullanılan, elektrolit dengesini bozmayan ve patlayıcı gaz oluşturmayan izotonik solüsyon hangisidir?",
+        "a": ["Mannitol", "Polietilen Glikol (PEG) - Elektrolit Solüsyonu", "Hint Yağı", "Laktuloz"],
+        "correct": 1
+      },
+      {
+        "q": "Antasit (mide asidini azaltan) ilaçlarla birlikte alındığında enterik kaplaması midede erken çözülerek gastrik irritasyona neden olan laksatif hangisidir?",
+        "a": ["Bisakodil", "Sıvı vazelin", "Gliserin", "Metilselüloz"],
+        "correct": 0
+      },
+      {
+        "q": "Uzun süre stimülan laksatif (Örn: Sinameki) kullanımına bağlı gelişen, kolonun atonik hale gelmesi ve myenterik pleksus hasarı ile karakterize tabloya ne ad verilir?",
+        "a": ["İrritabl Bağırsak Sendromu", "Katartik Kolon", "Megakolon", "Divertikülit"],
+        "correct": 1
+      }
+    ],
+    "match": [
+      { "A": "Laktuloz", "B": "Hepatik Ensefalopati Tedavisi" },
+      { "A": "Sıvı Vazelin", "B": "Lipid Pnömonisi Riski" },
+      { "A": "Hint Yağı", "B": "Risinoleik Asit (İnce barsakta etki)" },
+      { "A": "Bisakodil", "B": "Antasitlerle alınmamalı (Enterik kaplı)" },
+      { "A": "Sennozid (Sinameki)", "B": "Antrakinon türevi / Anne sütüne geçer" },
+      { "A": "Psyllium", "B": "Bol su ile alınmalı (Kitle oluşturan)" },
+      { "A": "Dokuzat", "B": "Yüzey gerilimini azaltan nemlendirici" },
+      { "A": "Prukaloprid", "B": "5-HT4 Agonisti (Prokinetik)" },
+      { "A": "Lubiproston", "B": "Klor Kanal Aktivatörü" },
+      { "A": "Magnezyum Sülfat", "B": "Böbrek yetmezliğinde kontrendike" }
+    ],
+    "decypher": [
+      {
+        "text": "Laksatifler feçesin yumuşamasını sağlarken, {purgatifler} feçesin sulu halde kalmasını sağlayarak istem dışı ve hızlı atılmasına neden olur.",
+        "decoys": ["prokinetikler", "antasitler"]
+      },
+      {
+        "text": "Bitkisel kaynaklı bir yağ olan {Hint} yağı, ince bağırsakta lipaz ile parçalanarak çok güçlü iritan bir madde olan risinoleik aside dönüşür.",
+        "decoys": ["Zeytin", "Badem"]
+      },
+      {
+        "text": "Sıvı vazelin gibi lubrikanların akciğerlere aspire edilmesi sonucu oluşan ve tedavisi zor olan tabloya {lipid} pnömonisi denir.",
+        "decoys": ["bakteriyel", "viral"]
+      }
+    ]
+  }
+}

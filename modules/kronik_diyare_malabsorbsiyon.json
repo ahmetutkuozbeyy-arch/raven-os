@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "title": "KRONİK DİYARE VE MALABSORBSİYON",
+    "tag": "GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🩺 KLİNİK & PATOFİZYOLOJİ</div><div class='sum-body'>• <b>4 Ana Mekanizma:</b> Sekretuar (açlıkta durmaz), Ozmotik (gap >125, açlıkta durur), İnflamatuar (kan/mukus), Yağlı (steatore).<br>• <b>Malabsorbsiyon Sinyalleri:</b> Kilo kaybı, kas erimesi, ödem (hipoalbuminemi), tetani (Ca eksikliği), anemi (Fe, B12, Folat).<br>• <b>Alarm Semptomlar:</b> Gece diyaresi, kilo kaybı, hematokezya.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KRİTİK BİLGİ</div><div class='sum-body'>• <b>Ozmotik Gap:</b> 290 - [2 x (Na + K)]. >125 mOsm/kg ise Ozmotik Diyare.<br>• <b>Çölyak:</b> İzah edilemeyen Fe eksikliği anemisi + Dermatitis Herpetiformis. Tanıda ilk adım TTG IgA.<br>• <b>Sekretuar Nedenler:</b> VİPoma, Karsinoid, Laksatifler, Safra asidi malabsorbsiyonu.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TANI & TEDAVİ</div><div class='sum-body'>• <b>Altın Standart (Yağ):</b> 24 saatlik dışkıda >7gr yağ (Steatore).<br>• <b>Çölyak Kesin Tanı:</b> İnce barsak biyopsisi (Marsh kriterleri).<br>• <b>Pankreas Yetersizliği:</b> Fekal elastaz, Sekretin testi.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: ATİPİK AJAN",
+        "desc": "Poliklinik - 28 Yaş Kadın - Dirençli Anemi ve Kaşıntı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ]</b>\n\nSübje kronik yorgunluk ve tedaviye dirençli demir eksikliği anemisi ile başvuruyor. Sorgulamada dirseklerinde kaşıntılı, veziküler döküntüler (Dermatitis Herpetiformis) olduğunu fark ediyorsun. Diyare belirgin değil, ancak gaz şikayeti var.\n\nVeri tabanını tara ve ilk hamleni yap:",
+            "opts": [
+              {
+                "txt": "Sadece Oral Demir preparatı başla ve 3 ay sonra gör.",
+                "type": "wrong",
+                "go": "s1_hata"
+              },
+              {
+                "txt": "Doku Transglutaminaz (tTG) IgA ve Total IgA iste.",
+                "type": "correct",
+                "go": "s2"
+              }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ HATALI KARAR ]</b>\n\nSemptomatik tedavi uyguladın ancak kök nedeni (malabsorbsiyonu) atladın. Hasta demiri ememediği için anemisi düzelmeyecek ve otoimmün hasar devam edecek. Dermatit, Çölyak için patognomoniktir.",
+            "opts": [
+              {
+                "txt": "GERİ DÖN VE ANALİZİ DERİNLEŞTİR",
+                "go": "s1"
+              }
+            ]
+          },
+          "s2": {
+            "text": "<b>[ GELİŞME ]</b>\n\ntTG IgA pozitif geldi. Şüphen: Çölyak Hastalığı (Gluten Enteropatisi). Kesin tanı ve mukoza hasarını belgelemek için 'Altın Standart' prosedürü uygulaman gerekiyor.\n\nSırada ne var?",
+            "opts": [
+              {
+                "txt": "Üst GİS Endoskopisi ve Duodenum Biyopsisi",
+                "type": "correct",
+                "action": "end"
+              },
+              {
+                "txt": "Glutensiz diyete başlatıp sonucu bekle (Biyopsisiz)",
+                "type": "wrong",
+                "go": "s2_hata"
+              }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KRİTİK HATA ]</b>\n\nErişkin hastalarda biyopsi ile kanıtlamadan ömür boyu sürecek kısıtlayıcı bir diyete başlamak doğru değildir. Ayrıca diyet başlanırsa mukozal iyileşme olacağından, ileride yapılacak biyopsi yalancı negatif çıkabilir.",
+            "opts": [
+              {
+                "txt": "GERİ DÖN",
+                "go": "s2"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: SULU FIRTINA",
+        "desc": "Acil Servis - 55 Yaş Erkek - Masif Sulu Diyare",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ]</b>\n\nSübje günde 10'dan fazla, ağrısız, çok bol miktarda sulu dışkılama şikayetiyle geldi. Hipokalemisi var. En kritik veri: 'Hastaneye yatırılıp 24 saat AÇ BIRAKILMASINA RAĞMEN' diyare hız kesmedi.\n\nBu hemodinamik tablo hangi diyare tipini işaret ediyor?",
+            "opts": [
+              {
+                "txt": "Ozmotik Diyare",
+                "type": "wrong",
+                "go": "s1_hata"
+              },
+              {
+                "txt": "Sekretuar Diyare",
+                "type": "correct",
+                "go": "s2"
+              }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ HATALI ANALİZ ]</b>\n\nOzmotik diyare (örn. laktoz intoleransı), ozmotik yükü oluşturan gıda alımı kesildiğinde (açlıkta) durur veya belirgin azalır. Açlıkta devam eden yüksek volümlü diyare, aktif iyon sekresyonunu (Sekretuar) gösterir.",
+            "opts": [
+              {
+                "txt": "GERİ DÖN VE DÜZELT",
+                "go": "s1"
+              }
+            ]
+          },
+          "s2": {
+            "text": "<b>[ GELİŞME ]</b>\n\nSekretuar diyare teyit edildi. Enfeksiyon dışlandı. Görüntülemede pankreasta kitle şüphesi var. Nöroendokrin bir tümörden şüpheleniyorsun. Hipokalemi ve aklorhidri (WDHA sendromu) yapan spesifik ajanı arıyorsun.\n\nHangi plazma peptid düzeyi kontrol edilmeli?",
+            "opts": [
+              {
+                "txt": "Vasoaktif İntestinal Peptid (VIP)",
+                "type": "correct",
+                "action": "end"
+              },
+              {
+                "txt": "Gastrin",
+                "type": "wrong",
+                "go": "s2_hata"
+              }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ HEDEF SAPMASI ]</b>\n\nGastrinoma (Zollinger-Ellison) da sekretuar diyare yapar ancak belirgin peptik ülserler ve hiperasidite ile seyreder. WDHA (Watery Diarrhea, Hypokalemia, Achlorhydria) sendromu VIPoma klasiğidir.",
+            "opts": [
+              {
+                "txt": "GERİ DÖN",
+                "go": "s2"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: BATAN GEMİ",
+        "desc": "Poliklinik - 60 Yaş - Kilo Kaybı ve Kötü Koku",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ]</b>\n\nSübje tuvalet deliğinde 'yüzen', fırçalamakla zor temizlenen, çok kötü kokulu ve yağlı dışkılamadan şikayetçi. Son 6 ayda 10 kg vermiş. Alkolizm öyküsü mevcut.\n\nÖn tanın 'Yağlı Diyare' (Steatore). Bunu kantitatif olarak doğrulamak için eşik değer nedir?",
+            "opts": [
+              {
+                "txt": "24 saatte > 7 gr yağ atılımı",
+                "type": "correct",
+                "go": "s2"
+              },
+              {
+                "txt": "Gaita pH < 5.5",
+                "type": "wrong",
+                "go": "s1_hata"
+              }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YANLIŞ PARAMETRE ]</b>\n\nGaita pH < 5.5 (asidik gaita), karbonhidrat malabsorbsiyonunu (örn. laktaz eksikliği) gösterir. Yağ malabsorbsiyonu için kantitatif yağ ölçümü esastır.",
+            "opts": [
+              {
+                "txt": "GERİ DÖN VE DÜZELT",
+                "go": "s1"
+              }
+            ]
+          },
+          "s2": {
+            "text": "<b>[ GELİŞME ]</b>\n\nSteatore doğrulandı. Yapısal hastalık (ince barsak serisi/CT) dışlandı. Pankreasın ekzokrin yetersizliğinden (Kronik Pankreatit) şüpheleniyorsun.\n\nTanı algoritmasında (Flowchart) hangi test önceliklidir?",
+            "opts": [
+              {
+                "txt": "Dışkıda Kimotripsin Aktivitesi / Elastaz",
+                "type": "correct",
+                "action": "end"
+              },
+              {
+                "txt": "D-Ksiloz Testi",
+                "type": "wrong",
+                "go": "s2_hata"
+              }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ MEKANİZMA ]</b>\n\nD-Ksiloz testi mukoza bütünlüğünü (ince barsak emilimini) gösterir. Pankreas yetersizliğinde mukoza sağlamdır, sindirim enzimi eksiktir. Pankreas fonksiyon testlerine odaklanmalısın.",
+            "opts": [
+              {
+                "txt": "GERİ DÖN",
+                "go": "s2"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Ozmotik Gap hesaplandığında >125 mOsm/kg sonucu elde ediliyor. Aşağıdaki etyolojilerden hangisi bu tabloya EN UYGUNDUR?",
+        "a": [
+          "Laktaz eksikliği (Laktoz intoleransı)",
+          "VİPoma",
+          "Karsinoid Sendrom",
+          "Kolera toksini"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Aşağıdaki klinik bulgu ve malabsorbsiyon eşleştirmelerinden hangisi YANLIŞTIR?",
+        "a": [
+          "Tetani - Kalsiyum / D Vitamini eksikliği",
+          "Gece Körlüğü - A Vitamini eksikliği",
+          "Kolay kanama/Ekimoz - K Vitamini eksikliği",
+          "Periferal Nöropati - C Vitamini eksikliği"
+        ],
+        "correct": 3
+      },
+      {
+        "q": "Çölyak hastalığı taramasında kullanılan, duyarlılığı ve özgüllüğü en yüksek serolojik test hangisidir?",
+        "a": [
+          "Anti-Gliadin IgG",
+          "Doku Transglutaminaz (tTG) IgA",
+          "Anti-Nükleer Antikor (ANA)",
+          "Gaita pH testi"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "Kronik diyare ayırıcı tanısında, hastanın 'Aç kalmasıyla düzelmeyen' ve 'Normal Ozmotik Gap'e sahip' diyare tipi hangisidir?",
+        "a": [
+          "Ozmotik Diyare",
+          "Sekretuar Diyare",
+          "Yağlı Diyare",
+          "İritabl Barsak Sendromu"
+        ],
+        "correct": 1
+      },
+      {
+        "q": "İleum rezeksiyonu veya hastalığı (örn. Crohn) olan bir hastada aşağıdaki maddelerden hangisinin emilimi birincil olarak bozulur?",
+        "a": [
+          "Demir",
+          "Folat",
+          "B12 Vitamini ve Safra Tuzları",
+          "Kalsiyum"
+        ],
+        "correct": 2
+      },
+      {
+        "q": "İnflamatuar diyarede dışkı incelemesinde en sık görülen bulgu hangisidir?",
+        "a": [
+          "Bol lökosit ve eritrosit",
+          "Yağ damlacıkları",
+          "Düşük pH",
+          "Charcot-Leyden kristalleri"
+        ],
+        "correct": 0
+      },
+      {
+        "q": "Malabsorbsiyon sendromunda 'ödem' gelişmesinin temel patofizyolojik nedeni nedir?",
+        "a": [
+          "Hiponatremi",
+          "Protein malabsorbsiyonuna bağlı hipoalbuminemi",
+          "Böbrek yetmezliği",
+          "Lenfatik obstrüksiyon"
+        ],
+        "correct": 1
+      }
+    ],
+    "match": [
+      {
+        "A": "Steatore",
+        "B": "Dışkıda yağ atılımının >7 gr/gün olması"
+      },
+      {
+        "A": "Ozmotik Gap > 125",
+        "B": "Ozmotik Diyare (Örn. Laktaz eksikliği)"
+      },
+      {
+        "A": "Sekretuar Diyare",
+        "B": "Açlıkta düzelmeyen, yüksek volümlü sulu dışkı"
+      },
+      {
+        "A": "Dermatitis Herpetiformis",
+        "B": "Çölyak hastalığı ile ilişkili kaşıntılı cilt lezyonu"
+      },
+      {
+        "A": "Marsh Sınıflaması",
+        "B": "Çölyak hastalığında ince barsak biyopsi evrelemesi"
+      }
+    ],
+    "decypher": [
+      {
+        "text": "Çölyak hastalığının kesin tanısı için endoskopi ile {duodenum} biyopsisi alınır ve villöz atrofi varlığı araştırılır.",
+        "decoys": [
+          "kolon",
+          "mide",
+          "ileum"
+        ]
+      },
+      {
+        "text": "Karbonhidrat malabsorbsiyonunda fermente olan şekerler nedeniyle dışkı pH'ı {asidik} (pH < 5.5) olur.",
+        "decoys": [
+          "alkalik",
+          "nötr",
+          "tamponize"
+        ]
+      },
+      {
+        "text": "VİPoma, Karsinoid sendrom ve Gastrinoma gibi nöroendokrin tümörler tipik olarak {sekretuar} tipte diyareye neden olur.",
+        "decoys": [
+          "ozmotik",
+          "inflamatuar",
+          "fonksiyonel"
+        ]
+      }
+    ]
+  }
+}

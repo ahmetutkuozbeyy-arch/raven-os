@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "title": "ANTİHELMİNTİKLER VE ANTİAMİBİKLER",
+    "tag": "TIBBİ FARMAKOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🪱 ANTİHELMİNTİKLER (SOLUCAN İLAÇLARI)</div><div class='sum-body'>• <b>Benzimidazoller (Albendazol/Mebendazol):</b> Parazitin beta-tübülinine bağlanarak mikrotübül sentezini inhibe eder. Glukoz alımını bozar.<br>• <b>Prazikuantel:</b> Sestod (Şerit) ve Trematodlarda (Kelebek) ilk tercihtir. Hücre içine Kalsiyum girişini artırarak kasılma ve spastik felç yapar.<br>• <b>Pirantel Pamoat:</b> Depolarizan nöromusküler blokör gibi davranır (Spastik felç).<br>• <b>Piperazin:</b> GABA agonistidir (Flask felç).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🦠 ANTİAMİBİKLER (AMİP İLAÇLARI)</div><div class='sum-body'>• <b>Metronidazol:</b> Doku amibisididir (İnvaziv formlara etkili). Anaerob bakterilere de etkilidir. DNA sarmalını bozar.<br>• <b>Luminal Amibisidler:</b> (Diloksanid Furoat, İyodokinol, Paromomisin). Semptomsuz taşıyıcılarda veya invaziv tedavi sonrası kalan kistleri temizlemek için kullanılır.<br>• <b>Klorokin:</b> Sadece karaciğer absesinde (Ekstraintestinal) etkilidir.</div></div><div class='sum-card sum-rx'><div class='sum-title'>⚠️ ÖNEMLİ YAN ETKİLER</div><div class='sum-body'>• <b>Metronidazol:</b> Alkolle alınırsa Disülfiram benzeri reaksiyon (yüz kızarması, kusma, taşikardi) yapar. Ağızda metalik tat bırakır.<br>• <b>Albendazol:</b> Yağlı yemekle emilimi artar (Kist hidatik tedavisinde istenir).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: MİKROTÜBÜL SAVAŞI",
+        "desc": "Pediatri - Kıl Kurdu ve Askariyazis Tedavisi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\n6 yaşında bir çocuk, geceleri artan makat kaşıntısı ile getirildi. Selofan bant yönteminde Enterobius vermicularis (Kıl kurdu) yumurtaları görüldü.\n\nTedavide ilk tercih edilen, parazitin mikrotübül sentezini geri dönüşümsüz engelleyen ilaç grubu hangisidir?",
+            "opts": [
+              { "txt": "Benzimidazoller (Mebendazol / Albendazol)", "type": "correct", "go": "s2" },
+              { "txt": "Prazikuantel", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YANLIŞ GRUP ]</b>\n\nPrazikuantel şerit ve kelebeklerde (Sestod/Trematod) kullanılır. Yuvarlak solucanlarda (Nematod) ve kıl kurdunda Benzimidazoller veya Pirantel Pamoat tercih edilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nMebendazol verdin. Bu ilaç parazit hücresinde beta-tübüline bağlanarak mikrotübül yapısını bozar. Bunun sonucunda parazitte hayati olan hangi fonksiyon durur?",
+            "opts": [
+              { "txt": "Glukoz alımı ve transportu", "type": "correct", "go": "s3" },
+              { "txt": "Kalsiyum kanallarının açılması", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nKalsiyum girişi Prazikuantel'in mekanizmasıdır. Mikrotübüllerin bozulması, parazitin glukoz almasını engeller ve enerji depolarını tüketerek ölümüne yol açar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ALTERNATİF ]</b>\n\nEğer bu çocukta Ascaris (Bağırsak solucanı) olsaydı ve 'Spastik Felç' yaparak parazitin atılmasını sağlayan bir ilaç seçmek isteseydin hangisini kullanırdın?",
+            "opts": [
+              { "txt": "Pirantel Pamoat", "type": "correct", "go": "s4" },
+              { "txt": "Piperazin", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ FELÇ TİPİ ]</b>\n\nPiperazin GABA agonistidir ve 'Flask Felç' (Gevşek felç) yapar. Pirantel Pamoat ise asetilkolin salgısını artırarak 'Spastik Felç' (Kasılma) yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KLİNİK BİLGİ ]</b>\n\nKaraciğer kist hidatiği (Echinococcus granulosus) tedavisinde de kullanılan Albendazol'ün emilimini artırmak için hastaya ne önerirsin?",
+            "opts": [
+              { "txt": "İlacı yağlı bir yemekle birlikte almasını.", "type": "correct", "go": "s5" },
+              { "txt": "İlacı aç karnına bol suyla almasını.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ FARMAKOKİNETİK ]</b>\n\nAlbendazolün sistemik etki göstermesi (kiste ulaşması) için emilmesi gerekir. Yağlı gıdalar emilimini 5 kata kadar artırır. (Sadece barsak paraziti içinse açlık fark etmeyebilir ama kist için tokluk şarttır).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya uygun antihelmintik tedavi verildi ve hijyen eğitimi yapıldı. Aile tedavisi önerildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KARACİĞERDE TEHLİKE",
+        "desc": "Enfeksiyon - Kanlı İshal ve Karaciğer Absesi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\n40 yaşında erkek hasta. 10 gündür kanlı-mukuslu ishal (Dizanteri) ve sağ üst kadran ağrısı şikayeti var. USG'de karaciğerde abse saptandı. Etken Entamoeba histolytica.\n\nBu 'İnvaziv' tablo (Doku amibiyazisi) için en etkili ilaç hangisidir?",
+            "opts": [
+              { "txt": "Metronidazol", "type": "correct", "go": "s2" },
+              { "txt": "Diloksanid Furoat", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YERLEŞİM ]</b>\n\nDiloksanid Furoat sadece lümendeki (bağırsak boşluğundaki) amiplere etkilidir, dokuya (karaciğere) geçmez. Doku için Metronidazol şarttır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ETKİ MEKANİZMASI ]</b>\n\nMetronidazol (ve Ornidazol) amip hücresi içinde nasıl bir etki göstererek paraziti öldürür?",
+            "opts": [
+              { "txt": "Nitro grubu indirgenerek serbest radikaller oluşturur ve DNA'yı hasara uğratır.", "type": "correct", "go": "s3" },
+              { "txt": "Protein sentezini ribozomda durdurur.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nMetronidazol bir ön ilaçtır. Anaerob ortamda (parazit veya bakteri içinde) ferrodoksin sistemiyle indirgenir ve toksik radikaller oluşturarak DNA'yı parçalar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ UYARI ]</b>\n\nHastaya Metronidazol reçete ederken SAKIN yapmaması gereken şey nedir?",
+            "opts": [
+              { "txt": "Alkol almamalıdır (Disülfiram benzeri reaksiyon).", "type": "correct", "go": "s4" },
+              { "txt": "Süt ürünleri tüketmemelidir.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ İLAÇ ETKİLEŞİMİ ]</b>\n\nMetronidazol, alkolü yıkan enzimi (Aldehit dehidrojenaz) inhibe eder. İlaçla birlikte alkol alınırsa asetaldehit birikir; yüzde kızarma, kusma, taşikardi ve ölüm korkusu gelişir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ TAMAMLAMA ]</b>\n\nHastanın karaciğer absesi ve ishali düzeldi. Ancak bağırsak lümeninde kalan kistleri temizlemek ve nüksü önlemek için tedaviye ne eklenmelidir?",
+            "opts": [
+              { "txt": "Luminal Amibisid (Örn: Paromomisin, İyodokinol, Diloksanid)", "type": "correct", "go": "s5" },
+              { "txt": "Klorokin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ KOMBİNASYON ]</b>\n\nKlorokin sadece karaciğerdeki amibe etkilidir, lümene etkisi yoktur. Lümendeki kistleri temizlemek için luminal etkili (emilmeyen) ilaçlar gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nMetronidazol ile doku tedavisi yapıldı, ardından luminal ajanla portörlük (taşıyıcılık) önlendi. Hasta tam şifa ile taburcu oldu.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: ŞERİT DÜŞÜRME",
+        "desc": "Gastroenteroloji - Tenya (Şerit) Tedavisi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ TANI ]</b>\n\nHasta dışkısında 'şerit parçaları' gördüğünü söylüyor. Yapılan incelemede Taenia saginata (Sığır şeridi) saptandı.\n\nSestod (Şerit) ve Trematod (Kelebek) enfeksiyonlarında en geniş spektrumlu ve etkili ilaç hangisidir?",
+            "opts": [
+              { "txt": "Prazikuantel", "type": "correct", "go": "s2" },
+              { "txt": "Mebendazol", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SPEKTRUM ]</b>\n\nMebendazol nematodlara (yuvarlak solucan) etkilidir. Yassı solucanlarda (Sestod/Trematod) altın standart Prazikuanteldir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nPrazikuantel parazitte ne yaparak ölümüne neden olur?",
+            "opts": [
+              { "txt": "Hücre içine Kalsiyum girişini artırarak Spastik Felç yapar.", "type": "correct", "go": "s3" },
+              { "txt": "GABA reseptörünü uyararak Flask Felç yapar.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nFlask felç Piperazin'in etkisidir. Prazikuantel, tegümenti (kabuğu) bozar ve kalsiyum girişini artırarak parazitin kasılıp kalmasına (spastik felç) ve barsak duvarından kopmasına neden olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ALTERNATİF ]</b>\n\nEğer Prazikuantel verilemeseydi, sadece barsak şeritlerine etkili olan ve oksidatif fosforilasyonu inhibe eden hangi ilacı seçerdin?",
+            "opts": [
+              { "txt": "Niklozamid", "type": "correct", "action": "end" },
+              { "txt": "İvermektin", "type": "wrong", "go": "s3" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Mikrotübül sentezini inhibe ederek (beta-tübüline bağlanarak) etki gösteren antihelmintik grubu hangisidir?", "a": ["Benzimidazoller (Albendazol, Mebendazol)", "Prazikuantel", "Piperazin", "İvermektin"], "correct": 0 },
+      { "q": "Metronidazol kullanımı sırasında alkol alınmasıyla ortaya çıkan tabloya ne ad verilir?", "a": ["Disülfiram benzeri reaksiyon", "Serotonin sendromu", "Alerjik şok", "Hipertansif kriz"], "correct": 0 },
+      { "q": "Sestod (Şerit) ve Trematod (Kelebek) enfeksiyonlarında hücre içine kalsiyum girişini artırarak spastik felç yapan ilaç hangisidir?", "a": ["Prazikuantel", "Pirantel Pamoat", "Mebendazol", "Klorokin"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi sadece barsak lümenindeki amiplere etkili olan (Dokuya geçmeyen) bir ilaçtır?", "a": ["Diloksanid Furoat", "Metronidazol", "Klorokin", "Emetin"], "correct": 0 },
+      { "q": "Karaciğer kist hidatiği (Echinococcus) tedavisinde kullanılan Albendazol'ün emilimini artırmak için ne yapılmalıdır?", "a": ["Yağlı yemekle birlikte alınmalıdır", "Aç karnına alınmalıdır", "Sütle alınmamalıdır", "Bol suyla alınmalıdır"], "correct": 0 },
+      { "q": "GABA agonist etkisiyle parazitte flask (gevşek) felç oluşturan antihelmintik hangisidir?", "a": ["Piperazin", "Pirantel Pamoat", "Prazikuantel", "Levamizol"], "correct": 0 },
+      { "q": "Amebik karaciğer absesi tedavisinde 'Metronidazol'e alternatif veya ek olarak kullanılabilen, sadece karaciğerde yoğunlaşan ilaç hangisidir?", "a": ["Klorokin", "Tetrasiklin", "Paromomisin", "İyodokinol"], "correct": 0 },
+      { "q": "Kıl kurdu (Enterobius vermicularis) tedavisinde tek doz olarak da kullanılabilen, nikotinik reseptörleri uyararak spastik felç yapan ilaç hangisidir?", "a": ["Pirantel Pamoat", "Mebendazol", "İvermektin", "Niklozamid"], "correct": 0 },
+      { "q": "Metronidazolün en sık görülen ve hastaları rahatsız eden tat değişikliği yan etkisi nedir?", "a": ["Ağızda metalik tat", "Tatsızlık (Ageuzi)", "Ekşi tat", "Tuzlu tat"], "correct": 0 },
+      { "q": "Hem anaerob bakterilere (Bacteroides vb.) hem de protozoonlara (Amip, Giardia) etkili olan antibiyotik hangisidir?", "a": ["Metronidazol", "Penisilin", "Gentamisin", "Vankomisin"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Albendazol", "B": "Mikrotübül inhibisyonu (Kist Hidatik)" },
+      { "A": "Prazikuantel", "B": "Kalsiyum girişi artışı (Şerit)" },
+      { "A": "Metronidazol", "B": "DNA hasarı (Amip/Giardia)" },
+      { "A": "Pirantel Pamoat", "B": "Spastik felç (Kıl kurdu)" },
+      { "A": "Piperazin", "B": "Flask felç (GABA agonist)" },
+      { "A": "Diloksanid Furoat", "B": "Luminal amibisid" },
+      { "A": "Klorokin", "B": "Karaciğer absesinde etkili" },
+      { "A": "Disülfiram Reaksiyonu", "B": "Metronidazol + Alkol" }
+    ],
+    "decypher": [
+      {
+        "text": "{Benzimidazol} grubu ilaçlar (Albendazol, Mebendazol), parazitlerin beta-{tübülin} proteinine bağlanarak mikrotübül oluşumunu engeller. Bu durum parazitin {glukoz} alımını bozar ve enerji üretemeyen parazit ölür.",
+        "decoys": ["Prazikuantel", "aktin", "kalsiyum", "sodyum"]
+      },
+      {
+        "text": "{Metronidazol}, doku amibiyazisinde ve {anaerob} bakteri enfeksiyonlarında kullanılan temel ilaçtır. Parazit içinde indirgenerek oluşturduğu serbest radikallerle {DNA} yapısını bozar. En önemli uyarısı {alkol} ile alınmamasıdır.",
+        "decoys": ["Klorokin", "aerob", "protein", "süt"]
+      },
+      {
+        "text": "{Prazikuantel}, şerit ve kelebek enfeksiyonlarında en etkili ilaçtır. Parazit zarının {kalsiyum} geçirgenliğini artırarak kaslarda şiddetli kasılmaya ve {spastik} felce neden olur. Parazit tutunduğu yerden kopar ve atılır.",
+        "decoys": ["sodyum", "flask", "gevşek", "magnezyum"]
+      }
+    ]
+  }
+}

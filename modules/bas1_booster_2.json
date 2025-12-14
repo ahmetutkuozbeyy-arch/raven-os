@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "title": "BAS1 BOOSTER: FARMAKOLOJİ VE TEDAVİ",
+    "tag": "SINAV HAZIRLIK"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>💊 MİDE ASİDİ İLAÇLARI</div><div class='sum-body'>• <b>H2 Reseptör Blokerleri:</b> (Ranitidin, Famotidin). Histaminin paryetal hücredeki H2 reseptörüne bağlanmasını yarışmalı olarak engeller.<br>• <b>Proton Pompa İnhibitörleri (PPI):</b> (Omeprazol, Lansoprazol). H+/K+ ATP-az enzimini <b>irreversibl</b> (geri dönüşümsüz) inhibe eder. En güçlü asit baskılayıcılardır.<br>• <b>Misoprostol:</b> PGE1 analoğudur. NSAİİ ülserlerini önlemede kullanılır ama <b>gebelikte kontrendikedir</b> (Abortif).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🤢 ANTİEMETİKLER</div><div class='sum-body'>• <b>5-HT3 Antagonistleri (Setronlar):</b> Kemoterapiye bağlı kusmada (CINV) en etkilidir.<br>• <b>Metoklopramid:</b> D2 blokeri + 5-HT4 agonistidir. Prokinetiktir ama EPS (Ekstrapiramidal) yan etki yapabilir.<br>• <b>Aprepitant:</b> NK-1 reseptör antagonistidir. Geç kusmada etkilidir.</div></div><div class='sum-card sum-rx'><div class='sum-title'>⚠️ ÖZEL DURUMLAR</div><div class='sum-body'>• <b>Simetidin:</b> CYP enzimlerini inhibe eder (İlaç etkileşimi!) ve antiandrojeniktir (Jinekomasti yapar).<br>• <b>Loperamid:</b> Opioid türevidir. Kanlı ishalde (Dizanteri) verilmez.<br>• <b>Oktreotid:</b> Somatostatin analoğudur. Varis kanaması ve sekretuar ishalde kullanılır.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "VAKA 1: ÜLSER TEDAVİSİ",
+        "desc": "Farmakoloji - İlaç Seçimi ve Mekanizma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\nPeptik ülser tanısı alan bir hastaya 'Ranitidin' reçete edildi. Bu ilacın etki mekanizması tam olarak nedir? (Sınav sorusu)",
+            "opts": [
+              { "txt": "Paryetal hücredeki H2 reseptörlerini bloke eder.", "type": "correct", "go": "s2" },
+              { "txt": "H+/K+ ATP-az pompasını inhibe eder.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MEKANİZMA KARIŞIKLIĞI ]</b>\n\nPompa inhibitörü olanlar PPI (Omeprazol vb.) grubudur. Ranitidin, Famotidin gibi ilaçlar Histamin H2 reseptör blokeridir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ KARŞILAŞTIRMA ]</b>\n\nEğer bu hastaya Ranitidin yerine Omeprazol (PPI) verseydik, asit baskılama gücü nasıl değişirdi?",
+            "opts": [
+              { "txt": "Daha güçlü olurdu (En güçlü baskılayıcı).", "type": "correct", "go": "s3" },
+              { "txt": "Daha zayıf olurdu.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ POTENS ]</b>\n\nPPI'lar asit salgısının 'son ortak yolunu' (Pompayı) kapattığı için H2 blokerlerinden çok daha güçlüdür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ UYGULAMA ]</b>\n\nPPI ilaçlarının (Omeprazol) maksimum etki göstermesi için ne zaman alınması gerekir?",
+            "opts": [
+              { "txt": "Sabah kahvaltıdan 30-60 dk önce (Aç karnına).", "type": "correct", "go": "s4" },
+              { "txt": "Yemeklerden hemen sonra.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ FARMAKOKİNETİK ]</b>\n\nPPI'lar ön ilaçtır, asidik ortamda aktifleşir ve yemekle uyarılmış pompaları bloke eder. Bu yüzden yemekten önce alınmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya PPI kullanımı anlatıldı. Başarılı tedavi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "VAKA 2: BULANTI VE YAN ETKİ",
+        "desc": "Farmakoloji - Antiemetik Yan Etkileri",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\nBulantı şikayetiyle acile gelen gence Metoklopramid yapıldı. Bir süre sonra hastanın boynu kasıldı, gözleri yukarı kaydı (Akut Distoni).\n\nBu yan etkinin nedeni nedir?",
+            "opts": [
+              { "txt": "Beyindeki Dopamin (D2) reseptörlerini bloke etmesi.", "type": "correct", "go": "s2" },
+              { "txt": "Serotonin reseptörlerini uyarması.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nMetoklopramid kan-beyin bariyerini geçer ve bazal gangliyonlarda dopamini bloke eder. Bu da Parkinson benzeri Ekstrapiramidal Semptomlara (EPS) yol açar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ALTERNATİF ]</b>\n\nBu hastada EPS riskini yaşamamak için, kan-beyin bariyerini geçmeyen hangi D2 blokeri tercih edilebilirdi?",
+            "opts": [
+              { "txt": "Domperidon", "type": "correct", "go": "s3" },
+              { "txt": "Klorpromazin", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nDomperidon periferik etkili bir D2 antagonistidir, santral yan etkisi çok azdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ BAŞKA BİR SENARYO ]</b>\n\nEğer hasta kemoterapi alıyor olsaydı ve şiddetli kusması olsaydı, ilk tercih edilecek ilaç grubu ne olurdu?",
+            "opts": [
+              { "txt": "5-HT3 Antagonistleri (Ondansetron vb.)", "type": "correct", "action": "end" },
+              { "txt": "Antihistaminikler", "type": "wrong", "go": "s3" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Aşağıdaki H2 reseptör blokerlerinden hangisi CYP enzimlerini inhibe eder ve antiandrojenik (jinekomasti) yan etki yapar?", "a": ["Simetidin", "Famotidin", "Ranitidin", "Nizatidin"], "correct": 0 },
+      { "q": "Proton pompası inhibitörleri (PPI) asit salgısını hangi mekanizmayla durdurur?", "a": ["H+/K+ ATP-az enzimini irreversibl inhibe ederek", "H2 reseptörünü bloke ederek", "Gastrin salgısını azaltarak", "Asetilkolini yıkarak"], "correct": 0 },
+      { "q": "NSAİİ kullanan hastalarda ülseri önlemek için kullanılan prostaglandin E1 analoğu hangisidir?", "a": ["Misoprostol", "Sükralfat", "Bizmut", "Pirenzepin"], "correct": 0 },
+      { "q": "Gebelikte kullanılması KONTRENDİKE olan (Düşük yaptıran) mide ilacı hangisidir?", "a": ["Misoprostol", "Omeprazol", "Famotidin", "Kalsiyum Karbonat"], "correct": 0 },
+      { "q": "Kemoterapiye bağlı kusmada (CINV) en etkili olan ilaç grubu hangisidir?", "a": ["5-HT3 Antagonistleri (Setronlar)", "Antihistaminikler", "Benzodiazepinler", "Antikolinerjikler"], "correct": 0 },
+      { "q": "Hangi antiemetik ilaç P maddesinin (Substance P) bağlandığı NK-1 reseptörlerini bloke eder?", "a": ["Aprepitant", "Ondansetron", "Metoklopramid", "Dimenhidrinat"], "correct": 0 },
+      { "q": "Metoklopramid kullanımına bağlı gelişebilecek en önemli nörolojik yan etki nedir?", "a": ["Ekstrapiramidal Semptomlar (Distoni)", "Sedasyon", "Halüsinasyon", "İşitme kaybı"], "correct": 0 },
+      { "q": "Taşıt tutmasında (Motion Sickness) en etkili olan ve bant şeklinde uygulanan ilaç hangisidir?", "a": ["Skopolamin", "Ondansetron", "Domperidon", "Loperamid"], "correct": 0 },
+      { "q": "Kanlı ve ateşli ishalde (Dizanteri) kullanılması KONTRENDİKE olan ilaç hangisidir?", "a": ["Loperamid (Motilite azaltıcı)", "Oral Rehidratasyon Sıvısı", "Çinko", "Probiyotik"], "correct": 0 },
+      { "q": "Mide mukozasına yapışarak fiziksel bariyer oluşturan ve asidik ortamda aktifleşen ilaç hangisidir?", "a": ["Sükralfat", "Omeprazol", "Ranitidin", "Metoklopramid"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Omeprazol", "B": "PPI (İrreversibl inhibisyon)" },
+      { "A": "Ranitidin", "B": "H2 Blokeri" },
+      { "A": "Simetidin", "B": "CYP inhibisyonu / Jinekomasti" },
+      { "A": "Misoprostol", "B": "PGE1 analoğu / Gebede yasak" },
+      { "A": "Ondansetron", "B": "5-HT3 blokeri (Kemoterapi)" },
+      { "A": "Aprepitant", "B": "NK-1 blokeri (Geç kusma)" },
+      { "A": "Metoklopramid", "B": "D2 blokeri / EPS riski" },
+      { "A": "Skopolamin", "B": "Taşıt tutması" }
+    ]
+  }
+}

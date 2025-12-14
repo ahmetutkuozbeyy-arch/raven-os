@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "title": "KARACİĞER HASTALIKLARINDA LABORATUVAR",
+    "tag": "BİYOKİMYA & DAHİLİYE"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧪 TESTLER & ANLAMLARI</div><div class='sum-body'>• <b>Hepatoselüler Hasar:</b> ALT ve AST (Transaminazlar). ALT sitozolik, AST hem sitozolik hem mitokondriyaldir. ALT karaciğere daha spesifiktir.<br>• <b>Kolestaz (Safra Yolu):</b> ALP ve GGT. ALP kemik, plasenta ve barsakta da bulunur; GGT ise karaciğere daha özgüdür ve alkol kullanımında indüklenir.<br>• <b>Sentez Fonksiyonu:</b> Albümin (yarı ömrü uzun, kronik hasarı gösterir) ve Protrombin Zamanı/INR (yarı ömrü kısa, akut/kronik yetmezliği gösterir).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KRİTİK BİLGİ</div><div class='sum-body'>• <b>De Ritis Oranı (AST/ALT):</b> >2 ise Alkolik Hepatit veya Siroz, <1 ise Viral Hepatit veya NAFLD düşündürür.<br>• <b>Hiperbilirubinemiler:</b> İndirekt (Gilbert, Crigler-Najjar, Hemoliz); Direkt (Dubin-Johnson, Rotor, Kolestaz).<br>• <b>Wilson Hastalığı:</b> Seruloplazmin düşüklüğü, idrar bakır artışı.<br>• <b>Hemokromatozis:</b> Ferritin ve transferrin satürasyonu yüksekliği.</div></div><div class='sum-card sum-rx'><div class='sum-title'>🧬 PATERN ANALİZİ</div><div class='sum-body'>• <b>Akut Hepatit:</b> ALT/AST > 10 kat artış, ALP normal/hafif artmış.<br>• <b>Kolestatik:</b> ALP ve GGT > 4 kat artış, Bilirubin artışı (Direkt hakimiyeti).<br>• <b>Siroz:</b> Trombositopeni, Albümin düşüklüğü, INR uzaması, AST>ALT.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: SARARAN GENÇ",
+        "desc": "Acil Servis - 20 Yaş Erkek - Sınav Stresi ve Sarılık",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: VAKA TANITIMI ]</b>\n\n20 yaşında erkek öğrenci, final sınavları döneminde gözlerinde sararma fark ederek geliyor. Halsizlik dışında şikayeti yok. Karın ağrısı, ateş veya kilo kaybı yok. Alkol veya ilaç kullanım öyküsü yok.\n\nLaboratuvar: AST: 25 U/L, ALT: 30 U/L, ALP: 80 U/L, Total Bilirubin: 3.5 mg/dL, Direkt Bilirubin: 0.4 mg/dL.\n\nBu tabloyu nasıl yorumlarsın?",
+            "opts": [
+              { "txt": "İzole İndirekt Hiperbilirubinemi", "type": "correct", "go": "s2" },
+              { "txt": "Kolestatik Karaciğer Hastalığı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ PATERN HATASI ]</b>\n\nKolestatik hastalıkta ALP ve GGT yüksekliği ile birlikte 'Direkt' bilirubin hakimiyeti beklenir. Bu hastada karaciğer enzimleri (AST, ALT, ALP) tamamen normal ve sadece 'İndirekt' (Ankonjuge) bilirubin yüksekliği var.",
+            "opts": [{ "txt": "DÜZELT VE İLERLE", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: AYIRICI TANI ]</b>\n\nİzole indirekt hiperbilirubineminin en sık iki nedeni: Hemoliz veya Bilirubin konjugasyon defektleridir. Hastanın Hemoglobin: 14.5 g/dL, Retikülosit: %1 (Normal) saptandı. Hemoliz dışlandı.\n\nBu klinik senaryo (stres/açlık ile artan hafif sarılık, normal enzimler) hangi genetik durumu işaret eder?",
+            "opts": [
+              { "txt": "Gilbert Sendromu", "type": "correct", "go": "s3" },
+              { "txt": "Dubin-Johnson Sendromu", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ SENDROM KARIŞIKLIĞI ]</b>\n\nDubin-Johnson ve Rotor sendromlarında konjuge (direkt) hiperbilirubinemi görülür. Gilbert ve Crigler-Najjar'da ise ankonjuge (indirekt) hiperbilirubinemi vardır. Erişkin yaşta, hafif stresle tetiklenen iyi huylu tablo Gilbert'tir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: MOLEKÜLER TEMEL ]</b>\n\nGilbert sendromunun patofizyolojisinde hangi enzim aktivitesinde azalma söz konusudur?",
+            "opts": [
+              { "txt": "UDP-Glukuronil Transferaz (UGT1A1)", "type": "correct", "go": "s4" },
+              { "txt": "Alkalen Fosfataz", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ENZİM BİLGİSİ ]</b>\n\nBilirubini glukuronik asitle birleştirerek suda çözünür (direkt/konjuge) hale getiren enzim UDP-Glukuronil Transferaz'dır. Gilbert sendromunda bu enzimin promotör bölgesindeki mutasyon nedeniyle aktivitesi %30'a düşmüştür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: TANIYI DESTEKLEME ]</b>\n\nTanıdan emin olmak için (gerekli olmasa da) yapılan 'Açlık Testi'nde (24-48 saat düşük kalorili diyet) bilirubin düzeyinin ne olması beklenir?",
+            "opts": [
+              { "txt": "Bilirubin düzeyi 2-3 katına çıkar (Artar)", "type": "correct", "go": "s5" },
+              { "txt": "Bilirubin düzeyi düşer", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TEST YORUMU ]</b>\n\nGilbert sendromunda açlık, stres, enfeksiyon gibi durumlar UGT enzim aktivitesini daha da baskılar ve hemoliz olmaksızın indirekt bilirubini artırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: YÖNETİM ]</b>\n\nHastaya yaklaşımın ne olmalıdır?",
+            "opts": [
+              { "txt": "Benign bir durumdur, tedavi gerekmez, hastayı rahatlat.", "type": "correct", "action": "end" },
+              { "txt": "Karaciğer biyopsisi yap ve Fenobarbital başla.", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ GEREKSİZ GİRİŞİM ]</b>\n\nGilbert sendromu karaciğerde hasar bırakmayan, ilerlemeyen, benign bir durumdur. Biyopsi endikasyonu yoktur. Fenobarbital enzimi indükleyip sarılığı düşürse de rutin kullanımda önerilmez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: ALKOLİK KARACİĞER",
+        "desc": "Dahiliye - 50 Yaş Erkek - Kronik Alkolizm ve Karın Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: LABORATUVAR ANALİZİ ]</b>\n\nUzun süredir alkol kullanan 50 yaşında erkek hasta sağ üst kadran ağrısı ile başvurdu. Karaciğer enzimleri şöyle: AST: 250 U/L, ALT: 100 U/L, GGT: 450 U/L.\n\nBu enzim paterninde dikkatini çeken en önemli oran nedir?",
+            "opts": [
+              { "txt": "AST/ALT Oranı (De Ritis) > 2", "type": "correct", "go": "s2" },
+              { "txt": "ALT/AST Oranı > 1", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ORAN ANALİZİ ]</b>\n\nViral hepatitlerde ve yağlı karaciğerde (NAFLD) genellikle ALT > AST'dir. Ancak alkolik karaciğer hastalığında tipik olarak AST > ALT olur ve oran genellikle 2'nin üzerindedir.",
+            "opts": [{ "txt": "DÜZELT VE İLERLE", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: PATOFİZYOLOJİ ]</b>\n\nAlkolik hepatitte AST'nin ALT'den daha yüksek olmasının temel biyokimyasal nedeni nedir?",
+            "opts": [
+              { "txt": "Alkolün mitokondriyal hasar yapması ve B6 vitamini (Piridoksal 5-fosfat) eksikliği", "type": "correct", "go": "s3" },
+              { "txt": "Alkolün ALT sentezini baskılaması", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA HATASI ]</b>\n\nAST hem sitozolde hem mitokondride bulunur; alkol mitokondriyal toksisite yapar. Ayrıca ALT sentezi için gereken B6 vitamini alkoliklerde eksiktir, bu da ALT düzeyinin rölatif olarak düşük kalmasına neden olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: GGT DEĞERİ ]</b>\n\nHastada GGT (Gama Glutamil Transferaz) düzeyi oldukça yüksek (450 U/L). Bu durumu nasıl açıklarsın?",
+            "opts": [
+              { "txt": "GGT, kronik alkol kullanımında mikrozomal enzim indüksiyonu ile artar.", "type": "correct", "go": "s4" },
+              { "txt": "GGT sadece kemik hastalıklarında yükselir.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MARKER HATASI ]</b>\n\nKemik hastalıklarında ALP yükselir, GGT normaldir. GGT karaciğere özgüdür ve alkol, fenitoin gibi maddelerle indüklenir. Alkoliklerde yoksunluk takibinde de kullanılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: HEMATOLOJİK BULGU ]</b>\n\nAlkolik karaciğer hastalığında tam kan sayımında (hemogram) sıkça karşılaşılan, eritrosit hacmiyle (MCV) ilgili bulgu nedir?",
+            "opts": [
+              { "txt": "Makrositoz (MCV Yüksekliği)", "type": "correct", "go": "s5" },
+              { "txt": "Mikrositoz (MCV Düşüklüğü)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ HEMATOLOJİ BİLGİSİ ]</b>\n\nAlkolün kemik iliğine direkt toksik etkisi ve eşlik eden Folat/B12 eksikliği nedeniyle eritrositler büyür (Makrositoz). GGT yüksekliği ile birlikte MCV yüksekliği alkolizm için güçlü bir ipucudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: PROGNOZ ]</b>\n\nHastanın PT (Protrombin Zamanı) ve Bilirubin değerleri de yükselmeye başlamış. Maddrey Diskriminant Fonksiyonu (MDF) skoru hesaplanıyor. Bu skorun > 32 olması neyi ifade eder?",
+            "opts": [
+              { "txt": "Kötü prognoz ve yüksek mortalite riski (Steroid tedavisi düşünülmeli)", "type": "correct", "action": "end" },
+              { "txt": "İyi prognoz, ayaktan takip edilebilir", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ SKORLAMA HATASI ]</b>\n\nMaddrey skoru (4.6 x [PT hasta - PT kontrol] + Bilirubin) şiddetli alkolik hepatiti belirler. Skor > 32 ise mortalite yüksektir ve kontrendikasyon yoksa steroid tedavisi endikedir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: GENETİK BİRİKİM",
+        "desc": "Nöroloji Konsültasyonu - 16 Yaş - Titreme ve Karaciğer Enzimleri",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: KLİNİK TABLO ]</b>\n\n16 yaşında kız hasta, ellerde titreme (tremor), okul başarısında düşme ve konuşma bozukluğu şikayetleriyle nörolojiye başvuruyor. Rutin tetkiklerinde tesadüfen AST: 150, ALT: 80 saptanıyor. Göz muayenesinde korneada 'Kayser-Fleischer' halkası görülüyor.\n\nEn olası tanı nedir?",
+            "opts": [
+              { "txt": "Wilson Hastalığı (Hepatolentiküler Dejenerasyon)", "type": "correct", "go": "s2" },
+              { "txt": "Hemokromatozis", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANI HATASI ]</b>\n\nHemokromatozis demir birikimiyle gider; diyabet ve bronz ten yapar. Nörolojik bulgular (tremor), karaciğer hastalığı ve Kayser-Fleischer halkası (korneada bakır birikimi) Wilson hastalığı triadı'dır.",
+            "opts": [{ "txt": "DÜZELT VE İLERLE", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: TARAMA TESTİ ]</b>\n\nWilson hastalığı şüphesinde serumda bakır taşıyıcı protein olan hangi markeri ölçmelisin ve düzeyinin ne olmasını beklersin?",
+            "opts": [
+              { "txt": "Seruloplazmin - Düşük", "type": "correct", "go": "s3" },
+              { "txt": "Ferritin - Yüksek", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MARKER HATASI ]</b>\n\nWilson hastalığında karaciğerde seruloplazmin sentezi bozulur ve bakır safra ile atılamaz. Serum seruloplazmin düzeyi tipik olarak düşüktür (<20 mg/dL). Ferritin hemokromatozis markeridir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: DOĞRULAMA ]</b>\n\nSerum seruloplazmin düşük geldi. Tanıyı desteklemek için 24 saatlik idrarda neye bakmalısın?",
+            "opts": [
+              { "txt": "24 saatlik idrarda Bakır atılımı (Artmış)", "type": "correct", "go": "s4" },
+              { "txt": "24 saatlik idrarda Protein (Artmış)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nSeruloplazmine bağlanamayan serbest bakır kanda dolaşır ve böbreklerden süzülür. Bu nedenle Wilson hastalarında idrarla bakır atılımı artmıştır (>100 mcg/gün).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: HEMOLİZ ]</b>\n\nHastanın hemogramında anemi saptandı. Coombs negatif hemolitik anemi. Wilson hastalığında hemolizin nedeni nedir?",
+            "opts": [
+              { "txt": "Serbest bakırın kana karışıp eritrosit membranını okside etmesi", "type": "correct", "go": "s5" },
+              { "txt": "Otoimmün saldırı", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ HEMOLİZ MEKANİZMASI ]</b>\n\nKaraciğerden aniden kana karışan yoğun serbest bakır, eritrositlere toksik etki yapar ve akut intravasküler hemolize neden olur. Bu durum Wilson krizlerinde görülen 'Coombs negatif hemolitik anemi'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: ALTIN STANDART ]</b>\n\nTanı hala şüpheliyse veya aile taraması gerekirse, kesin tanı (altın standart) için karaciğer biyopsisinde neye bakılır?",
+            "opts": [
+              { "txt": "Kuru karaciğer ağırlığında kantitatif bakır ölçümü (>250 mcg/g)", "type": "correct", "action": "end" },
+              { "txt": "Sadece histopatolojik inceleme", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ STANDART BİLGİ ]</b>\n\nHistoloji siroz veya yağlanma gösterebilir ama spesifik değildir. Kesin tanı için biyopsi örneğinin kuru ağırlığında bakır miktarının ölçülmesi gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Karaciğerin sentez fonksiyonunu (gerçek karaciğer yetmezliğini) değerlendirmek için en uygun test çifti hangisidir?",
+        "a": ["ALT ve AST", "ALP ve GGT", "Albümin ve Protrombin Zamanı (PT)", "Bilirubin ve LDH"],
+        "correct": 2
+      },
+      {
+        "q": "Aşağıdakilerden hangisi izole indirekt (ankonjuge) hiperbilirubinemi nedenlerinden biridir?",
+        "a": ["Koledok taşı", "Dubin-Johnson sendromu", "Gilbert sendromu", "Pankreas başı tümörü"],
+        "correct": 2
+      },
+      {
+        "q": "Alkolik karaciğer hastalığında beklenen tipik transaminaz paterni hangisidir?",
+        "a": ["ALT > AST", "AST > ALT (Genellikle oran > 2)", "AST ve ALT normal", "AST > 1000 U/L"],
+        "correct": 1
+      },
+      {
+        "q": "Kemik hastalıklarında (örn. Paget) ALP yüksekliğine eşlik etmesi BEKLENMEYEN enzim hangisidir?",
+        "a": ["GGT (Gama Glutamil Transferaz)", "LDH", "Kalsiyum", "Fosfor"],
+        "correct": 0
+      },
+      {
+        "q": "Akut viral hepatitlerde (örn. Hepatit A) transaminaz (ALT/AST) düzeyleri genellikle hangi seviyelerdedir?",
+        "a": ["Hafif yüksek (< 2 kat)", "Orta yüksek (2-5 kat)", "Çok yüksek (> 10-20 kat, >1000 U/L)", "Normal"],
+        "correct": 2
+      },
+      {
+        "q": "Wilson hastalığının tanısında kullanılan tipik laboratuvar bulgusu aşağıdakilerden hangisidir?",
+        "a": ["Serum Ferritin yüksekliği", "Serum Seruloplazmin düşüklüğü", "Anti-Mitokondriyal Antikor (AMA) pozitifliği", "Direkt Bilirubin yüksekliği"],
+        "correct": 1
+      },
+      {
+        "q": "Primer Biliyer Kolanjit (PBC) tanısında en spesifik otoantikor hangisidir?",
+        "a": ["ANA (Anti-Nükleer Antikor)", "ASMA (Anti-Düz Kas Antikoru)", "AMA (Anti-Mitokondriyal Antikor)", "p-ANCA"],
+        "correct": 2
+      },
+      {
+        "q": "Hemokromatozis hastalığında karaciğerde biriken madde ve tarama testi hangisidir?",
+        "a": ["Bakır - Seruloplazmin", "Demir - Ferritin ve Transferrin Satürasyonu", "Glikojen - Kan şekeri", "Yağ - Lipid profili"],
+        "correct": 1
+      },
+      {
+        "q": "Sirozlu bir hastada 'pansitopeni' (lökosit, eritrosit ve trombosit düşüklüğü) gelişmesinin en olası nedeni nedir?",
+        "a": ["Kemik iliği yetmezliği", "Portal hipertansiyona bağlı hipersplenizm (Dalak büyümesi)", "Demir eksikliği", "Vitamin B12 eksikliği"],
+        "correct": 1
+      },
+      {
+        "q": "Dubin-Johnson sendromunda karaciğer biyopsisinde görülen karakteristik bulgu nedir?",
+        "a": ["Demir birikimi", "Bakır birikimi", "Koyu siyah (melanin benzeri) pigment birikimi", "Yağlanma"],
+        "correct": 2
+      }
+    ],
+    "match": [
+      { "A": "ALT (Alanin Aminotransferaz)", "B": "Karaciğere en spesifik enzim, sitozolik" },
+      { "A": "AST (Aspartat Aminotransferaz)", "B": "Mitokondriyal ve sitozolik, alkolde artar" },
+      { "A": "ALP (Alkalen Fosfataz)", "B": "Kolestaz ve kemik hastalıklarında artar" },
+      { "A": "GGT (Gama Glutamil Transferaz)", "B": "Kolestazda artar, kemikte artmaz, alkol indükler" },
+      { "A": "Albümin", "B": "Yarı ömrü 20 gün, kronik hasarı gösterir" },
+      { "A": "Protrombin Zamanı (PT/INR)", "B": "Yarı ömrü kısa (Faktör VII), akut yetmezliği gösterir" },
+      { "A": "Gilbert Sendromu", "B": "UGT enzim azlığı, stresle artan indirekt bilirubin" },
+      { "A": "Crigler-Najjar Tip 1", "B": "UGT enzim yokluğu, kernikterus riski" },
+      { "A": "Wilson Hastalığı", "B": "Bakır birikimi, Seruloplazmin düşüklüğü" },
+      { "A": "Primer Biliyer Kolanjit", "B": "Anti-Mitokondriyal Antikor (AMA) pozitifliği" }
+    ],
+    "decypher": [
+      {
+        "text": "Karaciğer hasarında, sitozolde bulunan {ALT} enzimi, hem sitozol hem de mitokondride bulunan AST enzimine göre karaciğere daha özgü kabul edilir.",
+        "decoys": ["ALP", "LDH"]
+      },
+      {
+        "text": "Safra yollarının tıkanıklığı veya hasarı durumunda, kan dolaşımına {Direkt} (konjuge) bilirubin geçişi artar ve bu durum idrarda bilirubine (kolüri) neden olur.",
+        "decoys": ["İndirekt", "Albümin"]
+      },
+      {
+        "text": "Wilson hastalığında, karaciğerde bakırın safraya atılımını sağlayan transport proteinindeki defekt sonucu serum {seruloplazmin} düzeyi düşer ve dokularda bakır birikir.",
+        "decoys": ["ferritin", "transferrin"]
+      }
+    ]
+  }
+}

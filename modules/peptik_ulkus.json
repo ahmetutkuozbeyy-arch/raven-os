@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "title": "PEPTİK ÜLSER VE GASTRİTLER",
+    "tag": "İÇ HASTALIKLARI"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 GASTRİT & GASTROPATİ</div><div class='sum-body'>• <b>Gastrit:</b> Mukozal hasara eşlik eden inflamasyon vardır (En sık H. Pylori).<br>• <b>Gastropati:</b> İnflamasyonun çok az olduğu veya olmadığı epitelyal hasardır (NSAİİ, Alkol, Safra).<br>• <b>H. Pylori:</b> Gram (-), spiral, hareketli. Üreaz enzimi ile asidi nötralize eder.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 KLİNİK AYRIM (TUS)</div><div class='sum-body'>• <b>Duodenal Ülser:</b> Ağrı AÇLIKLA artar, yemekle hafifler. Gece uyandırır. En sık Bulbus ön duvarda.<br>• <b>Gastrik Ülser:</b> Ağrı YEMEKLE artar (kilo kaybı). En sık küçük kurvatürde. Kanser riski vardır (Biyopsi Şart!).<br>• <b>Tanı:</b> 45 yaş altı + Alarm yoksa ➞ Üre Nefes Testi/Gaita Antijeni. Alarm varsa ➞ Endoskopi.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ</div><div class='sum-body'>• <b>H. Pylori Eradikasyonu:</b> PPI + Klaritromisin + Amoksisilin (veya Metronidazol). (14 Gün).<br>• <b>Kontrol:</b> Gastrik ülserlerde tedavi sonrası mutlaka <b>Kontrol Endoskopisi</b> ve biyopsi yapılmalıdır (Maligniteyi dışlamak için).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: GECE UYANDIRAN AĞRI",
+        "desc": "Poliklinik - 30 Yaş Erkek - Açlık Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n30 yaşında erkek hasta. Midesinde 'kazınma' tarzında yanma şikayeti var. Ağrının özellikle açken ve gece uykudan uyandıracak şekilde olduğunu, bir şeyler yiyince hafiflediğini söylüyor.\n\nBu klinik tablo hangi ülser tipine daha çok uyar?",
+            "opts": [
+              { "txt": "Duodenal Ülser", "type": "correct", "go": "s2" },
+              { "txt": "Gastrik Ülser", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK AYRIM ]</b>\n\nGastrik ülser ağrısı yemekle artar (asit salgısı artınca) ve hasta yemekten korkar. Duodenal ülser ağrısı ise asit tamponlanmadığı için açlıkta artar ve yemekle (tamponlanınca) azalır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANI YÖNTEMİ ]</b>\n\nHastada alarm semptomu (kilo kaybı, kanama, disfaji) yok ve yaşı genç. H. Pylori varlığını araştırmak için hangi NON-İNVAZİV testi istersin?",
+            "opts": [
+              { "txt": "Üre Nefes Testi veya Gaita Antijen Testi", "type": "correct", "go": "s3" },
+              { "txt": "Serumda H. Pylori Antikoru (IgG)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TEST SEÇİMİ ]</b>\n\nSeroloji (IgG) geçirilmiş enfeksiyonu da gösterir, aktif enfeksiyonu ayırt edemez. Aktif enfeksiyon ve tedavi takibi için Üre Nefes veya Gaita testi gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ PLANI ]</b>\n\nTest sonucu pozitif (H. Pylori +). Hangi tedavi rejimini reçete etmelisin (Klaritromisin direnci düşük bölge)?",
+            "opts": [
+              { "txt": "PPI + Klaritromisin + Amoksisilin (14 Gün)", "type": "correct", "go": "s4" },
+              { "txt": "Sadece PPI (Mide Koruyucu)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ERADİKASYON ]</b>\n\nPeptik ülser ve H. Pylori birlikteliğinde sadece asit baskılamak yetmez, bakteriyi yok etmek (eradikasyon) gerekir. Standart tedavi üçlü kombinasyondur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nHasta tedaviyi düzenli kullanmazsa, duodenal ülserin en sık görülen komplikasyonu nedir?",
+            "opts": [
+              { "txt": "Kanama", "type": "correct", "go": "s5" },
+              { "txt": "Malignite (Kanserleşme)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ RİSK ANALİZİ ]</b>\n\nDuodenal ülserlerin kanserleşme riski neredeyse YOKTUR. En sık komplikasyon kanama, sonra perforasyondur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta 14 günlük tedavisini tamamladı. Şikayetleri geçti. Kontrol testinde bakteri negatifleşti. Başarılı tedavi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: AĞRI KESİCİ MASUMİYETİ",
+        "desc": "Romatoloji/Gastro - 65 Yaş Kadın - NSAİİ Kullanımı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n65 yaşında kadın hasta. Diz ağrıları için uzun süredir her gün Diklofenak (NSAİİ) kullanıyor. Son 1 haftadır siyah renkli dışkılama (Melena) ve epigastrik ağrı ile geldi.\n\nNSAİİ'ler midede hangi mekanizmayla hasar yapar?",
+            "opts": [
+              { "txt": "COX-1 inhibisyonu ile Prostaglandin sentezini azaltarak.", "type": "correct", "go": "s2" },
+              { "txt": "Mide asidini artırarak.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nNSAİİ'lerin ana zararı asidi artırmak değil, mukozayı koruyan Prostaglandinleri (PGE2) azaltmak ve mukozal kan akımını bozmaktır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ENDOSKOPI ]</b>\n\nMelena (GİS Kanaması) olduğu için endoskopi yaptın. Mide antrumunda çok sayıda yüzeyel erozyon ve bir adet derin ülser gördün.\n\nBu tabloya ne denir?",
+            "opts": [
+              { "txt": "NSAİİ Gastropatisi / Ülseri", "type": "correct", "go": "s3" },
+              { "txt": "H. Pylori Gastriti", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AYRIM ]</b>\n\nNSAİİ hasarında inflamasyon hücresi azdır (Gastropati), daha çok erozyon ve kanama ön plandadır. H. Pylori'de aktif inflamasyon (nötrofil) görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ YAKLAŞIM ]</b>\n\nBiyopside H. Pylori NEGATİF çıktı. Tedavide ilk yapman gereken değişiklik nedir?",
+            "opts": [
+              { "txt": "NSAİİ kesilmeli, PPI başlanmalı.", "type": "correct", "go": "s4" },
+              { "txt": "Üçlü eradikasyon tedavisi verilmeli.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ GEREKSİZ İLAÇ ]</b>\n\nBakteri yoksa antibiyotik vermenin anlamı yoktur. Etken (Ağrı kesici) ortadan kaldırılmalı ve asit baskılanarak iyileşme sağlanmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KORUMA ]</b>\n\nHastanın diz ağrıları için mutlaka ağrı kesici kullanması gerekiyor. Mideyi korumak için NSAİİ yerine hangi grup ilacı tercih edersin?",
+            "opts": [
+              { "txt": "Selektif COX-2 İnhibitörü (Örn: Celecoxib)", "type": "correct", "go": "s5" },
+              { "txt": "Aspirin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nAspirin de COX-1'i inhibe eder ve kanama riskini artırır. COX-2 inhibitörleri mide mukozasına daha az zarar verir (ama kardiyak riske dikkat!).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nKanama durduruldu. Hasta COX-2 inhibitörü ve PPI korumasıyla taburcu edildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: İYİLEŞMEYEN YARA",
+        "desc": "Onkoloji - 60 Yaş Erkek - Yemek Sonrası Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n60 yaşında erkek hasta. Yemek yedikten hemen sonra artan epigastrik ağrı ve 5 kg kilo kaybı şikayeti var.\n\nAlarm semptomları (Yaş >45, Kilo kaybı) olduğu için endoskopi yaptın. Küçük kurvatürde (mide köşesi) bir ülser gördün.\n\nTanısal yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Ülser kenarından en az 4-6 biyopsi almak.", "type": "correct", "go": "s2" },
+              { "txt": "Sadece H. Pylori testi yapıp PPI vermek.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ HAYATİ HATA ]</b>\n\nGastrik ülserlerin %5'i aslında ülser görünümlü MİDE KANSERİDİR. Biyopsi almadan 'iyi huylu' demek imkansızdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PATOLOJİ ]</b>\n\nBiyopside malignite (kanser) görülmedi. Sadece kronik gastrit ve H. Pylori (+) saptandı.\n\nTedavi planın nedir?",
+            "opts": [
+              { "txt": "H. Pylori Eradikasyonu + 8 hafta PPI", "type": "correct", "go": "s3" },
+              { "txt": "Sadece diyet.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ÜLSER TEDAVİSİ ]</b>\n\nGastrik ülserler duodenal ülserlerden daha geç iyileşir. H. Pylori tedavisine ek olarak uzun süreli (6-8 hafta) asit baskılaması gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TAKİP KRİTERİ ]</b>\n\nTedavi bitti, hasta 'iyiyim' diyor. Duodenal ülserden farklı olarak, Gastrik Ülserde mutlaka yapılması gereken şey nedir?",
+            "opts": [
+              { "txt": "Kontrol Endoskopisi (Ülserin iyileştiğini görmek için)", "type": "correct", "go": "s4" },
+              { "txt": "Sadece nefes testi kontrolü.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ALTIN KURAL ]</b>\n\nKanserli bir ülser de PPI ile geçici olarak küçülebilir ve semptomlar geçebilir. Ülserin tamamen kapandığını ve biyopside kanser olmadığını teyit etmek ŞARTTIR.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nKontrol endoskopisinde ülserin kapanmadığı görüldü. Tekrar biyopsi alındı ve bu sefer 'Adenokarsinom' saptandı.\n\nBu durum H. Pylori'nin hangi virülans faktörüyle ilişkili olabilir?",
+            "opts": [
+              { "txt": "CagA ve VacA", "type": "correct", "go": "s5" },
+              { "txt": "Üreaz", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ VİRÜLANS ]</b>\n\nCagA pozitif suşlar, mide kanseri riskini belirgin şekilde artırır. Üreaz sadece bakterinin asitte yaşamasını sağlar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta erken evre mide kanseri tanısıyla cerrahiye sevk edildi. İlk biyopside atlanabilen kanser, ısrarlı takip ve kontrol endoskopisi sayesinde yakalandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Gastrit ve Gastropati arasındaki temel fark nedir?", "a": ["Gastritte inflamasyon vardır, Gastropatide (NSAİİ/Alkol) inflamasyon çok azdır veya yoktur", "Gastrit sadece antrumda olur", "Gastropati bakteriyeldir", "Fark yoktur"], "correct": 0 },
+      { "q": "Duodenal ülser ağrısının en tipik özelliği nedir?", "a": ["Açlıkla artar, yemekle hafifler (Gece ağrısı)", "Yemekle artar", "Sırta vurmaz", "Sürekli devam eder"], "correct": 0 },
+      { "q": "H. Pylori tanısında aktif enfeksiyonu gösteren en güvenilir NON-İNVAZİV test hangisidir?", "a": ["Üre Nefes Testi", "Serum IgG Antikoru", "Hızlı Üreaz Testi (Biyopsi)", "Kültür"], "correct": 0 },
+      { "q": "Gastrik ülserlerin en sık yerleşim yeri neresidir?", "a": ["Küçük Kurvatür (Angulus)", "Büyük Kurvatür", "Fundus", "Kardia"], "correct": 0 },
+      { "q": "Hangi ülser tipinde tedavi sonrası Kontrol Endoskopisi yapılması zorunludur?", "a": ["Gastrik Ülser (Kanser riski!)", "Duodenal Ülser", "Özofagus Ülseri", "Hepsi"], "correct": 0 },
+      { "q": "NSAİİ (Ağrı kesici) kullanımına bağlı ülserlerin önlenmesinde en etkili ilaç grubu hangisidir?", "a": ["Proton Pompa İnhibitörleri (PPI)", "H2 Reseptör Blokerleri", "Antiasitler", "Sukralfat"], "correct": 0 },
+      { "q": "H. Pylori'nin mide asidini nötralize ederek hayatta kalmasını sağlayan enzimi hangisidir?", "a": ["Üreaz", "Katalaz", "Oksidaz", "Proteaz"], "correct": 0 },
+      { "q": "Duodenal ülserin en sık görülen komplikasyonu nedir?", "a": ["Kanama", "Perforasyon", "Obstrüksiyon", "Malignite"], "correct": 0 },
+      { "q": "H. Pylori eradikasyonunda kullanılan standart üçlü tedavide hangisi bulunur?", "a": ["PPI + Klaritromisin + Amoksisilin", "PPI + Bizmut + Tetrasiklin", "H2 Bloker + Metronidazol", "Sadece Antibiyotik"], "correct": 0 },
+      { "q": "Zollinger-Ellison sendromunda (Gastrinoma) görülen tipik bulgu nedir?", "a": ["Çoklu ve tedaviye dirençli peptik ülserler", "Tek bir gastrik ülser", "Atrofik gastrit", "Mide polipleri"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "H. Pylori", "B": "Gram negatif, spiral, üreaz (+)" },
+      { "A": "NSAİİ", "B": "Prostaglandin sentezini azaltır" },
+      { "A": "Duodenal Ülser", "B": "Açlık ağrısı, gece uyandırır" },
+      { "A": "Gastrik Ülser", "B": "Yemekle artan ağrı, biyopsi şart" },
+      { "A": "Üre Nefes Testi", "B": "Non-invaziv aktif enfeksiyon tanısı" },
+      { "A": "Hızlı Üreaz Testi (RUT)", "B": "Endoskopik (invaziv) pratik tanı" },
+      { "A": "PPI (Omeprazol)", "B": "En güçlü asit baskılayıcı" },
+      { "A": "Melena", "B": "Üst GİS kanaması (Siyah dışkı)" }
+    ],
+    "decypher": [
+      {
+        "text": "{Helicobacter} Pylori, mide mukozasında yaşayan ve ürettiği {Üreaz} enzimi ile amonyak oluşturarak asitten korunan bir bakteridir. Kronik gastrit ve {peptik} ülserin en sık nedenidir.",
+        "decoys": ["Campylobacter", "Lipaz", "reflü", "viral"]
+      },
+      {
+        "text": "{Duodenal} ülser ağrısı genellikle açken veya gece başlar ve yemek yemekle hafifler. {Gastrik} ülser ağrısı ise yemekten sonra artar ve hastalar yemekten korktuğu için {kilo} kaybı sık görülür.",
+        "decoys": ["Özofageal", "Antral", "kilo alımı", "kusma"]
+      },
+      {
+        "text": "Gastrik ülserlerin malignite (kanser) potansiyeli olduğu için mutlaka {biyopsi} alınmalıdır. Tedavi sonrasında ülserin iyileştiğini doğrulamak için kontrol {endoskopisi} yapılması şarttır.",
+        "decoys": ["cerrahi", "grafi", "ultrason", "kültür"]
+      }
+    ]
+  }
+} 

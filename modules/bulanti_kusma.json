@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "title": "BULANTI, KUSMA VE AYIRICI TANI",
+    "tag": "ENTEGRE (PEDİATRİ & DAHİLİYE)"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧠 FİZYOPATOLOJİ</div><div class='sum-body'>• <b>Kusma Merkezi:</b> Medulla oblongata'dadır. Vagus, sempatik sinirler ve kaslardan uyarı alır.<br>• <b>CTZ (Kemoreseptör Tetikleme Bölgesi):</b> 4. ventrikül tabanında (Area Postrema) bulunur. Kan-beyin bariyeri dışındadır, bu yüzden kandaki toksinleri (üremi, ilaçlar) algılar.<br>• <b>Reseptörler:</b> 5-HT3 (Serotonin), D2 (Dopamin), H1 (Histamin), M1 (Muskarinik), NK1 (P Maddesi).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 KIRMIZI BAYRAKLAR (PEDİATRİ)</div><div class='sum-body'>• <b>Safralı (Yeşil) Kusma:</b> Ampulla Vateri altındaki obstrüksiyonu (Volvulus, Atrezi) gösterir. CERRAHİ ACİLDİR!<br>• <b>Fışkırır Tarzda (Projektil) Kusma:</b> İnfantil Hipertrofik Pilor Stenozu (İHPS) veya KİBAS.<br>• <b>Fekaloid (Dışkımsı) Kusma:</b> Distal barsak tıkanıklığı veya gastrokolik fistül.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 KOMPLİKASYON & TEDAVİ</div><div class='sum-body'>• <b>Metabolik Sonuç:</b> Mide içeriği kaybı ➞ Hipokloremik Metabolik Alkaloz ve Hipopotasemi.<br>• <b>Mallory-Weiss:</b> Şiddetli öğürme sonrası gastroözofageal bileşkede mukozal yırtık ve kanama.<br>• <b>Boerhaave:</b> Kusmaya bağlı özofagusun tam kat yırtılması (Mediastinit riski!).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: YEŞİL ALARM",
+        "desc": "Yenidoğan Acil - 3 Günlük Bebek - Safralı Kusma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ BAŞVURU ]</b>\n\n3 günlük bir erkek bebek acil servise getirildi. Annesi bebeğin sabahtan beri huzursuz olduğunu ve beslendikten sonra 'koyu yeşil' renkte kustuğunu söylüyor. Karın distandü (şiş).\n\nBu 'Safralı Kusma' neyi işaret eder?",
+            "opts": [
+              { "txt": "Ampulla Vateri'nin distalinde (altında) bir tıkanıklık olduğunu.", "type": "correct", "go": "s2" },
+              { "txt": "Mide çıkışında darlık olduğunu.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ANATOMİK HATA ]</b>\n\nMide çıkışındaki (Pilor) darlıklarda safra mideye geçemediği için kusmuk safrasız (No-biliyöz) olur. Safralı kusma, safranın döküldüğü yerin (Ampulla Vateri) daha aşağısında bir tıkanıklık demektir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ACİLİYET ]</b>\n\nYenidoğan döneminde safralı kusma, aksi ispat edilene kadar cerrahi bir acildir. En çok korkulan ve barsak gangrenine yol açan tanı hangisidir?",
+            "opts": [
+              { "txt": "Midgut Volvulus (Barsak dönmesi)", "type": "correct", "go": "s3" },
+              { "txt": "Gastroenterit", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ YÖNELİM ]</b>\n\nGastroenterit enfeksiyözdür, safralı kusma nadirdir ve 3 günlük bebekte ilk akla gelmez. Volvulus barsağın kendi etrafında dönüp kan akımını kesmesidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ GÖRÜNTÜLEME ]</b>\n\nAyakta Direkt Batın Grafisi (ADBG) çekildi. Mide ve duodenumda hava var, ancak distalde (aşağıda) hiç gaz yok. Bu görünüme ne ad verilir?",
+            "opts": [
+              { "txt": "Çift Kabarcık (Double Bubble) Bulgusu", "type": "correct", "go": "s4" },
+              { "txt": "Kahve Çekirdeği Bulgusu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ RADYOLOJİ ]</b>\n\nKahve çekirdeği, sigmoid volvulus (erişkin) bulgusudur. Duodenal atrezi veya volvulusta mide ve duodenumun gazla şişmesi 'Çift Kabarcık' görünümü yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nÇocuk Cerrahisi konsültasyonu istedin. Ameliyata kadar hastayı stabilize etmek için ne yapmalısın?",
+            "opts": [
+              { "txt": "Oral beslenmeyi kes (NPO), Nazogastrik sonda tak, IV sıvı başla.", "type": "correct", "go": "s5" },
+              { "txt": "Hemen antibiyotik verip gözlemle.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TEMEL İLKE ]</b>\n\nTıkanıklık olan bir hastayı beslemeye devam etmek veya midesini boşaltmamak (dekompresyon yapmamak) kusmayı ve aspirasyon riskini artırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta acilen ameliyata alındı. Malrotasyon ve Volvulus saptandı, barsak nekrozu gelişmeden düzeltildi. Safralı kusmayı ciddiye almak hayat kurtardı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KEMOTERAPİ VE CTZ",
+        "desc": "Onkoloji - 55 Yaş Kadın - İlaç Kaynaklı Kusma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ FİZYOLOJİ ]</b>\n\n55 yaşında Sisplatin (Emetojenik kemoterapi) alan hasta şiddetli bulantı ve kusma yaşıyor. Kandaki ilaçlar ve toksinler, Kan-Beyin Bariyerinin dışında olan hangi merkezi uyarır?",
+            "opts": [
+              { "txt": "Chemoreceptor Trigger Zone (CTZ / Area Postrema)", "type": "correct", "go": "s2" },
+              { "txt": "Vestibüler Sistem", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MERKEZ HATASI ]</b>\n\nVestibüler sistem 'hareket hastalığında' (araba tutması) rol oynar. Kandaki kimyasalları (ilaç, üre, toksin) algılayan merkez 4. ventrikül tabanındaki CTZ'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ NÖROTRANSMİTTER ]</b>\n\nKemoterapiye bağlı kusmada, özellikle ince barsaktaki enterokromafin hücrelerinden salınan ve Vagus sinirini uyaran temel mediatör hangisidir?",
+            "opts": [
+              { "txt": "Serotonin (5-HT)", "type": "correct", "go": "s3" },
+              { "txt": "Histamin", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ RESEPTÖR ]</b>\n\nHistamin daha çok vestibüler (denge) kaynaklı kusmalarda etkilidir. Kemoterapi kusmasında ana yolak Serotonin (5-HT3) üzerinden işler.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nBu hastaya en etkili antiemetik (kusma önleyici) olarak hangi grup ilacı verirsin?",
+            "opts": [
+              { "txt": "5-HT3 Antagonisti (Örn: Ondansetron)", "type": "correct", "go": "s4" },
+              { "txt": "Proton Pompa İnhibitörü", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YANLIŞ İLAÇ ]</b>\n\nPPI mide asidini azaltır, bulantı merkezine etkisi yoktur. Ondansetron (Zofran) kemoterapi kusmasının en güçlü ilacıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMBİNASYON ]</b>\n\nKusma çok dirençli. Tedaviye 'P Maddesi'ni (Substance P) bloke eden NK-1 reseptör antagonisti eklemek istiyorsun. Bu ilaç hangisidir?",
+            "opts": [
+              { "txt": "Aprepitant", "type": "correct", "go": "s5" },
+              { "txt": "Metoklopramid", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ İLAÇ BİLGİSİ ]</b>\n\nMetoklopramid Dopamin antagonistidir. NK-1 antagonisti olan ve gecikmiş kusmada etkili olan ilaç Aprepitant'tır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya Ondansetron + Aprepitant + Deksametazon kombine protokolü uygulandı. Kusma kontrol altına alındı ve beslenmesi düzeldi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: METABOLİK KRİZ",
+        "desc": "Poliklinik - 6 Haftalık Bebek - Fışkırır Tarzda Kusma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n6 haftalık (1.5 aylık) erkek bebek. Annesi, 'Her emmeden sonra fışkırır tarzda (projektil) kusuyor, sonra hemen acıkıp tekrar emmek istiyor' diyor. Kusmukta safra yok (safrasız).\n\nEn olası ön tanın nedir?",
+            "opts": [
+              { "txt": "İnfantil Hipertrofik Pilor Stenozu (İHPS)", "type": "correct", "go": "s2" },
+              { "txt": "Gastroözofageal Reflü (GÖR)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nReflüde kusma genelde sızıntı şeklindedir ve bebek beslenmeyi reddedebilir (özofajitten dolayı). Pilor stenozunda ise kusma fışkırır tarzdadır ve bebek 'açtır'.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nBebeğin karnını muayene ederken epigastrik bölgede (mide çıkışında) sert, hareketli bir kitle hissettin. Bu klasik bulgunun adı nedir?",
+            "opts": [
+              { "txt": "Zeytin (Olive) Kitle", "type": "correct", "go": "s3" },
+              { "txt": "Sosis Kitle", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KİTLE TİPİ ]</b>\n\nSosis kitle İnvajinasyon'da görülür. Hipertrofik pilor kası, 'Zeytin' büyüklüğünde ve sertliğinde ele gelir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ METABOLİK TABLO ]</b>\n\nSürekli mide asidi (HCL) kusan bu bebekte hangi elektrolit ve asit-baz bozukluğu gelişmiştir?",
+            "opts": [
+              { "txt": "Hipokloremik Metabolik Alkaloz", "type": "correct", "go": "s4" },
+              { "txt": "Metabolik Asidoz", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nMide asidi (H+ ve Cl-) kaybedildiği için vücut alkaliye kayar (Alkaloz) ve klor düşer. Potasyum da idrarla atıldığı için Hipopotasemi eşlik eder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ RİSK ]</b>\n\nBebek çok susuz (dehidrate) kalmış. Eğer tedavi edilmezse, şiddetli öğürmeye bağlı gastroözofageal bileşkede mukozal yırtık ve kanama gelişebilir. Buna ne denir?",
+            "opts": [
+              { "txt": "Mallory-Weiss Sendromu", "type": "correct", "go": "s5" },
+              { "txt": "Boerhaave Sendromu", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nBoerhaave 'tam kat' yırtılmadır ve ölümcüldür. Mukozal yırtık ve kanama Mallory-Weiss'tir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nÖnce sıvı ve elektrolit dengesi düzeltildi (Alkaloz düzeltilmeden anestezi verilmez!). Sonra Piloromiyotomi ameliyatı yapıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Kandaki toksinleri ve ilaçları algılayarak kusmayı tetikleyen 'Chemoreceptor Trigger Zone' (CTZ) nerede bulunur?", "a": ["4. Ventrikül tabanında (Area Postrema)", "Serebellumda", "Midede", "Hipotalamusta"], "correct": 0 },
+      { "q": "Yenidoğan bir bebekte 'Safralı (Yeşil) Kusma' görülmesi neyi düşündürür?", "a": ["Ampulla Vateri'nin distalinde tıkanıklık (Volvulus/Atrezi)", "Pilor Stenozu", "Gastroözofageal Reflü", "Basit beslenme hatası"], "correct": 0 },
+      { "q": "İnfantil Hipertrofik Pilor Stenozunda (İHPS) görülen tipik kusma şekli nasıldır?", "a": ["Fışkırır tarzda (Projektil) ve Safrasız", "Safralı", "Kanlı", "Eforla gelen"], "correct": 0 },
+      { "q": "Sürekli kusan bir hastada en sık görülen asit-baz dengesizliği hangisidir?", "a": ["Hipokloremik Metabolik Alkaloz", "Metabolik Asidoz", "Respiratuar Alkaloz", "Hiperkalemi"], "correct": 0 },
+      { "q": "Kemoterapiye bağlı kusmada en etkili olan ve 5-HT3 reseptörünü bloke eden ilaç hangisidir?", "a": ["Ondansetron", "Metoklopramid", "Domperidon", "Eritromisin"], "correct": 0 },
+      { "q": "Şiddetli öğürme ve kusma sonrası özofagus alt ucunda gelişen mukozal yırtık ve kanamaya ne ad verilir?", "a": ["Mallory-Weiss Sendromu", "Boerhaave Sendromu", "Zollinger-Ellison", "Barrett Özofagus"], "correct": 0 },
+      { "q": "Hareket hastalığında (Araba tutması) kusmayı tetikleyen sistem ve reseptör hangisidir?", "a": ["Vestibüler Sistem (H1 ve M1)", "CTZ (D2)", "Mide (5-HT3)", "Korteks (GABA)"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi kusmanın 'Kırmızı Bayrak' (Alarm) bulgularından biri DEĞİLDİR?", "a": ["İshal eşlik etmesi", "Safralı kusma", "Fışkırır tarzda kusma", "Hematemez (Kanlı kusma)"], "correct": 0 },
+      { "q": "Distal barsak tıkanıklığında kusmuğun karakteri nasıldır?", "a": ["Fekaloid (Dışkı kokulu)", "Kanlı", "Berrak", "Sadece safra"], "correct": 0 },
+      { "q": "Pilor stenozlu bebekte karın muayenesinde ele gelen kitlenin klasik tanımı nedir?", "a": ["Zeytin (Olive)", "Sosis", "Portakal", "Üzüm"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "CTZ", "B": "Area Postrema, kan-beyin bariyeri dışı" },
+      { "A": "Kusma Merkezi", "B": "Medulla Oblongata (Retiküler formasyon)" },
+      { "A": "Safralı Kusma", "B": "Ampulla vateri altı tıkanıklık (Acil!)" },
+      { "A": "Projektil Kusma", "B": "Pilor Stenozu / KİBAS" },
+      { "A": "Fekaloid Kusma", "B": "Distal barsak tıkanıklığı" },
+      { "A": "Ondansetron", "B": "5-HT3 Antagonisti (Kemoterapi)" },
+      { "A": "Aprepitant", "B": "NK-1 Antagonisti (P Maddesi)" },
+      { "A": "Metoklopramid", "B": "Dopamin (D2) Antagonisti" },
+      { "A": "Mallory-Weiss", "B": "Mukozal yırtık (Kanama)" },
+      { "A": "Boerhaave", "B": "Tam kat yırtık (Mediastinit)" }
+    ],
+    "decypher": [
+      {
+        "text": "Kusma merkezi {Medulla} oblongatada bulunur. Kandaki toksinleri ve ilaçları algılayan {CTZ} (Kemoreseptör Tetikleme Bölgesi) ise 4. ventrikül tabanında, {Area} Postrema'da yer alır ve kan-beyin bariyerinin dışındadır.",
+        "decoys": ["Serebellum", "Korteks", "Mide", "Vagus"]
+      },
+      {
+        "text": "Yenidoğan bir bebekte {safralı} (yeşil) kusma görülmesi, aksi ispat edilene kadar {cerrahi} bir acildir ve barsak dönmesi ({Volvulus}) veya tıkanıklığı şüphesi doğurur. Asla 'üşütmüştür' denilip geçiştirilmemelidir.",
+        "decoys": ["kanlı", "mukuslu", "enfeksiyon", "reflü"]
+      },
+      {
+        "text": "Sürekli kusan bir hastada mide asidi (HCl) kaybına bağlı olarak {Alkaloz} gelişir. Ayrıca potasyum kaybı nedeniyle {Hipopotasemi} görülür. Tedavide öncelik sıvı ve elektrolit kaybının {rehidratasyon} ile yerine konmasıdır.",
+        "decoys": ["Asidoz", "Hiperkalemi", "Antibiyotik", "Cerrahi"]
+      }
+    ]
+  }
+}

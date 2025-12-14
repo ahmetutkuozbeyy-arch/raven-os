@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "title": "GASTROENTERİTLER",
+    "tag": "ENFEKSİYON & PARAZİTOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🦠 AMEBİASİS (KANLI İSHAL)</div><div class='sum-body'>• <b>Etken:</b> Entamoeba histolytica.<br>• <b>Klinik:</b> Kanlı, mukuslu ishal (Dizanteri) ve tenezm.<br>• <b>Kural:</b> Her kanlı dışkılama = Amebiasis = Metronidazol.<br>• <b>Tanı:</b> Trikrom boyama ile trofozoitlerin görülmesi.</div></div><div class='sum-card sum-tus'><div class='sum-title'>💧 GİARDİASİS (YAĞLI İSHAL)</div><div class='sum-body'>• <b>Etken:</b> Giardia intestinalis.<br>• <b>Klinik:</b> Yağlı, pis kokulu, sulu ishal (Steatore). Kan görülmez!<br>• <b>Mekanizma:</b> İnce barsak (duodenum) tutulumu ve malabsorbsiyon.<br>• <b>Tanı:</b> Dışkıda kist/trofozoit veya ELISA.</div></div><div class='sum-card sum-rx'><div class='sum-title'>⚠️ İMMÜNSÜPRESİF İSHAL</div><div class='sum-body'>• <b>Cryptosporidium:</b> HIV+ hastalarda koleriform (çok sulu) ishal yapar. Tanıda 'Asit-Fast' (Kinyoun) boyası kullanılır.<br>• <b>Blastocystis:</b> En sık görülen parazittir, vakuolar formu tipiktir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KANLI İSHAL",
+        "desc": "Acil Servis - 35 Yaş Erkek - Karın Ağrısı ve Kan",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ BAŞVURU ]</b>\n\n35 yaşında erkek hasta. 3 gündür devam eden şiddetli karın ağrısı, tenezm (sürekli ıkınma hissi) ve günde 8-10 kez olan ishal şikayetiyle geldi. Dışkısının kanlı ve mukuslu (sümüksü) olduğunu belirtiyor.\n\nParazitoloji ders notuna göre aklına gelen İLK kural nedir?",
+            "opts": [
+              { "txt": "Her kanlı dışkılama = AMEBİASİS", "type": "correct", "go": "s2" },
+              { "txt": "Her kanlı dışkılama = GİARDİASİS", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANI HATASI ]</b>\n\nGiardiasis ince barsağı tutar ve yağlı/sulu ishal yapar, kanama yapmaz. Kanlı ishal (Dizanteri) kalın barsağı tutan Entamoeba histolytica'nın tipik bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ TANI YÖNTEMİ ]</b>\n\nTanıyı doğrulamak için dışkı incelemesi istedin. Amebiasis tanısında eritrosit fagosite etmiş trofozoitleri görmek için hangi boyama yöntemi en değerlidir?",
+            "opts": [
+              { "txt": "Trikrom Boyası", "type": "correct", "go": "s3" },
+              { "txt": "Asit-Fast (Kinyoun) Boyası", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ BOYA SEÇİMİ ]</b>\n\nAsit-fast boyası Cryptosporidium gibi koksidiyal parazitler içindir. Amip (ve Giardia) tanısında Trikrom boyası altın standarttır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nMikroskopta Entamoeba histolytica ile karışabilen ancak hastalık yapmayan (apatojen) benzer bir amip türü vardır. PCR ile ayrım yapılabilir. Bu tür hangisidir?",
+            "opts": [
+              { "txt": "Entamoeba dispar", "type": "correct", "go": "s4" },
+              { "txt": "Entamoeba coli", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ BENZERLİK ]</b>\n\nE. coli 8 çekirdekli kistiyle ayrılır. E. dispar ise mikroskobik olarak E. histolytica ile aynıdır, ayrım için antijen veya DNA testi gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nTanı: Amebik Dizanteri. Tedavi edilmezse bu parazit kan yoluyla en sık hangi organa giderek 'Abse' yapar?",
+            "opts": [
+              { "txt": "Karaciğer (Amebik Karaciğer Absesi)", "type": "correct", "go": "s5" },
+              { "txt": "Beyin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ HEDEF ORGAN ]</b>\n\nBağırsaktan portal ven yoluyla ilk gidilecek yer Karaciğerdir. Sağ üst kadran ağrısı ve ateşle giden karaciğer absesi tipiktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nKanlı dışkılaması olan bu hastaya ampirik olarak hangi ilacı başlamalısın?",
+            "opts": [
+              { "txt": "Metronidazol", "type": "correct", "action": "end" },
+              { "txt": "Trimetoprim-Sülfametoksazol", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: MALABSORBSİYON",
+        "desc": "Pediatri - 6 Yaş Çocuk - Kilo Kaybı ve Kötü Koku",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ŞİKAYET ]</b>\n\n6 yaşında kreşe giden çocuk. Annesi son 1 aydır çocuğun iştahsız olduğunu, karnının şiştiğini ve dışkısının 'çok kötü koktuğunu, yağlı gibi olduğunu' söylüyor. Kilo kaybı var. Kan yok.\n\nBu tablo (Steatore) hangi paraziti düşündürür?",
+            "opts": [
+              { "txt": "Giardia intestinalis", "type": "correct", "go": "s2" },
+              { "txt": "Entamoeba histolytica", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ DIŞKI KARAKTERİ ]</b>\n\nAmip kanlı/mukuslu ishal yapar. Giardia ise ince barsağa yapışarak emilimi bozar ve yağlı, pis kokulu (steatore) ishale neden olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nGiardia trofozoitleri barsak duvarını delip kana geçer mi?",
+            "opts": [
+              { "txt": "Hayır, sadece yüzeye yapışır ve emilimi engeller.", "type": "correct", "go": "s3" },
+              { "txt": "Evet, invazivdir ve kanlı ishal yapar.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nGiardia 'Vantuzları' (emici disk) ile duodenal mukozaya halı gibi yapışır. İnvazyon yapmaz, bu yüzden kanama görülmez. Malabsorbsiyon yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ BİRLİKTELİK ]</b>\n\nBu çocukta ayrıca karın ağrısı ve IgA eksikliği de saptandı. Giardia enfeksiyonu, safra yollarına geçerek hangi tabloyu taklit edebilir?",
+            "opts": [
+              { "txt": "Kolesistit / Safra Taşı", "type": "correct", "go": "s4" },
+              { "txt": "Apandisit", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YERLEŞİM ]</b>\n\nGiardia duodenum ve safra yollarına yerleşir. Safra kesesi diskinezisine yol açarak taş benzeri ağrı yapabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TANI ]</b>\n\nMikroskopide parazit görülmedi (Aralıklı atılım). Tanı koymak için dışkıda ne bakılabilir?",
+            "opts": [
+              { "txt": "Giardia Antijeni (ELISA)", "type": "correct", "go": "s5" },
+              { "txt": "Kültür", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TEST SEÇİMİ ]</b>\n\nGiardia kültürde üretilmez. Antijen testi (GSA) duyarlılığı yüksektir ve pratik bir tanı yöntemidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nGiardiasis tanısı kesinleşti. Tedavi planın ne olmalı?",
+            "opts": [
+              { "txt": "Metronidazol", "type": "correct", "action": "end" },
+              { "txt": "Penisilin", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: İMMÜNSÜPRESİF HASTA",
+        "desc": "Enfeksiyon - HIV (+) Hasta - Sulu İshal",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ]</b>\n\nHIV (+) tanılı ve CD4 sayısı düşük bir hasta. Günde 10 litreyi bulan 'Koleriform' (su gibi) ishal ile başvurdu. Kan yok. Dehidratasyon ağır.\n\nHangi fırsatçı parazitten şüphelenirsin?",
+            "opts": [
+              { "txt": "Cryptosporidium", "type": "correct", "go": "s2" },
+              { "txt": "Entamoeba histolytica", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK ]</b>\n\nAmip kanlı ishal yapar. İmmünsüpresiflerde 'su gibi' bol ishal yapan etkenler Cryptosporidium, Cyclospora ve Cystoisospora grubudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ BOYAMA ]</b>\n\nBu parazitin ookistlerini (yumurtalarını) dışkıda görebilmek için hangi ÖZEL boyama yöntemi gereklidir?",
+            "opts": [
+              { "txt": "Modifiye Asit-Fast (Kinyoun) Boyası", "type": "correct", "go": "s3" },
+              { "txt": "Gram Boyası", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ SPESİFİK BOYA ]</b>\n\nKoksidiyal parazitler (Crypto, Cyclo, Isospora) asit-fast boyası ile Kırmızı renkte boyanarak tanınır. Rutin incelemede görülmezler.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ EK BULGU ]</b>\n\nHastada ayrıca sağ üst kadran ağrısı ve enzim yüksekliği başladı. Bu parazit (Cryptosporidium) barsak dışında nereyi tutabilir?",
+            "opts": [
+              { "txt": "Safra Yolları (Akalküloz Kolesistit / Kolanjit)", "type": "correct", "go": "s4" },
+              { "txt": "Beyin", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nCryptosporidium AIDS hastalarında safra yollarına yerleşerek tıkanıklık ve kolesistit yapabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ YAKLAŞIMI ]</b>\n\nBu hastada ishali durdurmanın en etkili yolu nedir?",
+            "opts": [
+              { "txt": "Antiretroviral tedavi (ART) ile bağışıklığı güçlendirmek.", "type": "correct", "go": "s5" },
+              { "txt": "Sadece sıvı vermek.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TEMEL SORUN ]</b>\n\nSpesifik antiparaziter ilaçlar (Nitazoksanid) etkilidir ama bağışıklık sistemi düzelmeden (CD4 artmadan) enfeksiyon tam olarak temizlenmez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nAsit-fast boyama ile tanı kondu. ART ve destek tedavisi başlandı. İshal kontrol altına alındı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Kanlı ve mukuslu ishal (Dizanteri) ile gelen hastada öncelikle hangi parazit düşünülmelidir?", "a": ["Entamoeba histolytica", "Giardia intestinalis", "Cryptosporidium", "Blastocystis hominis"], "correct": 0 },
+      { "q": "Yağlı, pis kokulu, sulu ishal (Steatore) yapan ve ince barsağı tutan parazit hangisidir?", "a": ["Giardia intestinalis", "Entamoeba histolytica", "Enterobius vermicularis", "Ascaris"], "correct": 0 },
+      { "q": "İmmünsüpresif (AIDS) hastalarda koleriform (su gibi) ishale neden olan ve Asit-Fast boyası ile tanınan etken nedir?", "a": ["Cryptosporidium spp.", "Entamoeba coli", "Blastocystis", "Giardia"], "correct": 0 },
+      { "q": "Amebiasis ve Giardiasis tedavisinde ilk tercih edilen ilaç hangisidir?", "a": ["Metronidazol", "Penisilin", "Albendazol", "Praziquantel"], "correct": 0 },
+      { "q": "Entamoeba histolytica tanısında trofozoitleri görmek için hangi boyama yöntemi en uygundur?", "a": ["Trikrom Boyası", "Gram Boyası", "Asit-Fast Boyası", "Giemsa"], "correct": 0 },
+      { "q": "Giardia enfeksiyonu barsaklarda hangi patolojik değişikliğe yol açarak ishal yapar?", "a": ["Villus atrofisi ve Malabsorbsiyon", "Derin ülserasyon", "Kanama", "Polip oluşumu"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi Amebiasis'in barsak dışı en sık komplikasyonudur?", "a": ["Karaciğer Absesi", "Beyin Absesi", "Pnömoni", "Artrit"], "correct": 0 },
+      { "q": "En sık görülen barsak paraziti olup, patojenitesi tartışmalı olan ve vakuolar formu ile tanınan etken hangisidir?", "a": ["Blastocystis hominis", "Giardia", "Cryptosporidium", "Cyclospora"], "correct": 0 },
+      { "q": "Entamoeba dispar ile Entamoeba histolytica arasındaki fark nedir?", "a": ["E. dispar hastalık yapmaz (Apatojen), E. histolytica yapar.", "E. dispar kanlı ishal yapar.", "E. dispar daha büyüktür.", "Fark yoktur."], "correct": 0 },
+      { "q": "Cyclospora cayetanensis enfeksiyonu hangi parazite klinik ve tanısal olarak benzer?", "a": ["Cryptosporidium", "Giardia", "Amip", "Kancalı kurt"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Entamoeba histolytica", "B": "Kanlı ishal (Dizanteri)" },
+      { "A": "Giardia intestinalis", "B": "Yağlı ishal (Steatore)" },
+      { "A": "Cryptosporidium", "B": "AIDS'te sulu ishal (Asit-fast boya)" },
+      { "A": "Metronidazol", "B": "Amip ve Giardia ilacı" },
+      { "A": "Trikrom Boyası", "B": "Amip tanısında altın standart" },
+      { "A": "Karaciğer Absesi", "B": "Amebiasis komplikasyonu" },
+      { "A": "Blastocystis", "B": "Vakuolar form, en sık görülen" },
+      { "A": "Cyclospora", "B": "Mevsimsel geçiş, sulu ishal" }
+    ],
+    "decypher": [
+      {
+        "text": "{Entamoeba} histolytica, kalın barsağa yerleşerek ülserlere ve {kanlı}, mukuslu ishale neden olur. Tedavisinde {Metronidazol} kullanılır. Karaciğerde {abse} yapabilir.",
+        "decoys": ["Giardia", "yağlı", "Penisilin", "kist"]
+      },
+      {
+        "text": "{Giardia} intestinalis, ince barsak villuslarına yapışarak emilimi bozar ve {yağlı}, kötü kokulu ishale (steatore) yol açar. Dışkıda {kan} görülmez. Tanıda antijen testi veya dışkı mikroskopisi kullanılır.",
+        "decoys": ["Amip", "kanlı", "mukus", "iltihap"]
+      },
+      {
+        "text": "{Cryptosporidium}, özellikle bağışıklığı baskılanmış hastalarda şiddetli {sulu} ishale neden olan bir koksidiyal parazittir. Tanısında dışkının {Asit-Fast} (Kinyoun) yöntemiyle boyanması gerekir.",
+        "decoys": ["Blastocystis", "kanlı", "Gram", "Trikrom"]
+      }
+    ]
+  }
+}

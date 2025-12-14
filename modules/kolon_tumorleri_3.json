@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "title": "İNCE VE KALIN BARSAK TÜMÖRLERİ",
+    "tag": "PATOLOJİ & GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🩺 POLİPLER VE SINIFLAMA</div><div class='sum-body'>• <b>Non-Neoplastik:</b> Hiperplastik (%90, en sık), Hamartomatöz (Jüvenil, P-J), Yangısal, Lenfoid.<br>• <b>Neoplastik (Adenomlar):</b> Tübüler (%90, en sık), Villöz (%1, en riskli), Tübülovillöz.<br>• <b>Malignite Riski:</b> Villöz > Tübülovillöz > Tübüler. Çap > 2cm ise risk artar.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 HEREDİTER SENDROMLAR</div><div class='sum-body'>• <b>FAP:</b> APC geni (5q21), >100 polip, %100 kanserleşme.<br>• <b>Lynch (HNPCC):</b> DNA Mismatch Repair (MMR) defekti (MLH1, MSH2). Sağ kolon tümörü, müsinöz tip.<br>• <b>Peutz-Jeghers:</b> STK11 mutasyonu, mukokutanöz pigmentasyon, hamartomatöz polip.<br>• <b>Gardner:</b> FAP + Osteom + Epidermal kist.</div></div><div class='sum-card sum-rx'><div class='sum-title'>🧬 KARSİNOGENEZ YOLAKLARI</div><div class='sum-body'>• <b>APC/Beta-Katenin (WNT):</b> Sporadik tümörlerin %80'i. Adenom-Karsinom sekansı.<br>• <b>Mikrosatellit İnstabilite (MSI):</b> DNA onarım hatası. Lynch sendromu ve sporadiklerin %15'i.<br>• <b>Prognoz:</b> En sık yerleşim Rektosigmoid. Metastaz: KC > AC > Kemik.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: SESİL TEHDİT",
+        "desc": "Kolonoskopi Ünitesi - 65 Yaş Erkek - Polip Saptandı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: TANI ]</b>\n\n65 yaşındaki erkek hastanın tarama kolonoskopisinde rektosigmoid bölgede 3 cm çapında, tabanı geniş (sesil), yüzeyi karnabahar görünümünde kadifemsi bir lezyon saptandı.\n\nMakroskopik görünüme dayanarak en olası histolojik tip nedir?",
+            "opts": [
+              { "txt": "Villöz Adenom", "type": "correct", "go": "s2" },
+              { "txt": "Tübüler Adenom", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MORFOLOJİ HATASI ]</b>\n\nTübüler adenomlar genellikle saplı, küçük ve düzgün yüzeylidir. Sesil, geniş tabanlı, büyük (3 cm) ve kadifemsi/karnabahar görünümü 'Villöz Adenom' için tipiktir.",
+            "opts": [{ "txt": "DÜZELT VE İLERLE", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: RİSK ANALİZİ ]</b>\n\nPatoloji sonucu 'Villöz Adenom' olarak geldi. Bu polip tipi ile ilgili malignite potansiyeli hakkında hastaya ne söylersin?",
+            "opts": [
+              { "txt": "Adenomlar içinde en yüksek kanserleşme riskine (%40 invazyon) sahiptir.", "type": "correct", "go": "s3" },
+              { "txt": "Tübüler adenomlara göre daha düşük risklidir.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ RİSK SIRALAMASI ]</b>\n\nMalignite riski sıralaması: Villöz (%40) > Tübülovillöz > Tübüler şeklindedir. Villöz adenomlar yüksek dereceli displazi barındırma eğilimindedir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: MOLEKÜLER TEMEL ]</b>\n\nBu hastada tümör gelişim süreci sporadik (kalıtsal olmayan) bir yol izliyor. Bu süreçte en erken gerçekleşen ve 'Gatekeeper' (Kapı bekçisi) olarak bilinen gen mutasyonu hangisidir?",
+            "opts": [
+              { "txt": "APC Geni (5q21) inaktivasyonu", "type": "correct", "go": "s4" },
+              { "txt": "p53 Mutasyonu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MUTASYON ZAMANLAMASI ]</b>\n\nAdenom-Karsinom sekansında (Vogelstein modeli), ilk vuruş (first hit) APC gen mutasyonudur. p53 mutasyonu ise adenomdan karsinoma geçişte (geç dönemde) görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: YOLAK MEKANİZMASI ]</b>\n\nAPC geni inaktive olduğunda hücre içinde birikerek nükleusa geçen ve WNT sinyal yolağını sürekli aktif tutarak proliferasyona neden olan protein hangisidir?",
+            "opts": [
+              { "txt": "Beta-katenin", "type": "correct", "go": "s5" },
+              { "txt": "E-cadherin", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ MEKANİZMA HATASI ]</b>\n\nAPC proteini normalde Beta-katenini yıkar. APC bozulunca Beta-katenin sitoplazmada birikir, nükleusa geçer ve TCF ile birleşerek hücreyi sürekli bölünmeye zorlar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: TAKİP ]</b>\n\nPolip total olarak çıkarıldı (Polipektomi). Patolojide invazyon yok ancak yüksek dereceli displazi var. Bu hasta için en kritik yaklaşım nedir?",
+            "opts": [
+              { "txt": "Yakın kolonoskopik takip (Adenomlar karsinom prekürsörüdür)", "type": "correct", "action": "end" },
+              { "txt": "Ek tedaviye gerek yok, risk sıfırlandı.", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ TAKİP EKSİKLİĞİ ]</b>\n\nAdenom saptanan hastalarda yeni adenom ve kanser gelişme riski 4 kat artmıştır. Mutlaka belirli aralıklarla (3-5 yıl, patolojiye göre değişir) sürveyans yapılmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: GENETİK MİRAS",
+        "desc": "Poliklinik - 19 Yaş Erkek - Rektal Kanama ve Aile Öyküsü",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: ANAMNEZ ]</b>\n\n19 yaşında erkek hasta rektal kanama şikayetiyle geldi. Anamnezde babasının 35 yaşında kolon kanserinden vefat ettiği öğrenildi. Kolonoskopide tüm kolonu 'halı gibi' kaplayan yüzlerce (>100) polip görüldü.\n\nEn olası tanın nedir?",
+            "opts": [
+              { "txt": "Familyal Adenomatöz Polipozis (FAP)", "type": "correct", "go": "s2" },
+              { "txt": "Lynch Sendromu (HNPCC)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SENDROM KARIŞIKLIĞI ]</b>\n\nLynch sendromunda polip sayısı azdır (genellikle <100) ve tümörler sağ kolon ağırlıklıdır. >100 adenomatöz polip (polipozis) FAP için tanı koydurucudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: GENETİK TEST ]</b>\n\nTanıyı doğrulamak için hangi gende germline mutasyon araştırması istersin?",
+            "opts": [
+              { "txt": "APC Geni", "type": "correct", "go": "s3" },
+              { "txt": "MLH1 ve MSH2 Genleri", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ HEDEF GEN HATASI ]</b>\n\nMLH1 ve MSH2, Lynch sendromundaki (DNA Mismatch Repair) genlerdir. FAP, APC genindeki (5q21) otozomal dominant mutasyonla oluşur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: EK BULGULAR ]</b>\n\nHastanın fizik muayenesinde çenesinde osteomlar, derisinde epidermal kistler ve diş anomalileri saptadın. FAP'ın bu varyantının adı nedir?",
+            "opts": [
+              { "txt": "Gardner Sendromu", "type": "correct", "go": "s4" },
+              { "txt": "Turcot Sendromu", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ SENDROM AYRIMI ]</b>\n\nTurcot sendromunda kolon poliplerine 'Beyin Tümörleri' (Medulloblastom vb.) eşlik eder. Gardner sendromunda ise Osteom, Epidermal kist ve Desmoid tümörler (yumuşak doku) görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: PROGNOZ ]</b>\n\nHastaya tedavi uygulanmazsa, kolon kanseri gelişme riski ve beklenen yaş aralığı nedir?",
+            "opts": [
+              { "txt": "%100 Risk - 30'lu yaşlar", "type": "correct", "go": "s5" },
+              { "txt": "%50 Risk - 60'lı yaşlar", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ RİSK ANALİZİ ]</b>\n\nFAP hastalarında tedavi edilmezse kanser gelişimi kaçınılmazdır (%100). Genellikle 20'li yaşlarda adenomlar çıkar, 30'lu yaşlarda kanser gelişir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: TEDAVİ ]</b>\n\nBu aşamada (çok sayıda polip varlığında) önerilecek tek küratif tedavi nedir?",
+            "opts": [
+              { "txt": "Total Kolektomi (Profilaktik)", "type": "correct", "action": "end" },
+              { "txt": "Yıllık kolonoskopik polipektomi", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ YETERSİZ TEDAVİ ]</b>\n\nYüzlerce polibi tek tek çıkarmak imkansızdır ve kanser riskini sıfırlamaz. FAP tanısı konduğu an profilaktik total kolektomi endikedir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: SAĞ TARAFIN GİZEMİ",
+        "desc": "Onkoloji - 45 Yaş Kadın - Sağ Kolon Tümörü",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: TANI ]</b>\n\n45 yaşında kadın hasta, halsizlik ve anemi (Demir eksikliği) nedeniyle tetkik ediliyor. Çekumda (Sağ kolon) kitle saptanıyor. Biyopside 'Müsinöz Adenokarsinom' ve yoğun lenfositik infiltrasyon görülüyor.\n\nBu tablo hangi herediter sendromu düşündürmelidir?",
+            "opts": [
+              { "txt": "Lynch Sendromu (HNPCC)", "type": "correct", "go": "s2" },
+              { "txt": "Peutz-Jeghers Sendromu", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ SENDROM TANIMA ]</b>\n\nPeutz-Jeghers hamartomatöz polipler ve dudakta pigmentasyonla gider. Genç yaşta sağ kolon yerleşimli, müsinöz ve lenfosit infiltrasyonlu tümörler Lynch Sendromu için tipiktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: MOLEKÜLER PATOLOJİ ]</b>\n\nLynch sendromunda temel moleküler defekt nedir?",
+            "opts": [
+              { "txt": "DNA Mismatch Repair (MMR) bozukluğu -> Mikrosatellit İnstabilite (MSI)", "type": "correct", "go": "s3" },
+              { "txt": "Kromozomal İnstabilite -> LOH (Loss of Heterozygosity)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA KARIŞIKLIĞI ]</b>\n\nKromozomal instabilite (FAP ve sporadiklerin %80'i) APC yolağıdır. Lynch sendromu ise DNA replikasyon hatalarının (Mismatch) düzeltilememesi (MSI fenotipi) sonucu oluşur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: HEDEF GENLER ]</b>\n\nBu hastada hangi genlerde mutasyon olma olasılığı en yüksektir?",
+            "opts": [
+              { "txt": "MLH1, MSH2, MSH6", "type": "correct", "go": "s4" },
+              { "txt": "KRAS, BRAF", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ GEN BİLGİSİ ]</b>\n\nKRAS ve BRAF onkogenlerdir. Lynch sendromunda sorumlu genler DNA onarım genleri olan MLH1, MSH2, MSH6 ve PMS2'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: EKSTRAİNTESTİNAL RİSK ]</b>\n\nHastayı bilgilendirirken kolon dışı kanser risklerinden bahsetmelisin. Lynch sendromlu kadınlarda en sık görülen kolon dışı kanser hangisidir?",
+            "opts": [
+              { "txt": "Endometrium (Rahim) Kanseri", "type": "correct", "go": "s5" },
+              { "txt": "Meme Kanseri", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ KANSER RİSKİ ]</b>\n\nLynch sendromunda kolon kanserinden sonra en sık görülen malignite Endometrium kanseridir. Ayrıca over, mide, ince barsak ve üriner sistem kanser riski de artmıştır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: TANI KRİTERLERİ ]</b>\n\nAilesini sorguladığında 'Amsterdam Kriterleri'ni karşıladığını gördün. Bu kriterlerden biri aşağıdakilerden hangisidir?",
+            "opts": [
+              { "txt": "En az 3 akraba (biri 1. derece), 2 kuşak, 1 tanesi <50 yaş tanı almış olmalı", "type": "correct", "action": "end" },
+              { "txt": "En az 100 polip varlığı", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ KRİTER BİLGİSİ ]</b>\n\nAmsterdam kriterleri (3-2-1 kuralı): En az 3 akraba etkilenmiş, 2 ardışık kuşak tutulmuş ve en az 1 kişi 50 yaşından önce tanı almış olmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Kolorektal kanserlerin en sık görüldüğü anatomik lokalizasyon hangisidir?",
+        "a": ["Çekum", "Transvers Kolon", "Rektosigmoid Bölge", "İnen Kolon"],
+        "correct": 2
+      },
+      {
+        "q": "Adenom-Karsinom sekansında (Vogelstein modeli) gerçekleşen İLK mutasyon ('First Hit') genellikle hangi gendedir?",
+        "a": ["p53", "KRAS", "APC", "SMAD4"],
+        "correct": 2
+      },
+      {
+        "q": "Aşağıdaki polip tiplerinden hangisinin malignite (kanserleşme) riski EN YÜKSEKTİR?",
+        "a": ["Tübüler Adenom", "Hiperplastik Polip", "Villöz Adenom", "Jüvenil Polip"],
+        "correct": 2
+      },
+      {
+        "q": "Peutz-Jeghers sendromunda görülen karakteristik mutasyon ve polip tipi hangisidir?",
+        "a": ["APC - Adenomatöz", "STK11 - Hamartomatöz", "MMR - Serrated", "PTEN - İnflamatuar"],
+        "correct": 1
+      },
+      {
+        "q": "Familyal Adenomatöz Polipozis (FAP) tanısı için kolonda en az kaç adet polip bulunmalıdır?",
+        "a": ["10", "50", "100", "1000"],
+        "correct": 2
+      },
+      {
+        "q": "Lynch sendromu (HNPCC) patogenezinde rol oynayan temel moleküler mekanizma nedir?",
+        "a": ["Mikrosatellit İnstabilite (MSI) / DNA Mismatch Repair defekti", "Kromozomal İnstabilite (CIN)", "CpG Adası Metilasyonu", "Telomeraz Aktivasyonu"],
+        "correct": 0
+      },
+      {
+        "q": "Gardner sendromunda kolon poliplerine ek olarak görülen karakteristik bulgular nelerdir?",
+        "a": ["Beyin tümörleri (Medulloblastom)", "Osteomlar, epidermal kistler, desmoid tümörler", "Mukokutanöz pigmentasyon", "Tırnak atrofisi ve alopesi"],
+        "correct": 1
+      },
+      {
+        "q": "Kolonun en sık görülen NON-NEOPLASTİK polip tipi hangisidir?",
+        "a": ["Tübüler Adenom", "Hiperplastik Polip", "Villöz Adenom", "Jüvenil Polip"],
+        "correct": 1
+      },
+      {
+        "q": "Sporadik kolorektal kanser gelişiminde 'Adenomdan Karsinoma' geçiş süresi ortalama ne kadardır?",
+        "a": ["1-2 yıl", "5 yıl", "10-20 yıl", "30-40 yıl"],
+        "correct": 2
+      },
+      {
+        "q": "Cowden sendromunda mutasyona uğrayan gen hangisidir?",
+        "a": ["APC", "PTEN", "STK11", "MLH1"],
+        "correct": 1
+      }
+    ],
+    "match": [
+      { "A": "FAP", "B": "APC Gen Mutasyonu (>100 Polip)" },
+      { "A": "Lynch Sendromu", "B": "DNA Mismatch Repair (MMR) Defekti" },
+      { "A": "Turcot Sendromu", "B": "Kolon Polipleri + Beyin Tümörü" },
+      { "A": "Gardner Sendromu", "B": "Osteom + Epidermal Kist + FAP" },
+      { "A": "Peutz-Jeghers", "B": "STK11 Mutasyonu + Pigmentasyon" },
+      { "A": "Cowden Sendromu", "B": "PTEN Mutasyonu + Trikolemmom" },
+      { "A": "Villöz Adenom", "B": "En Yüksek Malignite Riski" },
+      { "A": "Tübüler Adenom", "B": "En Sık Görülen Neoplastik Polip" },
+      { "A": "Hiperplastik Polip", "B": "En Sık Non-Neoplastik Polip" },
+      { "A": "Karsinoid Tümör", "B": "En Sık Appendikste Görülür" }
+    ],
+    "decypher": [
+      {
+        "text": "Sporadik kolon kanserlerinin %80'inden sorumlu olan {APC} / Beta-katenin yolağında, 'gatekeeper' genin inaktivasyonu sonucu proliferasyon kontrolsüz hale gelir.",
+        "decoys": ["p53", "KRAS"]
+      },
+      {
+        "text": "Lynch sendromu, DNA replikasyonu sırasında oluşan hatalı baz eşleşmelerinin düzeltilememesi yani {mikrosatellit} instabilite ile karakterizedir.",
+        "decoys": ["kromozomal", "genetik"]
+      },
+      {
+        "text": "Adenomatöz polipler histolojik yapılarına göre tübüler, tübülovillöz ve {villöz} olmak üzere üçe ayrılır; bunlardan en riskli olanı sonuncusudur.",
+        "decoys": ["sesil", "hiperplastik"]
+      }
+    ]
+  }
+}

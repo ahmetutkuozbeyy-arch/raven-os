@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "BEYİN-BAĞIRSAK AKSI VE İBS",
+    "tag": "GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧠 BEYİN-BAĞIRSAK AKSI</div><div class='sum-body'>• <b>Tanım:</b> Santral Sinir Sistemi (SSS) ile Enterik Sinir Sistemi (ESS) arasındaki çift yönlü iletişimdir. Vücuttaki serotoninin %95'i bağırsaktadır.<br>• <b>İBS (Huzursuz Barsak):</b> Organik bir neden olmaksızın karın ağrısı ve dışkılama alışkanlığı değişikliği ile giden fonksiyonel bir hastalıktır.<br>• <b>Patogenez:</b> Viseral hipersensitivite (Ağrı eşiğinin düşmesi), motilite bozukluğu, mikrobiyota değişimi.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 ROMA IV KRİTERLERİ</div><div class='sum-body'>• <b>Tanı Şartı:</b> Son 3 ayda, haftada en az 1 gün karın ağrısı + şunlardan en az 2'si:<br>1. Dışkılama ile ilişkili (artma/azalma).<br>2. Dışkı sıklığında değişiklik.<br>3. Dışkı formunda (görünümünde) değişiklik.</div></div><div class='sum-card sum-rx'><div class='sum-title'>⚠️ ALARM BULGULARI</div><div class='sum-body'>• <b>Kırmızı Bayraklar:</b> 50 yaş üstü başlangıç, İstem dışı kilo kaybı, Gece uyandıran şikayetler, Ailede kanser öyküsü, GİS kanama/Anemi.<br>• <b>Yönetim:</b> Alarm bulgusu varsa organik hastalık (Kanser, İBH) araştırılmalıdır. Yoksa İBS tanısıyla semptomatik tedavi verilir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: TANI KRİTERLERİ",
+        "desc": "Poliklinik - 30 Yaş Kadın - Şişkinlik ve Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n30 yaşında kadın hasta. 1 yıldır devam eden karın ağrısı ve şişkinlik şikayetiyle geldi. Ağrının tuvalete gidince (defekasyonla) rahatladığını, stresli dönemlerde arttığını belirtiyor. İshal ve kabızlık atakları yaşıyor.\n\nBu tablo hangi tanı kriterlerine göre değerlendirilmelidir?",
+            "opts": [
+              { "txt": "Roma IV Kriterleri", "type": "correct", "go": "s2" },
+              { "txt": "Amsterdam Kriterleri", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YANLIŞ KRİTER ]</b>\n\nAmsterdam kriterleri genetik kolorektal kanser (Lynch Sendromu) içindir. Fonksiyonel gastrointestinal hastalıkların tanısında Roma IV kriterleri kullanılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ALARM SORGUSU ]</b>\n\nİBS tanısı koymadan önce organik hastalıkları ekarte etmelisin. Hastaya 'Kırmızı Bayrak' (Alarm) bulgularını soruyorsun.\n\nHangisi İBS için bir ALARM BULGUSU DEĞİLDİR?",
+            "opts": [
+              { "txt": "Ağrının yemekle veya stresle artması", "type": "correct", "go": "s3" },
+              { "txt": "Gece uykudan uyandıran ağrı veya ishal", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ GECE SEMPTOMU ]</b>\n\nFonksiyonel hastalıklar (İBS) genellikle gece uyurken 'susar'. Gece uykudan uyandıran semptomlar organik bir hastalığı (İnflamasyon, Kanser) işaret eder ve alarm bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nHastanın alarm bulgusu yok, tetkikleri normal. Ancak karnına hafifçe bastırdığında veya barsaklarında az miktarda gaz olduğunda bile şiddetli ağrı hissediyor.\n\nNormalde ağrı yapmayacak bir uyarının ağrılı hissedilmesi durumuna ne denir?",
+            "opts": [
+              { "txt": "Viseral Hipersensitivite (Allodini)", "type": "correct", "go": "s4" },
+              { "txt": "Viseral Nöropati", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ AĞRI EŞİĞİ ]</b>\n\nİBS hastalarında bağırsak duvarındaki reseptörlerin ağrı eşiği düşmüştür. Normal fizyolojik uyarılar bile beyne 'ağrı' olarak iletilir. Buna Viseral Hipersensitivite denir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nTedavide diyet değişikliği öneriyorsun. Fermente edilebilir karbonhidratların (gaz yapan gıdaların) kısıtlandığı diyetin adı nedir?",
+            "opts": [
+              { "txt": "FODMAP Diyeti", "type": "correct", "go": "s5" },
+              { "txt": "Ketojenik Diyet", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ DİYET ]</b>\n\nFODMAP (Fermentable Oligo-, Di-, Mono-saccharides And Polyols) diyeti, barsakta fermantasyonu ve gaz oluşumunu azaltarak İBS semptomlarını hafifletir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya İBS-M (Mikst tip) tanısı kondu. Diyet, spazmolitikler ve stres yönetimi ile şikayetleri geriledi. Beyin-bağırsak aksının önemi anlatıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: TEHLİKELİ SİNYALLER",
+        "desc": "Geriatri - 60 Yaş Erkek - Değişen Alışkanlıklar",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\n60 yaşında erkek hasta. Hayatı boyunca düzenli tuvalete çıkarmış. Son 3 aydır kabızlık başladığını ve dışkı çapının inceldiğini (kalem gibi) söylüyor. 5 kg kilo kaybı var.\n\nBu hastaya 'Yaşlılığa bağlı İBS' diyebilir misin?",
+            "opts": [
+              { "txt": "HAYIR. Alarm bulguları var, mutlaka Kolonoskopi yapılmalı.", "type": "correct", "go": "s2" },
+              { "txt": "Evet, Roma kriterlerine uyuyor.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ 50 YAŞ SINIRI ]</b>\n\n50 yaşından sonra YENİ başlayan barsak alışkanlığı değişikliği, kilo kaybı ve dışkı çapında incelme KOLON KANSERİ açısından çok güçlü alarm bulgularıdır. İBS bir dışlama tanısıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ POST-ENFEKSİYÖZ İBS ]</b>\n\nKolonoskopi yapıldı ve normal bulundu (Neyse ki!). Hasta sorgulandığında, şikayetlerinin 6 ay önce geçirdiği şiddetli bir 'Besin Zehirlenmesi'nden sonra başladığını hatırladı.\n\nAkut gastroenterit sonrası gelişen bu İBS tablosuna ne denir?",
+            "opts": [
+              { "txt": "Post-Enfeksiyöz İBS (PI-IBS)", "type": "correct", "go": "s3" },
+              { "txt": "Crohn Hastalığı", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ETYOLOJİ ]</b>\n\nAkut bir barsak enfeksiyonundan (Salmonella, Campylobacter vb.) sonra mikrobiyota ve sinir uçları hasar görebilir. Enfeksiyon iyileşse bile semptomlar kalıcı olup İBS tablosuna (PI-IBS) dönüşebilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ MİKROBİYOTA ]</b>\n\nBu hastada barsak florasının bozulduğu (Disbiyozis) düşünülüyor. İnce barsakta aşırı bakteri üremesi (SIBO) olup olmadığını anlamak için hangi testi yapabilirsin?",
+            "opts": [
+              { "txt": "Hidrojen/Metan Nefes Testi", "type": "correct", "go": "s4" },
+              { "txt": "Üre Nefes Testi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ TEST SEÇİMİ ]</b>\n\nÜre nefes testi H. Pylori içindir. SIBO (Small Intestinal Bacterial Overgrowth) tanısında bakterilerin ürettiği Hidrojen veya Metan gazı nefeste ölçülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastada malignite dışlandı. Tanı PI-IBS olarak kondu. Probiyotik ve Rifaksimin (barsak antibiyotiği) tedavisi ile şikayetler kontrol altına alındı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "İBS tanısında kullanılan güncel kriterler hangisidir?", "a": ["Roma IV Kriterleri", "Amsterdam Kriterleri", "Ranson Kriterleri", "Tokyo Kriterleri"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi İBS için bir 'Alarm Bulgusu' (Kırmızı Bayrak) DEĞİLDİR?", "a": ["Dışkılama ile rahatlayan ağrı", "İstemsiz kilo kaybı", "Gece uyandıran semptomlar", "50 yaş üstü başlangıç"], "correct": 0 },
+      { "q": "Normal şiddetteki bir barsak uyarısının (örn: gaz), hasta tarafından ağrılı olarak algılanmasına ne denir?", "a": ["Viseral Hipersensitivite", "Viseral Nöropati", "Paralitik İleus", "Divertikülit"], "correct": 0 },
+      { "q": "Vücuttaki serotoninin %95'i nerede bulunur?", "a": ["Gastrointestinal Sistem (Enterokromafin hücreleri)", "Beyin", "Trombositler", "Akciğer"], "correct": 0 },
+      { "q": "İBS tedavisinde önerilen, fermente edilebilir karbonhidratların kısıtlandığı diyetin adı nedir?", "a": ["FODMAP Diyeti", "Akdeniz Diyeti", "DASH Diyeti", "Ketojenik Diyet"], "correct": 0 },
+      { "q": "Roma IV kriterlerine göre karın ağrısının özelliği ne olmalıdır?", "a": ["Defekasyonla ilişkili olmalı (Artan veya azalan)", "Sürekli ve şiddetli olmalı", "Sırta vurmalı", "Yemekle başlamalı"], "correct": 0 },
+      { "q": "Beyin-Bağırsak aksının ana sinirsel bileşeni hangisidir?", "a": ["Nervus Vagus", "Siatik Sinir", "Frenik Sinir", "Trigeminal Sinir"], "correct": 0 },
+      { "q": "Akut bir gastroenterit (besin zehirlenmesi vb.) sonrası gelişen İBS formuna ne denir?", "a": ["Post-Enfeksiyöz İBS (PI-IBS)", "İBS-C", "İBS-D", "Organik İBS"], "correct": 0 },
+      { "q": "İBS hastalarında dışkı formunu (katı/sıvı) değerlendirmek için kullanılan skala hangisidir?", "a": ["Bristol Dışkı Skalası", "Glasgow Koma Skalası", "APGAR Skoru", "Visual Analog Skala"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi İBS'nin alt tiplerinden biri DEĞİLDİR?", "a": ["İBS-V (Kusma baskın)", "İBS-C (Kabızlık baskın)", "İBS-D (İshal baskın)", "İBS-M (Mikst)"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Roma IV", "B": "İBS tanı kriterleri" },
+      { "A": "Viseral Hipersensitivite", "B": "Düşük ağrı eşiği" },
+      { "A": "FODMAP", "B": "İBS diyeti" },
+      { "A": "Alarm Bulgusu", "B": "Kilo kaybı, Gece uyanma, Kanama" },
+      { "A": "İBS-C", "B": "Kabızlık baskın tip" },
+      { "A": "İBS-D", "B": "İshal baskın tip" },
+      { "A": "Serotonin (5-HT)", "B": "GİS motilite ve duyusunda ana mediatör" },
+      { "A": "Beyin-Bağırsak Aksı", "B": "Çift yönlü iletişim" }
+    ],
+    "decypher": [
+      {
+        "text": "İrritabl Barsak Sendromu (İBS), karın ağrısı ve dışkılama alışkanlığındaki değişiklikle karakterize {fonksiyonel} bir barsak hastalığıdır. Tanı için {Roma} IV kriterleri kullanılır ve organik nedenlerin dışlanması gerekir.",
+        "decoys": ["organik", "Tokyo", "cerrahi", "enfeksiyöz"]
+      },
+      {
+        "text": "Beyin-Bağırsak aksı, santral sinir sistemi ile {enterik} sinir sistemi arasındaki çift yönlü iletişimi ifade eder. Bu iletişimde en önemli nörotransmitterlerden biri, %95'i bağırsakta bulunan {serotonin}dir.",
+        "decoys": ["somatik", "dopamin", "insülin", "böbrek"]
+      },
+      {
+        "text": "İBS tanısı konulurken hastada {kilo} kaybı, rektal kanama, {gece} uykudan uyandıran semptomlar ve 50 yaş üstü başlangıç gibi {alarm} bulgularının olmaması gerekir.",
+        "decoys": ["iştah", "gündüz", "güven", "ateş"]
+      }
+    ]
+  }
+}

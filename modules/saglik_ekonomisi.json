@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "SAĞLIK EKONOMİSİ",
+    "tag": "HALK SAĞLIĞI"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>💰 TEMEL KAVRAMLAR</div><div class='sum-body'>• <b>Ekonomi:</b> Kıt kaynakların sınırsız ihtiyaçlar arasında nasıl bölüştürüleceğini inceleyen bilimdir.<br>• <b>Fırsat Maliyeti:</b> Bir tercihte bulunulduğunda vazgeçilen en iyi ikinci alternatifin değeridir.<br>• <b>Makroekonomi:</b> Toplumsal düzeyde (Enflasyon, GSYİH) inceler.<br>• <b>Mikroekonomi:</b> Birey ve firma düzeyinde (Fiyat, Tüketim) inceler.</div></div><div class='sum-card sum-tus'><div class='sum-title'>⚖️ SAĞLIK PİYASASI ÖZELLİKLERİ</div><div class='sum-body'>• <b>Asimetrik Bilgi:</b> Doktor (Sunucu) hastadan (Tüketici) çok daha fazla bilgiye sahiptir. Bu nedenle sağlıkta 'Tüketici Egemenliği' tam işlemez.<br>• <b>Arzın Talebi Yaratması:</b> Hekim, hastanın ne kadar hizmet alacağına karar verebilir (Tedarikçi güdümlü talep).<br>• <b>Dışsallık:</b> Bir kişinin sağlık davranışı (Örn: Aşı) başkalarını da etkiler.</div></div><div class='sum-card sum-rx'><div class='sum-title'>⚠️ VERİMLİLİK vs ETKİLİLİK</div><div class='sum-body'>• <b>Schubert Örneği:</b> Sağlık hizmetinde sadece 'verimlilik' (hız/maliyet) odaklı olmak kaliteyi düşürür.<br>• <b>Kamu Müdahalesi:</b> Sağlık piyasası tam rekabet koşullarını sağlamadığı için devlet müdahalesi (Regülasyon) şarttır.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: ZOR TERCİH",
+        "desc": "Hastane Yönetimi - Bütçe Planlama - Kıt Kaynaklar",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nBir kamu hastanesinin başhekimisin. Bütçen kısıtlı. Ya 'Yeni Doğan Yoğun Bakım Ünitesi'ni yenileyeceksin ya da 'Fizik Tedavi Merkezi' açacaksın. İkisini birden yapamıyorsun.\n\nYoğun bakımı seçersen, yapamadığın Fizik Tedavi Merkezi senin neyin olur?",
+            "opts": [
+              { "txt": "Fırsat Maliyeti (Alternatif Maliyet)", "type": "correct", "go": "s2" },
+              { "txt": "Sabit Maliyet", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ EKONOMİK KAVRAM ]</b>\n\nEkonomide bir şeyi seçtiğinde vazgeçtiğin en değerli diğer şeye 'Fırsat Maliyeti' denir. Kıt kaynakların olduğu her yerde bu maliyet vardır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PİYASA YAPISI ]</b>\n\nSağlık hizmeti sunarken, normal bir pazar (Örn: Domates pazarı) gibi davranabilir misin? Yani parası olana hizmet verip, olmayanı geri çevirebilir misin?",
+            "opts": [
+              { "txt": "Hayır, sağlık ticari bir mal değildir ve dışsallığı vardır.", "type": "correct", "go": "s3" },
+              { "txt": "Evet, serbest piyasa kuralları aynen geçerlidir.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ PİYASA BAŞARISIZLIĞI ]</b>\n\nSağlık hizmetleri tam rekabet piyasasına uymaz. Çünkü 'Hakkaniyet' ilkesi gereği ihtiyacı olan herkesin ulaşması gerekir ve bulaşıcı hastalıklarda toplumsal fayda (Dışsallık) söz konusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ASİMETRİK BİLGİ ]</b>\n\nHastaların çoğu neye ihtiyacı olduğunu bilmez. Doktor ne derse onu yapar. Bu duruma (Doktorun bilgili, hastanın bilgisiz olması) ne denir?",
+            "opts": [
+              { "txt": "Asimetrik Bilgi", "type": "correct", "go": "s4" },
+              { "txt": "Tam Rekabet", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ BİLGİ DENGESİZLİĞİ ]</b>\n\nTam rekabette alıcı ve satıcı her şeyi bilir. Sağlıkta ise satıcı (hekim) çok daha bilgilidir. Bu durum 'Arzın kendi talebini yaratmasına' (Gereksiz tetkik/ameliyat) yol açabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SCHUBERT PARADOKSU ]</b>\n\nBir verimlilik uzmanı hastanene geldi ve 'Ameliyat sürelerini yarıya indirelim, notaların yarısını çalmayalım, daha çok hasta bakalım' dedi. (Schubert'in Bitmemiş Senfonisi örneği).\n\nBu yaklaşıma cevabın ne olmalı?",
+            "opts": [
+              { "txt": "Sağlıkta sadece 'Verimlilik' (Hız/Sayı) değil, 'Etkililik ve Kalite' esastır. Bu öneri reddedilir.", "type": "correct", "action": "end" },
+              { "txt": "Harika fikir, hemen uygulayalım.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ KALİTE ]</b>\n\nSağlık hizmeti bir 'Senfoni' gibidir. Sadece süreyi kısaltmak veya personeli azaltmak (Verimlilik), ortaya çıkan eseri (Sağlık sonucu) bozar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: AŞI KARARI",
+        "desc": "Halk Sağlığı - Dışsallık ve Kamu Müdahalesi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nBir grip salgını var. Bir kişi aşı olduğunda sadece kendini değil, çevresindekileri de koruyor. Bu ekonomik kavrama ne ad verilir?",
+            "opts": [
+              { "txt": "Pozitif Dışsallık (Externalite)", "type": "correct", "go": "s2" },
+              { "txt": "Marjinal Fayda", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANIM ]</b>\n\nBir eylemin, o eylemi yapan ve parasını ödeyen dışındaki üçüncü kişilere sağladığı faydaya (veya zarara) Dışsallık denir. Aşı pozitif dışsallıktır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PİYASA SORUNU ]</b>\n\nEğer aşıyı sadece 'parası olanlar alsın' diye serbest piyasaya bırakırsan ne olur?",
+            "opts": [
+              { "txt": "Toplumsal bağışıklık sağlanamaz, salgın büyür (Piyasa Başarısızlığı).", "type": "correct", "go": "s3" },
+              { "txt": "Denge fiyatı oluşur ve herkes mutlu olur.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MÜDAHALE GEREĞİ ]</b>\n\nPozitif dışsallığı olan mallar (Aşı, Eğitim) serbest piyasada 'yetersiz' üretilir ve tüketilir. Bu yüzden devletin müdahale etmesi gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TALEP ÖZELLİĞİ ]</b>\n\nİnsanlar hasta olacaklarını önceden bilip ona göre bütçe ayırabilirler mi? (Örn: Haftaya apandisitim patlayacak).",
+            "opts": [
+              { "txt": "Hayır, sağlık talebi belirsiz ve düzensizdir.", "type": "correct", "go": "s4" },
+              { "txt": "Evet, planlanabilir.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ BELİRSİZLİK ]</b>\n\nSağlık hizmeti talebi genellikle 'Rastlantısal'dır. Kimin ne zaman, ne kadar hasta olacağı bilinemez. Bu da sigorta sistemini zorunlu kılar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nDevlet aşıları ücretsiz yapma kararı aldı. Çünkü sağlık hizmeti bir 'Kamu Malı' özelliği taşır ve toplumsal fayda bireysel faydadan büyüktür.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Ekonominin temel sorunu nedir?", "a": ["Kıt kaynaklarla sınırsız ihtiyaçları karşılamak", "Daha çok para basmak", "Enflasyonu düşürmek", "Vergileri artırmak"], "correct": 0 },
+      { "q": "Bir mal veya hizmeti seçtiğimizde vazgeçtiğimiz diğer alternatifin değerine ne ad verilir?", "a": ["Fırsat Maliyeti", "Sabit Maliyet", "Değişken Maliyet", "Marjinal Maliyet"], "correct": 0 },
+      { "q": "Sağlık piyasasında doktorun hastadan daha fazla bilgiye sahip olması durumuna ne denir?", "a": ["Asimetrik Bilgi", "Tam Rekabet", "Monopol", "Elastikiyet"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi sağlık hizmetlerinin tam rekabet piyasasından farklarından biridir?", "a": ["Giriş-çıkışın serbest olmaması (Diploma/Lisans gereği)", "Homojen ürün olması", "Tam bilgi olması", "Çok sayıda alıcı ve satıcı olması"], "correct": 0 },
+      { "q": "Bir kişinin aşı olması sayesinde diğer insanların da hastalıktan korunması hangi ekonomik kavramla açıklanır?", "a": ["Pozitif Dışsallık", "Negatif Dışsallık", "Fırsat Maliyeti", "Enflasyon"], "correct": 0 },
+      { "q": "Sağlık hizmetlerinde 'Arzın talebi yaratması' ne anlama gelir?", "a": ["Hekimin yönlendirmesiyle hastanın daha fazla hizmet talep etmesi", "Hastanelerin kapanması", "İlaç fiyatlarının düşmesi", "Hastaların doktora gitmemesi"], "correct": 0 },
+      { "q": "Schubert'in Bitmemiş Senfonisi örneği sağlık ekonomisinde neyi eleştirmek için kullanılır?", "a": ["Sadece verimlilik/maliyet odaklı olup kaliteyi göz ardı etmeyi", "Sanatın önemini", "Müzik terapisini", "Doktor maaşlarını"], "correct": 0 },
+      { "q": "Sağlık hizmeti talebinin en önemli özelliği nedir?", "a": ["Belirsiz ve düzensiz olması", "Tamamen planlanabilir olması", "Fiyata çok duyarlı olması", "Mevsimsel olması"], "correct": 0 },
+      { "q": "Birey ve firma düzeyindeki ekonomik kararları inceleyen dala ne ad verilir?", "a": ["Mikroekonomi", "Makroekonomi", "Ekonometri", "İstatistik"], "correct": 0 },
+      { "q": "Sağlık hizmetinin ticari bir mal gibi alınıp satılamamasının temel etik nedeni nedir?", "a": ["Yaşama hakkı ve insan onuru ile ilişkili olması", "Pahalı olması", "Devletin yasaklaması", "Doktorların istememesi"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Makroekonomi", "B": "Toplumsal düzey (Enflasyon, Büyüme)" },
+      { "A": "Mikroekonomi", "B": "Birey/Firma düzeyi (Fiyat, Tüketim)" },
+      { "A": "Fırsat Maliyeti", "B": "Vazgeçilen en iyi alternatif" },
+      { "A": "Asimetrik Bilgi", "B": "Doktorun hastadan çok bilmesi" },
+      { "A": "Dışsallık", "B": "Üçüncü kişilere etki (Aşı vb.)" },
+      { "A": "Kıtlık", "B": "Kaynakların sınırlı olması" },
+      { "A": "Tedarikçi Güdümlü Talep", "B": "Arzın talebi yaratması" },
+      { "A": "Regülasyon", "B": "Devletin piyasaya müdahalesi" }
+    ],
+    "decypher": [
+      {
+        "text": "Ekonomi, sınırsız insan ihtiyaçlarının {kıt} kaynaklarla nasıl karşılanacağını inceleyen bilim dalıdır. Sağlık ekonomisinde de temel sorun, bütçenin sınırlı olması nedeniyle {tercih} yapma zorunluluğudur. Her tercihin bir {fırsat} maliyeti vardır.",
+        "decoys": ["bol", "para", "sabit", "kâr"]
+      },
+      {
+        "text": "Sağlık piyasası, tam rekabet koşullarını taşımaz. Çünkü alıcı (hasta) ve satıcı (doktor) arasında {asimetrik} bilgi vardır. Ayrıca sağlık hizmeti, aşı örneğinde olduğu gibi topluma {dışsallık} (yarar/zarar) yayar. Bu yüzden devlet {müdahalesi} gereklidir.",
+        "decoys": ["eşit", "simetrik", "içsellik", "ticaret"]
+      },
+      {
+        "text": "Sağlık hizmetlerinde sadece {verimlilik} (az kaynakla çok iş) hedeflenirse, hizmetin {kalitesi} ve etkililiği düşebilir. Bu duruma 'Schubert'in Bitmemiş Senfonisi' örneği verilir; notaları hızlı çalmak müziği bozar.",
+        "decoys": ["kâr", "hız", "maliyet", "sayı"]
+      }
+    ]
+  }
+}

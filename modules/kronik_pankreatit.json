@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "title": "KRONİK PANKREATİT VE OLGU YÖNETİMİ",
+    "tag": "GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 TIGAR-O SINIFLAMASI</div><div class='sum-body'>• <b>T (Toksik-Metabolik):</b> Alkol (%70-80), Sigara, Hiperkalsemi, Hiperlipidemi.<br>• <b>I (İdiyopatik):</b> Erken ve geç başlangıçlı.<br>• <b>G (Genetik):</b> Katyonik Tripsinojen (PRSS1), SPINK1, CFTR mutasyonları.<br>• <b>A (Otoimmün):</b> Tip 1 (IgG4 ilişkili) ve Tip 2.<br>• <b>R (Rekürren):</b> Tekrarlayan akut ataklar.<br>• <b>O (Obstrüktif):</b> Tümör, darlık, pankreas divisum.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 KLİNİK & TANI</div><div class='sum-body'>• <b>Klinik Triad:</b> Karın Ağrısı (En sık) + Steatore + Diyabet.<br>• <b>Tanı:</b> BT'de kalsifikasyonlar ve kanal genişlemesi tipiktir. Erken tanıda <b>EUS</b> (Endoskopik Ultrason) en duyarlı yöntemdir.<br>• <b>Fonksiyon Testi:</b> Fekal Elastaz-1 (Düşükse yetmezlik).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ YAKLAŞIMI</div><div class='sum-body'>• <b>Ağrı:</b> Alkol kesilmesi -> NSAİİ -> Tramadol -> Narkotik -> Çölyak Blokajı.<br>• <b>Steatore:</b> Pankreas enzimleri (Yemek ortasında, en az 30.000 Ünite Lipaz). Mide asidini baskılamak (PPI) etkinliği artırır.<br>• <b>Cerrahi:</b> Puestow (Kanal drenajı) veya Whipple (Rezeksiyon).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: ALKOLÜN İZLERİ",
+        "desc": "Poliklinik - 50 Yaş Erkek - İnatçı Karın Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n50 yaşında erkek hasta. 20 yıldır günde 3 duble rakı içiyor. Son 2 yıldır epigastrik bölgede, sırta vuran, yemeklerden sonra artan künt ve sürekli bir ağrısı var. Kilo kaybı mevcut.\n\nİlk olarak hangi görüntüleme yöntemini istersin?",
+            "opts": [
+              { "txt": "Bilgisayarlı Tomografi (BT)", "type": "correct", "go": "s2" },
+              { "txt": "Direkt Karın Grafisi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YETERSİZ ]</b>\n\nDirekt grafide kalsifikasyonlar görülebilir (%30) ancak parankim ve kanal yapısını değerlendirmek, kanseri ekarte etmek için BT daha üstündür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ RADYOLOJİ ]</b>\n\nBT'de pankreas parankiminde yaygın kalsifikasyonlar, atrofi ve ana pankreas kanalında (Wirsung) genişleme (8 mm) saptandı.\n\nTanın nedir?",
+            "opts": [
+              { "txt": "Kronik Kalsifik Pankreatit", "type": "correct", "go": "s3" },
+              { "txt": "Pankreas Kanseri", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nKanser de kitle ve kanal genişlemesi yapabilir ancak yaygın parankimal kalsifikasyonlar Kronik Pankreatitin (özellikle alkolik) en tipik bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ STRATEJİSİ - 1 ]</b>\n\nHastanın en büyük şikayeti ağrı. Tedaviye nasıl başlarsın?",
+            "opts": [
+              { "txt": "Alkolün kesin kesilmesi + NSAİİ (Ağrı kesici) + Düşük yağlı diyet", "type": "correct", "go": "s4" },
+              { "txt": "Hemen Cerrahi (Whipple)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ BASAMAKLI TEDAVİ ]</b>\n\nCerrahi son çaredir. Önce yaşam tarzı değişikliği ve medikal tedavi denenir. Alkol kesilmezse ağrı azalmaz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ STRATEJİSİ - 2 ]</b>\n\nHasta 2 ay sonra geldi. Ağrıları azalmış ama 'dışkısının yağlı olduğunu ve tuvalete yapıştığını' (Steatore) söylüyor. Kilo kaybı devam ediyor.\n\nNe reçete edersin?",
+            "opts": [
+              { "txt": "Pankreas Enzim Preparatları (Yemeklerle birlikte) + PPI", "type": "correct", "go": "s5" },
+              { "txt": "Antibiyotik", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ EKSİK TEDAVİ ]</b>\n\nSteatore, ekzokrin yetmezliği gösterir. Sindirim için dışarıdan enzim (Lipaz/Amilaz) verilmelidir. Mide asidi enzimleri bozmasın diye PPI eklenir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastanın kilo alımı başladı, ağrısı kontrol altında. Alkolü bıraktığı için prognoz iyi. Takibe alındı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: İNATÇI AĞRI",
+        "desc": "Gastroenteroloji - Büyük Kanal Hastalığı - Cerrahi Kararı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ KLİNİK TABLO ]</b>\n\n42 yaşında kadın hasta. İdiyopatik kronik pankreatit tanılı. Yüksek doz narkotik analjeziklere rağmen geçmeyen şiddetli karın ağrısı var. Yaşam kalitesi çok düşük.\n\nMRCP (Manyetik Rezonans) sonucunda ana pankreas kanalının 'zincir gölü' gibi genişlediği (12 mm) ve içinde taşlar olduğu görüldü.\n\nBu ağrının mekanizması nedir?",
+            "opts": [
+              { "txt": "Duktal Hipertansiyon (Kanal içi basınç artışı)", "type": "correct", "go": "s2" },
+              { "txt": "Nöral inflamasyon", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nKronik pankreatitte ağrının iki ana nedeni vardır: 1. Nöropati, 2. Duktal obstrüksiyon. Burada kanalın çok geniş olması (obstrüksiyon) basıncı artırarak ağrı yapar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ GİRİŞİMSEL TEDAVİ ]</b>\n\nMedikal tedavi başarısız. Kanalda büyük taşlar var. İlk olarak hangi endoskopik yöntemi denersin?",
+            "opts": [
+              { "txt": "ERCP ile Sfinkterotomi + Taş Ekstraksiyonu + Stent", "type": "correct", "go": "s3" },
+              { "txt": "EUS eşliğinde Çölyak Pleksus Blokajı", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ÖNCELİK ]</b>\n\nKanalda mekanik bir tıkanıklık (taş) varsa öncelik bunu açmaktır. Çölyak blokajı daha çok küçük kanal hastalığında veya kanser ağrısında etkilidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ CERRAHİ ]</b>\n\nERCP ile taşlar tam temizlenemedi ve ağrı devam ediyor. Kanal çapı geniş (12 mm) olduğu için en uygun cerrahi prosedür hangisidir?",
+            "opts": [
+              { "txt": "Lateral Pankreatikojejunostomi (Puestow Ameliyatı)", "type": "correct", "go": "s4" },
+              { "txt": "Whipple Ameliyatı (Pankreatikoduodenektomi)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ CERRAHİ SEÇİMİ ]</b>\n\nWhipple, pankreas başı tümörlerinde veya başında büyük kitle varsa yapılır. Kanalın boydan boya geniş olduğu durumlarda kanalı barsağa ağızlaştıran Puestow ameliyatı (Drenaj ameliyatı) tercih edilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMPLİKASYON TAKİBİ ]</b>\n\nAmeliyat başarılı geçti, ağrı geçti. Ancak 1 yıl sonra hasta 'çok su içme, sık idrara çıkma' şikayetiyle geldi. Ne düşünürsün?",
+            "opts": [
+              { "txt": "Pankreatojenik Diyabet (Tip 3c DM)", "type": "correct", "go": "s5" },
+              { "txt": "İdrar Yolu Enfeksiyonu", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ENDOKRİN YETMEZLİK ]</b>\n\nKronik pankreatit ve cerrahi sonrası adacık hücre rezervi azalır. İnsülin ve Glukagon eksikliği ile giden 'kırılgan' (brittle) diyabet gelişir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya insülin tedavisi başlandı. Ağrısız bir yaşam sürüyor ancak diyabet ve enzim replasmanı ömür boyu sürecek.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: OTOİMMÜN GİZEM",
+        "desc": "Dahiliye - 35 Yaş Kadın - Sarılık ve Kitle",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ BAŞVURU ]</b>\n\n35 yaşında kadın hasta. Ağrısız sarılık ve hafif kilo kaybı ile başvurdu. Alkol/Sigara kullanmıyor. BT'de pankreas başında 'sosis benzeri' diffüz genişleme ve kitle görünümü var.\n\nİlk akla gelen korkutucu tanı nedir?",
+            "opts": [
+              { "txt": "Pankreas Kanseri", "type": "correct", "go": "s2" },
+              { "txt": "Akut Pankreatit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK ]</b>\n\nPankreas başında kitle ve ağrısız sarılık her zaman önce kanseri düşündürmelidir. Ancak hastanın genç olması ve 'sosis' görünümü alternatif tanıları akla getirir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ LABORATUVAR ]</b>\n\nKanser belirteçleri (CA 19-9) normal. Ancak serum IgG4 düzeyi normalin 10 katı yüksek bulundu. Bu bulgu hangi özel pankreatit tipini işaret eder?",
+            "opts": [
+              { "txt": "Otoimmün Pankreatit (Tip 1)", "type": "correct", "go": "s3" },
+              { "txt": "Herediter Pankreatit", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ SEROLOJİ ]</b>\n\nIgG4 yüksekliği, Otoimmün Pankreatit (AIP) için çok spesifik bir belirteçtir. Bu hastalık 'IgG4 ilişkili sistemik hastalık' grubundadır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ DENEMESİ ]</b>\n\nKanserden şüphelenilse de IgG4 yüksekliği nedeniyle cerrahiden önce bir ilaç denemesi yapmaya karar verdin. Hangi ilaç?",
+            "opts": [
+              { "txt": "Steroid (Kortizon) Tedavisi", "type": "correct", "go": "s4" },
+              { "txt": "Geniş Spektrumlu Antibiyotik", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ TEDAVİ YANITI ]</b>\n\nOtoimmün pankreatit steroide 'dramatik' yanıt verir. Kitle ve sarılık haftalar içinde kaybolur. Bu aynı zamanda tanısal bir testtir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nSteroid tedavisi ile 4 hafta sonra çekilen BT'de pankreastaki şişliğin tamamen indiği görüldü. Gereksiz Whipple ameliyatından kurtuldu.\n\nOtoimmün pankreatit başka hangi organları tutabilir?",
+            "opts": [
+              { "txt": "Safra yolları, Tükrük bezleri, Retroperiton", "type": "correct", "action": "end" },
+              { "txt": "Kemik ve Kas", "type": "wrong", "go": "s4" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Kronik pankreatitin en sık nedeni nedir?", "a": ["Alkolizm (%70-80)", "Safra taşları", "Hiperlipidemi", "Travma"], "correct": 0 },
+      { "q": "Kronik pankreatitin klasik klinik triadında hangisi YOKTUR?", "a": ["Sarılık", "Karın Ağrısı", "Steatore", "Diyabet"], "correct": 0 },
+      { "q": "TIGAR-O sınıflamasında 'T' harfi neyi temsil eder?", "a": ["Toksik-Metabolik (Alkol, Sigara...)", "Tümör", "Travma", "Tıkanıklık"], "correct": 0 },
+      { "q": "Pankreas egzokrin yetmezliğini (Steatore) göstermede en duyarlı ve pratik test hangisidir?", "a": ["Fekal Elastaz-1", "Serum Amilaz", "İdrar Amilaz", "Sekretin Testi"], "correct": 0 },
+      { "q": "Kronik pankreatitli bir hastada ana pankreas kanalı (Wirsung) 10 mm genişlemiş ve içinde taşlar var. En uygun cerrahi tedavi nedir?", "a": ["Lateral Pankreatikojejunostomi (Puestow)", "Total Pankreatektomi", "Whipple", "Distal Pankreatektomi"], "correct": 0 },
+      { "q": "Otoimmün pankreatit tanısında en değerli serolojik belirteç hangisidir?", "a": ["IgG4", "IgA", "ANA", "RF"], "correct": 0 },
+      { "q": "Pankreas enzim replasman tedavisi (PERT) ne zaman uygulanmalıdır?", "a": ["Yemeklerin ortasında veya hemen başında", "Yemekten 1 saat önce", "Yemekten 2 saat sonra", "Gece yatarken"], "correct": 0 },
+      { "q": "Kronik pankreatit ağrı tedavisinde 'Çölyak Pleksus Blokajı' hangi hastalarda daha etkilidir?", "a": ["Küçük kanal hastalığı olanlarda", "Kanalı geniş olanlarda", "Taşı olanlarda", "Psödokisti olanlarda"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi kronik pankreatitin bir komplikasyonu DEĞİLDİR?", "a": ["Akut Apandisit", "Psödokist", "Duodenal Darlık", "Splenik Ven Trombozu"], "correct": 0 },
+      { "q": "Herediter pankreatitte en sık suçlanan gen mutasyonu hangisidir?", "a": ["Katyonik Tripsinojen (PRSS1)", "CFTR", "SPINK1", "KRAS"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Alkol", "B": "Kronik pankreatitin en sık nedeni" },
+      { "A": "Steatore", "B": "Yağlı, kötü kokulu dışkı (Ekzokrin yetmezlik)" },
+      { "A": "Tip 3c Diyabet", "B": "Pankreatojenik diyabet (Endokrin yetmezlik)" },
+      { "A": "IgG4", "B": "Otoimmün Pankreatit" },
+      { "A": "Puestow", "B": "Geniş kanallı hastalıkta cerrahi (Drenaj)" },
+      { "A": "Kalsifikasyon", "B": "BT'de kronik pankreatit bulgusu" },
+      { "A": "Fekal Elastaz", "B": "Ekzokrin fonksiyon testi" },
+      { "A": "Çölyak Blokaj", "B": "Ağrı tedavisi (Nöroliz)" }
+    ],
+    "decypher": [
+      {
+        "text": "Kronik pankreatit, pankreasın ilerleyici inflamasyonu sonucu parankim kaybı ve {fibrozis} ile giden bir hastalıktır. En sık neden {alkol} kullanımıdır. İleri evrede hem ekzokrin ({steatore}) hem de endokrin (diyabet) yetmezlik gelişir.",
+        "decoys": ["nekroz", "safra", "ödem", "bakteri"]
+      },
+      {
+        "text": "Pankreas enzim replasman tedavisinde amaç, duodenuma yeterli miktarda {Lipaz} ulaştırmaktır. İlaçların mide asidinden etkilenmemesi için {enterik} kaplı olması veya yanında {PPI} (Asit baskılayıcı) verilmesi gerekir.",
+        "decoys": ["Amilaz", "insülin", "steroid", "antibiyotik"]
+      },
+      {
+        "text": "{Otoimmün} pankreatit, pankreasın lenfoplazmositer infiltrasyonu ile giden, BT'de sosis benzeri görünüm yapan bir formdur. Serumda {IgG4} düzeyi yüksektir ve {steroid} tedavisine dramatik yanıt verir.",
+        "decoys": ["Herediter", "IgA", "cerrahi", "antibiyotik"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "ÜST GİS KANAMALARI",
+    "tag": "İÇ HASTALIKLARI"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🩸 TEMEL TANIMLAR</div><div class='sum-body'>• <b>Üst GİS Kanaması:</b> Treitz ligamentinin proksimalinden kaynaklanan kanamalardır.<br>• <b>Hematemez:</b> Kanlı veya kahve telvesi şeklinde kusma.<br>• <b>Melena:</b> Siyah, cıvık, katran gibi ve kötü kokulu dışkılama (En az 50-100 ml kan).<br>• <b>Hematoşezi:</b> Makattan taze kan gelmesi (Genelde Alt GİS, ama çok hızlı Üst GİS kanamasında da olabilir).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 ETYOLOJİ & SKORLAR</div><div class='sum-body'>• <b>En Sık Neden:</b> Peptik Ülser (%40-50).<br>• <b>Diğerleri:</b> Varisler (%10-20), Mallory-Weiss (%5-15), Eroziv Gastrit.<br>• <b>Risk Skorlaması:</b> Rockall Skoru (Mortalite) ve Blatchford Skoru (Müdahale gereksinimi).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TEDAVİ ALGORİTMASI</div><div class='sum-body'>• <b>İlk Adım:</b> Hemodinamik stabilizasyon (Sıvı/Kan).<br>• <b>İlaç:</b> Yüksek doz İV PPI (Non-varis) veya Vazoaktif ilaçlar (Varis).<br>• <b>İşlem:</b> İlk 24 saatte ENDOSKOPI (Tanı ve Tedavi).<br>• <b>Forrest Sınıflaması:</b> Ülser kanamasında tekrar kanama riskini belirler.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KAHVE TELVESİ",
+        "desc": "Acil Servis - 60 Yaş Erkek - NSAİİ Öyküsü",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ BAŞVURU ]</b>\n\n60 yaşında erkek hasta. Romatoid artrit nedeniyle düzenli NSAİİ kullanıyor. Sabah saatlerinde başlayan 'kahve telvesi' şeklinde kusma (Hematemez) ve siyah dışkılama (Melena) şikayetiyle geldi. Tansiyon: 100/60 mmHg, Nabız: 100/dk.\n\nİlk yapılması gereken nedir?",
+            "opts": [
+              { "txt": "Damar yolu aç, sıvı resüsitasyonuna başla (Stabilizasyon).", "type": "correct", "go": "s2" },
+              { "txt": "Hemen endoskopiye al.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ÖNCE GÜVENLİK ]</b>\n\nHasta hemodinamik olarak sınırda (Taşikardik). Stabilize edilmeden (sıvı/kan verilmeden) endoskopiye alınan hastalarda mortalite yüksektir. Önce ABC.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MEDİKAL TEDAVİ ]</b>\n\nHasta stabilize edildi. Endoskopi hazırlığı yapılırken, kanamayı durdurmaya yardımcı olması ve pıhtı stabilizasyonu için hangi ilacı İV (Damardan) başlarsın?",
+            "opts": [
+              { "txt": "Proton Pompa İnhibitörü (PPI) - Yüksek Doz", "type": "correct", "go": "s3" },
+              { "txt": "Somatostatin / Oktreotid", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nNSAİİ öyküsü olan bir hastada en olası neden Peptik Ülserdir. Ülser kanamasında temel ilaç PPI'dır. Oktreotid Varis kanamasında kullanılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ENDOSKOPI ]</b>\n\nEndoskopi yapıldı. Mide antrumunda 2 cm çapında bir ülser ve ülserin ortasında 'Fışkırır tarzda aktif kanama' (Forrest 1a) görüldü.\n\nEndoskopik tedavi yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Kombine Tedavi (Adrenalin enjeksiyonu + Koter veya Klips)", "type": "correct", "go": "s4" },
+              { "txt": "Sadece adrenalin enjeksiyonu yeterlidir.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YETERSİZ TEDAVİ ]</b>\n\nAktif kanamalarda tek başına adrenalin enjeksiyonu tekrar kanama riskini yeterince düşürmez. Mutlaka ikinci bir yöntemle (Termal veya Mekanik) desteklenmelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ RİSK ANALİZİ ]</b>\n\nKanama durduruldu. Forrest sınıflamasına göre 'Aktif kanayan' (F1a/1b) veya 'Görünen damar' (F2a) olan ülserlerin tekrar kanama riski nasıldır?",
+            "opts": [
+              { "txt": "Yüksektir (%55-90). Yoğun bakımda takip gerekir.", "type": "correct", "go": "s5" },
+              { "txt": "Düşüktür. Servise alınabilir.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ FORREST EVRELEMESİ ]</b>\n\nForrest 1 ve 2a lezyonlar 'Yüksek Riskli' gruptur ve tekrar kanama ihtimalleri çok yüksektir. Forrest 2c ve 3 düşük risklidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta 72 saat yoğun bakımda yüksek doz PPI ile izlendi. Kanama tekrarlamadı. H. Pylori ve NSAİİ yönetimi planlanarak taburcu edildi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: VARİS KANAMASI",
+        "desc": "Acil Servis - 50 Yaş Siroz Hastası - Masif Hematemez",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DURUM ]</b>\n\n50 yaşında, bilinen alkolik siroz hastası. Ağız dolusu taze kan kusma (Masif Hematemez) ile getirildi. Şuuru bulanık, TA: 80/50 mmHg. (Şok Tablosu).\n\nSıvı resüsitasyonu ile birlikte, portal basıncı düşürmek için HANGİ İLACI hemen başlamalısın?",
+            "opts": [
+              { "txt": "Vazoaktif İlaç (Terlipressin, Oktreotid veya Somatostatin)", "type": "correct", "go": "s2" },
+              { "txt": "Sadece PPI", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ EKSİK ]</b>\n\nSirozlu bir hastada kanama büyük ihtimalle varis kaynaklıdır. PPI mide asidini baskılar ama portal basıncı düşürmez. Vazoaktif ilaçlar splanknik kan akımını azaltarak kanamayı durdurmaya yardımcı olur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ EK TEDAVİ ]</b>\n\nSirozlu hastalarda GİS kanaması sırasında enfeksiyon riski çok yüksektir ve mortaliteyi artırır. Bu nedenle ne yapılmalıdır?",
+            "opts": [
+              { "txt": "Profilaktik Antibiyotik (Örn: Seftriakson) başlanmalı.", "type": "correct", "go": "s3" },
+              { "txt": "Ateşi çıkarsa antibiyotik verilmeli.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ PROFİLAKSİ ]</b>\n\nSirozlu GİS kanamalarında %20-50 enfeksiyon gelişir. Bu yüzden enfeksiyon bulgusu olmasa bile proflaktik antibiyotik standarttır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ENDOSKOPI ]</b>\n\nHasta stabilize edildi ve endoskopiye alındı. Özofagus alt uçta aktif kanayan varisler görüldü. En etkili endoskopik tedavi yöntemi nedir?",
+            "opts": [
+              { "txt": "Endoskopik Bant Ligasyonu (EBL)", "type": "correct", "go": "s4" },
+              { "txt": "Skleroterapi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ GÜNCEL TEDAVİ ]</b>\n\nSkleroterapi eskiden kullanılırdı ancak komplikasyon riski yüksektir. Günümüzde varis kanamasında altın standart 'Bant Ligasyonu'dur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ DİRENÇLİ KANAMA ]</b>\n\nBant atılmasına rağmen kanama durmuyor veya tekrar ediyor. Medikal ve endoskopik tedavi başarısız. Kurtarıcı tedavi (Rescue) olarak ne düşünürsün?",
+            "opts": [
+              { "txt": "TIPS (Transjuguler İntrahepatik Portosistemik Şant)", "type": "correct", "go": "s5" },
+              { "txt": "Acil Cerrahi Şant", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ CERRAHİ RİSKİ ]</b>\n\nChild C sirozlu bir hastada acil cerrahinin mortalitesi çok yüksektir (%50-90). TIPS daha az invazivdir ve portal basıncı etkili şekilde düşürür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ GEÇİCİ ÖNLEM ]</b>\n\nTIPS hazırlığı yapılırken hasta kanamaya devam ediyor. Zaman kazanmak için geçici olarak ne uygulanabilir?",
+            "opts": [
+              { "txt": "Balon Tamponadı (Sengstaken-Blakemore Tüpü)", "type": "correct", "action": "end" },
+              { "txt": "Nazogastrik sonda takıp yıkamak", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: ÖĞÜRME SONRASI KAN",
+        "desc": "Acil Servis - 25 Yaş Erkek - Alkol Sonrası Kusma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ HİKAYE ]</b>\n\n25 yaşında erkek hasta. Arkadaşlarıyla yoğun alkol aldığı bir gecenin sonunda defalarca şiddetli öğürmüş ve kusmuş (Gıdasal). Son kusmasında 'parlak kırmızı kan' gelmiş.\n\nEn olası tanı nedir?",
+            "opts": [
+              { "txt": "Mallory-Weiss Yırtığı", "type": "correct", "go": "s2" },
+              { "txt": "Özofagus Varis Kanaması", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TİPİK ÖYKÜ ]</b>\n\nVaris kanaması sirozda olur ve spontan başlar. Şiddetli öğürme ve kusma sonrası gelişen kanama, mukoza yırtığını (Mallory-Weiss) düşündürür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ LOKALİZASYON ]</b>\n\nMallory-Weiss yırtığı anatomik olarak nerede oluşur?",
+            "opts": [
+              { "txt": "Gastroözofageal Bileşkede (Kardia)", "type": "correct", "go": "s3" },
+              { "txt": "Mide antrumunda", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ANATOMİ ]</b>\n\nYırtık, ani basınç artışına bağlı olarak özofagusun mideye birleştiği yerde (Kardia) longitüdinal (boylamasına) olarak gerçekleşir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SEYİR ]</b>\n\nHastanın hemodinamisi stabil. Kanama kendiliğinden durmuş. Endoskopide yırtık görüldü ama aktif kanama yok. Yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Konservatif tedavi (Gözlem + PPI) yeterlidir.", "type": "correct", "go": "s4" },
+              { "txt": "Mutlaka cerrahi onarım gerekir.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ PROGNOZ ]</b>\n\nMallory-Weiss yırtıklarının %80-90'ı kendiliğinden durur ve cerrahi veya endoskopik tedavi gerektirmez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nEğer bu hasta 'Tüm katları içeren' bir yırtılma yaşasaydı ve şiddetli göğüs ağrısı, nefes darlığı, cilt altı amfizemi olsaydı tanı ne olurdu?",
+            "opts": [
+              { "txt": "Boerhaave Sendromu (Özofagus Rüptürü)", "type": "correct", "go": "s5" },
+              { "txt": "Dieulafoy Lezyonu", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ CİDDİ AYRIM ]</b>\n\nMallory-Weiss sadece mukozal yırtıktır. Boerhaave ise özofagusun tam kat delinmesidir ve mediastinite yol açan ölümcül bir tablodur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nMallory-Weiss tanısı doğrulandı. Hasta 24 saat gözlemden sonra taburcu edildi. Boerhaave ayırıcı tanısının önemi vurgulandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Üst GİS kanamasının anatomik sınırı neresidir?", "a": ["Treitz Ligamenti", "Pilor", "İleoçekal Valv", "Kardia"], "correct": 0 },
+      { "q": "Üst GİS kanamalarının en sık nedeni nedir?", "a": ["Peptik Ülser (%50)", "Varisler", "Mallory-Weiss", "Tümörler"], "correct": 0 },
+      { "q": "Siyah, cıvık, katran gibi ve kötü kokulu dışkılamaya ne ad verilir?", "a": ["Melena", "Hematemez", "Hematoşezi", "Gizli Kan"], "correct": 0 },
+      { "q": "Sirozlu bir hastada varis kanaması şüphesinde başlanması gereken ilaç grubu hangisidir?", "a": ["Vazoaktif İlaçlar (Oktreotid/Terlipressin) + Antibiyotik", "Sadece PPI", "Sadece Beta Bloker", "Sadece Serum Fizyolojik"], "correct": 0 },
+      { "q": "Şiddetli öğürme ve kusma sonrası gelişen mukozal yırtığa ne denir?", "a": ["Mallory-Weiss Sendromu", "Boerhaave Sendromu", "Zollinger-Ellison", "Dieulafoy"], "correct": 0 },
+      { "q": "Forrest sınıflamasında 'Fışkırır tarzda kanama' (Arteriyel) hangi evredir?", "a": ["Forrest 1a", "Forrest 1b", "Forrest 2a", "Forrest 3"], "correct": 0 },
+      { "q": "Ülser kanamasında endoskopik tedavide altın standart nedir?", "a": ["Kombine Yöntem (Adrenalin + Termal/Mekanik)", "Sadece Adrenalin", "Sadece Yıkama", "Sadece İlaç"], "correct": 0 },
+      { "q": "Tedaviye dirençli varis kanamalarında uygulanan girişimsel radyolojik işlem nedir?", "a": ["TIPS", "PEG", "ERCP", "PTK"], "correct": 0 },
+      { "q": "Üst GİS kanaması ile gelen hastada mortalite riskini belirlemek için kullanılan skorlama sistemi hangisidir?", "a": ["Rockall Skoru", "Ranson Kriterleri", "Glasgow Koma Skoru", "Child-Pugh"], "correct": 0 },
+      { "q": "Varis kanamasında 'balon tamponadı' için kullanılan tüpün adı nedir?", "a": ["Sengstaken-Blakemore Tüpü", "Levin Tüpü", "Foley Sonda", "T-Tüp"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Hematemez", "B": "Kanlı kusma" },
+      { "A": "Melena", "B": "Siyah, katran gibi dışkı" },
+      { "A": "Hematoşezi", "B": "Makattan taze kan gelmesi" },
+      { "A": "Peptik Ülser", "B": "En sık üst GİS kanama nedeni" },
+      { "A": "Varis Kanaması", "B": "Portal hipertansiyon, Siroz" },
+      { "A": "Mallory-Weiss", "B": "Öğürme sonrası yırtık" },
+      { "A": "Forrest 1a", "B": "Fışkırır tarzda kanama (Yüksek risk)" },
+      { "A": "TIPS", "B": "Portosistemik şant (Kurtarıcı tedavi)" }
+    ],
+    "decypher": [
+      {
+        "text": "Üst GİS kanaması, {Treitz} ligamentinin proksimalinden kaynaklanan kanamalardır. En sık görülen belirtiler ağızdan kan gelmesi ({hematemez}) ve siyah renkli dışkılamadır ({melena}).",
+        "decoys": ["pilor", "hematoşezi", "ishal", "kabızlık"]
+      },
+      {
+        "text": "Sirozlu hastalarda gelişen varis kanamalarında, endoskopik tedavi öncesinde splanknik kan akımını azaltmak için {Vazoaktif} ilaçlar ve enfeksiyonu önlemek için proflaktik {Antibiyotik} başlanmalıdır. Endoskopide en etkili yöntem bant {ligasyonu}dur.",
+        "decoys": ["PPI", "analjezik", "skleroterapi", "cerrahi"]
+      },
+      {
+        "text": "Peptik ülser kanamalarında tekrar kanama riskini belirlemek için {Forrest} sınıflaması kullanılır. Fışkırır tarzda kanama (1a) veya sızıntı (1b) {aktif} kanamayı gösterir ve acil endoskopik müdahale gerektirir.",
+        "decoys": ["Rockall", "Child", "pasif", "kronik"]
+      }
+    ]
+  }
+}

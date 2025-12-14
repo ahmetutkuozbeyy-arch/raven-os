@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "title": "SAFRA TAŞLARI, KOLESİSTİT VE KOLANJİT",
+    "tag": "İÇ HASTALIKLARI"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 KLİNİK TANIMLAR</div><div class='sum-body'>• <b>Biliyer Kolik:</b> Sağ üst kadranda, yemek sonrası başlayan, sırta vuran ağrı. Ateş ve lökositoz YOKTUR.<br>• <b>Akut Kolesistit:</b> Safra kesesi inflamasyonu. <b>Murphy (+)</b>, Ateş, Lökositoz vardır.<br>• <b>Akut Kolanjit:</b> Safra yolu enfeksiyonu. <b>Charcot Triadı</b> (Ateş, Ağrı, Sarılık) ve <b>Reynolds Pentadı</b> (+Şok, Konfüzyon) görülür.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TAŞ TİPLERİ</div><div class='sum-body'>• <b>Kolesterol Taşları (%80):</b> Sarı renkli. Obezite, kadın cinsiyet, hızlı kilo kaybı ile ilişkilidir.<br>• <b>Siyah Pigment Taşları:</b> Kalsiyum bilirübinat. Hemoliz ve Sirozda görülür.<br>• <b>Kahverengi Pigment Taşları:</b> Safra stazı ve bakteriyel enfeksiyon zemininde oluşur.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TANI & TEDAVİ (TOKYO 18)</div><div class='sum-body'>• <b>Tanı:</b> Kese taşı için ilk tercih <b>USG</b> (Duvar >4mm). Koledok taşı için MRCP/EUS.<br>• <b>Kolesistit Tedavisi:</b> Antibiyotik + Erken Laparoskopik Kolesistektomi.<br>• <b>Kolanjit Tedavisi:</b> Acil Biliyer Drenaj (ERCP) + Antibiyotik.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: MURPHY'NİN İŞARETİ",
+        "desc": "Acil Servis - 45 Yaş Kadın - Yemek Sonrası Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n45 yaşında, obez kadın hasta. Yağlı bir akşam yemeğinden 1 saat sonra başlayan, sağ üst kadranda (RUQ) ve sırta vuran şiddetli ağrı ile geldi. Bulantısı var ama kusma yok.\n\nİlk ayırıcı tanı sorusu: Ağrı ne kadar sürdü?",
+            "opts": [
+              { "txt": "6 saatten uzun sürdü ve ateş eşlik ediyor.", "type": "correct", "go": "s2" },
+              { "txt": "1-2 saat sürdü ve geçti.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ BİLİYER KOLİK ]</b>\n\nKısa süren (<6 saat), ateş ve lökositozun olmadığı ağrılar 'Biliyer Kolik'tir. İnflamasyon (Kolesistit) yoktur, sadece taş kanalı tıkamıştır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nAğrısı devam ediyor ve ateşi 38°C. Sağ üst kadrana elinle bastırırken hastadan derin nefes almasını istiyorsun. Hasta ağrı nedeniyle aniden nefesini tutuyor.\n\nBu bulgunun adı nedir?",
+            "opts": [
+              { "txt": "Murphy Belirtisi", "type": "correct", "go": "s3" },
+              { "txt": "Courvoisier Belirtisi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ İSİM HATASI ]</b>\n\nCourvoisier; ağrısız, ele gelen safra kesesidir (Pankreas Ca). İnflamasyona bağlı inspiratuar duraksama Murphy belirtisidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ GÖRÜNTÜLEME ]</b>\n\nMurphy (+) ve Lökositoz var. Tokyo Kriterlerine göre 'Şüpheli Akut Kolesistit'. Kesin tanı için İLK tercih edilecek görüntüleme yöntemi nedir?",
+            "opts": [
+              { "txt": "Ultrasonografi (USG)", "type": "correct", "go": "s4" },
+              { "txt": "Bilgisayarlı Tomografi (BT)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ALTIN STANDART ]</b>\n\nSafra kesesi taşlarını ve duvar kalınlığını en iyi gösteren, radyasyonsuz yöntem USG'dir. BT komplikasyon şüphesinde istenir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ BULGULAR ]</b>\n\nUSG'de kese duvarı 5 mm (Kalın), perikolesistik sıvı var ve taş izlendi. Tokyo Grade 1 (Hafif) Akut Kolesistit tanısı kondu.\n\nTedavi yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Antibiyotik + Erken Laparoskopik Kolesistektomi (LC)", "type": "correct", "go": "s5" },
+              { "txt": "Sadece antibiyotik ile soğutma, 6 hafta sonra ameliyat.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ GÜNCEL YAKLAŞIM ]</b>\n\nErken cerrahi (ilk 72 saat veya başvuruda), komplikasyonları ve yatış süresini azalttığı için artık standart tedavidir. Soğutma tedavisi eski bir yaklaşımdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta erken dönemde laparoskopik olarak ameliyat edildi. Komplikasyon gelişmeden taburcu oldu. Başarılı yönetim.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: ACİL DRENAJ",
+        "desc": "Acil Servis - 70 Yaş Erkek - Ateş ve Sarılık",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ KLİNİK TABLO ]</b>\n\n70 yaşında erkek hasta. Yüksek ateş (39°C), titreme, sağ üst kadran ağrısı ve gözlerde sararma şikayetiyle geldi. Tansiyonu 80/50 mmHg (Hipotansif) ve bilinci bulanık.\n\nBu tabloyu hangi terimle tanımlarsın?",
+            "opts": [
+              { "txt": "Reynolds Pentadı (Akut Kolanjit + Şok)", "type": "correct", "go": "s2" },
+              { "txt": "Charcot Triadı", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ CİDDİYET FARKI ]</b>\n\nCharcot Triadı sadece Ateş+Ağrı+Sarılık'tır. Buna Hipotansiyon (Şok) ve Konfüzyon (Bilinç kaybı) eklenirse adı Reynolds Pentadı olur ve acil bir durumdur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nAkut Kolanjit (Safra yolu enfeksiyonu) gelişmiş. Hastanın şoka girmesinin temel nedeni nedir?",
+            "opts": [
+              { "txt": "Biliyer obstrüksiyona bağlı artan basınçla bakterilerin kana karışması (Biliyer Sepsis).", "type": "correct", "go": "s3" },
+              { "txt": "Safra kesesinin delinmesi (Perforasyon).", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s3": {
+            "text": "<b>[ ŞİDDET BELİRLEME ]</b>\n\nTokyo Kriterlerine göre; Hipotansiyon (KVS yetmezliği) ve Bilinç bulanıklığı (Nörolojik yetmezlik) olduğu için bu hasta hangi evrededir?",
+            "opts": [
+              { "txt": "Grade 3 (Şiddetli) Akut Kolanjit", "type": "correct", "go": "s4" },
+              { "txt": "Grade 2 (Orta) Akut Kolanjit", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ EVRELEME ]</b>\n\nHerhangi bir organ yetmezliği (KVS, Solunum, Renal vb.) varsa Grade 3 kabul edilir. Grade 2'de sadece lökositoz, yüksek ateş gibi bulgular vardır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ACİL TEDAVİ ]</b>\n\nSıvı resüsitasyonu ve antibiyotik başladın. Ancak Grade 3 kolanjitte 'Hayat Kurtarıcı' olan asıl işlem nedir?",
+            "opts": [
+              { "txt": "Acil Biliyer Drenaj (ERCP)", "type": "correct", "go": "s5" },
+              { "txt": "Acil Kolesistektomi", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ YANLIŞ HEDEF ]</b>\n\nSorun safra kesesinde değil, safra kanalının (koledok) tıkalı olmasındadır. Ameliyat değil, kanalın açılması (Drenaj/ERCP) gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya acil ERCP yapıldı, koledoktaki taş çıkarıldı ve pürülan safra drene edildi. Hasta sepsis tablosundan çıktı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: RENKLERİN GİZEMİ",
+        "desc": "Laboratuvar - Taş Analizi - Etyoloji Bulmacası",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA 1 ]</b>\n\n30 yaşında kadın hasta. Orak Hücreli Anemi (Kronik Hemoliz) tanısı var. Safra kesesinde çok sayıda küçük, sert taşlar saptandı. Taşların rengi SİYAH.\n\nBu taşların ana bileşeni nedir?",
+            "opts": [
+              { "txt": "Kalsiyum Bilirübinat (Pigment)", "type": "correct", "go": "s2" },
+              { "txt": "Kolesterol", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ PATOGENEZ ]</b>\n\nHemoliz sonucu artan 'Ankonjuge Bilirubin' safra yollarında kalsiyumla birleşerek Siyah Pigment taşlarını oluşturur. Kolesterol taşları sarıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ VAKA 2 ]</b>\n\n55 yaşında erkek hasta. Daha önce safra yollarından ameliyat geçirmiş (striktür/darlık var). Tekrarlayan kolanjit atakları oluyor. Safra yollarında 'KAHVERENGİ', çamur kıvamında taşlar çıktı.\n\nBu taşların oluşumundaki temel faktör nedir?",
+            "opts": [
+              { "txt": "Safra Stazı ve Bakteriyel Enfeksiyon", "type": "correct", "go": "s3" },
+              { "txt": "Hızlı Kilo Kaybı", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ENFEKSİYON ]</b>\n\nKahverengi taşlar, safra yollarında darlık/staz olduğunda bakterilerin ürettiği enzimler (beta-glukuronidaz) sayesinde oluşur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ VAKA 3 ]</b>\n\n45 yaşında, obez, 4 çocuk annesi kadın (4F kuralı). Safra kesesinde 2 cm çapında, SARI renkli, yüzeyi düzgün bir taş var.\n\nBu taşın oluşum mekanizması nedir?",
+            "opts": [
+              { "txt": "Safrada Kolesterol Süpersatürasyonu", "type": "correct", "go": "s4" },
+              { "txt": "Hemoliz", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KLASİK ]</b>\n\nBatı toplumlarında en sık görülen (%80) taş tipidir. Kolesterolün safrada aşırı artması veya safra tuzlarının azalmasıyla oluşur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ASEMPTOMATİK ]</b>\n\nBu sarı taş tesadüfen USG'de görüldü. Hastanın hiçbir şikayeti yok. Tedavi yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Takip (Ameliyat gerekmez)", "type": "correct", "go": "s5" },
+              { "txt": "Profilaktik Kolesistektomi", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ KURAL ]</b>\n\nAsemptomatik safra taşlarında ameliyat önerilmez. Sadece Porselen Kese, orak hücreli anemi gibi özel durumlarda profilaktik cerrahi yapılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nTaş tiplerini ve etyolojilerini başarıyla ayırttın. Siyah (Hemoliz/Siroz), Kahverengi (Enfeksiyon/Staz), Sarı (Metabolik/Obezite).",
+            "opts": [
+              { "txt": "MODÜLÜ TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Safra kesesi taşlarının en sık görülen tipi hangisidir?", "a": ["Kolesterol Taşları (%80)", "Siyah Pigment Taşları", "Kahverengi Pigment Taşları", "Kalsiyum Karbonat Taşları"], "correct": 0 },
+      { "q": "Akut kolesistit tanısında 'İlk Tercih' görüntüleme yöntemi hangisidir?", "a": ["Ultrasonografi (USG)", "Bilgisayarlı Tomografi (BT)", "MRCP", "ERCP"], "correct": 0 },
+      { "q": "Akut kolanjitin en tipik klinik tablosu olan 'Charcot Triadı' neleri içerir?", "a": ["Ateş, Sarılık, Sağ Üst Kadran Ağrısı", "Ateş, Hipotansiyon, Konfüzyon", "Ağrı, Kusma, İshal", "Sarılık, Kaşıntı, Kilo Kaybı"], "correct": 0 },
+      { "q": "Reynolds Pentadı hangi durumu işaret eder?", "a": ["Akut Kolanjit + Şok (Hipotansiyon/Konfüzyon)", "Akut Pankreatit", "Safra Kesesi Perforasyonu", "Karaciğer Absesi"], "correct": 0 },
+      { "q": "Derin inspiryumda sağ üst kadranda ağrı ve nefesin kesilmesi bulgusuna ne ad verilir?", "a": ["Murphy Belirtisi", "McBurney Belirtisi", "Courvoisier Belirtisi", "Kehr Belirtisi"], "correct": 0 },
+      { "q": "Siyah pigment taşlarının oluşumunda en önemli risk faktörleri nelerdir?", "a": ["Kronik Hemoliz ve Siroz", "Obezite ve Diyabet", "Enfeksiyon ve Staz", "Hızlı Kilo Kaybı"], "correct": 0 },
+      { "q": "Tokyo Kriterlerine göre 'Grade 3 (Şiddetli) Akut Kolanjit' tedavisinde ilk adım ne olmalıdır?", "a": ["Acil Biliyer Drenaj (ERCP) ve Organ Desteği", "Acil Kolesistektomi", "Sadece Antibiyotik", "Perkütan Drenaj"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi safra taşı oluşumu için bir risk faktörü (4F) DEĞİLDİR?", "a": ["Erkek Cinsiyet", "Obezite (Fat)", "Kadın Cinsiyet (Female)", "40 Yaş Üstü (Forty)"], "correct": 0 },
+      { "q": "Safra yollarında staz ve bakteriyel enfeksiyon zemininde oluşan taş tipi hangisidir?", "a": ["Kahverengi Pigment Taşları", "Siyah Pigment Taşları", "Kolesterol Taşları", "Kalsiyum Taşları"], "correct": 0 },
+      { "q": "Asemptomatik (sessiz) safra taşlarında ne zaman ameliyat önerilir?", "a": ["Porselen Kese (Kanser riski) varlığında", "Taş sayısı çoksa", "Taş boyutu küçükse", "Hasta istiyorsa"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Kolesterol Taşı", "B": "Sarı renkli, Obezite ile ilişkili" },
+      { "A": "Siyah Pigment Taşı", "B": "Hemoliz ve Siroz ile ilişkili" },
+      { "A": "Kahverengi Pigment Taşı", "B": "Enfeksiyon ve Staz ile ilişkili" },
+      { "A": "Charcot Triadı", "B": "Ateş, Ağrı, Sarılık (Kolanjit)" },
+      { "A": "Murphy Belirtisi", "B": "İnspiryumda ağrı (Kolesistit)" },
+      { "A": "Reynolds Pentadı", "B": "Şok ve Konfüzyon eklenmesi" },
+      { "A": "USG", "B": "Kese taşlarında ilk tercih" },
+      { "A": "ERCP", "B": "Koledok taşlarının tedavisi" }
+    ],
+    "decypher": [
+      {
+        "text": "Safra taşlarının oluşumunda safrada kolesterolün aşırı artması ({supersatürasyon}), safra kesesinin kasılma kusuru ({hipomotilite}) ve kristalleşmeyi başlatan çekirdeklenme ({nükleasyon}) rol oynar.",
+        "decoys": ["enfeksiyon", "hemoliz", "perforasyon", "iskemi"]
+      },
+      {
+        "text": "Akut {Kolanjit}, safra yollarının tıkanıklığı ve enfeksiyonu sonucu gelişen acil bir tablodur. Tanıda {Charcot} triadı (Ateş, Ağrı, Sarılık) ve {Reynolds} pentadı (Şok, Konfüzyon) kullanılır.",
+        "decoys": ["Kolesistit", "Pankreatit", "Murphy", "McBurney"]
+      },
+      {
+        "text": "Akut kolesistit tanısında {Ultrasonografi} ilk tercih edilen görüntüleme yöntemidir. Tedavide antibiyotiklerin yanı sıra erken dönemde laparoskopik {kolesistektomi} önerilir.",
+        "decoys": ["BT", "MR", "ERCP", "Drenaj"]
+      }
+    ]
+  }
+}

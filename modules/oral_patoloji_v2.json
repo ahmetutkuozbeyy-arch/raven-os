@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "title": "AĞIZ VE TÜKRÜK BEZİ PATOLOJİSİ",
+    "tag": "PATOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 ORAL MUKOZA HASTALIKLARI</div><div class='sum-body'>• <b>Aftöz Stomatit:</b> Tekrarlayan, ağrılı, sığ ülserler. Behçet'in bir parçası olabilir.<br>• <b>Herpes (HSV-1):</b> İntranükleer inklüzyonlar, multinükleer dev hücreler (Tzanck testi).<br>• <b>Lökoplaki:</b> Beyaz plak. Prekanserözdür (%5-6 malignite).<br>• <b>Eritroplaki:</b> Kırmızı, kadifemsi plak. Malignite riski %50'dir (Daha tehlikeli!).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TÜKRÜK BEZİ TÜMÖRLERİ</div><div class='sum-body'>• <b>Pleomorfik Adenom:</b> En sık görülen BENİGN (%60). Epitelyal + Mezenkimal (Mikst). Kapsüllü ama nüks edebilir.<br>• <b>Warthin Tümörü:</b> Erkeklerde ve <span class='sum-tag'>SİGARA</span> içenlerde sık. Bilateral olabilir. Lenfoid stroma içerir.<br>• <b>Mukoepidermoid Ca:</b> En sık görülen MALİGN tümör.<br>• <b>Adenoid Kistik Ca:</b> Perinöral invazyon yapar (Ağrılıdır).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💀 ORAL KANSERLER</div><div class='sum-body'>• <b>SCC (Skuamöz Hücreli Ca):</b> Oral kavitenin en sık kanseri (%95).<br>• <b>Riskler:</b> Alkol + Sigara (Sinerjik etki), HPV, Kötü hijyen.<br>• <b>Bulgu:</b> Keratin incileri ve intersellüler köprüler.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: BEYAZ TEHLİKE",
+        "desc": "KBB Polikliniği - 55 Yaş Erkek - Ağız Tabanında Plak",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n55 yaşında erkek hasta. Ağız tabanında, dili kaldırdığında fark edilen beyaz renkli bir leke şikayetiyle geldi. 30 yıldır günde 1 paket sigara içiyor.\n\nİlk muayene hamlen ne olmalı?",
+            "opts": [
+              { "txt": "Plağı spatul ile kazımayı dene.", "type": "correct", "go": "s2" },
+              { "txt": "Hemen eksizyonel biyopsi yap.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ACELECİ ]</b>\n\nÖnce lezyonun niteliğini anlamalısın. Kazınabiliyorsa mantar (candida) veya gıda artığı olabilir. İnvaziv girişimden önce basit testler yapılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nLezyonu kazımaya çalıştın ama çıkmıyor, mukozaya sıkıca yapışık. Candida ekarte edildi. Bu klinik görünümün adı nedir?",
+            "opts": [
+              { "txt": "Lökoplaki", "type": "correct", "go": "s3" },
+              { "txt": "Liken Planus", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KARIŞIKLIK ]</b>\n\nLiken planus genelde yanak mukozasında, iki taraflı (bilateral) ve ağsı (Wickham çizgileri) beyazlıklar yapar. Tek taraflı, kazınamayan plak Lökoplakidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ RİSK ANALİZİ ]</b>\n\nLökoplaki 'prekanseröz' bir lezyondur. Peki, eğer bu lezyon beyaz değil de 'KIRMIZI' ve kadifemsi (Eritroplaki) olsaydı, malignite riski nasıl değişirdi?",
+            "opts": [
+              { "txt": "Risk çok daha yüksek olurdu (%50).", "type": "correct", "go": "s4" },
+              { "txt": "Risk azalırdı, kırmızı lezyonlar sadece inflamasyondur.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KIRMIZI ALARM ]</b>\n\nEritroplaki (kırmızı plak), Lökoplakiye (beyaz plak) göre çok daha yüksek oranda displazi ve karsinom içerir. Kırmızı renk, epitelin inceldiğini ve damarların yüzeye yaklaştığını gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ HİSTOLOJİ ]</b>\n\nBiyopsi aldın. Patolog raporda 'Keratin incileri içeren invaziv adalar' olduğunu belirtti. Tanın nedir?",
+            "opts": [
+              { "txt": "Skuamöz Hücreli Karsinom (SCC)", "type": "correct", "go": "s5" },
+              { "txt": "Adenokarsinom", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ DOKU TİPİ ]</b>\n\nAğız içi döşemesi çok katlı yassı (skuamöz) epiteldir. Buranın en sık kanseri SCC'dir. Adenokarsinom tükrük bezlerinden kaynaklanır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nErken evre SCC tanısı kondu. Cerrahi planlandı. Hastanın prognozunu etkileyen en önemli faktör nedir?",
+            "opts": [
+              { "txt": "Erken tanı ve evreleme (TNM).", "type": "correct", "action": "end" },
+              { "txt": "Hastanın yaşı.", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ PROGNOZ ]</b>\n\nOral kanserlerde sağkalımı belirleyen en kritik faktör erken tanıdır. Dudak kanserleri %90 iyileşirken, ağız tabanı kanserleri daha kötü seyreder.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KULAK ALTINDA ŞİŞLİK",
+        "desc": "Poliklinik - 40 Yaş Kadın - Yavaş Büyüyen Kitle",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ MUAYENE ]</b>\n\n40 yaşında kadın hasta. Sol kulak önünde (parotis bölgesi) 1 yıldır yavaş yavaş büyüyen, ağrısız bir şişlik şikayetiyle geldi. Yüz felci bulgusu yok.\n\nİlk düşüncen nedir?",
+            "opts": [
+              { "txt": "Pleomorfik Adenom (Benign)", "type": "correct", "go": "s2" },
+              { "txt": "Adenoid Kistik Karsinom (Malign)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ İSTATİSTİK ]</b>\n\nParotis tümörlerinin %65-80'i benigndir ve bunların da çoğu Pleomorfik Adenomdur. Ağrısız, yavaş büyüyen kitlede öncelik benigndedir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ PATOLOJİ ]</b>\n\nİnce İğne Aspirasyon Biyopsisi (İİAB) yapıldı. Sonuç: 'Miksoid stroma içinde epitelyal ve miyoepitelyal hücreler (Mikst yapı)'.\n\nTanın kesinleşti: Pleomorfik Adenom. Bu tümörün en karakteristik özelliği nedir?",
+            "opts": [
+              { "txt": "Epitelyal ve mezenkimal elemanların karışımı (Heterojenite).", "type": "correct", "go": "s3" },
+              { "txt": "Sadece onkositik hücrelerden oluşması.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KARIŞTIRMA ]</b>\n\nSadece onkositik hücrelerden oluşan tümör Warthin tümörüdür. Pleomorfik adenom 'karışık' (mikst) yapıdadır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ CERRAHİ PLAN ]</b>\n\nHastayı ameliyata alacaksın. Pleomorfik adenom kapsüllü olmasına rağmen, cerrahide dikkat edilmesi gereken kritik nokta nedir?",
+            "opts": [
+              { "txt": "Kapsülüyle birlikte genişçe çıkarılmalı (Yüzeyel Parotidektomi).", "type": "correct", "go": "s4" },
+              { "txt": "Sadece tümörün içi boşaltılmalı (Enükleasyon).", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ NÜKS RİSKİ ]</b>\n\nPleomorfik adenomun kapsülü yalancı çıkıntılar (pseudopodia) yapar. Sadece tümörü sıyırıp alırsan (enükleasyon), geride parça kalır ve nüks eder (%25 risk).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ KOMPLİKASYON ]</b>\n\nHasta ameliyatı reddediyor ve '10 yıl sonra gelsem ne olur?' diye soruyor. Pleomorfik adenomun uzun süre tedavi edilmezse en korkulan komplikasyonu nedir?",
+            "opts": [
+              { "txt": "Malign transformasyon (Karsinoma ex Pleomorfik Adenom).", "type": "correct", "go": "s5" },
+              { "txt": "Kendiliğinden küçülmesi.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ MALİGNİTE RİSKİ ]</b>\n\nTümör 15 yıldan uzun süre kalırsa malignleşme riski %10'a çıkar. Bu yüzden çıkarılmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta ikna oldu ve başarılı bir parotidektomi yapıldı. Yüz siniri (N. Facialis) korundu. Patoloji sonucu benign geldi. Tebrikler.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: SİGARA TİRYAKİSİ",
+        "desc": "Poliklinik - 60 Yaş Erkek - Bilateral Şişlik",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n60 yaşında erkek hasta. Günde 2 paket sigara içiyor. Her iki çene köşesinde (parotis) yumuşak, ağrısız şişlikler var. Biri daha büyük.\n\nİki taraflı (bilateral) olabilen ve sigara ile güçlü ilişkisi olan tükrük bezi tümörü hangisidir?",
+            "opts": [
+              { "txt": "Warthin Tümörü (Papiller Kistadenoma Lenfomatosum)", "type": "correct", "go": "s2" },
+              { "txt": "Pleomorfik Adenom", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TİPİK ÖZELLİK ]</b>\n\nPleomorfik adenom en sıktır ama genelde tek taraflıdır. Warthin tümörü %10 bilateraldir ve sigara içenlerde 8 kat sıktır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ MAKROSKOPİ ]</b>\n\nAmeliyatla çıkarılan kitlenin kesit yüzünde kistik boşluklar ve içlerinde 'motor yağı' kıvamında sıvı görüldü. Bu hangi tümöre uyar?",
+            "opts": [
+              { "txt": "Warthin Tümörü", "type": "correct", "go": "s3" },
+              { "txt": "Mukoepidermoid Karsinom", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ ]</b>\n\nMukoepidermoid karsinom sert ve infiltratiftir. Kistik yapılar ve koyu sıvı Warthin için tipiktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ MİKROSKOPİ ]</b>\n\nPatolog mikroskopta 'Lenfoid stroma üzerinde çift sıralı onkositik epitel' gördüğünü rapor etti. Bu ne anlama gelir?",
+            "opts": [
+              { "txt": "Bu Warthin tümörünün kesin tanısıdır.", "type": "correct", "go": "s4" },
+              { "txt": "Lenfoma başlangıcıdır.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ DOKU YAPISI ]</b>\n\nWarthin tümörünün diğer adı 'Adenolenfoma'dır ama lenfoma değildir. Yapısında bol miktarda lenfosit bulunur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ MALİGNİTE? ]</b>\n\nPeki, eğer hastada yüz felci, ağrı ve kitlede hızlı büyüme olsaydı, en sık görülen MALİGN tükrük bezi tümörü olarak neyi düşünürdün?",
+            "opts": [
+              { "txt": "Mukoepidermoid Karsinom", "type": "correct", "go": "s5" },
+              { "txt": "Warthin Tümörü", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ MALİGNİTE SIRALAMASI ]</b>\n\nWarthin benigndir. Tükrük bezlerinin en sık malign tümörü Mukoepidermoid Karsinomdur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastada Warthin tümörü doğrulandı. Sigarayı bırakması tavsiye edildi. Başarılı teşhis.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Oral kavite kanserlerinin %95'ini oluşturan histolojik tip hangisidir?", "a": ["Skuamöz Hücreli Karsinom (SCC)", "Adenokarsinom", "Lenfoma", "Sarkom"], "correct": 0 },
+      { "q": "Hangi oral lezyonun kanserleşme (malignite) riski en yüksektir?", "a": ["Eritroplaki (Kırmızı)", "Lökoplaki (Beyaz)", "Liken Planus", "Aft"], "correct": 0 },
+      { "q": "Tükrük bezlerinde en sık görülen BENİGN tümör hangisidir?", "a": ["Pleomorfik Adenom", "Warthin Tümörü", "Onkositom", "Miyoepitelyoma"], "correct": 0 },
+      { "q": "Tükrük bezlerinin en sık görülen MALİGN tümörü hangisidir?", "a": ["Mukoepidermoid Karsinom", "Adenoid Kistik Karsinom", "Asinik Hücreli Karsinom", "SCC"], "correct": 0 },
+      { "q": "Sigara içen erkeklerde sık görülen ve %10 bilateral olabilen tükrük bezi tümörü hangisidir?", "a": ["Warthin Tümörü", "Pleomorfik Adenom", "Mukoepidermoid Ca", "Adenoid Kistik Ca"], "correct": 0 },
+      { "q": "Perinöral invazyon (sinir tutulumu) yapma eğilimi en yüksek olan ve bu yüzden çok ağrılı olan malign tümör hangisidir?", "a": ["Adenoid Kistik Karsinom", "Warthin Tümörü", "Pleomorfik Adenom", "Mukoepidermoid Ca"], "correct": 0 },
+      { "q": "Herpes (HSV) enfeksiyonunun sitopatolojik tanısında görülen karakteristik hücre nedir?", "a": ["Multinükleer Dev Hücre (Tzanck hücresi)", "Koilkosit", "Reed-Sternberg", "Langhans hücresi"], "correct": 0 },
+      { "q": "Ağız tabanında, kazınamayan beyaz plak şeklinde görülen premalign lezyona ne ad verilir?", "a": ["Lökoplaki", "Kandidiazis", "Liken Planus", "Eritroplaki"], "correct": 0 },
+      { "q": "Sjögren sendromlu hastalarda tükrük bezinde gelişme riski artan malignite hangisidir?", "a": ["Lenfoma (MALT)", "SCC", "Adenokarsinom", "Melanom"], "correct": 0 },
+      { "q": "Pleomorfik adenom cerrahisinde nüksü önlemek için en önemli prensip nedir?", "a": ["Tümörü kapsülüyle birlikte genişçe çıkarmak", "Sadece tümörü enükle etmek", "Radyoterapi vermek", "Kemoterapi vermek"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Pleomorfik Adenom", "B": "En sık benign tükrük bezi tümörü" },
+      { "A": "Warthin Tümörü", "B": "Sigara, erkek, lenfoid stroma" },
+      { "A": "Mukoepidermoid Ca", "B": "En sık malign tükrük bezi tümörü" },
+      { "A": "Adenoid Kistik Ca", "B": "Perinöral invazyon, ağrı" },
+      { "A": "Lökoplaki", "B": "Beyaz plak (Premalign)" },
+      { "A": "Eritroplaki", "B": "Kırmızı plak (Yüksek risk)" },
+      { "A": "HSV (Herpes)", "B": "Tzanck testi, multinükleer dev hücre" },
+      { "A": "Candida", "B": "Beyaz, kazınabilen plak (Pamukçuk)" }
+    ],
+    "decypher": [
+      {
+        "text": "Oral kavitenin en sık görülen malign tümörü {Skuamöz} Hücreli Karsinomdur. En önemli risk faktörleri {sigara} ve alkoldür. Histolojik olarak {keratin} incileri görülmesi tipiktir.",
+        "decoys": ["Adenokarsinom", "travma", "müsin", "bazal"]
+      },
+      {
+        "text": "Tükrük bezi tümörlerinde kural olarak; bez ne kadar küçükse, tümörün malign olma ihtimali o kadar {yüksektir}. Parotis tümörlerinin çoğu {benign} iken, damak ve dil altındaki tümörlerin çoğu maligndir.",
+        "decoys": ["düşüktür", "malign", "kistik"]
+      },
+      {
+        "text": "{Pleomorfik} adenom, tükrük bezlerinin en sık görülen tümörüdür. Hem epitelyal hem de {mezenkimal} elemanlar içerdiği için mikst tümör de denir. Cerrahide kapsülüyle çıkarılmazsa {nüks} eder.",
+        "decoys": ["Warthin", "lenfoid", "metastaz", "kist"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "title": "ÇOCUKLUK ÇAĞI İNTESTİNAL PARAZİTLERİ",
+    "tag": "PEDİATRİ & ENFEKSİYON"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🩺 KLİNİK & ETKİLER</div><div class='sum-body'>• <b>Sistemik Etki:</b> GİS'te temel etki malabsorpsiyon ve malnütrisyondur. Bu durum büyüme-gelişme geriliğine ve boy kısalığına yol açabilir.<br>• <b>Spesifik Bulgular:</b> Giardia (Steatore/Çölyak benzeri), Enterobius (Perianal kaşıntı/Diş gıcırdatma), Ascaris (PİKA/Obstrüksiyon).<br>• <b>Yaş Grubu:</b> En sık 0-14 yaş grubunda görülür (%4-96 sıklık).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KRİTİK BİLGİ</div><div class='sum-body'>• <b>Tanı Anahtarları:</b> Oksiyür için Selofan Bant, Cryptosporidium için Asit-Fast boyama, Amip için Eritrosit Fagositozu.<br>• <b>Epidemioloji:</b> Cryptosporidium sıklığında klorlamaya direnç nedeniyle artış vardır.<br>• <b>Ayırıcı Tanı:</b> Kanlı ishal her zaman amebiasis değildir (Anal fissür, alerji ekarte edilmeli).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TANI & YÖNETİM</div><div class='sum-body'>• <b>Giardia:</b> Yağlı dışkılama yapar, Çölyak ile karışır.<br>• <b>Blastocystis:</b> İrritabl Barsak Sendromu (İBS) benzeri gaz/şişkinlik yapar; mikrobiyota çeşitliliği ile ilişkili olabilir.<br>• <b>Korunma:</b> Hijyen, temiz su kaynakları (klorlama yetersiz olabilir, filtrasyon/ozonlama gerekir).</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: GECE KAŞINTISI",
+        "desc": "Pediatri Polikliniği - 6 Yaş Kız - Huzursuzluk ve Kaşıntı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: SEMPTOM ANALİZİ ]</b>\n\n6 yaşında kız çocuğu, son 1 aydır geceleri artan huzursuzluk, uykuda diş gıcırdatma ve ağızdan salya akması şikayetleri ile getirildi. Annesi çocuğun sürekli poposunu kaşıdığını belirtiyor.\n\nEn olası ön tanın nedir?",
+            "opts": [
+              { "txt": "Enterobiasis (Kıl Kurdu)", "type": "correct", "go": "s2" },
+              { "txt": "Giardiasis", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANI HATASI ]</b>\n\nGiardiasis daha çok steatore (yağlı ishal) ve karın ağrısı ile gelir. Gece artan perianal kaşıntı, diş gıcırdatma ve salya akması <i>Enterobius vermicularis</i> için tipiktir.",
+            "opts": [{ "txt": "DÜZELT VE İLERLE", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: TANI YÖNTEMİ ]</b>\n\nTanıyı kesinleştirmek için aileye hangi tetkiki yapmalarını ve nasıl uygulamalarını söylersin?",
+            "opts": [
+              { "txt": "Sabah tuvaletini yapmadan ve yıkanmadan perianal bölgeye Selofan Bant uygulanması", "type": "correct", "go": "s3" },
+              { "txt": "Rutin Gaita Mikroskopisi için örnek alınması", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ YÖNTEM ]</b>\n\n<i>Enterobius vermicularis</i> yumurtaları perianal bölgeye bırakılır, dışkı içine nadiren karışır. Bu yüzden gaita mikroskopisinin duyarlılığı düşüktür. Altın standart 'Selofan Bant' yöntemidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: EK BULGULAR ]</b>\n\nSelofan bantta asimetrik (D harfi şeklinde) yumurtalar görüldü. Aile, çocuğun son zamanlarda idrar yaparken yanma şikayeti olduğunu da ekledi. Bu parazitle ilişkisi olabilir mi?",
+            "opts": [
+              { "txt": "Evet, ektopik migrasyon ile vulvovajinit ve tekrarlayan İYE yapabilir.", "type": "correct", "go": "s4" },
+              { "txt": "Hayır, bu parazit sadece bağırsakta yaşar.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KOMPLİKASYON BİLGİSİ ]</b>\n\nKıl kurtları özellikle kız çocuklarında perianal bölgeden vajinaya geçerek vulvovajinit, akıntı ve tekrarlayan idrar yolu enfeksiyonlarına (İYE) neden olabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: TEDAVİ STRATEJİSİ ]</b>\n\nReçeteyi düzenledin. Tedavinin başarısı için aileye vermen gereken en kritik talimat nedir?",
+            "opts": [
+              { "txt": "Sadece hasta çocuk değil, tüm aile bireyleri aynı anda tedavi edilmelidir.", "type": "correct", "go": "s5" },
+              { "txt": "Sadece semptomu olanlar ilaç kullansın.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ EKSİK TEDAVİ ]</b>\n\nEnterobiasis çok bulaşıcıdır. Aile içi yayılım sıktır ve semptomsuz portörlük olabilir. Re-enfeksiyonu önlemek için tüm aile (aynı evde yaşayanlar) eş zamanlı tedavi edilmelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: TAKİP ]</b>\n\nİlacın tek dozunu kullandılar. Parazitin yaşam döngüsünü düşünerek, yumurtadan yeni çıkacak larvaları da yok etmek için tedaviyi ne zaman tekrarlamalılar?",
+            "opts": [
+              { "txt": "2 hafta sonra", "type": "correct", "action": "end" },
+              { "txt": "2 gün sonra", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ YAŞAM DÖNGÜSÜ HATASI ]</b>\n\nİlaçlar genellikle erişkin formlara etkilidir. O an yumurta halinde olanların larva formuna geçip duyarlı hale gelmesi için yaklaşık 2 hafta beklenmeli ve doz tekrarlanmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: KRONİK KAÇAK",
+        "desc": "Gastroenteroloji - 8 Yaş Erkek - Gelişme Geriliği ve İshal",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: ANAMNEZ ]</b>\n\n8 yaşında erkek hasta. Şikayeti: Kötü kokulu, yağlı, açık renkli dışkılama ve karın şişliği. Büyüme eğrisinde duraklama (tartı alımı yetersiz) var. Aile 'Çocuğumuz Çölyak mı oldu?' diye endişeli.\n\nHangi paraziter enfeksiyon bu tabloyu en çok taklit eder?",
+            "opts": [
+              { "txt": "Giardia intestinalis", "type": "correct", "go": "s2" },
+              { "txt": "Entamoeba histolytica", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nEntamoeba kanlı-mukuslu ishal (dizanteri) yapar. Yağlı dışkılama (steatore), malabsorpsiyon ve Çölyak benzeri tablo <i>Giardia intestinalis</i> enfeksiyonunun tipik bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: MİKROSKOPİ ]</b>\n\nGaita mikroskopisi istedin. Laboratuvar teknisyeni, 'düşen yaprak gibi' hareket eden, 'yaşlı adam yüzü' görünümünde kamçılı formlar gördüğünü rapor etti.\n\nBu formun adı nedir?",
+            "opts": [
+              { "txt": "Trofozoit", "type": "correct", "go": "s3" },
+              { "txt": "Kist", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MORFOLOJİ BİLGİSİ ]</b>\n\nKistler hareketsiz ve dayanıklı formlardır. Hareketli, beslenen ve 'yüz' görünümüne sahip olan form Trofozoitlerdir. Genellikle ishalli dışkıda trofozoit, katı dışkıda kist görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: PATOGENEZ ]</b>\n\nGiardia'nın neden büyüme geriliği ve yağlı ishale yol açtığını aileye açıklaman gerekiyor. Temel mekanizma nedir?",
+            "opts": [
+              { "txt": "İnce bağırsak duvarına yapışarak emilim yüzeyini bloke etmesi (Malabsorpsiyon)", "type": "correct", "go": "s4" },
+              { "txt": "Bağırsak duvarını delip kan yoluyla yayılması", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ PATOGENEZ HATASI ]</b>\n\nGiardia invaziv değildir, doku içine girmez. Vantuzlarıyla duodenuma yapışır, 'kaldırım taşı' gibi yüzeyi kaplar ve besin emilimini engeller.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: EPİDEMİYOLOJİ ]</b>\n\nBölgesel verilere göre (EÜTF), Giardia'nın son yıllardaki (2015-2022) görülme sıklığı trendi nasıldır?",
+            "opts": [
+              { "txt": "Ciddi bir azalma göstermiştir (%2.5 -> %0.3)", "type": "correct", "go": "s5" },
+              { "txt": "Patlama yapmıştır (%2 -> %12)", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ VERİ HATASI ]</b>\n\nVerilere göre Giardia sıklığı azalırken, özellikle <i>Cryptosporidium</i> ve <i>Blastocystis</i> sıklığında artış gözlenmiştir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: KORUNMA ]</b>\n\nTedaviden sonra tekrar bulaşı önlemek için su kaynaklarıyla ilgili ne önerirsin?",
+            "opts": [
+              { "txt": "Suların klorlanması Giardia kistlerine karşı her zaman yeterli olmayabilir, filtrasyon/kaynatma önemlidir.", "type": "correct", "action": "end" },
+              { "txt": "Sadece klorlamak tüm parazitleri öldürür.", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ KORUNMA HATASI ]</b>\n\nGiardia ve özellikle Cryptosporidium kistleri standart klorlamaya dirençli olabilir. Fiziksel filtrasyon veya kaynatma daha güvenilirdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: GÖRÜNMEZ TEHDİT",
+        "desc": "Enfeksiyon - 9 Yaş - Su Kaynaklı Salgın Şüphesi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: VAKA TANIMI ]</b>\n\nBölgedeki yüzeyel su kaynaklarının kullanıldığı bir yerleşim yerinde ishal salgını başladı. Gelen hastalarda şiddetli karın ağrısı ve sulu ishal var. Rutin dışkı incelemelerinde parazit görülemedi. Hangi parazitten şüphelenirsin?",
+            "opts": [
+              { "txt": "Cryptosporidium spp.", "type": "correct", "go": "s2" },
+              { "txt": "Ascaris lumbricoides", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANI YÖNLENDİRMESİ ]</b>\n\nAscaris yumurtaları rutinde kolayca görülür. <i>Cryptosporidium</i> ookistleri çok küçüktür ve rutin incelemede gözden kaçabilir, özel boyama gerektirir. Ayrıca su kaynaklı salgınlarda (klor direnci) ön plandadır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: ÖZEL TANI ]</b>\n\nLaboratuvarı arayıp bu parazit için özel bir boyama yöntemi kullanmalarını istedin. Hangi boyama yöntemi Cryptosporidium ookistlerini gösterir?",
+            "opts": [
+              { "txt": "Modifiye Asit-Fast (Ehrlich-Ziehl-Neelsen)", "type": "correct", "go": "s3" },
+              { "txt": "Selofan Bant", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TEKNİK HATA ]</b>\n\nSelofan bant oksiyür içindir. Cryptosporidium ookistleri asit-fast boyası ile kırmızı renkte boyanarak görünür hale gelir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: EPİDEMİYOLOJİK TREND ]</b>\n\nLaboratuvar sonuçları pozitif geldi. Verilere baktığında, Cryptosporidium'un 2015'e göre 2022'de tespit edilme oranında nasıl bir değişim görüyorsun?",
+            "opts": [
+              { "txt": "Ciddi bir artış (%0.5 -> %12.9) var.", "type": "correct", "go": "s4" },
+              { "txt": "Azalma eğiliminde.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ VERİ ANALİZİ ]</b>\n\nVerilen tabloda Cryptosporidium 2015'te 27 vaka iken 2022'de 441 vakaya çıkmıştır. Bu artışın nedenleri arasında klor direnci ve boyama yöntemlerinin yaygınlaşması vardır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: HALK SAĞLIĞI ]</b>\n\nBelediyeye su arıtma sistemi ile ilgili tavsiye vereceksin. Sadece klorlama yapıldığını öğrendin. Cryptosporidium'u engellemek için sisteme ne eklenmeli?",
+            "opts": [
+              { "txt": "Kimyasal koagülasyon, filtrasyon veya ozonlama", "type": "correct", "go": "s5" },
+              { "txt": "Klor dozunun iki katına çıkarılması", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ DİRENÇ BİLGİSİ ]</b>\n\nCryptosporidium klorlamaya karşı oldukça dirençlidir. Ookistleri fiziksel olarak uzaklaştırmak (filtrasyon/koagülasyon) veya ozonlamak gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: İMMÜNİTE ]</b>\n\nBu parazit özellikle hangi hasta grubunda hayatı tehdit eden, durdurulamayan ishallere yol açar?",
+            "opts": [
+              { "txt": "İmmün yetmezliği olanlar (örn. AIDS)", "type": "correct", "action": "end" },
+              { "txt": "Sağlıklı adölesanlar", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ RİSK GRUBU ]</b>\n\nSağlıklı bireylerde hastalık kendini sınırlayabilir ancak immün yetmezlikli hastalarda (özellikle hücresel bağışıklık kusurları) Cryptosporidium kronik, şiddetli ve ölümcül ishal nedenidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Çocukluk çağında paraziter hastalıkların en sık görüldüğü yaş aralığı hangisidir?",
+        "a": ["0-14 yaş", "15-18 yaş", "Yenidoğan dönemi", "Sadece okul çağı"],
+        "correct": 0
+      },
+      {
+        "q": "Aşağıdakilerden hangisi Cryptosporidium spp. tanısında kullanılan boyama yöntemidir?",
+        "a": ["Giemsa", "Asit-Fast (Ehrlich-Ziehl-Neelsen)", "Gram boyama", "Trikrom"],
+        "correct": 1
+      },
+      {
+        "q": "Enterobius vermicularis (Kıl kurdu) tanısında altın standart yöntem nedir?",
+        "a": ["Gaita mikroskopisi", "Selofan bant yöntemi", "Gaita kültürü", "Kan serolojisi"],
+        "correct": 1
+      },
+      {
+        "q": "Ascaris lumbricoides enfeksiyonunda, bağırsak bulgularının yanı sıra görülebilen, akciğer göçüne bağlı semptomlar ve yabancı cisim yeme alışkanlığına ne ad verilir?",
+        "a": ["Loeffler pnömonisi / PİKA", "Dizanteri / Anoreksiya", "Steatore / Bulimia", "Anemi / Polifaji"],
+        "correct": 0
+      },
+      {
+        "q": "Aşağıdaki parazitlerden hangisi 'Steatore' (yağlı dışkılama) ve malabsorpsiyon tablosuyla Çölyak hastalığını taklit eder?",
+        "a": ["Enterobius vermicularis", "Giardia intestinalis", "Ascaris lumbricoides", "Taenia saginata"],
+        "correct": 1
+      },
+      {
+        "q": "Entamoeba histolytica'yı patojen olmayan Entamoeba dispar'dan ayırmak için mikroskopide görülmesi gereken patognomonik bulgu nedir?",
+        "a": ["Lökosit fagositozu", "Eritrosit fagositozu", "Kist formasyonu", "Kamçı hareketi"],
+        "correct": 1
+      },
+      {
+        "q": "Blastocystis hominis ile ilgili güncel mikrobiyota çalışmalarında öne sürülen görüş nedir?",
+        "a": ["Kesinlikle her vakada tedavi edilmelidir.", "Varlığı, artmış bakteriyel çeşitlilik (sağlıklı mikrobiyota) ile ilişkili olabilir.", "Sadece immün yetmezlikte görülür.", "Antibiyotik kullanımına bağlı gelişir."],
+        "correct": 1
+      },
+      {
+        "q": "Hastanın 'abdest bozan' olarak tariflediği, hareketli beyaz parçalar (halkalar) düşürdüğü parazit hangisidir?",
+        "a": ["Taenia saginata", "Ascaris lumbricoides", "Giardia intestinalis", "Fasciola hepatica"],
+        "correct": 0
+      },
+      {
+        "q": "Son yıllardaki verilere (2015-2022) göre saptanma sıklığında en belirgin artış görülen ve klorlamaya dirençli olan parazit hangisidir?",
+        "a": ["Giardia intestinalis", "Cryptosporidium spp.", "Enterobius vermicularis", "Entamoeba coli"],
+        "correct": 1
+      },
+      {
+        "q": "Paraziter enfeksiyonların çocuklarda neden olduğu, tüm sistemleri etkileyen en genel ve önemli sonuç nedir?",
+        "a": ["Hipertansiyon", "Büyüme ve gelişme geriliği (Malnütrisyon)", "Obezite", "Hiperaktivite"],
+        "correct": 1
+      }
+    ],
+    "match": [
+      { "A": "Enterobius vermicularis", "B": "Perianal Kaşıntı / Diş Gıcırdatma" },
+      { "A": "Giardia intestinalis", "B": "Steatore / Malabsorpsiyon" },
+      { "A": "Ascaris lumbricoides", "B": "PİKA / Mekanik Obstrüksiyon" },
+      { "A": "Taenia saginata", "B": "Halka (Proglottid) Düşürme" },
+      { "A": "Cryptosporidium spp.", "B": "Asit-Fast Boyama / Su Salgınları" },
+      { "A": "Entamoeba histolytica", "B": "Eritrosit Fagositozu / Kanlı İshal" },
+      { "A": "Blastocystis spp.", "B": "Gaz / Şişkinlik / İBS Benzeri Tablo" },
+      { "A": "Trichinella britovi", "B": "Çiğ Köfte / Yüz Ödemi / Kas Ağrısı" },
+      { "A": "Selofan Bant", "B": "Oksiyür (Kıl Kurdu) Tanısı" },
+      { "A": "Malnütrisyon", "B": "Kronik Parazitozun Sistemik Etkisi" }
+    ],
+    "decypher": [
+      {
+        "text": "Kronik ishal ve gelişme geriliği ile gelen bir çocukta, dışkıda yağ atılımı ({steatore}) varsa, Çölyak hastalığı araştırmadan önce mutlaka {Giardia} enfeksiyonu ekarte edilmelidir.",
+        "decoys": ["kanama", "Amip"]
+      },
+      {
+        "text": "Son yıllarda yapılan çalışmalarda, {Blastocystis} varlığının bağırsak mikrobiyotasında artmış bakteriyel {çeşitlilik} ile ilişkili olabileceği ve her zaman patojen olmayabileceği tartışılmaktadır.",
+        "decoys": ["Amip", "direnç"]
+      },
+      {
+        "text": "Yüzeyel su kaynaklarının kullanıldığı bölgelerde, standart klorlamaya dirençli olan {Cryptosporidium} ookistlerini uzaklaştırmak için filtrasyon veya {ozonlama} gibi ek yöntemler gereklidir.",
+        "decoys": ["Giardia", "kaynatma"]
+      }
+    ]
+  }
+}

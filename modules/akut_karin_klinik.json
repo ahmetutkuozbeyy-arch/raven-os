@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "AKUT KARIN VE AĞRI FİZYOPATOLOJİSİ",
+    "tag": "GENEL CERRAHİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 AĞRI TİPLERİ VE NÖROANATOMİ</div><div class='sum-body'>• <b>Viseral Ağrı:</b> C-lifleri (Miyelinsiz) ile taşınır. Künt, yaygın, huzursuzluk vericidir. Genellikle orta hatta hissedilir.<br>• <b>Pariyetal (Somatik) Ağrı:</b> A-delta lifleri (Miyelinli) ile taşınır. Keskin, batıcı ve iyi lokalizedir. Periton irritasyonunu gösterir.<br>• <b>Yansıyan Ağrı:</b> Embriyolojik kökene göre uzak bölgeye vurur (Örn: Diyafram irritasyonu -> Omuz).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS İPUÇLARI</div><div class='sum-body'>• <b>Ön Barsak (Foregut):</b> Mide, duodenum, safra yolları -> Epigastrik ağrı.<br>• <b>Orta Barsak (Midgut):</b> İnce barsak, apendiks -> Periumbilikal (Göbek çevresi) ağrı.<br>• <b>Son Barsak (Hindgut):</b> Kolon, rektum -> Suprapubik ağrı.<br>• <b>Kırmızı Bayrak (Kronik):</b> Uykudan uyandıran ağrı organiktir, fonksiyonel değildir!</div></div><div class='sum-card sum-rx'><div class='sum-title'>⚠️ ÖZEL POPÜLASYONLAR</div><div class='sum-body'>• <b>Yaşlılar:</b> Ağrı algısı azalmıştır, bulgular siliktir. En sık nedenler safra yolları ve barsak tıkanıklığıdır.<br>• <b>İmmünsüpresifler:</b> Ateş ve lökositoz olmayabilir (Maskelenmiş tablo). Nötropenik enterokolit ve CMV akla gelmelidir.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: AĞRININ GÖÇÜ",
+        "desc": "Acil Servis - 22 Yaş Erkek - Ağrı Karakter Değişimi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n22 yaşında erkek hasta. Sabah saatlerinde 'göbek çevresinde' (Periumbilikal) başlayan, tam tarif edemediği, künt bir ağrı ve iştahsızlık şikayetiyle geldi.\n\nBu aşamada ağrının tipi ve kaynağı nedir?",
+            "opts": [
+              { "txt": "Viseral Ağrı - Orta Barsak (Midgut) kaynaklı.", "type": "correct", "go": "s2" },
+              { "txt": "Pariyetal Ağrı - Ön Barsak (Foregut) kaynaklı.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ANATOMİK HATA ]</b>\n\nGöbek çevresi (Periumbilikal) ağrı, embriyolojik olarak 'Orta Barsak' yapılarını (ince barsak, apendiks) işaret eder ve başlangıçta viseraldir (künt).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ SEYİR ]</b>\n\n6 saat sonra hasta ağrının yer değiştirdiğini söylüyor. Ağrı artık sağ alt kadranda, parmakla gösterilebilen, hareketle ve öksürükle artan 'keskin' bir hal aldı.\n\nBu değişim neyi gösterir?",
+            "opts": [
+              { "txt": "Pariyetal peritonun inflamasyona katıldığını (Somatikleşme).", "type": "correct", "go": "s3" },
+              { "txt": "Ağrının yansıdığını (Referred pain).", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ FİZYOPATOLOJİ ]</b>\n\nYansıyan ağrı uzak bölgeye vurur. Burada organın üzerindeki periton iltihaplanmış ve ağrı keskinleşip lokalize olmuştur (A-delta lifleri devreye girmiştir).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nSağ alt kadranda McBurney noktası hassas. Elini karnına bastırıp aniden çektiğinde hasta acıyla zıplıyor. Bu bulgunun adı nedir?",
+            "opts": [
+              { "txt": "Rebound (Geri Tepme Ağrısı)", "type": "correct", "go": "s4" },
+              { "txt": "Rovsing Belirtisi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ TERMİNOLOJİ ]</b>\n\nRovsing, sol alt kadrana bastırınca sağda ağrı olmasıdır. El çekince artan ağrı Rebound'dur ve peritoniti gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TANI ]</b>\n\nLökositoz ve USG bulguları ile Akut Apandisit tanısı koydun. Ancak hasta 'Ağrım geçti, eve gideyim' diyor. Bu durum (Lune de Miel - Balayı dönemi) neyin habercisi olabilir?",
+            "opts": [
+              { "txt": "Perforasyon (Delinme) sonrası geçici rahatlama.", "type": "correct", "go": "s5" },
+              { "txt": "Spontan iyileşme.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ALDATICI İYİLİK ]</b>\n\nAkut apandisitte ani ağrı kesilmesi genellikle organın delindiğini (perforasyon) ve basıncın düştüğünü gösterir. Kısa süre sonra yaygın peritonit başlar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta acilen ameliyata alındı. Perfore apandisit saptandı. Doğru zamanlama ile sepsis önlendi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: SESSİZ TEHLİKE",
+        "desc": "Geriatri - 75 Yaş - Karın Ağrısı ve Ritim Bozukluğu",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n75 yaşında kadın hasta. Bilinen Atriyal Fibrilasyon (kalp ritim bozukluğu) öyküsü var. Ani başlayan, şiddetli ve yaygın karın ağrısı ile geldi. Ancak fizik muayenede batın rahat (yumuşak) görünüyor.\n\nBu uyumsuzluk (Semptom > Bulgular) neyi düşündürür?",
+            "opts": [
+              { "txt": "Akut Mezenter İskemi", "type": "correct", "go": "s2" },
+              { "txt": "Akut Gastroenterit", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KLİNİK TUZAK ]</b>\n\n'Pain out of proportion' (Bulgularla orantısız şiddetli ağrı) Mezenter İskeminin en tipik erken bulgusudur. Yaşlı ve aritmi öyküsü olan hastada ilk akla gelmelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ LAB DESTEĞİ ]</b>\n\nTanıyı desteklemek için hangi laboratuvar parametrelerinin yüksekliği kritik önem taşır?",
+            "opts": [
+              { "txt": "Laktat ve D-Dimer yüksekliği", "type": "correct", "go": "s3" },
+              { "txt": "Amilaz ve Lipaz yüksekliği", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ SPESİFİTE ]</b>\n\nAmilaz/Lipaz pankreatitte yükselir. İskemide doku hipoksisi nedeniyle Laktat asidozu gelişir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ GÖRÜNTÜLEME ]</b>\n\nTanıyı kesinleştirmek ve damar tıkanıklığını görmek için 'Altın Standart' görüntüleme nedir?",
+            "opts": [
+              { "txt": "BT Anjiografi", "type": "correct", "go": "s4" },
+              { "txt": "Ayakta Direkt Batın Grafisi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YETERSİZ TETKİK ]</b>\n\nDirekt grafi sadece perforasyon veya ileusu gösterir. Damar tıkanıklığını göstermez. BT Anjiyo şarttır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ FİZİK MUAYENE DEĞİŞİMİ ]</b>\n\nHasta takibinde karın distansiyonu gelişti ve barsak sesleri tamamen kayboldu (Sessiz Batın). Bu ne anlama gelir?",
+            "opts": [
+              { "txt": "Barsak nekrozu ve Paralitik İleus gelişmiş.", "type": "correct", "go": "s5" },
+              { "txt": "Hasta rahatlamış, uyuyor.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ KÖTÜLEŞME ]</b>\n\nSessiz batın, barsak hareketlerinin durduğunu ve tablonun ağırlaştığını (peritonit/nekroz) gösterir. Acil cerrahi gerekir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nAcil laparotomide SMA (Superior Mezenter Arter) embolisi saptandı. Nekrotik barsak rezeke edildi. Erken şüphe hayat kurtardı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: KRONİK AĞRI",
+        "desc": "Poliklinik - 35 Yaş Kadın - 6 Aydır Süren Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n35 yaşında kadın hasta. 1 yıldır aralıklı karın ağrısı, şişkinlik ve kabızlık-ishal atakları var. Tüm tetkikleri normal. Ağrı genellikle stresle artıyor.\n\nEn önemli soruyu sor: Ağrı seni gece uykudan uyandırıyor mu?",
+            "opts": [
+              { "txt": "Hayır, uyuyunca geçiyor.", "type": "correct", "go": "s2" },
+              { "txt": "Evet, her gece ağrıyla uyanıyorum.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KIRMIZI BAYRAK ]</b>\n\nEğer hasta 'Evet' deseydi, bu ORGANİK bir hastalığı (kanser, ülser vb.) düşündürürdü. Fonksiyonel ağrılar (IBS) genellikle uykudan uyandırmaz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nHasta 'Hayır' dedi. Kilo kaybı yok, ateş yok, gaitada kan yok. Bu bulgular (Kırmızı bayrakların yokluğu) hangi tanı grubunu destekler?",
+            "opts": [
+              { "txt": "Fonksiyonel Karın Ağrısı (Örn: İritabl Barsak Sendromu)", "type": "correct", "go": "s3" },
+              { "txt": "İnflamatuar Barsak Hastalığı (Crohn/Ülseratif Kolit)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ALARM BULGULARI ]</b>\n\nIBH'da genellikle kilo kaybı, ateş, kanlı ishal veya gece semptomları beklenir. Bu hastada bunlar yok.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ MUAYENE ]</b>\n\nKarın muayenesinde 'Kapalı Göz Testi' yapıyorsun. Hasta gözleri kapalıyken parmağını tam ağrıyan noktaya götüremiyor, genel bir bölgeyi gösteriyor.\n\nBu neyi işaret eder?",
+            "opts": [
+              { "txt": "Ağrının fonksiyonel veya viseral kökenli olduğunu.", "type": "correct", "go": "s4" },
+              { "txt": "Pariyetal peritonit olduğunu.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ LOKALİZASYON ]</b>\n\nPariyetal (organik/cerrahi) ağrıda hasta parmağıyla ağrıyan noktayı kesin olarak gösterebilir. Yeri belirsiz ağrı fonksiyonel veya viseraldir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nTanı: İritabl Barsak Sendromu (IBS). Tedavi yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Diyet düzenlemesi, stres yönetimi ve semptomatik tedavi.", "type": "correct", "go": "s5" },
+              { "txt": "Tanısal Laparoskopi.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ GEREKSİZ GİRİŞİM ]</b>\n\nAlarm bulgusu olmayan, kronik fonksiyonel ağrılarda invaziv işlemlerden (ameliyat) kaçınılmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya hastalığının iyi huylu olduğu anlatıldı, güvence verildi. Kırmızı bayraklar (kilo kaybı, kanama) olursa gelmesi söylendi.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Viseral ağrı hangi sinir lifleri ile taşınır ve karakteri nasıldır?", "a": ["C lifleri - Künt, yaygın", "A-delta lifleri - Keskin, lokalize", "Vagus - Yanıcı", "Frenik - Batıcı"], "correct": 0 },
+      { "q": "Embriyolojik olarak 'Ön Barsak' (Foregut) kaynaklı organların ağrısı nerede hissedilir?", "a": ["Epigastrium", "Periumbilikal", "Suprapubik", "Sırt"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi kronik karın ağrısında 'Kırmızı Bayrak' (Alarm bulgusu) DEĞİLDİR?", "a": ["Ağrının stresle artması", "Uykudan uyandıran ağrı", "Kilo kaybı", "Gaitada kan"], "correct": 0 },
+      { "q": "Sol omuzda hissedilen yansıyan ağrı (Kehr belirtisi) hangi organ patolojisini düşündürür?", "a": ["Dalak rüptürü / Diyafram irritasyonu", "Safra kesesi taşı", "Apandisit", "Böbrek taşı"], "correct": 0 },
+      { "q": "Yaşlı hastalarda akut karın tablosu neden daha sinsi seyreder?", "a": ["Ağrı algısı ve inflamatuar yanıt azaldığı için", "Ağrı eşiği düştüğü için", "Karın kasları güçlü olduğu için", "Daha çok ilaç kullandıkları için"], "correct": 0 },
+      { "q": "Pariyetal (Somatik) ağrının en önemli özelliği nedir?", "a": ["İyi lokalize edilmesi ve hareketle artması", "Gezici olması", "Bulantı ile geçmesi", "Karnın derinlerinde hissedilmesi"], "correct": 0 },
+      { "q": "Safra kesesi iltihabında (Kolesistit) ağrı nereye yansır?", "a": ["Sağ skapula (kürek kemiği) altı", "Sol omuz", "Kasıklar", "Göbek"], "correct": 0 },
+      { "q": "Mezenter İskemi'nin en tipik fizik muayene bulgusu nedir?", "a": ["Pain out of proportion (Bulgularla orantısız şiddetli ağrı)", "Tahta karın", "Rebound", "Ele gelen kitle"], "correct": 0 },
+      { "q": "Peritonit varlığında karın muayenesinde saptanan en güvenilir bulgu hangisidir?", "a": ["Rebound (Geri tepme ağrısı)", "Barsak seslerinde artış", "Skafoid karın", "Kitle"], "correct": 0 },
+      { "q": "İmmünsüpresif (bağışıklığı baskılanmış) hastalarda akut karın neden zor tanı alır?", "a": ["Ateş ve lökositoz gibi yanıtlar oluşmayabilir", "Ağrıyı hissetmezler", "Sürekli uyurlar", "Karınları çok gergindir"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Viseral Ağrı", "B": "C lifleri, künt, yaygın" },
+      { "A": "Pariyetal Ağrı", "B": "A-delta lifleri, keskin, lokalize" },
+      { "A": "Murphy Belirtisi", "B": "Akut Kolesistit" },
+      { "A": "McBurney Noktası", "B": "Akut Apandisit" },
+      { "A": "Kehr Belirtisi", "B": "Dalak Rüptürü (Sol omuz ağrısı)" },
+      { "A": "Psoas Belirtisi", "B": "Retroçekal Apandisit" },
+      { "A": "Foregut Ağrısı", "B": "Epigastrium" },
+      { "A": "Midgut Ağrısı", "B": "Periumbilikal (Göbek çevresi)" },
+      { "A": "Hindgut Ağrısı", "B": "Suprapubik" }
+    ],
+    "decypher": [
+      {
+        "text": "Karın ağrısının değerlendirilmesinde; {Viseral} ağrı genellikle organların gerilmesi veya iskemisi sonucu oluşur ve {künt} karakterdedir. {Pariyetal} ağrı ise peritonun inflamasyonu sonucu oluşur ve {keskin}, iyi lokalize edilen bir ağrıdır.",
+        "decoys": ["yansıyan", "yanıcı", "psikolojik", "kronik"]
+      },
+      {
+        "text": "Embriyolojik kökene göre; mide ve safra yolları ağrısı {Epigastrik} bölgede, ince barsak ve apendiks ağrısı {Göbek} çevresinde, kolon ve rektum ağrısı ise {Suprapubik} bölgede hissedilir.",
+        "decoys": ["Sırt", "Omuz", "Yan", "Böğür"]
+      },
+      {
+        "text": "Yaşlı hastalarda akut karın tablosu, ağrı algısının azalması ve {ateş}, lökositoz gibi yanıtların zayıf olması nedeniyle silik seyredebilir. Bu hastalarda en sık cerrahi nedenler safra yolları hastalıkları ve {barsak} tıkanıklığıdır.",
+        "decoys": ["mide", "dalak", "kusma", "ishal"]
+      }
+    ]
+  }
+}

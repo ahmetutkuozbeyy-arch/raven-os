@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "AKUT İSHAL (VİRAL)",
+    "tag": "HALK SAĞLIĞI & PEDİATRİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🦠 VİRAL ETKENLER</div><div class='sum-body'>• <b>Rotavirüs:</b> <2 yaş çocuklarda en sık akut ishal nedenidir. Kış aylarında pik yapar. Aşı ile önlenebilir.<br>• <b>Norovirüs:</b> Her yaşta görülür. Gıda kaynaklı salgınlarda (Gemi, okul, hastane) en sık etkendir.<br>• <b>Enterik Adenovirüs:</b> Tip 40 ve 41. İshali diğerlerine göre daha uzun sürebilir (5-12 gün).</div></div><div class='sum-card sum-tus'><div class='sum-title'>💧 KLİNİK VE TANI</div><div class='sum-body'>• <b>Tanım (DSÖ):</b> Günde 3 veya daha fazla sulu/gevşek dışkılama.<br>• <b>Dehidratasyon:</b> Ölümlerin ana nedenidir. Bulguları: Bıngıldak çökmesi, gözyaşı azalması, deri turgorunun bozulması, idrar azalması.<br>• <b>Tedavi:</b> Oral Rehidratasyon Sıvısı (ORS) + Çinko desteği. Antibiyotik verilmez!</div></div><div class='sum-card sum-rx'><div class='sum-title'>🛡️ KORUNMA</div><div class='sum-body'>• <b>Anne Sütü:</b> Koruyucudur, emzirme kesilmemelidir.<br>• <b>Hijyen:</b> El yıkama, temiz su temini.<br>• <b>Aşılama:</b> Rotavirüs aşısı ağır hastalık yükünü azaltır.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "OLGU 1: KIŞ MEVSİMİNDE İSHAL",
+        "desc": "Pediatri - 6 Aylık Bebek - Ateş ve Kusma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\n6 aylık kız bebek. Ocak ayında (Kış) polikliniğe getirildi. 3 gün önce kusma ve hafif ateşle başlamış, ardından günde 10-12 kez bol sulu, sarı renkli ve ekşi kokulu ishal eklenmiş. Anne sütü alıyor.\n\nBu tablo ve mevsimsel özellikler en çok hangi etkeni düşündürür?",
+            "opts": [
+              { "txt": "Rotavirüs", "type": "correct", "go": "s2" },
+              { "txt": "Bakteriyel (Salmonella)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nBakteriyel ishaller (Salmonella, Shigella) daha çok yaz aylarında görülür ve kanlı/mukuslu olabilir. Kış aylarında, kusma ile başlayan sulu ishalin en sık nedeni Rotavirüstür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ DEHİDRATASYON ]</b>\n\nBebeğin fizik muayenesinde huzursuz olduğu, gözlerinin hafif çöktüğü ve deri kıvrımının yavaş geri döndüğü (Turgor azalmış) görüldü. Ancak su içebiliyor.\n\nTedavi planın ne olmalı?",
+            "opts": [
+              { "txt": "Oral Rehidratasyon Sıvısı (ORS) ile sıvı açığını kapatmak + Emzirmeye devam etmek.", "type": "correct", "go": "s3" },
+              { "txt": "Hemen antibiyotik başlamak.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TEDAVİ HATASI ]</b>\n\nViral gastroenteritlerde antibiyotiğin yeri yoktur; ishali uzatabilir. Temel tedavi sıvı kaybını (dehidratasyonu) yerine koymaktır. Orta derece dehidratasyonda ORS yeterlidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ EK DESTEK ]</b>\n\nDünya Sağlık Örgütü (DSÖ) ve UNICEF, akut ishalli çocuklarda ishal süresini ve şiddetini azalttığı kanıtlanan hangi mineralin verilmesini önermektedir?",
+            "opts": [
+              { "txt": "Çinko (Zinc)", "type": "correct", "go": "s4" },
+              { "txt": "Demir", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ MİNERAL DESTEĞİ ]</b>\n\nİshal sırasında bağırsak mukozasının iyileşmesini hızlandıran ve bağışıklığı destekleyen mineral Çinkodur. Demir, akut enfeksiyon sırasında bakteriyel çoğalmayı artırabileceği için akut dönemde verilmez.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ BESLENME ]</b>\n\nAnnesi 'İshal oldu diye emzirmeyi kestim, sadece pirinç suyu veriyorum' diyor. Bu yaklaşım doğru mu?",
+            "opts": [
+              { "txt": "HAYIR. Anne sütü koruyucudur ve asla kesilmemelidir.", "type": "correct", "go": "s5" },
+              { "txt": "Evet, barsakları dinlendirmek gerekir.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ BESLENME İLKESİ ]</b>\n\nAç bırakmak barsak iyileşmesini geciktirir ve malnütrisyona yol açar. Anne sütü, içerdiği antikorlar ve besin öğeleriyle iyileşmeyi hızlandırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nBebek ORS ve sık emzirme ile hidrate edildi. Çinko desteği verildi. 4. günde tamamen düzeldi. Aileye el hijyeni ve aşı takvimi anlatıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "OLGU 2: SALGIN VAR",
+        "desc": "Halk Sağlığı - Okul Salgını - Kusma Ön Planda",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SALGIN ]</b>\n\nBir ilkokulda aynı gün içinde 30 öğrencide ve 2 öğretmende ani başlayan bulantı, şiddetli kusma ve sonrasında ishal şikayetleri görüldü. Gıda kaynaklı olduğu düşünülüyor.\n\nToplu yaşam alanlarında (Okul, Gemi, Kamp) salgın yapan en olası viral etken hangisidir?",
+            "opts": [
+              { "txt": "Norovirüs (Norwalk-like Virus)", "type": "correct", "go": "s2" },
+              { "txt": "Rotavirüs", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ EPİDEMİYOLOJİ ]</b>\n\nRotavirüs daha çok <2 yaş çocuklarda görülür. Norovirüs her yaş grubunu etkiler ve gıda/su kaynaklı büyük salgınların (özellikle kusma ile giden) bir numaralı nedenidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ BULAŞMA ]</b>\n\nNorovirüs salgınlarının kontrol altına alınması neden zordur?",
+            "opts": [
+              { "txt": "Çevre koşullarına ve dezenfektanlara (Klor) dirençlidir, enfektif dozu çok düşüktür.", "type": "correct", "go": "s3" },
+              { "txt": "Sadece kan yoluyla bulaşır.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ VİRÜS ÖZELLİĞİ ]</b>\n\nNorovirüs fekal-oral yolla, kontamine su/gıda ve yüzeylerle bulaşır. Çok az sayıda virüs bile hastalık yapabilir ve standart temizliğe dirençlidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ RİSK FAKTÖRLERİ ]</b>\n\nBu salgının yayılmasında sosyoekonomik faktörlerin etkisi büyüktür. Hangisi bu faktörlerden biridir?",
+            "opts": [
+              { "txt": "Yetersiz su ve sanitasyon altyapısı, kalabalık yaşam.", "type": "correct", "go": "s4" },
+              { "txt": "Genetik yatkınlık.", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ HALK SAĞLIĞI ]</b>\n\nİshal hastalıkları yoksulluk, temiz suya erişim eksikliği ve kötü hijyen koşullarıyla doğrudan ilişkilidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nOkulda sıkı hijyen önlemleri alındı, su depoları klorlandı. Hasta çocuklar izole edildi. Salgın kontrol altına alındı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "DSÖ'ye göre ishalin tanımı nedir?", "a": ["Günde 3 veya daha fazla sulu/gevşek dışkılama", "Günde 1 kez sulu dışkılama", "Karın ağrısı ile birlikte dışkılama", "Sadece kusma olması"], "correct": 0 },
+      { "q": "Gelişmekte olan ülkelerde 2 yaş altı çocuklarda akut ishalin en sık nedeni nedir?", "a": ["Rotavirüs", "Adenovirüs", "Norovirüs", "Salmonella"], "correct": 0 },
+      { "q": "Akut ishal tedavisinde 'hayat kurtarıcı' olan temel yaklaşım nedir?", "a": ["Oral Rehidratasyon Tedavisi (ORT)", "Antibiyotik tedavisi", "Antidiyareik ilaçlar (Loperamid)", "Aç bırakmak"], "correct": 0 },
+      { "q": "Toplu yaşam alanlarında (Gemi, Okul) her yaş grubunu etkileyen salgınların en sık nedeni hangisidir?", "a": ["Norovirüs", "Rotavirüs", "Astrovirüs", "E. Coli"], "correct": 0 },
+      { "q": "İshal süresini ve şiddetini azalttığı için DSÖ tarafından önerilen mineral desteği hangisidir?", "a": ["Çinko", "Demir", "Kalsiyum", "Magnezyum"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi dehidratasyon (sıvı kaybı) bulgusu DEĞİLDİR?", "a": ["Gözyaşında artış", "Bıngıldak çökmesi", "Deri turgorunun azalması", "İdrar miktarında azalma"], "correct": 0 },
+      { "q": "Rotavirüs enfeksiyonu klinik olarak genellikle nasıl başlar?", "a": ["Kusma ve ateş ile başlar, sonra ishal gelişir", "Sadece kanlı ishal ile", "Sadece karın ağrısı ile", "Öksürük ile"], "correct": 0 },
+      { "q": "Viral gastroenteritlerde antibiyotik kullanımı neden önerilmez?", "a": ["Etkisizdir ve direnç gelişimine/ishalin uzamasına neden olabilir", "Çok pahalıdır", "Alerji yapar", "Virüsleri öldürür ama toksinleri artırır"], "correct": 0 },
+      { "q": "Enterik Adenovirüslerin (Tip 40/41) ishal özelliği nasıldır?", "a": ["Diğer viral etkenlere göre daha uzun sürebilir (5-12 gün)", "Kanlıdır", "Sadece 1 gün sürer", "Kusma yapmaz"], "correct": 0 },
+      { "q": "İshalden korunmada en etkili ve ucuz yöntem nedir?", "a": ["El yıkama ve temiz su kullanımı", "Antibiyotik profilaksisi", "Vitamin takviyesi", "Maske takmak"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Rotavirüs", "B": "<2 yaş, Kış ishali, Aşı ile önlenir" },
+      { "A": "Norovirüs", "B": "Her yaş, Gıda kaynaklı salgınlar, Klora dirençli" },
+      { "A": "Adenovirüs", "B": "Daha uzun süren ishal (5-12 gün)" },
+      { "A": "Astrovirüs", "B": "Daha hafif seyirli, sporadik" },
+      { "A": "ORS", "B": "Dehidratasyon tedavisi" },
+      { "A": "Çinko", "B": "İshal süresini kısaltır, bağışıklığı destekler" },
+      { "A": "Dehidratasyon", "B": "Bıngıldak çökmesi, Turgor kaybı" },
+      { "A": "Anne Sütü", "B": "Koruyucu faktör (IgA)" }
+    ],
+    "decypher": [
+      {
+        "text": "Akut ishallerde en önemli ölüm nedeni {dehidratasyon} yani sıvı kaybıdır. Tedavide amaç kaybedilen sıvıyı {ORS} (Oral Rehidratasyon Sıvısı) ile yerine koymaktır. Antibiyotikler viral ishallerde {etkisizdir}.",
+        "decoys": ["enfeksiyon", "serum", "gerekli", "ateş"]
+      },
+      {
+        "text": "{Rotavirüs}, özellikle 2 yaş altı çocuklarda ciddi {ishal} ve kusmaya neden olan en sık etkendir. Kış aylarında pik yapar. Korunmada en etkili yöntem {aşılama}dır.",
+        "decoys": ["Norovirüs", "kabızlık", "antibiyotik", "yaz"]
+      },
+      {
+        "text": "{Norovirüs}, gıda ve su kaynaklı salgınlara neden olan, çevre koşullarına dayanıklı bir virüstür. Okul, gemi gibi toplu yaşam alanlarında {kusma} ve ishal salgınları yapar. Her {yaş} grubunu etkileyebilir.",
+        "decoys": ["Adenovirüs", "ateş", "sadece çocuk", "hastane"]
+      }
+    ]
+  }
+}

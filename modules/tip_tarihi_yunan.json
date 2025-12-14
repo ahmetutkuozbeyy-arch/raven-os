@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "ANTİK YUNAN VE ROMA TIBBI",
+    "tag": "TIP TARİHİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🏛️ MİTOLOJİK DÖNEM</div><div class='sum-body'>• <b>Asklepios:</b> Hekimlik Tanrısı. Tedavi merkezlerine 'Asklepion' denir (Bergama, Kos, Epidauros).<br>• <b>Tedavi Yöntemi:</b> İnkübasyon (Tapınak uykusu), rüya yorumu, su/banyo terapisi ve telkin.<br>• <b>Semboller:</b> Yılanlı asa (Güç ve yenilenme).</div></div><div class='sum-card sum-tus'><div class='sum-title'>📜 HİPPOKRATİK DÖNEM</div><div class='sum-body'>• <b>Hümoral Patoloji:</b> Hastalıklar 4 sıvının (Kan, Balgam, Sarı Safra, Kara Safra) dengesizliğidir.<br>• <b>Etik:</b> 'Önce zarar verme' (Primum non nocere) ilkesi ve Hippokrat Yemini.<br>• <b>Klinik:</b> Gözlem, prognoz ve hasta başı hekimliği ön plandadır.</div></div><div class='sum-card sum-rx'><div class='sum-title'>⚔️ ROMA VE GALEN</div><div class='sum-body'>• <b>Galen:</b> Gladyatör hekimidir. Deneysel fizyolojinin babasıdır. Arterlerde hava değil kan olduğunu bulmuştur.<br>• <b>3 Ruh Teorisi:</b> Karaciğer (Doğal), Kalp (Hayati), Beyin (Hayvani ruh).<br>• <b>Celsus:</b> İnflamasyonun 4 belirtisini (Rubor, Tumor, Calore, Dolore) tanımlamıştır.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: TAPINAK UYKUSU",
+        "desc": "M.Ö. 300 - Bergama Asklepion - Kronik Ağrılı Hasta",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ GİRİŞ ]</b>\n\nBergama Asklepion'una şifa bulmaya gelen kronik ağrılı bir hastasın. Kapıdaki rahip-hekimler seni karşılıyor. Girişte uyman gereken ilk kural nedir?",
+            "opts": [
+              { "txt": "Ölümcül hasta ve doğum yapacak kadınlar içeri giremez.", "type": "correct", "go": "s2" },
+              { "txt": "Herkes kabul edilir, ayrım yoktur.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KUTSALLIK ]</b>\n\nAsklepionlar kutsal alanlardır. 'Ölüm' ve 'Doğum' gibi kirletici sayılan olayların içeride gerçekleşmesi yasaktır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ ARINMA ]</b>\n\nİçeri kabul edildin. Tedaviye başlamadan önce kutsal sudan içmen ve yıkanman isteniyor. Bu hijyenik ve ritüelik arınma hangi tanrıça ile ilişkilendirilir?",
+            "opts": [
+              { "txt": "Hygieia (Sağlık/Temizlik)", "type": "correct", "go": "s3" },
+              { "txt": "Artemis (Avcılık)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANLIŞ TANRIÇA ]</b>\n\nAsklepios'un kızı Hygieia, hijyen ve koruyucu hekimliğin sembolüdür. Artemis av tanrıçasıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ İNKÜBASYON ]</b>\n\nGece oldu. 'Abaton' denilen kutsal uyku odasına alındın. Rüyanda Asklepios'un sana görünüp şifa vereceğine inanıyorsun. Bu yöntemin adı nedir?",
+            "opts": [
+              { "txt": "İnkübasyon (İstihare/Tapınak Uykusu)", "type": "correct", "go": "s4" },
+              { "txt": "Trepanasyon", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ TERİM HATASI ]</b>\n\nTrepanasyon kafatası delme işlemidir. Tapınakta uyuyarak şifa arama işlemine İnkübasyon (Enkoimesis) denir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ TEDAVİ ]</b>\n\nErtesi sabah rüyanı rahip-hekime anlattın. O da rüyanı yorumlayarak sana diyet, banyo ve telkin tedavisi verdi. Tapınakta dolaşan zehirsiz yılanlar neyi simgeler?",
+            "opts": [
+              { "txt": "Yenilenme ve Gücü (Deri değiştirme)", "type": "correct", "go": "s5" },
+              { "txt": "Ölüm ve Cezayı", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ SEMBOLİZM ]</b>\n\nYılan toprağın altında yaşadığı için gizli bilgilere sahiptir ve deri değiştirdiği için 'yenilenmeyi/gençleşmeyi' simgeler. Tıbbın sembolüdür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nTedavin tamamlandı. Tapınaktan ayrılırken şükran ifadesi olarak ne yaparsın?",
+            "opts": [
+              { "txt": "Adak adar veya kitabe yazdırırsın.", "type": "correct", "action": "end" },
+              { "txt": "Hiçbir şey yapmadan çıkarsın.", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: HİPPOKRATES'İN DERSİ",
+        "desc": "Kos Adası - M.Ö. 400 - Tıp Öğrencisi Eğitimi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ DERS BAŞLIYOR ]</b>\n\nHippokrates öğrencilerine sesleniyor: 'Hastalıklar tanrıların cezası değil, doğal nedenlerin sonucudur.'\n\nBu görüş tıpta hangi dönemin başlangıcıdır?",
+            "opts": [
+              { "txt": "Rasyonel (Bilimsel) Tıp Dönemi", "type": "correct", "go": "s2" },
+              { "txt": "Mitolojik Tıp Dönemi", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ FELSEFE ]</b>\n\nHastalıkları büyüden ve dinden ayırıp, gözlem ve mantığa dayandırmak Rasyonel Tıbbın temelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ HÜMORA TEORİSİ ]</b>\n\nHippokrates bir hastayı muayene ediyor. 'Bu hastanın Sarı Safrası artmış, ateşi ve öfkesi bundan' diyor.\n\nHastalıkların 4 sıvının dengesizliğinden kaynaklandığını savunan bu teorinin adı nedir?",
+            "opts": [
+              { "txt": "Hümoral Patoloji Teorisi", "type": "correct", "go": "s3" },
+              { "txt": "Miasma Teorisi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TEORİ KARIŞIKLIĞI ]</b>\n\nMiasma, hastalığın 'kötü hava'dan bulaştığını savunur. 4 sıvı (Kan, Balgam, Sarı Safra, Kara Safra) dengesi Hümoral teoridir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TEDAVİ İLKESİ ]</b>\n\nÖğrencilerine en önemli kuralı hatırlatıyor: 'Hekim olarak müdahale ederken dikkatli olun. Hastalığın doğal seyrine zarar vermeyin.'\n\nBu ilke Latince nasıl ifade edilir?",
+            "opts": [
+              { "txt": "Primum non nocere (Önce zarar verme)", "type": "correct", "go": "s4" },
+              { "txt": "Contraria contrariis curantur (Zıt zıddı tedavi eder)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ALTIN KURAL ]</b>\n\nHippokratik tıbbın temeli, hastaya zarar vermemektir. Doğanın iyileştirici gücüne (Vis medicatrix naturae) güvenilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ETİK ]</b>\n\nEğitimin sonunda öğrencilerine bir yemin ettiriyor. Bu yeminde aşağıdakilerden hangisi YASAKLANMIŞTIR?",
+            "opts": [
+              { "txt": "Zehir hazırlamak, çocuk düşürtmek, mesane taşı ameliyatı yapmak.", "type": "correct", "go": "s5" },
+              { "txt": "Kırık-çıkık tedavisi yapmak.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ YEMİN İÇERİĞİ ]</b>\n\nHippokrat yemininde ötenazi (zehir), kürtaj ve litotomi (taş ameliyatı - cerrahlara bırakılmalı) yasaklanmıştır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ MİRAS ]</b>\n\nHippokrates 'Tıbbın Babası' olarak tarihe geçiyor. Onun eserlerinin toplandığı külliyatın adı nedir?",
+            "opts": [
+              { "txt": "Corpus Hippocraticum", "type": "correct", "action": "end" },
+              { "txt": "De Materia Medica", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: GALEN'İN LABORATUVARI",
+        "desc": "Roma - M.S. 180 - Deneysel Fizyoloji",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ GLADYATÖR CERRAHİSİ ]</b>\n\nBergamalı Galen, Roma'da gladyatörlerin hekimi olarak ün salmış. Yaralı bir gladyatörün atardamarının kesildiğini görüyor. O dönemki inanışın aksine, arterin içinden ne çıktığını kanıtlıyor?",
+            "opts": [
+              { "txt": "Kan (Hava değil!)", "type": "correct", "go": "s2" },
+              { "txt": "Pneuma (Ruh)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ BÜYÜK KEŞİF ]</b>\n\nEskiden arterlerde hava (pneuma) dolaştığı sanılırdı. Galen damarları bağlayarak içlerinde kan olduğunu ispatlamıştır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ DİSSEKSİYON ]</b>\n\nGalen anatomi dersi veriyor. Ancak Roma'da insan diseksiyonu yasak. Galen hangi hayvanları kullanarak anatomi öğreniyor ve öğretiyor?",
+            "opts": [
+              { "txt": "Domuz ve Maymun", "type": "correct", "go": "s3" },
+              { "txt": "İnsan kadavrası", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ YANILGI ]</b>\n\nGalen insan diseksiyonu yapamamıştır. Hayvan anatomisini insana uyarladığı için 1500 yıl boyunca bazı anatomik yanlışlar (Örn: Karaciğer 5 loblu) doğru kabul edilmiştir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ 3 RUH TEORİSİ ]</b>\n\nGalen fizyolojisine göre vücutta 3 temel organ ve 3 ruh vardır. 'Doğal Ruh' (Nutritive soul) hangi organda üretilir ve kanı oluşturur?",
+            "opts": [
+              { "txt": "Karaciğer", "type": "correct", "go": "s4" },
+              { "txt": "Kalp", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ GALEN FİZYOLOJİSİ ]</b>\n\nKaraciğer: Doğal Ruh (Beslenme).\nKalp: Hayati Ruh (Isı/Canlılık).\nBeyin: Hayvani Ruh (Hareket/His).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ECZACILIK ]</b>\n\nGalen, bitkisel ve hayvansal karışımlardan karmaşık ilaçlar hazırlıyor. Bu nedenle hangi unvanla anılır?",
+            "opts": [
+              { "txt": "Eczacılığın Babası (Şeyhû’s Seyadile)", "type": "correct", "go": "s5" },
+              { "txt": "Cerrahinin Babası", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ GALENİK ]</b>\n\nGalen'in formülleri 'Galenik prezuvarlar' olarak bilinir. Eczacılığın babası kabul edilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ MİRAS ]</b>\n\nGalen'in tıbbı Orta Çağ boyunca hem İslam dünyasında hem de Avrupa'da tartışılmaz otorite kabul edilmiştir. 'En iyi hekim aynı zamanda ..... olandır' sözündeki boşluk nedir?",
+            "opts": [
+              { "txt": "Filozof", "type": "correct", "action": "end" },
+              { "txt": "Rahip", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Antik Roma'da 'Hastalıkların 4 Ana Belirtisini' (Rubor, Tumor, Calore, Dolore) tanımlayan ansiklopedist kimdir?", "a": ["Celsus", "Galen", "Hippokrates", "Dioscorides"], "correct": 0 },
+      { "q": "Botanik biliminin kurucusu sayılan ve 'De Materia Medica' (Tıbbi Materyaller) kitabını yazan hekim kimdir?", "a": ["Dioscorides", "Theophrastus", "Soranus", "Galen"], "correct": 0 },
+      { "q": "İskenderiye Tıp Okulu'nda 'insan kadavrası üzerinde diseksiyon' yapan ve sinir sistemini tanımlayan anatomist kimdir?", "a": ["Herophilus", "Erasistratus", "Hippokrates", "Celsus"], "correct": 0 },
+      { "q": "Efesli Soranus hangi alandaki çalışmalarıyla tanınır?", "a": ["Jinekoloji ve Doğum (Gynaecia)", "Göz Hastalıkları", "Kırık-Çıkık", "Bulaşıcı Hastalıklar"], "correct": 0 },
+      { "q": "Asklepios'un kızı olan ve 'Hijyen/Koruyucu Hekimlik' sembolü sayılan tanrıça kimdir?", "a": ["Hygieia", "Panacea", "Aceso", "Meditrina"], "correct": 0 },
+      { "q": "Galen'e göre 'Doğal Ruh' (Natural Spirit) hangi organda bulunur?", "a": ["Karaciğer", "Kalp", "Beyin", "Mide"], "correct": 0 },
+      { "q": "Hippokrat yemininde hekimlerin yapmaması istenen cerrahi işlem hangisidir?", "a": ["Mesane taşı ameliyatı (Litotomi)", "Kırık tedavisi", "Apse drenajı", "Yara dikimi"], "correct": 0 },
+      { "q": "Hastalıkların 'kötü hava' (bataklık havası vb.) yoluyla bulaştığını savunan teori nedir?", "a": ["Miasma Teorisi", "Germ Teorisi", "Hümoral Teori", "Pnömatik Teori"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi Hümoral Patoloji teorisindeki 4 sıvıdan biri DEĞİLDİR?", "a": ["İdrar", "Kan", "Balgam (Flegma)", "Sarı Safra"], "correct": 0 },
+      { "q": "İlk kadın hekim olduğu söylenen ve erkek kılığında eğitim alan efsanevi isim kimdir?", "a": ["Agnodice", "Aspasia", "Hygieia", "Panacea"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Asklepios", "B": "Hekimlik Tanrısı" },
+      { "A": "Hippokrates", "B": "Tıbbın Babası / Rasyonel Tıp" },
+      { "A": "Galen", "B": "Deneysel Fizyoloji / Eczacılık" },
+      { "A": "Dioscorides", "B": "Materia Medica / Botanik" },
+      { "A": "Herophilus", "B": "Anatomi / Diseksiyon" },
+      { "A": "Soranus", "B": "Jinekoloji / Doğum" },
+      { "A": "Celsus", "B": "İnflamasyon belirtileri (Rubor...)" },
+      { "A": "Chiron", "B": "İlk hekim Sentor (Eğitmen)" }
+    ],
+    "decypher": [
+      {
+        "text": "Hippokrates'e göre vücutta dört temel sıvı (hümor) vardır: {Kan}, balgam, {sarı} safra ve kara safra. Sağlık bu sıvıların {dengesi} (krasis), hastalık ise dengesizliğidir.",
+        "decoys": ["idrar", "kırmızı", "kaos", "tükrük"]
+      },
+      {
+        "text": "Galen, arterlerin içinde {hava} değil {kan} olduğunu ispatlamıştır. Ancak kanın {karaciğer} kaynaklı olduğunu ve kalbin sağından soluna deliklerden geçtiğini savunarak yanılmıştır.",
+        "decoys": ["su", "irin", "beyin", "akciğer"]
+      },
+      {
+        "text": "Roma döneminde Celsus, inflamasyonun dört ana belirtisini tanımlamıştır: Rubor ({Kızarıklık}), Tumor ({Şişlik}), Calore (Sıcaklık) ve Dolore ({Ağrı}).",
+        "decoys": ["Morarma", "Kitle", "Kaşıntı", "Sızı"]
+      }
+    ]
+  }
+}

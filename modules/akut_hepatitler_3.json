@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "title": "AKUT HEPATİTLER",
+    "tag": "ENFEKSİYON & GASTROENTEROLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🩺 KLİNİK SEYİR</div><div class='sum-body'>• <b>Prodrom Dönemi:</b> Sarılık öncesi 'Grip Benzeri' tablo (Ateş, halsizlik, iştahsızlık, bulantı). Sigara içenlerde tiksinme tipiktir.<br>• <b>İkterik Dönem:</b> İdrar rengi koyulaşır (çay rengi), sklera ve cilt sararır. Hepatomegali ve hassasiyet gelişir. Prodromal şikayetler azalır.<br>• <b>İyileşme:</b> Sarılık geriler, iştah açılır.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KRİTİK BİLGİ</div><div class='sum-body'>• <b>Bulaş Yolları:</b> HAV ve HEV fekal-oral (su/besin); HBV, HCV, HDV parenteral (kan/cinsel).<br>• <b>Laboratuvar:</b> ALT/AST > 1000 U/L (Viral/Toksik hasar). Direkt ve İndirekt Bilirubin artar. İdrarda ürobilinojen artışı erken bulgudur.<br>• <b>Risk:</b> Gebelerde HEV fulminan seyreder (%20 mortalite).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TANI & YÖNETİM</div><div class='sum-body'>• <b>Tanı:</b> HAV (Anti-HAV IgM), HBV (HBsAg, Anti-HBc IgM), HCV (Anti-HCV + HCV RNA), HEV (Anti-HEV IgM).<br>• <b>Tedavi:</b> Akut viral hepatitlerde genellikle destek tedavisidir (İstirah, hidrasyon). Alkol ve hepatotoksik ilaçlar kesilir.<br>• <b>Korunma:</b> HAV ve HBV için aşı mevcuttur.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: OKUL SALGINI",
+        "desc": "Pediatri - 10 Yaş Erkek - Sarılık ve Halsizlik",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: PRODROM ]</b>\n\n10 yaşında erkek çocuk. Annesi son 1 haftadır aşırı halsiz olduğunu, iştahının kesildiğini, bulantısı olduğunu ve hafif ateşi çıktığını söylüyor. Okulda benzer şikayetleri olan başka çocuklar da var. Fizik muayenede henüz sarılık yok.\n\nBu aşamada en olası ön tanın nedir?",
+            "opts": [
+              { "txt": "Viral Üst Solunum Yolu Enfeksiyonu", "type": "wrong", "go": "s1_hata" },
+              { "txt": "Akut Viral Hepatit (Prodrom Dönemi)", "type": "correct", "go": "s2" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ERKEN TANI FIRSATI ]</b>\n\nSemptomlar gribal enfeksiyona benzese de, iştahsızlığın çok belirgin olması ve okulda salgın öyküsü (fekal-oral bulaş riski) Hepatit prodromunu akla getirmelidir. Sarılık henüz başlamamış olabilir.",
+            "opts": [{ "txt": "TEKRAR DEĞERLENDİR", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: İKTERİK DÖNEM ]</b>\n\n3 gün sonra aile tekrar geldi. Çocuğun gözlerinin sarardığını ve idrarının 'çay gibi' koyu çıktığını belirttiler. Muayenede skleralar ikterik, karaciğer kosta altında 2 cm palpabl ve hassas.\n\nİdrar renginin koyulaşmasının (kolüri) patofizyolojik nedeni nedir?",
+            "opts": [
+              { "txt": "Konjuge (Direkt) Bilirübinin idrara geçmesi", "type": "correct", "go": "s3" },
+              { "txt": "Hemoglobinüri", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA HATASI ]</b>\n\nHepatitte hepatosellüler hasar ve intrahepatik kolestaz nedeniyle konjuge bilirübin kana karışır. Suda çözünen form olduğu için idrarla atılır ve rengi koyulaştırır. Hemoglobinüri hemolizde görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: SEROLOJİ ]</b>\n\nTanıyı kesinleştirmek için çocukluk çağında ve okul salgınlarında en sık görülen etkeni düşünerek hangi testi istersin?",
+            "opts": [
+              { "txt": "Anti-HAV IgM", "type": "correct", "go": "s4" },
+              { "txt": "HBsAg", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ETKEN SEÇİMİ ]</b>\n\nOkul çağı, fekal-oral bulaş ve salgın öyküsü Hepatit A virüsünü (HAV) işaret eder. Akut enfeksiyon tanısı Anti-HAV IgM ile konur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: TEDAVİ ]</b>\n\nTest sonucu pozitif: Akut Hepatit A. Aile tedavi için antibiyotik veya antiviral ilaç beklentisinde. Yaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Spesifik tedavisi yoktur. İstirahat, bol sıvı ve yağsız diyet önerilir.", "type": "correct", "go": "s5" },
+              { "txt": "Hemen antiviral tedaviye başlanmalıdır.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ TEDAVİ PRENSİBİ ]</b>\n\nAkut Hepatit A kendini sınırlayan bir hastalıktır. Kronikleşmez. Tedavi semptomatiktir (destek tedavisi). Gereksiz ilaç kullanımından kaçınılmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: KORUNMA ]</b>\n\nAnnesi 'Kardeşine de bulaşır mı?' diye endişeli. Ev halkı teması için ne yapmalısın?",
+            "opts": [
+              { "txt": "Aşılama durumlarını kontrol et, aşısızlara aşı veya immünglobulin yap.", "type": "correct", "action": "end" },
+              { "txt": "Sadece maske takmaları yeterlidir.", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ PROFLAKSİ EKSİKLİĞİ ]</b>\n\nHepatit A fekal-oral yolla çok kolay bulaşır. Ev içi temaslılarda en etkili korunma aşılamadır (maruziyet sonrası profilaksi).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: SESSİZ RİSK",
+        "desc": "Dahiliye - 30 Yaş - Riskli Temas",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: ANAMNEZ ]</b>\n\n30 yaşında erkek hasta, hafif bulantı ve sağ üst kadran ağrısı ile geldi. Öyküsünde 2 ay önce korunmasız cinsel ilişki şüphesi var. Ciltte sarılık yok ancak ALT: 1200, AST: 950 saptandı.\n\nÖncelikli şüphen nedir?",
+            "opts": [
+              { "txt": "Akut Hepatit B (Parenteral/Cinsel bulaş)", "type": "correct", "go": "s2" },
+              { "txt": "Akut Hepatit A (Fekal-oral bulaş)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ EPİDEMİYOLOJİ ]</b>\n\nCinsel yolla bulaş öyküsü ve erişkin hasta tablosu öncelikle Hepatit B (veya C) düşündürmelidir. Hepatit A daha çok gıda/su kaynaklıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: PENCERE DÖNEMİ ]</b>\n\nHepatit B paneli istedin. Sonuçlar: HBsAg (-), Anti-HBs (-), Anti-HBc IgM (+). Bu tabloyu nasıl yorumlarsın?",
+            "opts": [
+              { "txt": "Pencere Dönemi (Window Period) - Akut Enfeksiyon", "type": "correct", "go": "s3" },
+              { "txt": "Yanlış negatiflik - Hasta sağlıklı", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ SEROLOJİ YORUMU ]</b>\n\nHBsAg'nin kaybolduğu ancak Anti-HBs'nin henüz oluşmadığı döneme 'Pencere Dönemi' denir. Bu dönemde akut enfeksiyonun tek göstergesi Anti-HBc IgM pozitifliğidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: KO-ENFEKSİYON ]</b>\n\nHastanın durumu aniden kötüleşti. Bilinç bulanıklığı başladı. Hepatit D (Delta) süperenfeksiyonundan şüpheleniyorsun. HDV'nin replikasyonu için hangi virüsün yüzey antijenine ihtiyacı vardır?",
+            "opts": [
+              { "txt": "HBV (HBsAg)", "type": "correct", "go": "s4" },
+              { "txt": "HCV", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ VİROLOJİ BİLGİSİ ]</b>\n\nHepatit D defektif bir RNA virüsüdür. Kılıf oluşturmak ve çoğalmak için mutlaka Hepatit B virüsünün yüzey antijenine (HBsAg) muhtaçtır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: FULMİNAN SEYİR ]</b>\n\nHastada 'Fulminan Hepatit' (Akut Karaciğer Yetmezliği) geliştiğini gösteren en önemli laboratuvar bulgusu hangisidir?",
+            "opts": [
+              { "txt": "Protrombin Zamanı (PT) uzaması ve INR artışı", "type": "correct", "go": "s5" },
+              { "txt": "Transaminazların (ALT/AST) aşırı yükselmesi", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ PROGNOZ GÖSTERGESİ ]</b>\n\nTransaminazlar karaciğer hasarını gösterir ancak fonksiyonu göstermez. Karaciğerin sentez fonksiyonunun bozulduğunu (yetmezliği) gösteren en iyi parametre PT uzamasıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: KRONİKLEŞME RİSKİ ]</b>\n\nBu hasta iyileşirse, erişkin yaşta kazanılan Akut Hepatit B'nin kronikleşme ihtimali yaklaşık ne kadardır?",
+            "opts": [
+              { "txt": "Düşüktür (%1-5)", "type": "correct", "action": "end" },
+              { "txt": "Çok Yüksektir (%90)", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ İSTATİSTİK ]</b>\n\nYenidoğanlarda kronikleşme %90 iken, immün sistemi gelişmiş erişkinlerde akut HBV %95-99 oranında tam iyileşir, kronikleşme %5'in altındadır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: GEBELİK TEHLİKESİ",
+        "desc": "Acil Servis - 26 Yaş Gebe - Sarılık",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: TRİAJ ]</b>\n\n26 yaşında, 32 haftalık (3. trimester) gebe hasta, bulantı, kusma ve sarılık şikayetiyle başvurdu. Yakın zamanda temiz su kaynağının olmadığı kırsal bir bölgeye seyahat öyküsü var.\n\nSu kaynaklı bulaşan hangi hepatit virüsü gebelerde yüksek mortaliteye sahiptir?",
+            "opts": [
+              { "txt": "Hepatit E (HEV)", "type": "correct", "go": "s2" },
+              { "txt": "Hepatit A (HAV)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KRİTİK BİLGİ ]</b>\n\nHAV da suyla bulaşır ancak gebelerde fulminan seyir nadirdir. HEV, gebelerin 3. trimesterinde %20'lere varan mortalite (ölüm) riski taşır.",
+            "opts": [{ "txt": "DÜZELT VE İLERLE", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: AYIRICI TANI ]</b>\n\nHepatit E tanısı için serolojik test istedin. Bu sırada hastanın ALT ve AST değerlerinin 2000 U/L civarında olduğunu gördün. Gebeliğe bağlı diğer hangi patolojiyi ekarte etmelisin?",
+            "opts": [
+              { "txt": "HELLP Sendromu / Akut Yağlı Karaciğer", "type": "correct", "go": "s3" },
+              { "txt": "Kolesistit", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AYIRICI TANI ]</b>\n\nKolesistitte transaminazlar bu kadar yükselmez (genellikle <400). HELLP sendromu ve Gebeliğin Akut Yağlı Karaciğeri, 3. trimesterde sarılık ve enzim yüksekliği ile giden ve acil doğum gerektiren durumlardır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: TANI ]</b>\n\nAnti-HEV IgM pozitif geldi. Tansiyon normal, trombositopeni yok (HELLP dışlandı). Tanı: Gebelikte Akut Hepatit E. Hastayı hangi komplikasyon açısından yakın takip etmelisin?",
+            "opts": [
+              { "txt": "Fulminan Hepatit ve DIC (Yaygın Damar İçi Pıhtılaşma)", "type": "correct", "go": "s4" },
+              { "txt": "Kronikleşme ve Siroz", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ KLİNİK SEYİR ]</b>\n\nHepatit E immünsuprese olmayanlarda kronikleşmez. Gebelerdeki asıl korku akut karaciğer yetmezliği (fulminan seyir) ve kanama bozukluğudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: BULAŞ KAYNAĞI ]</b>\n\nHasta bu virüsü nasıl kapmış olabilir? HEV'in bulaş yolu ve rezervuarı hakkında ne biliyorsun?",
+            "opts": [
+              { "txt": "Fekal-oral yolla, kontamine su ve iyi pişmemiş etlerden (domuz/av eti)", "type": "correct", "go": "s5" },
+              { "txt": "Kan transfüzyonu ile", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ EPİDEMİYOLOJİ ]</b>\n\nHEV fekal-oral yolla bulaşır. Zoonotik karakterlidir; domuzlar, yaban domuzları ve geyikler rezervuar olabilir. Kontamine sular salgın nedenidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: YÖNETİM ]</b>\n\nHastanın genel durumu stabil seyrediyor. Doğum yaklaşırken bebeğe geçiş riski hakkında ne söylersin?",
+            "opts": [
+              { "txt": "Vertikal geçiş (anneden bebeğe) mümkündür, yenidoğan taranmalıdır.", "type": "correct", "action": "end" },
+              { "txt": "HEV kan yoluyla bulaşmadığı için bebeğe geçmez.", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ VERTİKAL GEÇİŞ ]</b>\n\nKlasik bilgi HEV'in fekal-oral bulaştığı yönünde olsa da, viremi sırasında transplasental (anneden bebeğe) geçiş mümkündür ve yenidoğanda ciddi enfeksiyon yapabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Akut viral hepatitlerin 'prodromal' (sarılık öncesi) döneminde aşağıdakilerden hangisi EN SIK görülen semptomlardan biridir?",
+        "a": ["İştahsızlık ve bulantı", "Kaşıntı", "Asit toplanması", "GİS kanaması"],
+        "correct": 0
+      },
+      {
+        "q": "Hepatit B virüs (HBV) enfeksiyonunda 'Pencere Dönemi'ni tanımlayan serolojik profil hangisidir?",
+        "a": ["HBsAg (-), Anti-HBs (-), Anti-HBc IgM (+)", "HBsAg (+), Anti-HBc IgM (+)", "HBsAg (-), Anti-HBs (+), Anti-HBc IgG (+)", "HBsAg (+), HBeAg (+)"],
+        "correct": 0
+      },
+      {
+        "q": "Gebelerde 3. trimesterde geçirildiğinde %20 oranında fulminan hepatit ve mortaliteye neden olan virüs hangisidir?",
+        "a": ["Hepatit A", "Hepatit B", "Hepatit C", "Hepatit E"],
+        "correct": 3
+      },
+      {
+        "q": "Aşağıdaki hepatit virüslerinden hangisi 'defektif' bir virüstür ve replikasyon için HBsAg'ye ihtiyaç duyar?",
+        "a": ["Hepatit A", "Hepatit C", "Hepatit D", "Hepatit E"],
+        "correct": 2
+      },
+      {
+        "q": "Akut hepatit tanısında, karaciğerin sentetik fonksiyonunun (yetmezlik) bozulduğunu gösteren en güvenilir laboratuvar parametresi hangisidir?",
+        "a": ["ALT yüksekliği", "AST yüksekliği", "Protrombin Zamanı (PT) uzaması", "GGT yüksekliği"],
+        "correct": 2
+      },
+      {
+        "q": "Fekal-oral yolla bulaşan ve kronikleşmeyip ömür boyu bağışıklık bırakan hepatit etkeni hangisidir?",
+        "a": ["Hepatit C", "Hepatit A", "Hepatit B", "Hepatit D"],
+        "correct": 1
+      },
+      {
+        "q": "Akut hepatitli bir hastada idrar renginin 'çay rengi' (kolüri) olmasının nedeni nedir?",
+        "a": ["İdrara konjuge (direkt) bilirübin geçişi", "İdrara indirekt bilirübin geçişi", "Hemoglobinüri", "Myoglobinüri"],
+        "correct": 0
+      },
+      {
+        "q": "Kronikleşme ihtimali en yüksek olan (>%80) ve bu nedenle 'sessiz katil' olarak bilinen hepatit virüsü hangisidir?",
+        "a": ["Hepatit A", "Hepatit B", "Hepatit C", "Hepatit E"],
+        "correct": 2
+      },
+      {
+        "q": "Hepatit B aşısı (rekombinant aşı) ile bağışıklanmış bir kişide beklenen serolojik sonuç nedir?",
+        "a": ["HBsAg (-), Anti-HBs (+), Anti-HBc IgG (-)", "HBsAg (-), Anti-HBs (+), Anti-HBc IgG (+)", "HBsAg (+), Anti-HBs (-)", "HBsAg (-), Anti-HBs (-)"],
+        "correct": 0
+      },
+      {
+        "q": "Akut viral hepatitlerde karaciğer enzimlerinin (ALT/AST) tipik seyri nasıldır?",
+        "a": ["Hafif yükselir (<2 kat)", "Değişmez", "Çok yüksek değerlere (>10-20 kat) ulaşır", "Düşer"],
+        "correct": 2
+      }
+    ],
+    "match": [
+      { "A": "Hepatit A (HAV)", "B": "Fekal-Oral / Kronikleşmez / Aşı var" },
+      { "A": "Hepatit B (HBV)", "B": "Parenteral / DNA Virüsü / Kronikleşebilir" },
+      { "A": "Hepatit C (HCV)", "B": "Parenteral / En sık kronikleşen" },
+      { "A": "Hepatit D (HDV)", "B": "Defektif / Ko-enfeksiyon veya Süperenfeksiyon" },
+      { "A": "Hepatit E (HEV)", "B": "Fekal-Oral / Gebede Fulminan Seyir" },
+      { "A": "HBsAg", "B": "Aktif enfeksiyon göstergesi (Yüzey antijeni)" },
+      { "A": "Anti-HBs", "B": "Bağışıklık göstergesi (Koruyucu antikor)" },
+      { "A": "Anti-HBc IgM", "B": "Akut enfeksiyon veya Pencere dönemi" },
+      { "A": "ALT/AST > 1000", "B": "Akut hepatosellüler hasar" },
+      { "A": "PT Uzaması", "B": "Fulminan hepatit (Yetmezlik) bulgusu" }
+    ],
+    "decypher": [
+      {
+        "text": "Akut hepatitlerde sarılık ortaya çıktığında, hastanın ateş ve bulantı gibi {prodrom} dönemi şikayetlerinde genellikle gerileme görülür.",
+        "decoys": ["kronik", "terminal"]
+      },
+      {
+        "text": "Hepatit D virüsü, replikasyonu ve paketlenmesi için mutlaka {Hepatit B} virüsünün yardımına ihtiyaç duyan defektif bir RNA virüsüdür.",
+        "decoys": ["Hepatit C", "Hepatit A"]
+      },
+      {
+        "text": "Gebeliğin 3. trimesterinde geçirilen {Hepatit E} enfeksiyonu, diğer viral hepatitlere göre çok daha yüksek oranda fulminan seyir ve anne ölümü riski taşır.",
+        "decoys": ["Hepatit A", "Hepatit C"]
+      }
+    ]
+  }
+}

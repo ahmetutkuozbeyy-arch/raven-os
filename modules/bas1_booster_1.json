@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "title": "BAS1 BOOSTER: PATOLOJİ VE TEMEL BİLİMLER",
+    "tag": "SINAV HAZIRLIK"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 GİS TÜMÖRLERİ VE KÖKENLERİ</div><div class='sum-body'>• <b>GIST (Gastrointestinal Stromal Tümör):</b> Midenin en sık görülen mezenkimal tümörüdür. <b>Cajal'ın İnterstisyel Hücrelerinden</b> (Pacemaker hücreleri) köken alır. Tanıda <b>CD117 (c-kit)</b> pozitiftir.<br>• <b>Mide Lenfoması (MALToma):</b> H. Pylori enfeksiyonu ile ilişkilidir. Erken evrede antibiyotikle geriler. Marjinal zon B hücrelerinden köken alır.<br>• <b>Karsinoid (Nöroendokrin) Tümörler:</b> En sık İnce Bağırsak (İleum) ve Apendikste görülür. Serotonin salgılar.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 KANSER YOLAKLARI</div><div class='sum-body'>• <b>APC/Beta-Katenin Yolağı:</b> Sporadik kolon kanserlerinin %80'inde görülür (Adenoma-Karsinoma sekansı).<br>• <b>Mikrosatelit İnstabilite (MSI):</b> DNA mismatch repair genlerindeki (MLH1, MSH2) mutasyonla gider (Lynch Sendromu).<br>• <b>E-Cadherin (CDH1):</b> Mutasyonu <b>Diffüz Tip Mide Kanseri</b> (Taşlı yüzük hücreli) ile ilişkilidir.</div></div><div class='sum-card sum-rx'><div class='sum-title'>👶 KONJENİTAL VE DİĞERLERİ</div><div class='sum-body'>• <b>Hirschsprung:</b> Rektumda ganglion hücrelerinin yokluğu (Aganglionozis).<br>• <b>Meckel Divertikülü:</b> Gerçek divertiküldür. Vitellin kanal artığıdır.<br>• <b>Barrett Özofagus:</b> Reflüye bağlı skuamöz epitelin kolumnar epitele (İntestinal Metaplazi) dönüşmesidir. Adenokanser riskini artırır.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "VAKA 1: DUVARDAKİ KİTLE",
+        "desc": "Patoloji - Mide Tümörü Ayrıcı Tanısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\n60 yaşında erkek hasta. Midesinde submukozal yerleşimli, 5 cm çapında bir kitle saptandı. Biyopside iğsi hücreler (spindle cells) görülüyor.\n\nPatolog bu tümörün 'Cajal Hücrelerinden' köken aldığından şüpheleniyor. Ön tanın nedir?",
+            "opts": [
+              { "txt": "Gastrointestinal Stromal Tümör (GIST)", "type": "correct", "go": "s2" },
+              { "txt": "Leiomyosarkom", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ KÖKEN ]</b>\n\nLeiomyosarkom düz kas kökenlidir. Cajal hücrelerinden köken alan spesifik tümör GIST'tir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ İMMÜNOHİSTOKİMYA ]</b>\n\nTanıyı kesinleştirmek ve hedefe yönelik tedavi (Imatinib) planlamak için hangi boyamanın POZİTİF olması gerekir?",
+            "opts": [
+              { "txt": "CD117 (c-kit)", "type": "correct", "go": "s3" },
+              { "txt": "Desmin", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MARKER ]</b>\n\nDesmin kas kaynaklı tümörlerde pozitiftir. GIST'in en spesifik belirteci CD117'dir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ MUTASYON ]</b>\n\nCD117 boyandı. Bu tümörde en sık hangi gende 'gain-of-function' (fonksiyon kazandırıcı) mutasyon görülür?",
+            "opts": [
+              { "txt": "KIT Geni", "type": "correct", "go": "s4" },
+              { "txt": "p53 Geni", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ GENETİK ]</b>\n\nGIST patogenezinde KIT (veya PDGFRA) tirozin kinaz reseptöründeki mutasyonlar temel rol oynar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ SONUÇ ]</b>\n\nGIST tanısı doğrulandı. Imatinib (Tirozin kinaz inhibitörü) tedavisine yanıtın iyi olacağı öngörüldü.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "VAKA 2: METAPLAZİDEN KANSERE",
+        "desc": "Onkoloji - Özofagus Kanseri Gelişimi",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ VAKA ]</b>\n\nUzun süredir reflü (GÖRH) şikayeti olan hastanın endoskopisinde, özofagus alt ucunda 'Somon renkli' mukoza adacıkları görüldü. Biyopside skuamöz epitelin yerini goblet hücreli kolumnar epitelin aldığı raporlandı.\n\nBu lezyonun adı nedir?",
+            "opts": [
+              { "txt": "Barrett Özofagus (İntestinal Metaplazi)", "type": "correct", "go": "s2" },
+              { "txt": "Skuamöz Hücreli Karsinom", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANIM ]</b>\n\nBu bir kanser değil, kanser öncüsü (premalign) bir lezyondur. Epitelin tip değiştirmesine 'Metaplazi' denir. Reflüde skuamöz epitel aside dayanıklı kolumnar epitele dönüşür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ RİSK ]</b>\n\nBarrett özofagus zemininde gelişme riski en yüksek olan kanser tipi hangisidir?",
+            "opts": [
+              { "txt": "Özofagus Adenokarsinomu", "type": "correct", "go": "s3" },
+              { "txt": "Skuamöz Hücreli Karsinom (SCC)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KANSER TİPİ ]</b>\n\nSCC genelde alkol, sigara ve sıcak içeceklerle ilişkilidir ve üst/orta özofagusta görülür. Barrett zemininde gelişen ve distalde görülen kanser Adenokanserdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta displazi gelişimi açısından düzenli endoskopik takibe alındı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Kolon kanseri gelişiminde 'Adenoma-Karsinoma' sekansında ilk mutasyona uğrayan ve polip oluşumunu başlatan gen hangisidir?", "a": ["APC Geni", "KRAS", "p53", "DCC"], "correct": 0 },
+      { "q": "Mide kanserinin 'Diffüz Tipinde' (Taşlı yüzük hücreli) görülen karakteristik genetik bozukluk nedir?", "a": ["E-Cadherin (CDH1) mutasyonu", "APC mutasyonu", "HER2 amplifikasyonu", "Mikrosatelit instabilite"], "correct": 0 },
+      { "q": "Hirschsprung hastalığının kesin tanısı için yapılan rektal biyopside patolog ne arar?", "a": ["Ganglion hücrelerinin yokluğunu (Aganglionozis)", "Villus atrofisini", "Granülomları", "Kript apselerini"], "correct": 0 },
+      { "q": "H. Pylori enfeksiyonu aşağıdaki hastalıklardan hangisine NEDEN OLMAZ?", "a": ["Akut Pankreatit", "Kronik Gastrit", "Peptik Ülser", "MALT Lenfoma"], "correct": 0 },
+      { "q": "Pankreas adenokarsinomunun en sık görülen öncül (prekürsör) lezyonu nedir?", "a": ["PanIN (Pankreatik İntraduktal Neoplazi)", "GIST", "İnsülinoma", "Seröz Kistadenom"], "correct": 0 },
+      { "q": "Çocukluk çağında yanlışlıkla 'Kostik Madde' (Çamaşır suyu vb.) içen birinde yıllar sonra hangi kanser riski artar?", "a": ["Özofagus Skuamöz Hücreli Karsinom (SCC)", "Mide Lenfoması", "Kolon Kanseri", "GIST"], "correct": 0 },
+      { "q": "İnflamatuar Bağırsak Hastalıklarından hangisinde 'Kazeifiye olmayan Granülomlar' görülür?", "a": ["Crohn Hastalığı", "Ülseratif Kolit", "Çölyak", "Whipple Hastalığı"], "correct": 0 },
+      { "q": "Meckel divertikülünün histolojik özelliği nedir?", "a": ["Gerçek divertiküldür (Tüm barsak katmanlarını içerir)", "Yalancı divertiküldür", "Sadece mukoza içerir", "Sadece seroza içerir"], "correct": 0 },
+      { "q": "Midede görülen MALT Lenfoma'nın en önemli etyolojik ajanı nedir?", "a": ["Helicobacter Pylori", "EBV", "HPV", "HCV"], "correct": 0 },
+      { "q": "Ailesel Adenomatöz Polipozis (FAP) sendromunda mutasyon hangi gendedir?", "a": ["APC", "MLH1", "STK11", "PTEN"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "GIST", "B": "Cajal Hücresi / CD117 (+)" },
+      { "A": "Diffüz Mide Ca", "B": "E-Cadherin / Taşlı Yüzük" },
+      { "A": "Hirschsprung", "B": "Aganglionozis" },
+      { "A": "Barrett", "B": "İntestinal Metaplazi" },
+      { "A": "MALToma", "B": "H. Pylori ilişkili lenfoma" },
+      { "A": "Crohn", "B": "Granülom / Transmural" },
+      { "A": "APC Geni", "B": "Kolon Kanseri başlangıcı" },
+      { "A": "PanIN", "B": "Pankreas Ca öncülü" }
+    ]
+  }
+}

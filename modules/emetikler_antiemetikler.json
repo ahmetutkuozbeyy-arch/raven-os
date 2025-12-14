@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "title": "EMETİKLER VE ANTİEMETİKLER",
+    "tag": "TIBBİ FARMAKOLOJİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧠 KUSMA FİZYOLOJİSİ</div><div class='sum-body'>• <b>Kusma Merkezi:</b> Medulla oblongata'da, retiküler formasyondadır. Tüm uyarıların toplandığı yerdir.<br>• <b>CTZ (Area Postrema):</b> 4. ventrikül tabanında, kan-beyin bariyeri dışındadır. Kandaki ilaç ve toksinleri algılar.<br>• <b>Reseptörler:</b> CTZ'de D2, 5-HT3, NK1 ve Opioid; Vestibüler sistemde H1 ve M1 reseptörleri yoğundur.</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 İLAÇ GRUPLARI</div><div class='sum-body'>• <b>5-HT3 Antagonistleri (Setronlar):</b> Kemoterapiye bağlı kusmada (CINV) en etkilidirler. QT uzaması yapabilirler.<br>• <b>NK1 Antagonistleri (Aprepitant):</b> P maddesini bloke ederler. Geç başlangıçlı kusmada etkilidirler.<br>• <b>D2 Antagonistleri (Metoklopramid):</b> Prokinetiktir. Ekstrapiramidal yan etki (Distoni/Parkinsonizm) riski vardır.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 KLİNİK KULLANIM</div><div class='sum-body'>• <b>Taşıt Tutması:</b> Antihistaminikler (Dimenhidrinat) veya Skopolamin (M1 blokeri).<br>• <b>Gebelik Kusması:</b> Piridoksin (B6) + Doksilamin (Antihistaminik) ilk tercihtir.<br>• <b>Kombine Tedavi:</b> Yüksek riskli kemoterapide 5-HT3 Antagonisti + NK1 Antagonisti + Deksametazon kullanılır.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KEMOTERAPİ KABUSU",
+        "desc": "Onkoloji - Yüksek Riskli İlaç - Akut ve Geç Kusma",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nSisplatin (Yüksek emetojenik) kemoterapisi alacak bir hastada kusmayı önlemek istiyorsun. Patogenezde, özellikle 'Akut Fazda' (ilk 24 saat) barsaklardan salınan serotonin sorumludur.\n\nİlk tercih edeceğin, en güçlü antiemetik grubu hangisidir?",
+            "opts": [
+              { "txt": "5-HT3 Reseptör Antagonistleri (Örn: Ondansetron)", "type": "correct", "go": "s2" },
+              { "txt": "H1 Reseptör Antagonistleri (Antihistaminikler)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YANLIŞ HEDEF ]</b>\n\nAntihistaminikler vestibüler kaynaklı (denge) kusmalarda etkilidir. Kemoterapi kusmasının ana mediatörü Serotonindir ve 5-HT3 reseptörleri hedeflenmelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ KOMBİNASYON ]</b>\n\nHastada 'Geç Başlangıçlı' (24 saatten sonra) kusmayı da önlemek istiyorsun. Bu fazda 'P Maddesi' (Substance P) rol oynar.\n\nTedaviye hangi grup ilacı eklemelisin?",
+            "opts": [
+              { "txt": "NK-1 Reseptör Antagonisti (Örn: Aprepitant)", "type": "correct", "go": "s3" },
+              { "txt": "Dopamin Antagonisti (Metoklopramid)", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ MEKANİZMA ]</b>\n\nNK-1 reseptörleri P maddesi ile uyarılır ve geç kusmadan sorumludur. Aprepitant bu reseptörü bloke ederek setronların etkisini güçlendirir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ ETKİLEŞİM ]</b>\n\nAprepitant reçete ederken dikkatli olmalısın çünkü bu ilaç karaciğerde bir enzimi hem inhibe eder hem de onunla metabolize olur. Bu enzim hangisidir?",
+            "opts": [
+              { "txt": "CYP3A4", "type": "correct", "go": "s4" },
+              { "txt": "CYP2D6", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ FARMAKOKİNETİK ]</b>\n\nAprepitant CYP3A4 inhibitörüdür. Bu yolla yıkılan ilaçların (Örn: Deksametazon, Warfarin) düzeyini artırabilir. Deksametazon dozu azaltılmalıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ADJUVAN ]</b>\n\nEtkiyi maksimize etmek için protokole eklenen, mekanizması tam bilinmemekle birlikte antiemetik etkisi güçlü olan steroid hangisidir?",
+            "opts": [
+              { "txt": "Deksametazon", "type": "correct", "go": "s5" },
+              { "txt": "Prednizolon", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ STANDART ]</b>\n\nAntiemetik protokollerinde standart olarak kullanılan kortikosteroid Deksametazondur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHastaya Ondansetron + Aprepitant + Deksametazon üçlüsü başlandı. Kemoterapi süreci bulantısız tamamlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: HAREKET HASTALIĞI",
+        "desc": "Seyahat - Araba Tutması - Vestibüler Sistem",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ SENARYO ]</b>\n\nBir hasta uzun bir gemi yolculuğuna çıkacak ve deniz tutmasından (Motion Sickness) korkuyor. Bu tip kusmada uyarılar iç kulaktaki vestibüler sistemden gelir.\n\nBurada baskın olan iki reseptör hangisidir?",
+            "opts": [
+              { "txt": "Histamin (H1) ve Muskarinik (M1)", "type": "correct", "go": "s2" },
+              { "txt": "Serotonin (5-HT3) ve Dopamin (D2)", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ FİZYOLOJİ ]</b>\n\n5-HT3 ve D2 daha çok kimyasal ve visseral uyarılarda (CTZ) aktiftir. Denge ve hareketle ilgili kusmalarda H1 ve M1 reseptörleri rol oynar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ İLAÇ SEÇİMİ ]</b>\n\nBu hastaya profilaktik (koruyucu) olarak kulak arkasına yapıştırılan bir bant (patch) önerebilirsin. Bu ilaç hangisidir?",
+            "opts": [
+              { "txt": "Skopolamin (Hiyosin)", "type": "correct", "go": "s3" },
+              { "txt": "Metoklopramid", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ UYGULAMA YOLU ]</b>\n\nMetoklopramid prokinetiktir, taşıt tutmasında etkisi azdır. Skopolamin güçlü bir antikolinerjiktir ve transdermal (bant) formu taşıt tutması için idealdir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ YAN ETKİ ]</b>\n\nSkopolamin kullanan hastada antikolinerjik yan etkiler görülebilir. Hangisi bunlardan biridir?",
+            "opts": [
+              { "txt": "Ağız kuruluğu, görme bulanıklığı, sedasyon", "type": "correct", "go": "s4" },
+              { "txt": "İshal ve tükürük artışı", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ANTİKOLİNERJİK ]</b>\n\nAsetilkolin blokajı 'kurutur ve yavaşlatır'. Ağız kurur, göz bebeği büyür (bulanık görme), kabızlık olur. İshal kolinerjik bir etkidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ ALTERNATİF ]</b>\n\nEğer hasta ağızdan tablet isteseydi, hem H1 hem de M1 blokajı yapan hangi antihistaminiği önerirdin?",
+            "opts": [
+              { "txt": "Dimenhidrinat (Dramamine)", "type": "correct", "go": "s5" },
+              { "txt": "Ondansetron", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ENDİKASYON ]</b>\n\nOndansetron taşıt tutmasında etkisizdir. Dimenhidrinat klasik bir taşıt tutması ilacıdır ve sedasyon (uyku) yapabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta yolculuktan önce ilacını aldı ve sorunsuz bir seyahat geçirdi. Antikolinerjik yan etkiler konusunda uyarıldı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: MİDEYİ HIZLANDIR",
+        "desc": "Dahiliye - Diyabetik Gastroparezi - Prokinetikler",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ HASTA ]</b>\n\nUzun süreli diyabeti olan bir hasta, yemeklerden sonra şişkinlik ve bulantı şikayetiyle geldi. Mide boşalmasının geciktiği (Gastroparezi) düşünüldü.\n\nHem bulantıyı kesen hem de mide boşalmasını hızlandıran (Prokinetik) ilaç grubu hangisidir?",
+            "opts": [
+              { "txt": "Dopamin (D2) Reseptör Antagonistleri", "type": "correct", "go": "s2" },
+              { "txt": "5-HT3 Antagonistleri", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ETKİ MEKANİZMASI ]</b>\n\nSetronlar (5-HT3) sadece bulantıyı keser, mide hareketini artırmaz. Dopamin GİS'te motiliteyi baskılar, onu bloke edenler (Metoklopramid vb.) motiliteyi artırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ İLAÇ ]</b>\n\nBu gruptan en sık kullanılan ve hem santral (CTZ) hem periferik etkisi olan ilaç hangisidir?",
+            "opts": [
+              { "txt": "Metoklopramid", "type": "correct", "go": "s3" },
+              { "txt": "Aprepitant", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ TANIM ]</b>\n\nAprepitant NK-1 antagonistidir. Metoklopramid, klasik bir prokinetik ve antiemetiktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ YAN ETKİ - 1 ]</b>\n\nMetoklopramid kan-beyin bariyerini geçer ve beyindeki dopamin reseptörlerini de bloke eder. Bu durum hangi nörolojik yan etkiye yol açabilir?",
+            "opts": [
+              { "txt": "Ekstrapiramidal Semptomlar (Distoni, Parkinsonizm)", "type": "correct", "go": "s4" },
+              { "txt": "İşitme kaybı", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ NÖROLOJİ ]</b>\n\nBazal gangliyonlarda dopamin azalırsa Parkinson benzeri hareket bozuklukları (kasılmalar, titreme) görülür. Gençlerde akut distoni sık olabilir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YAN ETKİ - 2 ]</b>\n\nAynı ilaç hipofizden prolaktin salgısını artırarak (Hiperprolaktinemi) hangi yan etkilere neden olabilir?",
+            "opts": [
+              { "txt": "Galaktore (Süt gelmesi), Jinekomasti, Adet düzensizliği", "type": "correct", "go": "s5" },
+              { "txt": "Hipertansiyon", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ENDOKRİN ]</b>\n\nDopamin normalde prolaktini baskılar (PIF). Dopamin blokajı prolaktini serbest bırakır ve hormonal yan etkiler oluşur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ ALTERNATİF ]</b>\n\nEğer santral yan etkilerden (EPS) kaçınmak isteseydik, kan-beyin bariyerini geçmeyen hangi D2 antagonistini seçerdik?",
+            "opts": [
+              { "txt": "Domperidon", "type": "correct", "action": "end" },
+              { "txt": "Klorpromazin", "type": "wrong", "go": "s5" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Kemoterapiye bağlı kusmada (CINV) en etkili olan ve 5-HT3 reseptörlerini bloke eden ilaç grubu hangisidir?", "a": ["Setronlar (Ondansetron, Granisetron)", "Antihistaminikler", "Antikolinerjikler", "Benzodiazepinler"], "correct": 0 },
+      { "q": "Taşıt tutmasında (Motion Sickness) en etkili olan ve kulak arkası bant şeklinde uygulanan ilaç hangisidir?", "a": ["Skopolamin", "Metoklopramid", "Ondansetron", "Aprepitant"], "correct": 0 },
+      { "q": "Metoklopramid kullanımına bağlı gelişebilecek en önemli nörolojik yan etki nedir?", "a": ["Ekstrapiramidal Semptomlar (Distoni, Parkinsonizm)", "Sedasyon", "Konvülsiyon", "Halüsinasyon"], "correct": 0 },
+      { "q": "Kusma merkezi ve CTZ (Chemoreceptor Trigger Zone) beynin hangi bölgesinde bulunur?", "a": ["Medulla Oblongata / 4. Ventrikül tabanı", "Serebellum", "Hipotalamus", "Korteks"], "correct": 0 },
+      { "q": "Geç başlangıçlı kemoterapi kusmasında etkili olan ve P maddesini (Substance P) bloke eden ilaç hangisidir?", "a": ["Aprepitant (NK-1 Antagonisti)", "Ondansetron", "Deksametazon", "Domperidon"], "correct": 0 },
+      { "q": "Gebelikte sabah bulantıları için ilk tercih edilmesi gereken güvenli kombinasyon hangisidir?", "a": ["Piridoksin (B6) + Doksilamin", "Ondansetron", "Metoklopramid", "Kortikosteroid"], "correct": 0 },
+      { "q": "Aşağıdakilerden hangisi CTZ'de (Area Postrema) bulunan reseptörlerden biri DEĞİLDİR?", "a": ["GABA", "Dopamin (D2)", "Serotonin (5-HT3)", "Opioid"], "correct": 0 },
+      { "q": "Metoklopramid hangi reseptörü bloke ederek prokinetik (mideyi boşaltıcı) etki gösterir?", "a": ["Dopamin D2", "Serotonin 5-HT3", "Histamin H1", "Muskarinik M1"], "correct": 0 },
+      { "q": "Hangi antiemetik ilaç CYP3A4 enzimini inhibe ederek diğer ilaçların (örn: kortizon) metabolizmasını bozar?", "a": ["Aprepitant", "Ondansetron", "Metoklopramid", "Dimenhidrinat"], "correct": 0 },
+      { "q": "Kannabinoid türevi olan ve diğer tedavilere dirençli kusmalarda kullanılan ilaç hangisidir?", "a": ["Dronabinol", "Haloperidol", "Lorazepam", "Eritromisin"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Ondansetron", "B": "5-HT3 Antagonisti (Kemoterapi)" },
+      { "A": "Aprepitant", "B": "NK-1 Antagonisti (Geç kusma)" },
+      { "A": "Metoklopramid", "B": "D2 Antagonisti (Prokinetik)" },
+      { "A": "Skopolamin", "B": "M1 Antagonisti (Taşıt tutması)" },
+      { "A": "Dimenhidrinat", "B": "H1 Antagonisti (Denge)" },
+      { "A": "Dronabinol", "B": "Kannabinoid (Dirençli vakalar)" },
+      { "A": "Deksametazon", "B": "Adjuvan steroid" },
+      { "A": "Domperidon", "B": "Bariyeri geçmeyen D2 blokeri" }
+    ],
+    "decypher": [
+      {
+        "text": "Kandaki toksinleri algılayan {CTZ} (Kemoreseptör Tetikleyici Bölge), 4. ventrikül tabanında, kan-beyin bariyerinin {dışında} yer alır. Burada yoğun olarak {Dopamin} ve Serotonin reseptörleri bulunur.",
+        "decoys": ["Kusma Merkezi", "içinde", "Histamin", "GABA"]
+      },
+      {
+        "text": "{Metoklopramid}, dopamin reseptörlerini bloke ederek hem bulantıyı keser hem de mide boşalmasını hızlandırır ({Prokinetik}). Ancak beyne geçtiği için {Ekstrapiramidal} yan etkilere (kasılma, titreme) neden olabilir.",
+        "decoys": ["Ondansetron", "Antikolinerjik", "Sedatif", "Alerjik"]
+      },
+      {
+        "text": "{Aprepitant}, P maddesinin bağlandığı {NK1} reseptörlerini bloke eden yeni nesil bir ilaçtır. Özellikle kemoterapiye bağlı {gecikmiş} kusmaların önlenmesinde etkilidir.",
+        "decoys": ["5-HT3", "akut", "D2", "H1"]
+      }
+    ]
+  }
+}

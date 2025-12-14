@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "title": "AKUT KARIN VE AĞRI FİZYOPATOLOJİSİ",
+    "tag": "GENEL CERRAHİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🧬 AĞRI MEKANİZMALARI</div><div class='sum-body'>• <b>Viseral Ağrı:</b> C lifleri (Miyelinsiz) ile taşınır. Künt, yaygın ve huzursuzluk vericidir. Genellikle orta hatta hissedilir.<br>• <b>Pariyetal (Somatik) Ağrı:</b> A-delta lifleri (Miyelinli) ile taşınır. Keskin, batıcı ve iyi lokalizedir. Periton irritasyonunu (Rebound/Defans) gösterir.<br>• <b>Yansıyan Ağrı:</b> Embriyolojik kökene göre uzak bölgeye vurur (Örn: Safra kesesi -> Sağ skapula).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 KLİNİK BULGULAR & TANI</div><div class='sum-body'>• <b>Murphy Belirtisi:</b> Derin inspiryumda sağ üst kadranda ağrı ve nefesin kesilmesi (Kolesistit).<br>• <b>Psoas Belirtisi:</b> Uyluğun ekstansiyonu ile ağrı (Retroçekal Apandisit).<br>• <b>Kehr Belirtisi:</b> Sol omuzda ağrı (Diyafram irritasyonu/Dalak rüptürü).<br>• <b>Rovsing Belirtisi:</b> Sol alt kadrana bastırınca sağda ağrı olması.</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 YÖNETİM & GÖRÜNTÜLEME</div><div class='sum-body'>• <b>Altın Standart:</b> Ürolithiazis (Taş) için kontrastsız BT.<br>• <b>USG:</b> Safra kesesi ve jinekolojik patolojilerde ilk tercihtir.<br>• <b>Analjezi:</b> Tanısı kesinleşmemiş hastada ağrı kesici verilmesi muayene bulgularını maskeleyebilir, dikkatli olunmalıdır.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: AĞRININ GÖÇÜ",
+        "desc": "Acil Servis - 24 Yaş Erkek - Gezici Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n24 yaşında erkek hasta. Sabah saatlerinde göbek çevresinde (periumbilikal) başlayan, tam tarif edemediği künt bir ağrı ve iştahsızlık şikayetiyle geldi. Ateş hafif yüksek (37.8°C).\n\nBu aşamada ağrının tipi ve kaynağı nedir?",
+            "opts": [
+              { "txt": "Viseral Ağrı - Orta Barsak (Midgut) kaynaklı.", "type": "correct", "go": "s2" },
+              { "txt": "Pariyetal Ağrı - Ön Barsak (Foregut) kaynaklı.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ ANATOMİK HATA ]</b>\n\nGöbek çevresi (Periumbilikal) ağrı, embriyolojik olarak 'Orta Barsak' yapılarını (ince barsak, apendiks) işaret eder. Başlangıçta organ gerildiği için ağrı viseral (künt) karakterdedir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ SEYİR ]</b>\n\n6-8 saat sonra hasta ağrının yer değiştirdiğini ve sağ alt kadrana (SAK) yerleştiğini belirtiyor. Ağrı artık hareketle artan, keskin bir karakterde.\n\nBu değişim (Migrasyon) neyi ifade eder?",
+            "opts": [
+              { "txt": "İnflamasyonun pariyetal peritona ulaştığını (Somatikleşme).", "type": "correct", "go": "s3" },
+              { "txt": "Ağrının yansıdığını (Referred pain).", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ FİZYOPATOLOJİ ]</b>\n\nYansıyan ağrı uzak bölgeye vurur. Burada organın üzerindeki periton iltihaplanmış ve ağrı keskinleşip lokalize olmuştur (A-delta lifleri devreye girmiştir).",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nFizik muayenede sağ alt kadranda McBurney noktası hassas. Sol alt kadrana bastırdığında sağ tarafta ağrı hissediyor. Bu bulgunun adı nedir?",
+            "opts": [
+              { "txt": "Rovsing Belirtisi", "type": "correct", "go": "s4" },
+              { "txt": "Obturator Belirtisi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ SEMİYOLOJİ ]</b>\n\nObturator belirtisi bacağın iç rotasyonuyla ağrı oluşmasıdır. Soldan bastırıp sağda ağrı oluşturmak Rovsing belirtisidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ DERİN PALPASYON ]</b>\n\nSağ alt kadrana yavaşça bastırıp elini aniden çektiğinde hasta şiddetli ağrı ile irkiliyor. Bu bulgu (Rebound) neyin kesin kanıtıdır?",
+            "opts": [
+              { "txt": "Peritonit (Periton İrritasyonu)", "type": "correct", "go": "s5" },
+              { "txt": "Barsak Tıkanıklığı", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ KRİTİK BULGU ]</b>\n\nRebound (Blumberg belirtisi), pariyetal peritonun iltihaplandığını gösteren en güvenilir akut karın bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nKlinik ve laboratuvar (Lökositoz) bulguları ile Akut Apandisit tanısı kondu. Hasta cerrahiye hazırlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: TAHTA KARIN",
+        "desc": "Acil Servis - 60 Yaş Erkek - Ani Başlayan Şiddetli Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n60 yaşında erkek hasta. Uzun süredir hazımsızlık ve epigastrik ağrı şikayeti varmış. 1 saat önce karnına 'bıçak saplanır gibi' ani ve çok şiddetli bir ağrı girmiş.\n\nİlk bakışta hastanın hareketsiz yattığını ve karnını tuttuğunu görüyorsun. Neden hareketsiz?",
+            "opts": [
+              { "txt": "Peritonit ağrısı hareketle arttığı için.", "type": "correct", "go": "s2" },
+              { "txt": "Kolik ağrı olduğu için.", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ AĞRI KARAKTERİ ]</b>\n\nKolik ağrısı olan hasta (Örn: Böbrek taşı) kıvranır, yerinde duramaz. Peritonit hastası ise ağrı artmasın diye kımıldamadan yatar.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nKarnı palpe ettiğinde karın duvarı kaslarının istemsiz olarak kasıldığını ve tahta gibi sert olduğunu fark ettin (Defans). Barsak sesleri azalmış.\n\nEn olası ön tanın nedir?",
+            "opts": [
+              { "txt": "Peptik Ülser Perforasyonu (Delinme)", "type": "correct", "go": "s3" },
+              { "txt": "Akut Pankreatit", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ KLİNİK TABLO ]</b>\n\n'Tahta Karın' (Board-like rigidity) yaygın peritonitin en tipik bulgusudur ve sıklıkla içi boş organ perforasyonlarında (ülser delinmesi) görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ GÖRÜNTÜLEME ]</b>\n\nTanıyı doğrulamak için hızlıca Ayakta Direkt Batın Grafisi (ADBG) istedin. Filmde ne görmeyi beklersin?",
+            "opts": [
+              { "txt": "Diyafram altında serbest hava (Pnömoperitoneum)", "type": "correct", "go": "s4" },
+              { "txt": "Hava-Sıvı Seviyeleri", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ RADYOLOJİ ]</b>\n\nHava-sıvı seviyeleri ileus (tıkanıklık) bulgusudur. Mide delindiğinde içindeki hava karın boşluğuna kaçar ve diyafram altında hilal şeklinde görülür.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ YÖNETİM ]</b>\n\nTanı: Perfore Peptik Ülser. Hastanın tansiyonu düşüyor ve taşikardisi var (Şok tablosu). İlk yapılması gereken nedir?",
+            "opts": [
+              { "txt": "Damar yolu açıp sıvı resüsitasyonuna başlamak.", "type": "correct", "go": "s5" },
+              { "txt": "Hemen antibiyotik verip servise yatırmak.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ACİL YAKLAŞIM ]</b>\n\nAkut karında öncelik her zaman hastanın hemodinamik stabilizasyonudur (ABC). Sıvı verilmeden hasta ameliyata alınamaz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta stabilize edildi ve acil laparotomiye alındı. Ülser onarıldı. Erken teşhis ve resüsitasyon hayat kurtardı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: YEMEK SONRASI AĞRI",
+        "desc": "Poliklinik - 40 Yaş Kadın - Sağ Üst Kadran Ağrısı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ ANAMNEZ ]</b>\n\n40 yaşında, kilolu kadın hasta. Özellikle yağlı yemeklerden sonra başlayan, sağ üst kadranda ve sırta vuran ağrı şikayetiyle geldi. Ağrı bazen bulantı ile birlikte oluyor.\n\nAğrının sırtta tam olarak nereye yansıması tipiktir?",
+            "opts": [
+              { "txt": "Sağ skapula (kürek kemiği) altına", "type": "correct", "go": "s2" },
+              { "txt": "Sol omuza", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ YANSIYAN AĞRI ]</b>\n\nSol omuz (Kehr belirtisi) dalak/diyafram patolojilerinde görülür. Safra kesesi ağrısı sağ skapulaya yansır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ FİZİK MUAYENE ]</b>\n\nSağ üst kadrana (subkostal bölgeye) bastırırken hastadan derin nefes almasını istiyorsun. Hasta ağrı nedeniyle aniden nefesini kesiyor.\n\nBu bulgunun adı nedir?",
+            "opts": [
+              { "txt": "Murphy Belirtisi", "type": "correct", "go": "s3" },
+              { "txt": "Courvoisier Belirtisi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ İSİMLENDİRME ]</b>\n\nCourvoisier; ağrısız, ele gelen safra kesesidir (pankreas ca). İnspiryumda ağrı ile nefesin kesilmesi Murphy belirtisidir ve Akut Kolesistiti gösterir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ TANI ]</b>\n\nAkut kolesistit şüphesiyle hangi görüntüleme yöntemini İLK tercih olarak istersin?",
+            "opts": [
+              { "txt": "Hepatobiliyer Ultrasonografi (USG)", "type": "correct", "go": "s4" },
+              { "txt": "Bilgisayarlı Tomografi (BT)", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ ALTIN STANDART ]</b>\n\nSafra taşlarını ve kese duvarını en iyi gösteren, radyasyonsuz ve ucuz yöntem USG'dir. BT komplikasyon şüphesinde istenir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ BULGULAR ]</b>\n\nUSG'de safra kesesi duvarı kalınlaşmış (4mm), lümende taşlar var ve perikolesistik sıvı görülüyor. Tanı: Akut Taşlı Kolesistit.\n\nBu aşamada hastaya ağrı kesici (NSAİİ veya Opioid) verilmeli mi?",
+            "opts": [
+              { "txt": "Evet, tanı konduğu için ağrı kesici verilmelidir.", "type": "correct", "go": "s5" },
+              { "txt": "Hayır, ağrıyı maskeler.", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ MODERN YAKLAŞIM ]</b>\n\nTanısı kesinleşmiş veya görüntüleme planlanan hastalarda ağrı kesici verilmesi insani bir zorunluluktur ve klinik seyri bozmaz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ SONUÇ ]</b>\n\nHasta interne edildi, antibiyotik ve sıvı tedavisi başlandı. Elektif kolesistektomi planlandı.",
+            "opts": [
+              { "txt": "VAKAYI TAMAMLA", "action": "end", "type": "correct" }
+            ]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      { "q": "Viseral ağrı hangi sinir lifleri ile taşınır?", "a": ["C lifleri (Miyelinsiz)", "A-delta lifleri (Miyelinli)", "Somatik sinirler", "Frenik sinir"], "correct": 0 },
+      { "q": "Pariyetal (Somatik) ağrının en belirgin özelliği nedir?", "a": ["Keskin ve iyi lokalize olması", "Künt ve yaygın olması", "Bulantı ile geçmesi", "Gezici olması"], "correct": 0 },
+      { "q": "Sağ alt kadrana bastırıldığında oluşan 'Geri Tepme Ağrısı' (Rebound) neyi gösterir?", "a": ["Pariyetal Peritonit", "Viseral ağrı", "Barsak tıkanıklığı", "Gaz sancısı"], "correct": 0 },
+      { "q": "Sol omuzda hissedilen yansıyan ağrı (Kehr belirtisi) hangi organ patolojisini düşündürür?", "a": ["Dalak Rüptürü / Diyafram İrritasyonu", "Safra Kesesi Taşı", "Apandisit", "Böbrek Taşı"], "correct": 0 },
+      { "q": "Akut kolesistit tanısında en değerli fizik muayene bulgusu nedir?", "a": ["Murphy Belirtisi", "McBurney Hassasiyeti", "Rovsing Belirtisi", "Psoas Belirtisi"], "correct": 0 },
+      { "q": "Embriyolojik olarak 'Ön Barsak' (Foregut) kaynaklı organların (Mide, Safra yolları) ağrısı nerede hissedilir?", "a": ["Epigastrium", "Periumbilikal", "Suprapubik", "Sırt"], "correct": 0 },
+      { "q": "Yaşlı hastalarda akut karın tablosu neden daha sinsi seyreder?", "a": ["Ağrı algısı ve inflamatuar yanıt azaldığı için", "Ağrı eşiği düştüğü için", "Daha çok ilaç kullandıkları için", "Karın kasları güçlü olduğu için"], "correct": 0 },
+      { "q": "Perfore peptik ülser (Mide delinmesi) durumunda direkt grafide ne görülür?", "a": ["Diyafram altında serbest hava", "Hava-sıvı seviyeleri", "Buzlu cam manzarası", "Opak taş"], "correct": 0 },
+      { "q": "Üreter taşı (Renal kolik) ağrısı nereye yansır?", "a": ["Kasık ve testislere (skrotum/labia)", "Sırta", "Omuza", "Göbeğe"], "correct": 0 },
+      { "q": "Sol alt kadrana bastırınca sağ alt kadranda ağrı hissedilmesine ne denir?", "a": ["Rovsing Belirtisi", "Psoas Belirtisi", "Obturator Belirtisi", "Cullen Belirtisi"], "correct": 0 }
+    ],
+    "match": [
+      { "A": "Viseral Ağrı", "B": "C lifleri, künt, yaygın" },
+      { "A": "Pariyetal Ağrı", "B": "A-delta lifleri, keskin, lokalize" },
+      { "A": "Murphy Belirtisi", "B": "Akut Kolesistit" },
+      { "A": "McBurney Noktası", "B": "Akut Apandisit" },
+      { "A": "Kehr Belirtisi", "B": "Sol omuz ağrısı (Dalak)" },
+      { "A": "Rovsing Belirtisi", "B": "Soldan bastırınca sağda ağrı" },
+      { "A": "Foregut Ağrısı", "B": "Epigastrium" },
+      { "A": "Midgut Ağrısı", "B": "Periumbilikal (Göbek)" },
+      { "A": "Hindgut Ağrısı", "B": "Suprapubik" },
+      { "A": "Tahta Karın", "B": "Yaygın Peritonit / Perforasyon" }
+    ],
+    "decypher": [
+      {
+        "text": "Karın ağrısının değerlendirilmesinde; {Viseral} ağrı genellikle organların gerilmesi veya iskemisi sonucu oluşur ve {künt} karakterdedir. {Pariyetal} ağrı ise peritonun inflamasyonu sonucu oluşur ve {keskin}, iyi lokalize edilen bir ağrıdır.",
+        "decoys": ["yansıyan", "yanıcı", "psikolojik", "kronik"]
+      },
+      {
+        "text": "Fizik muayenede, hekimin elini karından aniden çekmesiyle oluşan şiddetli ağrıya {Rebound} denir ve peritonit bulgusudur. Derin inspiryumda sağ üst kadranda ağrı ile nefesin kesilmesine {Murphy} belirtisi denir.",
+        "decoys": ["Rovsing", "Psoas", "Obturator", "Cullen"]
+      },
+      {
+        "text": "Embriyolojik kökene göre; mide ve safra yolları ağrısı {Epigastrik} bölgede, ince barsak ve apendiks ağrısı {Göbek} çevresinde, kolon ve rektum ağrısı ise {Suprapubik} bölgede hissedilir.",
+        "decoys": ["Sırt", "Omuz", "Yan", "Böğür"]
+      }
+    ]
+  }
+}

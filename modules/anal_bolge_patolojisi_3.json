@@ -1,0 +1,280 @@
+{
+  "meta": {
+    "title": "ANAL BÖLGE, MEZENTER VE PERİTON PATOLOJİSİ",
+    "tag": "PATOLOJİ & GENEL CERRAHİ"
+  },
+  "modules": {
+    "summary": {
+      "text": "<div class='summary-container'><div class='sum-card sum-clinic'><div class='sum-title'>🩺 KLİNİK & PATOFİZYOLOJİ</div><div class='sum-body'>• <b>Hemoroid:</b> Anal yastıkçıkların semptomatik sarkmasıdır. İç (ağrısız kanama) ve Dış (ağrılı/tromboze) olarak ayrılır.<br>• <b>Anal Fissür:</b> Anodermde, dentate çizginin distalinde oluşan yırtıktır. %90 posterior orta hatta görülür. Ağrı-Spazm-İskemi kısır döngüsü vardır.<br>• <b>Apse/Fistül:</b> Anal glandların (kriptoglandüler) tıkanmasıyla apse başlar, drene edilmezse veya kendiliğinden patlarsa fistüle dönüşür (%40-50).</div></div><div class='sum-card sum-tus'><div class='sum-title'>🔥 TUS & KRİTİK BİLGİ</div><div class='sum-body'>• <b>Kronik Fissür Triadı:</b> 1. Derin Ülser 2. Sentinel Pili (Nöbetçi Meme) 3. Hipertrofik Anal Papilla.<br>• <b>Kural:</b> Perianal apse saptandığı an (fluktuasyon aranmaksızın) cerrahi drenaj yapılmalıdır. Antibiyotik tek başına yetersizdir.<br>• <b>En Sık Fistül:</b> İntersfinkterik (%45).</div></div><div class='sum-card sum-rx'><div class='sum-title'>💊 TANI & TEDAVİ</div><div class='sum-body'>• <b>Hemoroid:</b> Evre 1-2: Medikal/Band. Evre 3-4: Cerrahi (Hemoroidektomi/Stapler).<br>• <b>Fissür:</b> Akut: Sıcak su + Diltiazem/Nitrogliserin. Kronik: LİS (Lateral İnternal Sfinkterotomi).<br>• <b>Fistül:</b> Basitse fistülotomi, sfinkter tutulumu çoksa Seton.</div></div></div>"
+    },
+    "cases": [
+      {
+        "id": "c1",
+        "title": "GÖREV 1: KANLI ENGEL",
+        "desc": "Poliklinik - 45 Yaş Erkek - Rektal Kanama ve Prolapsus",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: TANI ]</b>\n\nSübje, tuvalet kağıdına bulaşan parlak kırmızı kanama şikayetiyle başvurdu. Ağrısı yok. Dışkılama sırasında anüsten bir memenin dışarı çıktığını, dışkılama bitince kendiliğinden içeri girmediğini, eliyle itmek zorunda kaldığını belirtiyor.\n\nBu klinik tablo hangi hemoroid evresidir?",
+            "opts": [
+              { "txt": "Evre 3 İnternal Hemoroid", "type": "correct", "go": "s2" },
+              { "txt": "Evre 2 İnternal Hemoroid", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ EVRELEME HATASI ]</b>\n\nEvre 2 hemoroidler ıkınmakla çıkar ve *kendiliğinden* içeri girer. Sübje 'elimle itmek zorunda kalıyorum' dediği için bu Evre 3'tür. Evre 4 ise hiç içeri girmez.",
+            "opts": [{ "txt": "DÜZELT VE DEVAM ET", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: İLK YÖNETİM ]</b>\n\nHasta daha önce hiç tedavi almamış. Evre 3 olmasına rağmen semptomları yeni başlamış. İlk basamakta invaziv işlemden önce ne önerirsin?",
+            "opts": [
+              { "txt": "Diyet (Lif/Su artır) + Flebotonik ilaçlar + Topikal krem", "type": "correct", "go": "s3" },
+              { "txt": "Doğrudan Milligan-Morgan Hemoroidektomi", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ AGRESİF YAKLAŞIM ]</b>\n\nCerrahi tedavi (Hemoroidektomi) en son seçenektir. Evre 3 hastalarda bile önce konservatif tedavi denenmeli veya daha az invaziv yöntemler (Band ligasyonu) düşünülmelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: GİRİŞİM ]</b>\n\n1 ay sonraki kontrolde kanama şikayeti azalmamış. Hasta cerrahi olmak istemiyor, 'Ofis ortamında halledilebilecek bir şey yok mu?' diye soruyor. Evre 3 hemoroid için en uygun ofis prosedürü nedir?",
+            "opts": [
+              { "txt": "Lastik Bant Ligasyonu (Rubber Band Ligation)", "type": "correct", "go": "s4" },
+              { "txt": "Skleroterapi", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YANLIŞ SEÇİM ]</b>\n\nSkleroterapi genellikle Evre 1 ve küçük Evre 2 hemoroidlerde etkilidir. Evre 3 (prolapsuslu) hemoroidlerde Bant Ligasyonu altın standart ofis tedavisidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: KOMPLİKASYON ]</b>\n\nBant ligasyonu uyguladın. Hasta işlemden 4 saat sonra acil servise 'idrarımı yapamıyorum' ve şiddetli ağrı şikayetiyle geldi. Ne olmuş olabilir?",
+            "opts": [
+              { "txt": "Bant dentate çizginin altına (somatik sinir bölgesine) konmuş -> Refleks glob vesicale", "type": "correct", "go": "s5" },
+              { "txt": "Rektum perforasyonu gelişmiştir", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ANALİZ HATASI ]</b>\n\nBant ligasyonu sonrası en sık görülen erken komplikasyonlar ağrı ve buna bağlı üriner retansiyondur. Bu genellikle bandın dentate çizgiye çok yakın veya altına (ağrılı bölge) atılmasından kaynaklanır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: ÇÖZÜM ]</b>\n\nSondayla mesaneyi boşalttın. Ağrıyı kestin. Hasta rahatladı. Taburcu ederken bantların ne zaman düşeceğini ve hafif kanama olabileceğini söylemelisin. Beklenen süre nedir?",
+            "opts": [
+              { "txt": "5-7 gün içinde nekroze olup düşer", "type": "correct", "action": "end" },
+              { "txt": "24 saat içinde düşer", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ BİLGİ HATASI ]</b>\n\nBandın dokuyu boğup nekroze etmesi ve düşmesi ortalama 5-7 gün sürer. Bu dönemde hafif lekelenme tarzı kanama normaldir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c2",
+        "title": "GÖREV 2: CAM KIRIĞI",
+        "desc": "Poliklinik - 30 Yaş Kadın - Dayanılmaz Anal Ağrı",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: SEMPTOM ANALİZİ ]</b>\n\nSübje 30 yaşında, kadın. Şikayeti: Dışkılama sırasında cam kesiği gibi yırtılır tarzda şiddetli ağrı ve sonrasında damla damla kanama. Ağrı dışkılamadan sonra saatlerce devam ediyor. Konstipasyon öyküsü var.\n\nÖn tanın nedir?",
+            "opts": [
+              { "txt": "Anal Fissür", "type": "correct", "go": "s2" },
+              { "txt": "Tromboze Hemoroid", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANI HATASI ]</b>\n\nTromboze hemoroidde ağrı süreklidir ve ele gelen şişlik vardır. 'Dışkılama sırasında cam kesiği' ve 'sonrasında devam eden spazm ağrısı' Anal Fissür için tipiktir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: MUAYENE ]</b>\n\nNazikçe anal bölgeyi araladın (diz-dirsek veya sol yan pozisyonda). Posterior orta hatta bir yırtık gördün. Tuşe rektal yapmak istiyorsun.\n\nYaklaşımın ne olmalı?",
+            "opts": [
+              { "txt": "Ağrılı olduğu için tuşe rektal ve anoskopi KONTRENDİKEDİR, yapmam.", "type": "correct", "go": "s3" },
+              { "txt": "Anal stenoz var mı diye mutlaka parmakla kontrol ederim.", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ HASTA KONFORU ]</b>\n\nAkut anal fissürde sfinkter spazmı nedeniyle tuşe rektal aşırı ağrılıdır ve hastaya travma yaratır. Tanı inspeksiyonla konur, zorlanmaz.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: AKUT TEDAVİ ]</b>\n\nTanı: Akut Anal Fissür. Hastaya sfinkter spazmını çözmek ve iyileşmeyi sağlamak için reçete düzenleyeceksin. Hangi kombinasyon en uygundur?",
+            "opts": [
+              { "txt": "Sıcak Oturma Banyosu + Topikal Diltiazem/Nitrogliserin + Laksatif", "type": "correct", "go": "s4" },
+              { "txt": "Sadece Antibiyotik ve Ağrı kesici", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ YETERSİZ TEDAVİ ]</b>\n\nFissür enfeksiyöz bir süreç değildir, antibiyotik verilmez. Temel sorun 'iskemi ve spazm'dır. Sıcak su ve vazodilatör kremler (Ca kanal blokeri/Nitrogliserin) kan akımını artırır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: KRONİKLEŞME ]</b>\n\nHasta 2 ay sonra geldi. Şikayetleri geçmemiş. Muayenede: Fissür tabanında internal sfinkter lifleri görülüyor, fissürün distalinde 'Sentinel Pili' (Nöbetçi Meme), proksimalinde 'Hipertrofik Papilla' var.\n\nTanı ve Kararın?",
+            "opts": [
+              { "txt": "Kronik Anal Fissür - Cerrahi (LİS) önerilir", "type": "correct", "go": "s5" },
+              { "txt": "Hala akut fissürdür - Kremlere 2 ay daha devam", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ ZAMAN KAYBI ]</b>\n\nTriad (Ülser + Sentinel Pili + Papilla) oluşmuşsa ve sfinkter lifleri görünüyorsa bu artık Kronik Fissürdür. Medikal tedavinin başarı şansı düşüktür (%30), cerrahi düşünülmelidir.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: CERRAHİ ]</b>\n\nLateral İnternal Sfinkterotomi (LİS) planladın. Hastaya ameliyatın en önemli ama nadir görülen uzun dönem komplikasyonunu anlatman lazım. Nedir bu?",
+            "opts": [
+              { "txt": "Gaz veya gaita inkontinansı (Tutamama)", "type": "correct", "action": "end" },
+              { "txt": "Üriner retansiyon", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ KOMPLİKASYON BİLGİSİ ]</b>\n\nSfinkterotomi, internal sfinkterin kesilmesidir. Fazla kesilirse kalıcı gaz/gaita kaçırma (inkontinans) riski vardır. Üriner retansiyon spinal anesteziye bağlı geçici olabilir ama prosedüre özgü majör risk inkontinanstır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      },
+      {
+        "id": "c3",
+        "title": "GÖREV 3: GİZLİ TÜNEL",
+        "desc": "Acil Servis - 35 Yaş Erkek - Ateş ve Perianal Şişlik",
+        "start": "s1",
+        "scenes": {
+          "s1": {
+            "text": "<b>[ AŞAMA 1: TRİAJ ]</b>\n\nSübje 35 yaşında. 3 gündür makat bölgesinde zonklayıcı ağrı ve şişlik var. Ateşi 38°C. Muayenede perianal bölgede saat 3 hizasında kızarık, sıcak, hassas bir şişlik tespit ettin.\n\nTanın nedir?",
+            "opts": [
+              { "txt": "Perianal Apse", "type": "correct", "go": "s2" },
+              { "txt": "Tromboze Hemoroid", "type": "wrong", "go": "s1_hata" }
+            ]
+          },
+          "s1_hata": {
+            "text": "<b>[ TANI HATASI ]</b>\n\nTromboze hemoroid ağrılıdır ama genellikle ateş (sistemik enfeksiyon bulgusu) yapmaz. Kızarıklık, ısı artışı ve ateş Apse bulgusudur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s1" }]
+          },
+          "s2": {
+            "text": "<b>[ AŞAMA 2: EYLEM ]</b>\n\nApse olduğuna eminsin. Henüz tam fluktuasyon (dalgalanma) vermiyor, sert kıvamda. Ne yapmalısın?",
+            "opts": [
+              { "txt": "Beklemeden hemen cerrahi insizyon ve drenaj", "type": "correct", "go": "s3" },
+              { "txt": "Antibiyotik verip fluktuasyon vermesini bekle", "type": "wrong", "go": "s2_hata" }
+            ]
+          },
+          "s2_hata": {
+            "text": "<b>[ ALTIN KURAL İHLALİ ]</b>\n\nPerianal apsede 'fluktuasyon beklenmez'. Beklenirse enfeksiyon yayılabilir (Fournier gangreni) veya sfinkter hasarı artabilir. Tanı konduğu an drenaj şarttır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s2" }]
+          },
+          "s3": {
+            "text": "<b>[ AŞAMA 3: ETİYOLOJİ ]</b>\n\nDrenajı yaptın, bol miktarda püy boşaldı. Hasta rahatladı. Hastaya bu apsenin neden oluştuğunu açıklıyorsun. Köken aldığı anatomik yapı neresidir?",
+            "opts": [
+              { "txt": "Anal Kriptler (Kriptoglandüler Enfeksiyon)", "type": "correct", "go": "s4" },
+              { "txt": "Kıl folikülleri", "type": "wrong", "go": "s3_hata" }
+            ]
+          },
+          "s3_hata": {
+            "text": "<b>[ PATOFİZYOLOJİ ]</b>\n\nKıl folikülü enfeksiyonu 'follikülit' veya 'pilonidal sinüs' yapar. Perianal apselerin %90'ı anal glandların (kriptlerin) tıkanması sonucu oluşur.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s3" }]
+          },
+          "s4": {
+            "text": "<b>[ AŞAMA 4: FİSTÜL GELİŞİMİ ]</b>\n\nHasta 3 ay sonra tekrar geldi. 'Şişliğim indi ama oradan sürekli sarı bir akıntı geliyor, iç çamaşırım kirleniyor' diyor. Muayenede eski drenaj yerinde granülasyon dokusu (dış ağız) görüyorsun.\n\nTanı nedir ve en sık hangi tiptedir?",
+            "opts": [
+              { "txt": "Perianal Fistül - İntersfinkterik (%45)", "type": "correct", "go": "s5" },
+              { "txt": "Perianal Fistül - Ekstrasfinkterik", "type": "wrong", "go": "s4_hata" }
+            ]
+          },
+          "s4_hata": {
+            "text": "<b>[ İSTATİSTİK BİLGİSİ ]</b>\n\nApselerin %40-50'si fistüle dönüşür. En sık görülen tip (%45) İntersfinkterik (İki sfinkter arası) fistüldür. Ekstrasfinkterik en nadir olanıdır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s4" }]
+          },
+          "s5": {
+            "text": "<b>[ AŞAMA 5: FİSTÜL TEDAVİSİ ]</b>\n\nMR çektirdin. Fistül traktı anal sfinkter kaslarının büyük bir kısmını içine alıyor (Yüksek transsfinkterik). Bu durumda sfinkteri korumak için doğrudan kesmek (fistülotomi) yerine hangi yöntemi tercih edersin?",
+            "opts": [
+              { "txt": "Seton Uygulaması", "type": "correct", "action": "end" },
+              { "txt": "Fistülotomi", "type": "wrong", "go": "s5_hata" }
+            ]
+          },
+          "s5_hata": {
+            "text": "<b>[ İNKONTİNANS RİSKİ ]</b>\n\nSfinkterin çoğunu tutan 'yüksek' fistüllerde fistülotomi (kesip açma) yapılırsa hasta gaz/gaita tutamaz. Seton (gevşek veya kesici) sfinkteri korumak veya kontrollü kesmek için kullanılır.",
+            "opts": [{ "txt": "GERİ DÖN", "go": "s5" }]
+          }
+        }
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Anal kanalın 'dentate line' (dişli çizgi) üzerinde kalan kısmından kaynaklanan, üzeri mukoza ile kaplı hemoroid tipi hangisidir?",
+        "a": ["Eksternal Hemoroid", "İnternal Hemoroid", "Sentinel Pili", "Anal Papilla"],
+        "correct": 1
+      },
+      {
+        "q": "Dışkılama ile prolabe olan (dışarı sarkan) ve ancak parmakla manuel olarak içeri itilebilen hemoroid hangi evredir?",
+        "a": ["Evre 1", "Evre 2", "Evre 3", "Evre 4"],
+        "correct": 2
+      },
+      {
+        "q": "Kronik anal fissür muayenesinde saptanan klasik triad (üçlü bulgu) içinde aşağıdakilerden hangisi YER ALMAZ?",
+        "a": ["Hipertrofik Anal Papilla", "Sentinel Pili (Nöbetçi Meme)", "Derin Anal Ülser (Liflerin görülmesi)", "Fistül Ağzı"],
+        "correct": 3
+      },
+      {
+        "q": "Perianal apselerin en sık yerleşim yeri aşağıdakilerden hangisidir?",
+        "a": ["İskiorektal", "Supralevator", "Perianal", "İntersfinkterik"],
+        "correct": 2
+      },
+      {
+        "q": "Anal fissürlerin büyük çoğunluğu (%90) anatomik olarak hangi hatta yerleşir?",
+        "a": ["Posterior Orta Hat", "Anterior Orta Hat", "Sağ Lateral", "Sol Lateral"],
+        "correct": 0
+      },
+      {
+        "q": "Anal apse tedavisinde 'altın kural' nedir?",
+        "a": ["Antibiyotik ile baskılamak", "Sıcak oturma banyosu", "Fluktuasyon beklenmeden cerrahi drenaj", "Kendiliğinden patlamasını beklemek"],
+        "correct": 2
+      },
+      {
+        "q": "Perianal fistüllerin sınıflandırmasında (Parks sınıflaması) en sık görülen tip hangisidir?",
+        "a": ["Transsfinkterik", "İntersfinkterik", "Suprasfinkterik", "Ekstrasfinkterik"],
+        "correct": 1
+      },
+      {
+        "q": "Lateral yerleşimli (saat 3 veya 9) anal fissür saptandığında, altta yatan hangi sistemik hastalık öncelikle düşünülmelidir?",
+        "a": ["Crohn Hastalığı", "Ülseratif Kolit", "Çölyak", "İBS"],
+        "correct": 0
+      },
+      {
+        "q": "45 yaş üstü rektal kanaması olan bir hastada, hemoroid saptansa bile yapılması gereken zorunlu tetkik nedir?",
+        "a": ["Anoskopi", "Kolonoskopi (Malignite taraması)", "MR", "BT"],
+        "correct": 1
+      },
+      {
+        "q": "Pilonidal Sinüs (Kıl Dönmesi) hastalığı en sık hangi anatomik bölgede görülür?",
+        "a": ["Perianal bölge", "İnguinal bölge", "Sakrokoksigeal bölge (İntergluteal sulkus)", "Aksilla"],
+        "correct": 2
+      }
+    ],
+    "match": [
+      { "A": "Evre 1 Hemoroid", "B": "Sadece kanama, prolapsus yok" },
+      { "A": "Evre 2 Hemoroid", "B": "Ikınmakla çıkar, kendiliğinden girer" },
+      { "A": "Evre 3 Hemoroid", "B": "Elle içeri itilmesi gerekir" },
+      { "A": "Evre 4 Hemoroid", "B": "Sürekli dışarıdadır, redükte olmaz" },
+      { "A": "Anal Fissür", "B": "Cam kesiği tarzı ağrı + Spazm" },
+      { "A": "Perianal Apse", "B": "Kriptoglandüler enfeksiyon + Ağrılı şişlik" },
+      { "A": "Seton", "B": "Sfinkter koruyucu fistül cerrahisi" },
+      { "A": "L.I.S.", "B": "Kronik fissürde altın standart cerrahi" },
+      { "A": "Bant Ligasyonu", "B": "Evre 2-3 hemoroid ofis tedavisi" },
+      { "A": "HPV 6 ve 11", "B": "Kondiloma Akuminata (Siğil)" }
+    ],
+    "decypher": [
+      {
+        "text": "Anal kanalın venöz drenajını sağlayan yastıkçıkların sarkması ve semptomatik hale gelmesi {hemoroid} olarak adlandırılır. Dentate çizginin üzerindekiler iç, altındakiler dış olarak sınıflandırılır.",
+        "decoys": ["polip", "fissür"]
+      },
+      {
+        "text": "Anal fissür patogenezinde temel faktör internal anal sfinkterdeki {hipertonite} (aşırı kasılma) sonucu oluşan iskemidir. Bu durum iyileşmeyi geciktirerek fissürün kronikleşmesine neden olur.",
+        "decoys": ["hipotoni", "enfeksiyon"]
+      },
+      {
+        "text": "Anal glandların tıkanması sonucu oluşan akut enfeksiyona {apse}, bu enfeksiyonun kronikleşip cilde bir kanal ağzı ile açılmasına ise {fistül} denir.",
+        "decoys": ["ülser", "sinüs"]
+      }
+    ]
+  }
+}
