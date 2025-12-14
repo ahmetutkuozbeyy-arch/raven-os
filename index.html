@@ -45,87 +45,60 @@
         }
 
         * { box-sizing: border-box; user-select: none; -webkit-tap-highlight-color: transparent; outline: none; }
-        
-        /* BODY SABİT KALIR (Arka plan efektleri için) */
         body { margin: 0; padding: 0; background: var(--bg); font-family: var(--font-main); height: 100dvh; width: 100vw; overflow: hidden; color: var(--text); transition: background 0.3s, color 0.3s; }
 
         /* ARKA PLAN */
         .scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0) 50%, rgba(var(--rgb), 0.05) 50%); background-size: 100% 4px; pointer-events: none; z-index: 10; opacity: var(--scanline-opacity); transition: opacity 0.5s; }
         .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(var(--rgb), 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--rgb), 0.1) 1px, transparent 1px); background-size: 30px 30px; z-index: 1; opacity: var(--grid-opacity); transition: opacity 0.5s; }
         
-        /* --- GÜNCELLENEN LAYER YAPISI (SCROLL İÇİN) --- */
         .layer { 
             position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
             display: none; flex-direction: column; z-index: 20; background: var(--bg);
-            /* Scroll Ayarları */
-            overflow-y: auto; 
-            overflow-x: hidden;
-            -webkit-overflow-scrolling: touch; /* iPhone yumuşak kaydırma */
+            overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch;
         }
         .layer.active { display: flex; }
 
-        /* --- SAĞ ÜST AYARLAR --- */
+        /* --- SAĞ ÜST AYARLAR (GÜNCELLENDİ: DAHA SADE) --- */
         .settings-bar {
             position: absolute; top: 15px; right: 15px; z-index: 100;
             display: flex; gap: 8px;
         }
         .setting-btn {
-            background: var(--panel); border: 1px solid var(--border); color: var(--text);
-            padding: 8px 12px; border-radius: 6px; font-size: 12px; cursor: pointer;
+            background: var(--panel); border: 1px solid var(--border); color: var(--text-muted); /* Pasifken daha soluk */
+            padding: 6px 10px; /* Biraz daha kompakt */
+            border-radius: 6px; font-size: 14px; cursor: pointer;
             display: flex; align-items: center; gap: 5px; transition: all 0.2s;
         }
-        .setting-btn:hover { border-color: var(--primary); color: var(--primary); }
-        .setting-btn.active { background: rgba(var(--rgb), 0.2); border-color: var(--primary); color: var(--primary); }
+        .setting-btn:hover { border-color: var(--text); color: var(--text); }
+        /* Aktifken sadece renk değişsin, parlama yok */
+        .setting-btn.active { 
+            background: var(--panel); 
+            border-color: var(--primary); 
+            color: var(--primary); 
+        }
 
-        /* WELCOME SCREEN (GÜNCELLENDİ) */
+        /* WELCOME SCREEN */
         #layer-welcome { 
-            align-items: center; 
-            justify-content: flex-start; /* Üstten başla (Eskiden center idi) */
-            text-align: center; 
-            padding: 60px 20px 100px 20px; /* Üst ve alt boşluk artırıldı */
+            align-items: center; justify-content: flex-start; text-align: center; 
+            padding: 60px 20px 100px 20px;
         }
         .welcome-content { max-width: 600px; width: 100%; animation: fadeIn 1s ease-out; position: relative; }
 
         /* RAVEN CONTAINER */
         .raven-container {
-            width: 250px;
-            height: 250px;
-            margin: 0 auto 10px auto;
-            position: relative;
-            animation: hoverFly 4s ease-in-out infinite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 250px; height: 250px; margin: 0 auto 10px auto;
+            position: relative; animation: hoverFly 4s ease-in-out infinite;
+            display: flex; align-items: center; justify-content: center;
         }
-        
-        .raven-svg {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 0 15px rgba(var(--rgb), 0.8));
-        }
-
+        .raven-svg { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 0 15px rgba(var(--rgb), 0.8)); }
         .raven-glow {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 160px; height: 160px;
-            border-radius: 50%;
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 160px; height: 160px; border-radius: 50%;
             background: radial-gradient(circle, rgba(var(--rgb), 0.4) 0%, transparent 70%);
-            animation: pulseGlow 3s infinite alternate;
-            z-index: -1;
+            animation: pulseGlow 3s infinite alternate; z-index: -1;
         }
-
-        @keyframes hoverFly {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-        
-        @keyframes pulseGlow {
-            0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-            100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.3); }
-        }
+        @keyframes hoverFly { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+        @keyframes pulseGlow { 0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1.3); } }
 
         .welcome-logo { font-size: 60px; font-weight: 900; color: var(--primary); margin-bottom: 0px; letter-spacing: -2px; position: relative; display: inline-block; text-shadow: 0 0 15px rgba(var(--rgb), 0.5); }
         .welcome-logo::before, .welcome-logo::after { content: "RA'VEN OS"; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: var(--bg); overflow: hidden; opacity: 0.7; }
@@ -175,7 +148,35 @@
         .terminal-screen { flex-grow: 1; padding: 20px; overflow-y: visible; display: none; flex-direction: column; max-width: 800px; margin: 0 auto; width: 100%; padding-bottom: 100px; }
         .terminal-screen.active { display: flex; }
 
-        .story-text { font-size: 18px; line-height: 1.7; color: var(--text); margin-bottom: 30px; white-space: pre-wrap; }
+        /* --- ÖZET EKRANI DÜZENLEMESİ (YENİ) --- */
+        .formatted-summary h3 {
+            color: var(--primary);
+            font-size: 18px; font-weight: 900;
+            margin-top: 25px; margin-bottom: 15px;
+            letter-spacing: 1px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .formatted-summary ul {
+            list-style: none; padding-left: 0; margin-bottom: 20px;
+        }
+        .formatted-summary li {
+            margin-bottom: 12px; padding-left: 20px;
+            position: relative; line-height: 1.6;
+        }
+        .formatted-summary li::before {
+            content: "•"; color: var(--primary);
+            position: absolute; left: 0; font-weight: bold;
+        }
+        .formatted-summary b { color: var(--text); font-weight: 800; }
+        .formatted-summary p { margin-bottom: 15px; line-height: 1.6; }
+        .summary-section {
+            background: rgba(var(--rgb), 0.05);
+            border: 1px solid var(--border);
+            padding: 20px; border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .story-text { font-size: 16px; line-height: 1.7; color: var(--text); margin-bottom: 30px; white-space: pre-wrap; }
         .opt-btn { background: var(--card-bg); border: 1px solid var(--border); color: var(--text); padding: 18px; margin-bottom: 12px; font-family: inherit; font-size: 15px; text-align: left; cursor: pointer; border-radius: 8px; transition: all 0.2s; position: relative; overflow: hidden; }
         .opt-btn:hover { border-color: var(--primary); background: rgba(var(--rgb), 0.05); }
         .opt-btn:active { transform: scale(0.98); }
@@ -495,7 +496,8 @@
                 <div style="font-size:12px; color:var(--text-muted);" id="step-counter"></div>
             </div>
 
-            <div id="game-text" class="story-text"></div>
+            <div id="game-text" class="story-text formatted-summary"></div>
+            
             <div id="game-opts"></div>
             
             <div id="match-area" class="match-container hidden">
@@ -583,12 +585,21 @@
             theme: 'cyber'
         };
 
+        /* --- SES MOTORU --- */
         const AudioEngine = {
             ctx: null,
-            init: function() { if(!this.ctx) this.ctx = new (window.AudioContext||window.webkitAudioContext)(); },
+            init: function() { 
+                if(!this.ctx) {
+                    this.ctx = new (window.AudioContext || window.webkitAudioContext)();
+                }
+                if(this.ctx.state === 'suspended') {
+                    this.ctx.resume();
+                }
+            },
             playTone: function(freq, type, duration) {
                 if(!settings.sound) return;
-                if(!this.ctx) this.init();
+                this.init(); 
+                
                 const o = this.ctx.createOscillator();
                 const g = this.ctx.createGain();
                 o.type = type;
@@ -601,9 +612,9 @@
             },
             xp: function() { this.playTone(880, 'sine', 0.1); setTimeout(()=>this.playTone(1760, 'sine', 0.2), 100); },
             combo: function() { 
-                this.playTone(523, 'triangle', 0.1); // C5
-                setTimeout(()=>this.playTone(659, 'triangle', 0.1), 100); // E5
-                setTimeout(()=>this.playTone(784, 'triangle', 0.3), 200); // G5
+                this.playTone(523, 'triangle', 0.1); 
+                setTimeout(()=>this.playTone(659, 'triangle', 0.1), 100); 
+                setTimeout(()=>this.playTone(784, 'triangle', 0.3), 200); 
             },
             levelup: function() { 
                 this.playTone(440, 'square', 0.1); 
@@ -615,8 +626,11 @@
             click: function() { this.playTone(1200, 'triangle', 0.05); }
         };
 
+        /* --- TİTREŞİM FONKSİYONU --- */
         function vibrate(pattern) {
-            if(settings.vibration && navigator.vibrate) navigator.vibrate(pattern);
+            if(settings.vibration && navigator.vibrate) {
+                try { navigator.vibrate(pattern); } catch(e){ console.log("Vibration blocked"); }
+            }
         }
 
         /* --- CORE DATA --- */
@@ -637,7 +651,7 @@
         let currentIdx = 0;
         let matchSelected = null;
         let sessionXP = 0;
-        let correctStreak = 0; // Cross-module Combo Tracker
+        let correctStreak = 0; 
 
         const RANKS = [
             { lvl: 1, name: "SLEEPER", rgb: "180, 160, 100" },
@@ -693,7 +707,9 @@
         }
 
         function enterSystem() {
+            AudioEngine.init(); 
             AudioEngine.click();
+            
             document.getElementById('layer-welcome').classList.remove('active');
             updateDashboard(); 
             document.getElementById('layer-dashboard').classList.add('active'); 
@@ -793,7 +809,24 @@
             if (type === 'summary') {
                 switchScreen('screen-game');
                 const sumDiv = document.getElementById('game-text');
-                sumDiv.innerHTML = appData.summary.text;
+                // ÖZET İÇERİĞİNİ HTML OLARAK GÜNCELLEDİK
+                sumDiv.innerHTML = `
+                    <div class="summary-section">
+                        <h3>🧬 AĞRI MEKANİZMALARI</h3>
+                        <ul>
+                            <li><b>Viseral Ağrı:</b> C lifleri (Miyelinsiz) ile taşınır. Künt, yaygın ve huzursuzluk vericidir. Genellikle orta hatta hissedilir.</li>
+                            <li><b>Pariyetal (Somatik) Ağrı:</b> A-delta lifleri (Miyelinli) ile taşınır. Keskin, batıcı ve iyi lokalizedir. Periton irritasyonunu (Rebound/Defans) gösterir.</li>
+                            <li><b>Yansıyan Ağrı:</b> Embriyolojik kökene göre uzak bölgeye vurur (Örn: Safra kesesi → Sağ skapula).</li>
+                        </ul>
+                    </div>
+                    <div class="summary-section">
+                        <h3>🔥 KLİNİK BULGULAR & TANI</h3>
+                        <ul>
+                            <li><b>Murphy Belirtisi:</b> Derin inspiryumda sağ üst kadranda palpasyonla ağrı ve inspiryumun durması (Akut Kolesistit).</li>
+                            <li><b>McBurney Noktası:</b> Spina iliaca anterior superior ile umbilikus arasındaki hattın dış 1/3'ünde hassasiyet (Akut Apandisit).</li>
+                        </ul>
+                    </div>
+                `;
                 updateNavButtons(false);
                 return;
             }
@@ -1161,7 +1194,7 @@
                 audio.volume = 0.4; 
                 audio.play().then(() => {
                     btn.classList.add('active'); 
-                    btn.style.borderColor = "var(--success)"; 
+                    // btn.style.borderColor = "var(--success)"; // BU SATIRI KALDIRDIK (Sadelik için)
                     showFloatingText(window.innerWidth/2, 50, "ODAK MODU: AKTİF", "var(--success)");
                 }).catch(e => {
                     alert("Ses dosyası (focus.mp3) bulunamadı!");
@@ -1169,7 +1202,7 @@
             } else {
                 audio.pause();
                 btn.classList.remove('active');
-                btn.style.borderColor = "var(--border)"; 
+                // btn.style.borderColor = "var(--border)"; // BU SATIRI KALDIRDIK
                 showFloatingText(window.innerWidth/2, 50, "ODAK MODU: KAPALI", "var(--danger)");
             }
         }
