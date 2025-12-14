@@ -45,12 +45,23 @@
         }
 
         * { box-sizing: border-box; user-select: none; -webkit-tap-highlight-color: transparent; outline: none; }
+        
+        /* BODY SABİT KALIR (Arka plan efektleri için) */
         body { margin: 0; padding: 0; background: var(--bg); font-family: var(--font-main); height: 100dvh; width: 100vw; overflow: hidden; color: var(--text); transition: background 0.3s, color 0.3s; }
 
         /* ARKA PLAN */
         .scanlines { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(rgba(0,0,0,0) 50%, rgba(var(--rgb), 0.05) 50%); background-size: 100% 4px; pointer-events: none; z-index: 10; opacity: var(--scanline-opacity); transition: opacity 0.5s; }
         .grid-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(var(--rgb), 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--rgb), 0.1) 1px, transparent 1px); background-size: 30px 30px; z-index: 1; opacity: var(--grid-opacity); transition: opacity 0.5s; }
-        .layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none; flex-direction: column; z-index: 20; background: var(--bg); }
+        
+        /* --- GÜNCELLENEN LAYER YAPISI (SCROLL İÇİN) --- */
+        .layer { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            display: none; flex-direction: column; z-index: 20; background: var(--bg);
+            /* Scroll Ayarları */
+            overflow-y: auto; 
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch; /* iPhone yumuşak kaydırma */
+        }
         .layer.active { display: flex; }
 
         /* --- SAĞ ÜST AYARLAR --- */
@@ -66,26 +77,16 @@
         .setting-btn:hover { border-color: var(--primary); color: var(--primary); }
         .setting-btn.active { background: rgba(var(--rgb), 0.2); border-color: var(--primary); color: var(--primary); }
 
-        /* --- ÖZET KARTI --- */
-        .summary-container { display: flex; flex-direction: column; gap: 20px; padding: 10px 0; }
-        .sum-card { background: var(--card-bg); border: 1px solid var(--border); border-left-width: 6px; padding: 20px; border-radius: 8px; box-shadow: var(--shadow-glow); position: relative; overflow: hidden; }
-        .sum-clinic { border-left-color: #3b82f6; } 
-        .sum-tus { border-left-color: #ef4444; }    
-        .sum-rx { border-left-color: #22c55e; }     
-        [data-theme="cyber"] .sum-clinic { background: linear-gradient(90deg, rgba(59, 130, 246, 0.15) 0%, transparent 100%); }
-        [data-theme="cyber"] .sum-tus { background: linear-gradient(90deg, rgba(239, 68, 68, 0.15) 0%, transparent 100%); }
-        [data-theme="cyber"] .sum-rx { background: linear-gradient(90deg, rgba(34, 197, 94, 0.15) 0%, transparent 100%); }
-        .sum-title { display: block; font-size: 1.2rem; font-weight: 900; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; opacity: 1; text-shadow: 0 0 10px rgba(0,0,0,0.5); }
-        .sum-clinic .sum-title { color: #60a5fa; } .sum-tus .sum-title { color: #f87171; } .sum-rx .sum-title { color: #4ade80; }
-        [data-theme="clean"] .sum-title { color: var(--text); text-shadow: none; }
-        .sum-body { font-size: 1rem; line-height: 1.7; color: var(--text); opacity: 0.9; }
-        .sum-body b { color: var(--primary); font-weight: 800; }
-
-        /* WELCOME SCREEN */
-        #layer-welcome { align-items: center; justify-content: center; text-align: center; padding: 20px; }
+        /* WELCOME SCREEN (GÜNCELLENDİ) */
+        #layer-welcome { 
+            align-items: center; 
+            justify-content: flex-start; /* Üstten başla (Eskiden center idi) */
+            text-align: center; 
+            padding: 60px 20px 100px 20px; /* Üst ve alt boşluk artırıldı */
+        }
         .welcome-content { max-width: 600px; width: 100%; animation: fadeIn 1s ease-out; position: relative; }
 
-        /* RAVEN CONTAINER (RESİM İÇİN UYARLANDI) */
+        /* RAVEN CONTAINER */
         .raven-container {
             width: 250px;
             height: 250px;
@@ -100,8 +101,8 @@
         .raven-svg {
             width: 100%;
             height: 100%;
-            object-fit: contain; /* Resmi bozmadan sığdır */
-            filter: drop-shadow(0 0 15px rgba(var(--rgb), 0.8)); /* Resme parıltı ver */
+            object-fit: contain;
+            filter: drop-shadow(0 0 15px rgba(var(--rgb), 0.8));
         }
 
         .raven-glow {
@@ -148,11 +149,11 @@
 
         /* KÜTÜPHANE */
         #layer-library { padding: 20px; }
-        .profile-card { display: flex; justify-content: space-between; align-items: center; background: rgba(var(--rgb), 0.05); border: 1px solid var(--primary); padding: 15px; margin-bottom: 20px; border-left: 4px solid var(--primary); border-radius: 8px; cursor: pointer; }
+        .profile-card { display: flex; justify-content: space-between; align-items: center; background: rgba(var(--rgb), 0.05); border: 1px solid var(--primary); padding: 15px; margin-bottom: 20px; border-left: 4px solid var(--primary); border-radius: 8px; cursor: pointer; flex-shrink: 0; }
         .rank-name { font-size: 18px; font-weight: 800; color: var(--primary); }
-        .filter-bar { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+        .filter-bar { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; flex-shrink: 0; }
         .filter-select, .search-input { flex: 1; background: var(--input-bg); border: 1px solid var(--border); color: var(--text); padding: 12px; font-family: inherit; font-size: 13px; border-radius: 8px; min-width: 100px; }
-        .module-list { flex-grow: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding-bottom: 20px; }
+        .module-list { flex-grow: 1; overflow-y: visible; display: flex; flex-direction: column; gap: 12px; padding-bottom: 20px; }
         .module-card { background: var(--card-bg); border: 1px solid var(--border); padding: 18px; border-radius: 10px; cursor: pointer; position: relative; transition: all 0.2s; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .module-card:hover { transform: translateY(-2px); border-color: var(--primary); }
         .module-code-badge { font-size: 10px; font-weight: 800; background: var(--primary); color: #fff; padding: 3px 8px; border-radius: 4px; }
@@ -161,7 +162,7 @@
 
         /* TERMİNAL HUD */
         #layer-terminal { padding: 0; }
-        .hud { height: 70px; background: var(--panel); border-bottom: 1px solid var(--border); display: flex; padding: 0 20px; align-items: center; justify-content: flex-start; gap: 20px; z-index: 50; }
+        .hud { height: 70px; background: var(--panel); border-bottom: 1px solid var(--border); display: flex; padding: 0 20px; align-items: center; justify-content: flex-start; gap: 20px; z-index: 50; flex-shrink: 0; }
         .hud-group { flex: 1; max-width: 200px; cursor: pointer; transition: transform 0.1s; }
         .hud-group:active { transform: scale(0.97); }
         .hud-label { display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 4px; color: var(--text-muted); font-weight: bold; }
@@ -171,7 +172,7 @@
         .xp-fill { background: var(--primary); box-shadow: 0 0 10px var(--primary); }
 
         /* GAME SCREENS */
-        .terminal-screen { flex-grow: 1; padding: 20px; overflow-y: auto; display: none; flex-direction: column; max-width: 800px; margin: 0 auto; width: 100%; }
+        .terminal-screen { flex-grow: 1; padding: 20px; overflow-y: visible; display: none; flex-direction: column; max-width: 800px; margin: 0 auto; width: 100%; padding-bottom: 100px; }
         .terminal-screen.active { display: flex; }
 
         .story-text { font-size: 18px; line-height: 1.7; color: var(--text); margin-bottom: 30px; white-space: pre-wrap; }
@@ -250,77 +251,78 @@
         .prof-val { color: var(--primary); font-weight: bold; }
         
         .hidden { display: none !important; }
-        /* --- DASHBOARD STYLES (YENİ EKLENDİ) --- */
-.dash-container { max-width: 800px; margin: 0 auto; padding: 20px; width: 100%; display: flex; flex-direction: column; gap: 20px; }
 
-/* Üst Profil Kartı */
-.dash-profile-header {
-    display: flex; align-items: center; gap: 20px;
-    background: var(--card-bg); border: 1px solid var(--border);
-    padding: 20px; border-radius: 12px;
-}
-.dash-avatar {
-    width: 80px; height: 80px; background: #000; border: 1px solid var(--primary);
-    border-radius: 12px; object-fit: cover; display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 15px rgba(var(--rgb), 0.2);
-}
-.dash-user-info { flex: 1; }
-.dash-username { font-size: 24px; font-weight: 900; display: flex; align-items: center; gap: 10px; color: var(--text); }
-.dash-edit-icon { font-size: 14px; color: var(--text-muted); cursor: pointer; transition: 0.2s; }
-.dash-edit-icon:hover { color: var(--primary); }
-.dash-rank-badge {
-    display: inline-block; background: var(--primary); color: #000;
-    font-size: 11px; font-weight: 900; padding: 4px 8px; border-radius: 4px;
-    margin-top: 8px; text-transform: uppercase; letter-spacing: 1px;
-}
+        /* --- DASHBOARD STYLES --- */
+        .dash-container { max-width: 800px; margin: 0 auto; padding: 20px; width: 100%; display: flex; flex-direction: column; gap: 20px; padding-bottom: 100px; }
 
-/* İstatistik Kartları (Odak & XP) */
-.dash-stats-row { display: flex; gap: 15px; }
-.dash-stat-card {
-    flex: 1; background: var(--card-bg); border: 1px solid var(--border);
-    padding: 20px; border-radius: 12px; text-align: center;
-    display: flex; flex-direction: column; justify-content: center;
-}
-.dash-stat-val { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 5px; }
-.dash-stat-label { font-size: 11px; font-weight: bold; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+        /* Üst Profil Kartı */
+        .dash-profile-header {
+            display: flex; align-items: center; gap: 20px;
+            background: var(--card-bg); border: 1px solid var(--border);
+            padding: 20px; border-radius: 12px;
+        }
+        .dash-avatar {
+            width: 80px; height: 80px; background: #000; border: 1px solid var(--primary);
+            border-radius: 12px; object-fit: cover; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 15px rgba(var(--rgb), 0.2);
+        }
+        .dash-user-info { flex: 1; }
+        .dash-username { font-size: 24px; font-weight: 900; display: flex; align-items: center; gap: 10px; color: var(--text); }
+        .dash-edit-icon { font-size: 14px; color: var(--text-muted); cursor: pointer; transition: 0.2s; }
+        .dash-edit-icon:hover { color: var(--primary); }
+        .dash-rank-badge {
+            display: inline-block; background: var(--primary); color: #000;
+            font-size: 11px; font-weight: 900; padding: 4px 8px; border-radius: 4px;
+            margin-top: 8px; text-transform: uppercase; letter-spacing: 1px;
+        }
 
-/* Arşivi Aç Butonu */
-.dash-big-btn {
-    width: 100%; padding: 40px;
-    background: transparent; border: 2px dashed var(--primary);
-    border-radius: 12px; cursor: pointer; text-align: center;
-    transition: all 0.3s; position: relative; overflow: hidden;
-}
-.dash-big-btn:hover { background: rgba(var(--rgb), 0.1); box-shadow: 0 0 20px rgba(var(--rgb), 0.2); transform: translateY(-2px); }
-.dash-big-icon { font-size: 32px; color: var(--primary); margin-bottom: 10px; display: block; }
-.dash-big-text { font-size: 16px; font-weight: 800; color: var(--text); letter-spacing: 1px; text-transform: uppercase; }
+        /* İstatistik Kartları (Odak & XP) */
+        .dash-stats-row { display: flex; gap: 15px; }
+        .dash-stat-card {
+            flex: 1; background: var(--card-bg); border: 1px solid var(--border);
+            padding: 20px; border-radius: 12px; text-align: center;
+            display: flex; flex-direction: column; justify-content: center;
+        }
+        .dash-stat-val { font-size: 28px; font-weight: 900; color: var(--primary); margin-bottom: 5px; }
+        .dash-stat-label { font-size: 11px; font-weight: bold; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
 
-/* Operasyon Verileri Paneli */
-.dash-data-panel {
-    background: #000; border: 1px solid var(--border);
-    border-radius: 12px; overflow: hidden; position: relative;
-}
-.dash-data-header {
-    padding: 15px 20px; font-size: 12px; font-weight: 900; color: var(--primary);
-    border-bottom: 1px solid var(--border); letter-spacing: 2px;
-    background: linear-gradient(90deg, rgba(var(--rgb), 0.1) 0%, transparent 100%);
-}
-.dash-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px;
-}
-.data-item { margin-bottom: 10px; }
-.data-label { font-size: 10px; color: var(--text-muted); margin-bottom: 5px; display: block; text-transform: uppercase; }
-.data-value { font-size: 18px; font-weight: 800; color: #fff; }
+        /* Arşivi Aç Butonu */
+        .dash-big-btn {
+            width: 100%; padding: 40px;
+            background: transparent; border: 2px dashed var(--primary);
+            border-radius: 12px; cursor: pointer; text-align: center;
+            transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .dash-big-btn:hover { background: rgba(var(--rgb), 0.1); box-shadow: 0 0 20px rgba(var(--rgb), 0.2); transform: translateY(-2px); }
+        .dash-big-icon { font-size: 32px; color: var(--primary); margin-bottom: 10px; display: block; }
+        .dash-big-text { font-size: 16px; font-weight: 800; color: var(--text); letter-spacing: 1px; text-transform: uppercase; }
 
-/* Progress Bar */
-.rank-progress-container { margin-top: 10px; }
-.rank-prog-bar {
-    width: 100%; height: 6px; background: #222; border-radius: 3px; overflow: hidden; margin-top: 5px;
-}
-.rank-prog-fill {
-    height: 100%; background: var(--primary); width: 0%;
-    box-shadow: 0 0 10px var(--primary); transition: width 0.5s ease;
-}
+        /* Operasyon Verileri Paneli */
+        .dash-data-panel {
+            background: #000; border: 1px solid var(--border);
+            border-radius: 12px; overflow: hidden; position: relative;
+        }
+        .dash-data-header {
+            padding: 15px 20px; font-size: 12px; font-weight: 900; color: var(--primary);
+            border-bottom: 1px solid var(--border); letter-spacing: 2px;
+            background: linear-gradient(90deg, rgba(var(--rgb), 0.1) 0%, transparent 100%);
+        }
+        .dash-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px;
+        }
+        .data-item { margin-bottom: 10px; }
+        .data-label { font-size: 10px; color: var(--text-muted); margin-bottom: 5px; display: block; text-transform: uppercase; }
+        .data-value { font-size: 18px; font-weight: 800; color: #fff; }
+
+        /* Progress Bar */
+        .rank-progress-container { margin-top: 10px; }
+        .rank-prog-bar {
+            width: 100%; height: 6px; background: #222; border-radius: 3px; overflow: hidden; margin-top: 5px;
+        }
+        .rank-prog-fill {
+            height: 100%; background: var(--primary); width: 0%;
+            box-shadow: 0 0 10px var(--primary); transition: width 0.5s ease;
+        }
     </style>
 </head>
 <body>
@@ -328,9 +330,8 @@
     <div class="scanlines"></div>
     <div id="feedback-overlay"></div>
 
-<div class="settings-bar">
+    <div class="settings-bar">
         <div class="setting-btn" id="btn-focus" onclick="toggleFocusMode()">🧠</div>
-        
         <div class="setting-btn active" id="btn-sound" onclick="toggleSetting('sound')">🔊</div>
         <div class="setting-btn active" id="btn-vibro" onclick="toggleSetting('vibro')">📳</div>
         <div class="setting-btn" id="btn-theme" onclick="toggleTheme()">👁️ <span id="theme-text">CYBER</span></div>
@@ -367,73 +368,74 @@
             <button class="start-btn" onclick="enterSystem()">BAĞLANTIYI BAŞLAT ➤</button>
         </div>
     </div>
+
     <div id="layer-dashboard" class="layer">
-    <div class="dash-container">
-        <div class="dash-profile-header">
-            <div class="dash-avatar">
-                <img src="raven_icon.png" style="width:50px; opacity:0.8;" alt="Avatar">
-            </div>
-            <div class="dash-user-info">
-                <div class="dash-username">
-                    <span id="dash-name">Kullanıcı</span>
-                    <span class="dash-edit-icon" onclick="editUsername()">✎</span>
+        <div class="dash-container">
+            <div class="dash-profile-header">
+                <div class="dash-avatar">
+                    <img src="raven_icon.png" style="width:50px; opacity:0.8;" alt="Avatar">
                 </div>
-                <div class="dash-rank-badge" id="dash-rank">SLEEPER</div>
-            </div>
-        </div>
-
-        <div class="dash-stats-row">
-            <div class="dash-stat-card">
-                <div class="dash-stat-val" id="dash-focus">100%</div>
-                <div class="dash-stat-label">ODAK</div>
-            </div>
-            <div class="dash-stat-card">
-                <div class="dash-stat-val" id="dash-total-xp">0</div>
-                <div class="dash-stat-label">TOPLAM XP</div>
-            </div>
-        </div>
-
-        <div class="dash-big-btn" onclick="openLibraryFromDash()">
-            <span class="dash-big-icon">📂</span>
-            <div class="dash-big-text">ARŞİVİ AÇ / DERSLERİ GÖRÜNTÜLE</div>
-        </div>
-
-        <div class="dash-data-panel">
-            <div class="dash-data-header">/// OPERASYON VERİLERİ ///</div>
-            <div class="dash-grid">
-                <div class="data-item">
-                    <span class="data-label">GÖREV BAŞARISI</span>
-                    <div class="data-value" id="dash-success-rate">0%</div>
-                    <div style="height:4px; background:#222; margin-top:5px; width:100px; border-radius:2px;">
-                        <div id="success-bar" style="height:100%; width:0%; background:var(--text-muted);"></div>
+                <div class="dash-user-info">
+                    <div class="dash-username">
+                        <span id="dash-name">Kullanıcı</span>
+                        <span class="dash-edit-icon" onclick="editUsername()">✎</span>
                     </div>
+                    <div class="dash-rank-badge" id="dash-rank">SLEEPER</div>
                 </div>
-                <div class="data-item">
-                    <span class="data-label">TAMAMLANAN MODÜL</span>
-                    <div class="data-value" id="dash-modules">0</div>
+            </div>
+
+            <div class="dash-stats-row">
+                <div class="dash-stat-card">
+                    <div class="dash-stat-val" id="dash-focus">100%</div>
+                    <div class="dash-stat-label">ODAK</div>
                 </div>
-                <div class="data-item">
-                    <span class="data-label">EN YÜKSEK KOMBO</span>
-                    <div class="data-value" id="dash-combo">0</div>
+                <div class="dash-stat-card">
+                    <div class="dash-stat-val" id="dash-total-xp">0</div>
+                    <div class="dash-stat-label">TOPLAM XP</div>
                 </div>
-                <div class="data-item">
-                    <span class="data-label">RÜTBE İLERLEMESİ</span>
-                    <div class="data-value"><span id="dash-xp-curr">0</span> / 100</div>
-                    <div class="rank-progress-container">
-                        <div class="rank-prog-bar">
-                            <div id="dash-xp-fill" class="rank-prog-fill"></div>
+            </div>
+
+            <div class="dash-big-btn" onclick="openLibraryFromDash()">
+                <span class="dash-big-icon">📂</span>
+                <div class="dash-big-text">ARŞİVİ AÇ / DERSLERİ GÖRÜNTÜLE</div>
+            </div>
+
+            <div class="dash-data-panel">
+                <div class="dash-data-header">/// OPERASYON VERİLERİ ///</div>
+                <div class="dash-grid">
+                    <div class="data-item">
+                        <span class="data-label">GÖREV BAŞARISI</span>
+                        <div class="data-value" id="dash-success-rate">0%</div>
+                        <div style="height:4px; background:#222; margin-top:5px; width:100px; border-radius:2px;">
+                            <div id="success-bar" style="height:100%; width:0%; background:var(--text-muted);"></div>
+                        </div>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">TAMAMLANAN MODÜL</span>
+                        <div class="data-value" id="dash-modules">0</div>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">EN YÜKSEK KOMBO</span>
+                        <div class="data-value" id="dash-combo">0</div>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">RÜTBE İLERLEMESİ</span>
+                        <div class="data-value"><span id="dash-xp-curr">0</span> / 100</div>
+                        <div class="rank-progress-container">
+                            <div class="rank-prog-bar">
+                                <div id="dash-xp-fill" class="rank-prog-fill"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <div id="layer-library" class="layer">
         <button class="menu-back-btn" onclick="backToDash()" style="margin-top:0; margin-bottom:20px; border-color:var(--primary); color:var(--primary);">
-        ⬅ DASHBOARD'A DÖN
-    </button>
+            ⬅ DASHBOARD'A DÖN
+        </button>
         <div class="profile-card" onclick="openProfile()">
             <div>
                 <div style="font-size:10px; color:var(--text-muted); letter-spacing:1px;">MEVCUT RÜTBE</div>
@@ -619,15 +621,15 @@
 
         /* --- CORE DATA --- */
         let player = { 
-    hp: 100, 
-    xp: 0, 
-    level: 1, 
-    username: 'Netrunner', 
-    maxCombo: 0, 
-    completedModules: 0, 
-    missionSuccess: 0,
-    totalMissions: 0 
-};
+            hp: 100, 
+            xp: 0, 
+            level: 1, 
+            username: 'Netrunner', 
+            maxCombo: 0, 
+            completedModules: 0, 
+            missionSuccess: 0,
+            totalMissions: 0 
+        };
         let appData = null;
         let db = [];
         let historyStack = [];
@@ -691,12 +693,11 @@
         }
 
         function enterSystem() {
-    AudioEngine.click();
-    document.getElementById('layer-welcome').classList.remove('active');
-    // document.getElementById('layer-library').classList.add('active'); // ESKİSİ
-    updateDashboard(); // Verileri yükle
-    document.getElementById('layer-dashboard').classList.add('active'); // YENİSİ
-}
+            AudioEngine.click();
+            document.getElementById('layer-welcome').classList.remove('active');
+            updateDashboard(); 
+            document.getElementById('layer-dashboard').classList.add('active'); 
+        }
 
         /* --- LIBRARY --- */
         function loadLibrary() {
@@ -786,7 +787,6 @@
             historyStack = [];
             currentIdx = 0;
             sessionXP = 0; 
-            // NOT: correctStreak burada sıfırlanmıyor! Modüller arası devam etmesi için.
             
             resetGameArea(); 
 
@@ -834,7 +834,6 @@
             const optsDiv = document.getElementById('game-opts');
             optsDiv.innerHTML = "";
             
-            // SHUFFLE OPTIONS (RANDOMIZE)
             let options = [...scene.opts];
             shuffleArray(options);
 
@@ -861,8 +860,6 @@
             const optsDiv = document.getElementById('game-opts');
             optsDiv.innerHTML = "";
             
-            // SHUFFLE QUIZ ANSWERS (RANDOMIZE)
-            // Create array of objects to keep track of correct answer
             let answers = q.a.map((txt, index) => ({ txt, isCorrect: index === q.correct }));
             shuffleArray(answers);
 
@@ -983,14 +980,13 @@
                 sessionXP += gain; 
                 if(e) showFloatingText(e.clientX, e.clientY, "+"+gain+" XP", "var(--primary)");
                 
-                // COMBO SYSTEM (5 Correct Answers)
                 correctStreak++;
                 if(correctStreak >= 5) { 
-                    player.hp = Math.min(100, player.hp + 5); // Heal 5 HP
-                    player.xp += 5; // Bonus 5 XP
+                    player.hp = Math.min(100, player.hp + 5); 
+                    player.xp += 5; 
                     sessionXP += 5;
-                    correctStreak = 0; // Reset streak
-                    AudioEngine.combo(); // Play special sound
+                    correctStreak = 0; 
+                    AudioEngine.combo(); 
                     if(e) setTimeout(() => showFloatingText(e.clientX, e.clientY - 40, "COMBO! +5 XP & FOCUS", "var(--success)"), 300);
                 }
 
@@ -999,7 +995,7 @@
                 AudioEngine.error();
                 vibrate(200);
                 player.hp -= 20; 
-                correctStreak = 0; // Reset streak on error
+                correctStreak = 0; 
             }
             
             setTimeout(() => overlay.style.opacity = "0", 600);
@@ -1115,82 +1111,65 @@
             document.getElementById('info-text').innerHTML = "Zihinsel dayanıklılık. Hatalı cevaplarda azalır.<br>%0 olursa sistem kilitlenir.<br><br><b>COMBO BONUSU:</b><br>5 doğru cevap = +5 XP ve +5 Focus yenilenmesi.";
             document.getElementById('info-modal').style.display='flex'; 
         }
+
         /* --- DASHBOARD LOGIC --- */
         function backToDash() {
-    AudioEngine.click();
-    // Kütüphaneyi kapat
-    document.getElementById('layer-library').classList.remove('active');
-    // Verileri tazele
-    updateDashboard(); 
-    // Dashboard'u aç
-    document.getElementById('layer-dashboard').classList.add('active');
-}
-function updateDashboard() {
-    // Profil
-    document.getElementById('dash-name').innerText = player.username || "Kullanıcı";
-    
-    // Rütbe Rengi ve İsmi Bulma
-    let r = RANKS[0];
-    let nextLvl = 100; // Varsayılan level atlama puanı
-    for(let rank of RANKS) { if(player.level >= rank.lvl) r = rank; }
-    
-    document.getElementById('dash-rank').innerText = r.name;
-    document.documentElement.style.setProperty('--rgb', r.rgb); // Tema rengini güncelle
+            AudioEngine.click();
+            document.getElementById('layer-library').classList.remove('active');
+            updateDashboard(); 
+            document.getElementById('layer-dashboard').classList.add('active');
+        }
+        
+        function updateDashboard() {
+            document.getElementById('dash-name').innerText = player.username || "Kullanıcı";
+            let r = RANKS[0];
+            for(let rank of RANKS) { if(player.level >= rank.lvl) r = rank; }
+            document.getElementById('dash-rank').innerText = r.name;
+            document.documentElement.style.setProperty('--rgb', r.rgb); 
+            document.getElementById('dash-focus').innerText = player.hp + "%";
+            document.getElementById('dash-total-xp').innerText = (player.level * 100) + player.xp; 
+            document.getElementById('dash-combo').innerText = player.maxCombo || 0;
+            document.getElementById('dash-modules').innerText = player.completedModules || 0;
+            let rate = player.totalMissions > 0 ? Math.round((player.missionSuccess / player.totalMissions) * 100) : 0;
+            document.getElementById('dash-success-rate').innerText = rate + "%";
+            document.getElementById('success-bar').style.width = rate + "%";
+            document.getElementById('dash-xp-curr').innerText = player.xp;
+            document.getElementById('dash-xp-fill').style.width = (player.xp) + "%";
+        }
 
-    // İstatistikler
-    document.getElementById('dash-focus').innerText = player.hp + "%";
-    document.getElementById('dash-total-xp').innerText = (player.level * 100) + player.xp; // Toplam kümülatif XP hesabı (örnek)
-    
-    // Alt Panel Verileri
-    document.getElementById('dash-combo').innerText = player.maxCombo || 0;
-    document.getElementById('dash-modules').innerText = player.completedModules || 0;
-    
-    // Başarı Oranı (Hesaplama)
-    let rate = player.totalMissions > 0 ? Math.round((player.missionSuccess / player.totalMissions) * 100) : 0;
-    document.getElementById('dash-success-rate').innerText = rate + "%";
-    document.getElementById('success-bar').style.width = rate + "%";
+        function openLibraryFromDash() {
+            AudioEngine.click();
+            document.getElementById('layer-dashboard').classList.remove('active');
+            document.getElementById('layer-library').classList.add('active');
+        }
 
-    // Level İlerleme Barı
-    document.getElementById('dash-xp-curr').innerText = player.xp;
-    document.getElementById('dash-xp-fill').style.width = (player.xp) + "%";
-}
+        function editUsername() {
+            let newName = prompt("Yeni kullanıcı adı:", player.username);
+            if(newName && newName.trim() !== "") {
+                player.username = newName;
+                updateDashboard();
+                localStorage.setItem('raven_player', JSON.stringify(player));
+            }
+        }
 
-function openLibraryFromDash() {
-    AudioEngine.click();
-    document.getElementById('layer-dashboard').classList.remove('active');
-    document.getElementById('layer-library').classList.add('active');
-}
-
-function editUsername() {
-    let newName = prompt("Yeni kullanıcı adı:", player.username);
-    if(newName && newName.trim() !== "") {
-        player.username = newName;
-        updateDashboard();
-        localStorage.setItem('raven_player', JSON.stringify(player));
-    }
-}
-
-/* --- ODAK MODU (BINAURAL BEATS) --- */
+        /* --- ODAK MODU --- */
         function toggleFocusMode() {
             const audio = document.getElementById('audio-focus');
             const btn = document.getElementById('btn-focus');
             
             if (audio.paused) {
-                // Sesi Başlat
-                audio.volume = 0.4; // Ses seviyesi %40 (Rahatsız etmesin diye kısık)
+                audio.volume = 0.4; 
                 audio.play().then(() => {
-                    btn.classList.add('active'); // Butonu aktif yap (yanar)
-                    btn.style.borderColor = "var(--success)"; // Yeşil yap
-                    // Ufak bir bildirim göster
+                    btn.classList.add('active'); 
+                    btn.style.borderColor = "var(--success)"; 
                     showFloatingText(window.innerWidth/2, 50, "ODAK MODU: AKTİF", "var(--success)");
                 }).catch(e => {
                     alert("Ses dosyası (focus.mp3) bulunamadı!");
                 });
             } else {
-                // Sesi Durdur
                 audio.pause();
                 btn.classList.remove('active');
-                btn.style.borderColor = "var(--border)"; // Eski rengine dön
+                btn.style.borderColor = "var(--border)"; 
                 showFloatingText(window.innerWidth/2, 50, "ODAK MODU: KAPALI", "var(--danger)");
             }
         }
